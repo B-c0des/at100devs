@@ -1,0 +1,235 @@
+
+  <%- include('partials/header') -%>
+
+
+  <div id="mainContainer">
+          
+          
+    <div id="secondContainer">
+          
+
+ 
+  <section id="main">
+    <div id="feed" onclick="var scrolly = window.pageYOffset; console.log(scrolly) " >
+     <!-- <img value='1' id="img" src="https://www.birthdaymessagesstatus.com/wp-content/uploads/2018/08/Stylish-Attitude-Girl-Images-for-FB-Profile-Pic.jpg">
+      <img value='2' id="img" src="https://thumbs.dreamstime.com/b/real-normal-person-portrait-22299720.jpg">
+      <img value='3' id="img" src="https://piximus.net/media/6621/portraits-of-people-87.jpg">
+      <img value='4' id="img" src="https://4.bp.blogspot.com/_cG2SV6Pnny4/SVEMe3VpLEI/AAAAAAAABic/tysh9iiyGuQ/s400/12_b.jpg">
+      
+     -->
+     <% for(var i=0; i<posts2.length; i++) {%>
+      <!-- <li class=""> -->
+
+          <img onclick="document.getElementById('feed').style.display= 'none'" class="<%=[i]%>" id="img" src="<%= posts2[i].image%>"  >
+            <!-- </li> -->
+      
+      <!-- </li> -->
+    <% } %>
+<!--     
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?person?random=1">
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?portrait?random=2">
+      
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?portrait?random=3">
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?portrait?random=4">
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?human?random=5">
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?man?random=6">
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?woman?random=7">
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?friends?random=8">
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?wedding?random=9">
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?bride?random=10">
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?groom?random=11">
+      
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?hiking?random=3">
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?boating?random=4">
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?group?random=5">
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?event?random=6">
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?gathering?random=7">
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?person?random=8">
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?person?random=9">
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?person?random=10">
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?person?random=11">
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?person?random=12">
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?person?random=13">
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?person?random=14">
+      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?person?random=15"> -->
+      
+     
+
+    </div>
+     </div>
+  </div>
+
+
+
+
+
+    
+    
+    </span>
+    </div></div></div>
+    <div>
+      <!-- <p><strong>User Name</strong>: <%= user.userName %></p>
+      <p><strong>Email</strong>: <%= user.email %></p>
+      <a href="/logout" class="col-3 btn btn-primary">Logout</a>
+  </div> -->
+      <div id='toggle-view-element'>
+        
+          <div class="mt-5">
+            <h2>Add a post</h2>
+            <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="mb-3">
+                  <label for="title" class="form-label">Title</label>
+                  <input type="text" class="form-control" id="title" name="title">
+              </div>
+              <div class="mb-3">
+                <label for="caption" class="form-label">Caption</label>
+                <textarea class="form-control" id="caption" name="caption"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="caption" class="form-label">Website</label>
+                <textarea class="form-control" id="website" name="website"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="caption" class="form-label">Contact</label>
+                <textarea class="form-control" id="contact" name="contact"></textarea>
+              </div>
+                <label for="imgUpload" class="form-label">Image</label>
+               
+                      <img id="output"/>
+                <input type="file" accept="image/*" onchange="loadFile(event)" class="form-control" id="file" name="file">
+              </div>
+              <button type="submit" class="btn btn-primary"  value="Upload" onclick="toggleContent()">Submit</button>
+            </form>
+            <button onclick="toggleContent()" type="none" class="btn btn-primary"  value="cancel">Cancel</button>
+          </div>
+      </div>
+
+       
+      
+ 
+</div>
+<div class="row justify-content-center mt-5">
+  <!---     <a class="btn btn-primary" href="/feed">Return to Feed</a>  -->
+     </div>  
+
+
+
+
+<!-- <div id="mainContainer">
+<div  id="secondContainer">
+  <section id="main">
+    <div id="feed" onclick="var scrolly = window.pageYOffset"> -->
+  <!-- <div class="row justify-content-center mt-5"> -->
+
+      <% for(var i=0; i<posts2.length; i++) {%>
+        <div id="" class="bgimg"></div>
+        <div  id="<%=[i]%>"  class="container-view">
+          <div id='x' onclick="this.parentNode.style.display = 'none'">x</div>
+
+            <img src="<%= posts2[i].image%>">
+
+          <form
+          class="col-1"
+          action="/post/likePost/<%= posts2[i]._id %>?_method=PUT"
+          method="POST"
+        >
+          <button class="btn btn-primary fa fa-heart" type="submit"></button>
+        </form>
+        <h3 class="col-3">Likes: <%= posts2[i].likes %></h3>
+        <%= posts2[i]._id%>
+          
+        Posts: <%= posts2[i]%>
+        Name: <%= posts2[i].name%>
+        Title: <%= posts2[i].title%>
+        Caption: <%= posts2[i].caption%>
+       
+         <%= posts2.user %>
+
+
+
+        <div class="mb-3">
+          <!-- <label for="name" class="form-label">comment</label> -->
+          <!-- <input type="text" class="form-control" name="commentPost"> -->
+      </div>
+        
+      <div class="col-6">
+        <h1 class="center-text">My Posts::</h1>
+        
+        <ul class="row list-unstyled">
+          
+          <div id='across' width="100%" height='30px' style='background-image: <%= posts2[i].image%>'>Hello</div>
+          comments: 
+          <%= posts2[i].comments  ? posts2[i].comments[0] : 'No comments added yet.'  %> 
+          <%= posts2[i].comments  ? posts2[i].comments.length : console.log('No comments added yet.') %>
+          <% for(var j=0; j < posts2[i].comments.length; j++) {  %>
+
+            
+            <li class="row-6 justify-content-between mt-1 ">
+                
+             
+             <%= posts2[i].comments[j]  %> 
+               
+              
+            </li>
+          <% } %>
+          </ul>
+
+        <div class="row justify-content-center mt-5 col px-md-5">
+     <!---     <a class="btn btn-primary" href="/feed">Return to Feed</a>  -->
+        </div>  
+      </div>  
+    
+
+        <form  class="col-10" 
+          action="/post/commentPost/<%= posts2[i]._id %>?_method=PUT"  
+          enctype="multipart/form-data"
+          method="POST"
+          >
+          <div class="mb-3">
+            <label for="caption" class="form-label">Comment</label>
+            <input type="text" class="form-control" name="comments"></input>
+          </div>
+        <button type="submit" class="btn btn-primary" value="comments" onclick="return confirm('Are you sure you want to comment?')">Submit this one!</button>
+                    </form>
+
+
+
+
+
+
+
+
+
+       
+        <%if(posts2[i].user == user.id){ %>
+        <form
+          action="/post/deletePost/<%= posts2[i]._id %>?_method=DELETE"
+          method="POST"
+          class="col-3"
+        >
+          <button class="btn btn-primary fa fa-trash" type="submit" onclick="return confirm('Are you sure you want to delete?')"></button>
+        </form>
+        <%}%>
+    </div>
+      <% } %>
+
+
+
+
+
+  </div>
+</div>  
+</div>
+</div>  
+</div>
+
+
+
+
+
+
+<%- include('partials/footer') -%>
