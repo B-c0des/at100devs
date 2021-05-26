@@ -1,22 +1,24 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script> -->
+    <script type='text/javascript' src="http://localhost:3000/js/index.js"></script>
     <script>
-        var img = new Image()
-        img.src= 'https://i.ytimg.com/vi/qAbHMwzGfPc/maxresdefault.jpg'
-    //img.src= 'https://source.unsplash.com/random/900×700/?flowers?random=1'
-    document.body.background= img.src
+
+var img = new Image()
+img.src= 'https://i.ytimg.com/vi/qAbHMwzGfPc/maxresdefault.jpg'
+//img.src= 'https://source.unsplash.com/random/900×700/?flowers?random=1'
+document.body.background= img.src
 
 
-        var loadFile = function(event) {
-          var output = document.getElementById('output');
-          output.src = URL.createObjectURL(event.target.files[0]);
-          output.onload = function() {
-            URL.revokeObjectURL(output.src) // free memory
-          }
-        };
-        var loadPost = function(e){
-          var output = document.getElementById('output');
-      
-        }
+var loadFile = function(event) {
+  var output = document.getElementById('output');
+  output.src = URL.createObjectURL(event.target.files[0]);
+  output.onload = function() {
+    URL.revokeObjectURL(output.src) // free memory
+  }
+};
+var loadPost = function(e){
+  var output = document.getElementById('output');
+
+}
 //         window.addEventListener('load', function () {
 //   init131();
 // });
@@ -24,13 +26,13 @@
 
 // function init131() {}
 <% for(var i=0; i<posts2.length; i++) {%>
-     
-    myArr = []
-    console.log(<%= i %>)
-    myArr.push('<%= posts2[0].comments %>')
-    console.log(myArr[0])
 
-    <% } %>
+myArr = []
+console.log(<%= i %>)
+myArr.push('<%= posts2[0].comments %>')
+console.log(myArr[0])
+
+<% } %>
 // const container = document.getElementById("toggleAddPostView");
 
 // container.addEventListener('onclick', function(){
@@ -42,49 +44,49 @@
 //         this.classList.remove('second');
 // })
 function toggleContent() {
-  // Get the DOM reference
-  var contentId = document.getElementById("toggle-view-element");
-  // Toggle 
-  contentId.style.display == "block" ? contentId.style.display = "none" : 
+// Get the DOM reference
+var contentId = document.getElementById("toggle-view-element");
+// Toggle 
+contentId.style.display == "block" ? contentId.style.display = "none" : 
 contentId.style.display = "block"; 
 document.querySelectorAll('#img').onclick = dosomething
 
 function dosomething(){
-    document.getElementById('feed').style.display= 'none'
+document.getElementById('feed').style.display= 'none'
 }
 
 
 
-  
+
 }
 
 function toggleViews() {
-  // Get the DOM reference
-  var contentId = document.querySelector(".class");
-  console.log(this.src)
-  // Toggle 
-  contentId.style.display == "block" ? contentId.style.display = "none" : 
+// Get the DOM reference
+var contentId = document.querySelector(".class");
+console.log(this.src)
+// Toggle 
+contentId.style.display == "block" ? contentId.style.display = "none" : 
 contentId.style.display = "block"; 
 }
 function minimize(){
-    //document.getElementById('feed').style.cssText = "display:block;"
+//document.getElementById('feed').style.cssText = "display:block;"
 //     var content = document.getElementById('feed')
 //document.getElementById('feed').style.opacity = '100 !important'
 //   content.style.display !== "block" ? content.style.display = "none" : 
 // // contentIstyle.display = "block"; 
 var img = new Image()
-    img.src= 'https://source.unsplash.com/random/900×700/?flowers?random=1'
-    document.body.background= img.src
+img.src= 'https://source.unsplash.com/random/900×700/?flowers?random=1'
+document.body.background= img.src
 
 this.parentNode.style.display = 'block'
 //document.getElementById('feed').setAttribute('style', 'width:0px')
 
-   const minimize =  document.getElementsByClassName("container-view")
+const minimize =  document.getElementsByClassName("container-view")
 
-  parent = minimize.parrentNode
+parent = minimize.parrentNode
 //  parent.element.style.display !== 'none' ?   parent.element.style.display = 'none' :   parent.element.style.display = 'inline'
 
-  //document.getElementById('feed').removeAttribute("style");
+//document.getElementById('feed').removeAttribute("style");
 //  document.querySelectorAll('#img').style.display= 'block'
 
 //document.getElementById('feed').style.display= 'none'
@@ -100,48 +102,40 @@ images = document.querySelectorAll('#img')
 console.log(images)
 
 for (var i = 0 ; i < images.length; i++) {
-    
-        var image = images[i];
-        image.addEventListener("click", func)
-        function func () {
-        console.log('start')
-        console.log(this.getAttribute("class"))
-        console.log(this.className)
-        console.log(this.id)
-        console.log(this.src)
-        img.src = this.src
-        
-        document.body.classList.add("mystyle")
-        document.body.style.backgroundImage=img.src;
-        //document.getElementById('bgimg').style.backgroundImage = img.src
-        //
-        
-        
-        //$("#feed").css("display", "none")
-        // document.body.background = img.src
-        document.getElementById(`${this.className}`).style.display = "block"
-        
-        
-        // var rect = image.getBoundingClientRect();
-        //image.style.cursor = "pointer";
-        
-        document.getElementById('feed').style.cssText = "height: 200%"
-        
-        }
-        
-        
+
+var image = images[i];
+image.addEventListener("click", func)
+function func () {
+console.log('start')
+console.log(this.getAttribute("class"))
+console.log(this.className)
+console.log(this.id)
+console.log(this.src)
+img.src = this.src
+
+document.body.classList.add("mystyle")
+document.body.style.backgroundImage=img.src;
+//document.getElementById('bgimg').style.backgroundImage = img.src
+//
+
+
+//$("#feed").css("display", "none")
+// document.body.background = img.src
+document.getElementById(`${this.className}`).style.display = "block"
+
+
+// var rect = image.getBoundingClientRect();
+//image.style.cursor = "pointer";
+
+document.getElementById('feed').style.cssText = "height: 200%"
+
 }
 
-    
 
+}
 
-
-
-    
-        </script>
-    
-    
-    
+    </script>
+   
     
     
 </body>
