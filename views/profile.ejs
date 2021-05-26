@@ -138,6 +138,19 @@
 
           <div style="background-image: url('<%= posts2[i].image%>'); width:100%; height:55%; background-size: cover; background-position: center;" onclick="document.getElementById('feed').style.display= 'none'" class="<%=[i]%>" id="img"></div>
 <div id='likebox'>
+
+
+  <%if(posts2[i].user == user.id){ %>
+    <form
+      action="/post/deletePost/<%= posts2[i]._id %>?_method=DELETE"
+      method="POST"
+      class="row-6 justify-content-between  "
+    >
+      <button class="btn btn-primary fa fa-trash" type="submit" onclick="return confirm('Are you sure you want to delete?')"></button>
+    </form>
+    <%}%>
+
+    
           <form
           class="row-6 justify-content-between  "
           action="/post/likePost/<%= posts2[i]._id %>?_method=PUT"
@@ -147,15 +160,7 @@
         </form>
 
 
-        <%if(posts2[i].user == user.id){ %>
-          <form
-            action="/post/deletePost/<%= posts2[i]._id %>?_method=DELETE"
-            method="POST"
-            class="row-6 justify-content-between  "
-          >
-            <button class="btn btn-primary fa fa-trash" type="submit" onclick="return confirm('Are you sure you want to delete?')"></button>
-          </form>
-          <%}%>
+
         </div>
 
 
