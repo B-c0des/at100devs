@@ -21,8 +21,12 @@
       <!-- <li class=""> -->
         
           <img onclick="document.getElementById('feed').style.display= 'none'" class="<%=[i]%>" id="img" src="<%= posts2[i].image%>"  >
-            <!-- </li> -->
-      
+           <!-- </li> -->
+           <div id="img-box">
+            <h1> Name: <%= posts2[i].name%></h1>
+            <h1>Title: <%= posts2[i].title%></h1>
+              <h1>Caption: <%= posts2[i].caption%></h1>
+             </div>
       <!-- </li> -->
     <% } %>
 <!--     
@@ -74,30 +78,30 @@
   </div> -->
       <div id='toggle-view-element'>
         
-          <div class="">
-            <h2>Add a post</h2>
+          <div id="add-posts">
+            <h1 class="text-center">Add a post</h1>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
               <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
+                <h1><label for="name" class="form-label">Name</label></h1>
                 <input type="text" class="form-control" id="name" name="name">
             </div>
             <div class="mb-3">
-                  <label for="title" class="form-label">Title</label>
+              <h1><label for="title" class="form-label">Title</label></h1>
                   <input type="text" class="form-control" id="title" name="title">
               </div>
               <div class="mb-3">
-                <label for="caption" class="form-label">Caption</label>
+                <h1><label for="caption" class="form-label">Caption</label></h1>
                 <textarea class="form-control" id="caption" name="caption"></textarea>
               </div>
               <div class="mb-3">
-                <label for="caption" class="form-label">Website</label>
+                <h1><label for="caption" class="form-label">Website</label></h1>
                 <textarea class="form-control" id="website" name="website"></textarea>
               </div>
               <div class="mb-3">
-                <label for="caption" class="form-label">Contact</label>
+                <h1><label for="caption" class="form-label">Contact</label></h1>
                 <textarea class="form-control" id="contact" name="contact"></textarea>
               </div>
-                <label for="imgUpload" class="form-label">Image</label>
+              <h1><label for="imgUpload" class="form-label">Image</label>
                
                       <img id="output"/>
                 <input type="file" accept="image/*" onchange="loadFile(event)" class="form-control" id="file" name="file">
@@ -126,8 +130,9 @@
   <!-- <div class="row justify-content-center mt-5"> -->
 
       <% for(var i=0; i<posts2.length; i++) {%>
-       
+        
         <div  id="<%=[i]%>"  class="container-view">
+          <div id="add-posts">
           <div id='x' onclick="this.parentNode.style.display = 'none'">x</div>
 
           <div style="background-image: url('<%= posts2[i].image%>'); width:100%; height:45%; background-size: cover; background-position: center;" onclick="document.getElementById('feed').style.display= 'none'" class="<%=[i]%>" id="img"></div>
@@ -220,6 +225,7 @@
         <button type="submit" class="btn btn-primary" value="comments" onclick="return confirm('Are you sure you want to comment?')">Submit this one!</button>
                     </form>
 
+                  
 
 
 
@@ -227,14 +233,13 @@
 
 
 
-
-       
+                  </div>
         
   </div>
       <% } %>
 
 
-
+    
 
 
   </div>
