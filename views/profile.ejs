@@ -220,10 +220,16 @@
           method="POST"
           >
           <div class="mb-15">
-            <label for="caption" class="form-label">Comment</label>
+            
+
+          
+          
+
+
+
             <input type="text" class="form-control" name="comments"></input>
           </div>
-        <button type="submit" class="btn btn-primary" value="comments" onclick="return confirm('Are you sure you want to comment?')">Submit this one!</button>
+        <button type="submit" id='something' class="btn btn-primary" value="comments" onsubmit="addText()" onclick="return confirm('Are you sure you want to comment?')">Submit this one!</button>
                     </form>
 
                   

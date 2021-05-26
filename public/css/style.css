@@ -270,6 +270,7 @@ header .overlay {
   opacity: 0.8;
   z-index: 1;
   backdrop-filter: blur(90px) saturate(1.5);
+  overflow-y: hidden;
 }
 
 @media (pointer: coarse) and (hover: none) {
@@ -301,9 +302,9 @@ header .overlay {
       
       flex-direction: row;
       display: flexbox;
-      backdrop-filter: blur(50px);
+      backdrop-filter: blur(30px);
       overflow-y: hidden;
-      width:50%;
+      width:70%;
       height:100vh;
       
     }
