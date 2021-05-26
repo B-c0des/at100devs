@@ -292,7 +292,7 @@ header .overlay {
       backdrop-filter: blur(50px);
       overflow-y: hidden;
       width:50%;
-      height:100vh;
+      height:100%;
       
     }
     #mainContainer{
