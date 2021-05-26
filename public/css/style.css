@@ -61,7 +61,7 @@ body{
       padding-right: 5%;
       padding-left: 5%;
       overflow-y: scroll;
-      height: 80%;
+      height: 100%;
       width: 100vw;
       backdrop-filter: blur(90px) saturate(130%) contrast(120%);
       top: 70px;
