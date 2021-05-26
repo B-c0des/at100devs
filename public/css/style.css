@@ -8,12 +8,13 @@ body{
       background-size: 100%;
       margin:0px;
       background-size:cover;
+      
     }
     #bgimage{
       height: 100%;
       width: 100%;
       position: fixed;
-      background-color: red;
+      background-color: rgba(255,255,255,.25)
       display: block;
       
     }
@@ -249,14 +250,10 @@ header {
 
 header video {
   position: absolute;
-  top: 50%;
-    left: 50%;
-    width: 150%;
+  top: 50px;
+  width: 200%;
   z-index: 0;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+ 
 }
 
 header .container {
@@ -272,7 +269,7 @@ header .overlay {
   width: 100%;
   opacity: 0.8;
   z-index: 1;
-  backdrop-filter: blur(100px);
+  backdrop-filter: blur(90px) saturate(1.5);
 }
 
 @media (pointer: coarse) and (hover: none) {
@@ -291,6 +288,14 @@ header .overlay {
   height: 60vh;
   box-shadow: 0px 30px 40px 8px rgba(00,00,00,.9);
 }
+#add-posts1{
+  margin-top: 40px;
+  background-color: rgba(255,255,255,.25);
+  border-radius: 10px;
+  width: 100%;
+  height: 80%;
+  box-shadow: 0px 30px 40px 8px rgba(00,00,00,.9);
+}
     .container{
       
       
@@ -299,7 +304,7 @@ header .overlay {
       backdrop-filter: blur(50px);
       overflow-y: hidden;
       width:50%;
-      height:100%;
+      height:100vh;
       
     }
     #img-box{
@@ -824,7 +829,12 @@ header .overlay {
     
     
     @media only screen and (max-width: 900px) {
-
+      header video{
+        width:600%;
+      }
+        .container{
+          width:90%;
+        }
       #x{
         
           position: inherit;
