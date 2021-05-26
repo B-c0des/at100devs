@@ -116,9 +116,6 @@
       
  
 </div>
-<div class="row justify-content-center mt-1">
-  <!---     <a class="btn btn-primary" href="/feed">Return to Feed</a>  -->
-     </div>  
 
 
 
@@ -157,16 +154,19 @@
           action="/post/likePost/<%= posts2[i]._id %>?_method=PUT"
           method="POST"
         >
-          <button class="btn btn-primary fa fa-heart" type="submit"></button>
+       
+          <button class="btn btn-primary fa fa-heart" type="submit"> <%= posts2[i].likes %></button>
         </form>
+        
 
 
 
         </div>
 
+        <!-- <div class="" id='likes'> <%= posts2[i].likes %></div> -->
 
 
-        <h3 class="col-3">Likes: <%= posts2[i].likes %></h3>
+        
         <!-- <%= posts2[i]._id%>
           
         Posts: <%= posts2[i]%>
@@ -220,7 +220,7 @@
       </div>  
     
 
-        <form  class="col-10" 
+        <form  class="col-10 w-100" 
           action="/post/commentPost/<%= posts2[i]._id %>?_method=PUT"  
           enctype="multipart/form-data"
           method="POST"
@@ -235,7 +235,7 @@
 
             <input type="text" class="form-control text-center" name="comments"></input>
           </div>
-        <button type="submit" id='something' class="btn btn-primary text-center" value="comments" onsubmit="addText()" onclick="return confirm('Are you sure you want to comment?')">Post comment!</button>
+        <button type="submit" id='something' class="btn btn-primary text-center w-100 rounded-bottom" value="comments" onsubmit="addText()" onclick="return confirm('Are you sure you want to comment?')">Post comment!</button>
                     </form>
 
                   
