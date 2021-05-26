@@ -133,10 +133,11 @@
         
         <div  id="<%=[i]%>"  class="container-view">
           <div id='x' onclick="this.parentNode.style.display = 'none'">x</div>
+          <div style="background-image: url('<%= posts2[i].image%>'); width:100%; z-index: 5; height:45%; background-size: cover; background-position: center;" onclick="document.getElementById('feed').style.display= 'none'" class="<%=[i]%>" id="img"></div>
           <div id="add-posts">
           
 
-          <div style="background-image: url('<%= posts2[i].image%>'); width:100%; height:55%; background-size: cover; background-position: center;" onclick="document.getElementById('feed').style.display= 'none'" class="<%=[i]%>" id="img"></div>
+         
 <div id='likebox'>
 
 
@@ -224,7 +225,7 @@
           enctype="multipart/form-data"
           method="POST"
           >
-          <div class="mb-15">
+          <div class="text-center">
             
 
           
@@ -232,9 +233,9 @@
 
 
 
-            <input type="text" class="form-control" name="comments"></input>
+            <input type="text" class="form-control text-center" name="comments"></input>
           </div>
-        <button type="submit" id='something' class="btn btn-primary" value="comments" onsubmit="addText()" onclick="return confirm('Are you sure you want to comment?')">Submit this one!</button>
+        <button type="submit" id='something' class="btn btn-primary text-center" value="comments" onsubmit="addText()" onclick="return confirm('Are you sure you want to comment?')">Post comment!</button>
                     </form>
 
                   
