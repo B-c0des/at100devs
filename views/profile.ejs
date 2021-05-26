@@ -200,7 +200,7 @@
             
                           
                        
-                       <h1 style="background-color: "><%= posts2[i].comments[j]  %></h1> 
+                       <h1 ><%= posts2[i].comments[j]  %><%= user.userName%></h1> 
                          
                         
                       </li>
@@ -230,9 +230,9 @@
 
 
 
-            <input type="text" class="form-control text-center" name="comments"></input>
+            <input type="text" class="form-control text-center" name="comments" id='sendComment'></input>
           </div>
-        <button type="submit" id='something' class="btn btn-primary text-center w-100 rounded-bottom" value="comments" onsubmit="addText()" onclick="return confirm('Are you sure you want to comment?')">Post comment!</button>
+        <button type="submit" class="btn btn-primary text-center w-100 rounded-bottom" value="comments" onsubmit="addText()" onclick="addText()">Post comment!</button>
                     </form>
 
                   

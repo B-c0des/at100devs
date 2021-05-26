@@ -24,7 +24,7 @@
         <div id="login-logout-box">
         
           
-            <span><strong>User Name</strong>: <%- user?.name && user.name.trim().length ? `<h1>Hello ${user.name.trim()}</h1>` : '<h1>Hello Guest</h1>' %></span>
+            <span><strong>User Name</strong>: <%- user?.userName && user.userName.trim().length ? `<h1>Hello ${user.userName.trim()}</h1>` : '<h1>Hello Guest</h1>' %></span>
             <span><strong>Email</strong>: <%- user?.email && user.email.trim().length ? `<h1>${user.email.trim()}</h1>` : '<h1>Hello Guest</h1>' %></span>
         
           </div>
