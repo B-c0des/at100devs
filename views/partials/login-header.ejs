@@ -60,11 +60,11 @@
 <header>
     <div class="overlay"></div>
   <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-    <source src="https://cdn.videvo.net/videvo_files/video/free/2013-08/small_watermarked/hd0933_preview.webm" type="video/mp4">
+    <source src="https://media.istockphoto.com/videos/the-blue-code-video-id157089299" type="video/mp4">
   </video>
-  <div class="container h-100">
+  <div class="container">
     <div class="d-flex h-100 text-center align-items-center">
-      <div class="w-100 text-white">
+      <div class="w-100 text-white mt-5">
 
         
 <style>
@@ -77,11 +77,9 @@
 header video {
   position: absolute;
   top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
+    left: 50%;
+    width: 150%;
+    height: 100%;
   z-index: 0;
   -ms-transform: translateX(-50%) translateY(-50%);
   -moz-transform: translateX(-50%) translateY(-50%);
@@ -100,8 +98,9 @@ header .overlay {
   left: 0;
   height: 100%;
   width: 100%;
-  opacity: 0.5;
+  opacity: 0.8;
   z-index: 1;
+  backdrop-filter: blur(100px);
 }
 
 @media (pointer: coarse) and (hover: none) {

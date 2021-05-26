@@ -72,12 +72,14 @@ function minimize(){
 //document.getElementById('feed').style.opacity = '100 !important'
 //   content.style.display !== "block" ? content.style.display = "none" : 
 // // contentIstyle.display = "block"; 
+var img = new Image()
+    img.src= 'https://source.unsplash.com/random/900×700/?flowers?random=1'
+    document.body.background= img.src
+
 this.parentNode.style.display = 'block'
 //document.getElementById('feed').setAttribute('style', 'width:0px')
 
    const minimize =  document.getElementsByClassName("container-view")
-  // Toggle 
-  document.querySelectorAll('#bgimage').style.cssText = "background-color: blue;"
 
   parent = minimize.parrentNode
 //  parent.element.style.display !== 'none' ?   parent.element.style.display = 'none' :   parent.element.style.display = 'inline'
@@ -109,7 +111,7 @@ for (var i = 0 ; i < images.length; i++) {
         console.log(this.src)
         img.src = this.src
         
-        document.body.background = img.src
+        document.body.classList.add("mystyle")
         document.body.style.backgroundImage=img.src;
         //document.getElementById('bgimg').style.backgroundImage = img.src
         //
@@ -122,7 +124,7 @@ for (var i = 0 ; i < images.length; i++) {
         
         // var rect = image.getBoundingClientRect();
         //image.style.cursor = "pointer";
-
+        
         document.getElementById('feed').style.cssText = "height: 200%"
         
         }
