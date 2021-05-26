@@ -2,13 +2,13 @@ body{
     /*  background-image: url("https://downloops.com/wp-content/uploads/edd/2018/03/MosaicBlue-Flowing-Mosaic-Pattern-Free-Download-Motion-Background-Video-Loop-SampleStill.jpg");
     */
     
-    /* background-image: url("https://source.unsplash.com/random/900×700/?signin?random=1"); */
-    
-      background-image:container;
+    /* background-image: url("https://source.unsplash.com/random/900×700/?flowers?random=2"); 
+     */
       background-size: 100%;
-      margin:0px;
       background-size:cover;
-      
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
     }
     #bgimage{
       height: 100%;
@@ -133,9 +133,10 @@ body{
       
     }
     #across{
+      text-overflow: unset;
       max-height:100px;
       overflow-y: scroll;
-      background-color: rgba(255,255,255,.25);
+      overflow-x: hidden;
     }
     #glow{
       z-index: 2;
@@ -301,7 +302,10 @@ header .overlay {
   height:fit-content;
 }
 #img{
-  box-shadow: 0px 30px 40px 1px rgba(00,00,00,.9);
+  box-shadow: 0px 10px 25px 1px rgba(00,00,00,.9);
+}
+#img:hover{
+  box-shadow: 0px 30px 40px 40px rgba(00,00,00,.9);
 }
 #add-posts1{
   margin-top: 40px;
@@ -598,12 +602,13 @@ header .overlay {
       width: 100%;
       flex-wrap: wrap;
       justify-content: space-around;
+      height:100%;
+      border-radius:20px;
+      box-shadow: 0px 30px 40px 8px rgba(00,00,00,.9);
       
-      height:100%
       
       
-      overflow-y: scroll;
-      
+      backdrop-filter: blur(20px);
       scrollbar-width: thin;
       display: inline-flex;
       
@@ -674,7 +679,7 @@ header .overlay {
       height:70px;
       background-color:transparent;
       z-index: 2;
-      backdrop-filter: blur(50px) brightness(140%)contrast(90%);
+      backdrop-filter: blur(50px) brightness(140%)contrast(90%)invert(20%);
       
     }
     
@@ -853,6 +858,13 @@ header .overlay {
     
     
     @media only screen and (max-width: 900px) {
+      #headerTitle{
+      letter-spacing: -1px;}
+      #toggle-view-element{
+        padding-left: 3%;
+      padding-right: 3%;
+     padding-top: 10%;
+      }
       header {
         display: unset;
         width:100%;
