@@ -19,7 +19,7 @@
      -->
      <% for(var i=0; i<posts2.length; i++) {%>
       <!-- <li class=""> -->
-
+        
           <img onclick="document.getElementById('feed').style.display= 'none'" class="<%=[i]%>" id="img" src="<%= posts2[i].image%>"  >
             <!-- </li> -->
       
@@ -74,7 +74,7 @@
   </div> -->
       <div id='toggle-view-element'>
         
-          <div class="mt-5">
+          <div class="">
             <h2>Add a post</h2>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
               <div class="mb-3">
@@ -112,7 +112,7 @@
       
  
 </div>
-<div class="row justify-content-center mt-5">
+<div class="row justify-content-center mt-1">
   <!---     <a class="btn btn-primary" href="/feed">Return to Feed</a>  -->
      </div>  
 
@@ -130,24 +130,39 @@
         <div  id="<%=[i]%>"  class="container-view">
           <div id='x' onclick="this.parentNode.style.display = 'none'">x</div>
 
-            <img src="<%= posts2[i].image%>">
-
+          <div style="background-image: url('<%= posts2[i].image%>'); width:100%; height:45%; background-size: cover; background-position: center;" onclick="document.getElementById('feed').style.display= 'none'" class="<%=[i]%>" id="img"></div>
+<div id='likebox'>
           <form
-          class="col-1"
+          class="row-6 justify-content-between  "
           action="/post/likePost/<%= posts2[i]._id %>?_method=PUT"
           method="POST"
         >
           <button class="btn btn-primary fa fa-heart" type="submit"></button>
         </form>
+
+
+        <%if(posts2[i].user == user.id){ %>
+          <form
+            action="/post/deletePost/<%= posts2[i]._id %>?_method=DELETE"
+            method="POST"
+            class="row-6 justify-content-between  "
+          >
+            <button class="btn btn-primary fa fa-trash" type="submit" onclick="return confirm('Are you sure you want to delete?')"></button>
+          </form>
+          <%}%>
+        </div>
+
+
+
         <h3 class="col-3">Likes: <%= posts2[i].likes %></h3>
-        <%= posts2[i]._id%>
+        <!-- <%= posts2[i]._id%>
           
         Posts: <%= posts2[i]%>
         Name: <%= posts2[i].name%>
         Title: <%= posts2[i].title%>
         Caption: <%= posts2[i].caption%>
        
-         <%= posts2.user %>
+         <%= posts2.user %> -->
 
 
 
@@ -156,31 +171,37 @@
           <!-- <input type="text" class="form-control" name="commentPost"> -->
       </div>
         
-      <div class="col-6">
+      <div class="col-14">
         <h1 class="center-text">My Posts::</h1>
         
         <ul class="row list-unstyled">
           
-          <div id='across' width="100%" height='30px' style='background-image: <%= posts2[i].image%>'>Hello</div>
-          comments: 
-          <%= posts2[i].comments  ? posts2[i].comments[0] : 'No comments added yet.'  %> 
-          <%= posts2[i].comments  ? posts2[i].comments.length : console.log('No comments added yet.') %>
-          <% for(var j=0; j < posts2[i].comments.length; j++) {  %>
+          
+                    <div> Name: <%= posts2[i].name%></div>
+              <div>Title: <%= posts2[i].title%></div>
+                <div>Caption: <%= posts2[i].caption%></div>
+                <div id='across' style='background-image: <%= posts2[i].image%>'> 
+                <div>Comments: 
+
+                    <% for(var j=0; j < posts2[i].comments.length; j++) {  %>
 
             
-            <li class="row-6 justify-content-between mt-1 ">
-                
-             
-             <%= posts2[i].comments[j]  %> 
-               
-              
-            </li>
-          <% } %>
+                          
+                       
+                       <div style="background-color: purple"><%= posts2[i].comments[j]  %></div> 
+                         
+                        
+                      </li>
+                    <% } %>
+
+         <!-- <%= posts2[i].comments  ? posts2[i].comments[0] : 'No comments added yet.'  %>  -->
+        </div>
+          </div>
+          
+          
           </ul>
 
-        <div class="row justify-content-center mt-5 col px-md-5">
-     <!---     <a class="btn btn-primary" href="/feed">Return to Feed</a>  -->
-        </div>  
+
       </div>  
     
 
@@ -189,7 +210,7 @@
           enctype="multipart/form-data"
           method="POST"
           >
-          <div class="mb-3">
+          <div class="mb-15">
             <label for="caption" class="form-label">Comment</label>
             <input type="text" class="form-control" name="comments"></input>
           </div>
@@ -205,15 +226,7 @@
 
 
        
-        <%if(posts2[i].user == user.id){ %>
-        <form
-          action="/post/deletePost/<%= posts2[i]._id %>?_method=DELETE"
-          method="POST"
-          class="col-3"
-        >
-          <button class="btn btn-primary fa fa-trash" type="submit" onclick="return confirm('Are you sure you want to delete?')"></button>
-        </form>
-        <%}%>
+        
   </div>
       <% } %>
 

@@ -17,6 +17,9 @@ body{
       display: block;
       
     }
+    #output{
+      width: 100%;
+    }
     .stop-scrolling {
       height: 100%;
       overflow: hidden;
@@ -58,8 +61,8 @@ body{
       margin: 0 auto;
       flex-direction: row;
       position: fixed;
-      padding-right: 5%;
-      padding-left: 5%;
+      padding-right: 25%;
+      padding-left: 25%;
       overflow-y: scroll;
       height: 100%;
       width: 100vw;
@@ -111,9 +114,16 @@ body{
       font-size: calc(12px + 1.5vw)
       
     }
+    #likebox{
+      position: relative;
+      height:25px;
+      width:100%;
+      top:-60px;
+      left:5px;
+    }
     #across{
-      backdrop-filter: blur(20px);
-      background-color: rgba(255,255,255,.5);
+      max-height:100px;
+      overflow-y: scroll;
     }
     #glow{
       z-index: 2;
@@ -561,9 +571,10 @@ body{
     #login-logout-box{
       position: fixed;
       left:0px;
-      top:0px;
-      width:220px;
-      height:20px;
+      top: 0px;
+      width: 620px;
+      height: 20px;
+      font-size: 1px;
       background-color:transparent;
       z-index: 2;
     }
