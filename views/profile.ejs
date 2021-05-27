@@ -127,7 +127,7 @@
   <!-- <div class="row justify-content-center mt-5"> -->
 
       <% for(var i=0; i<posts2.length; i++) {%>
-        
+        <div id='bgimage'>
         <div  id="<%=[i]%>"  class="container-view">
           <div id='x' onclick="this.parentNode.style.display = 'none'">x</div>
           <div style="background-image: url('<%= posts2[i].image%>'); width:100%; z-index: 5; height: 50vh; background-size: cover; background-position: center;" onclick="document.getElementById('feed').style.display= 'none'" class="<%=[i]%>" id="img"></div>
@@ -246,6 +246,7 @@
                   </div>
         
   </div>
+</div>
       <% } %>
 
 

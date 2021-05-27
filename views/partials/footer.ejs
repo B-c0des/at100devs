@@ -91,6 +91,10 @@ this.parentNode.style.display = 'block'
 
 const minimize =  document.getElementsByClassName("container-view")
 
+
+
+document.body.style.cssText = "background-color: green !important;"
+document.body.style.backgroundColor = 'black'
 parent = minimize.parrentNode
 //  parent.element.style.display !== 'none' ?   parent.element.style.display = 'none' :   parent.element.style.display = 'inline'
 
@@ -120,9 +124,8 @@ console.log(this.className)
 console.log(this.id)
 console.log(this.src)
 img.src = this.src
-
-document.body.classList.add("mystyle")
-document.body.style.backgroundImage=img.src;
+//ocument.body.classList.add("mystyle")
+//document.body.style.backgroundColor = 'red'
 //document.getElementById('bgimg').style.backgroundImage = img.src
 //
 
@@ -135,7 +138,7 @@ document.getElementById(`${this.className}`).style.display = "block"
 // var rect = image.getBoundingClientRect();
 //image.style.cursor = "pointer";
 
-document.getElementById('feed').style.cssText = "height: 00%"
+document.getElementById('feed').style.cssText = "height: 100%"
 
 }
 
