@@ -67,6 +67,6 @@ app.use("/post", postRoutes);
 //app.use("/guest", guest);
 
 //Server Running
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`Server is running on ${process.env.PORT}, you better catch it!`);
 });
