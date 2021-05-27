@@ -860,11 +860,7 @@ header .overlay {
     
     
     @media only screen and (max-width: 900px) {
-      body{
-        
-        overflow-x: hidden;
-        position: fixed;
-      }
+
       header{
         display: unset;
       }
