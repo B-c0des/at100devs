@@ -316,7 +316,7 @@ header .overlay {
       
       flex-direction: row;
       display: flexbox;
-      backdrop-filter: blur(20px) ;
+      backdrop-filter: blur(15px) ;
       overflow-y: hidden;
       width:100%;
       height:100vh;
@@ -886,7 +886,7 @@ position: relative;
         width:100%;
       }
       header video{
-        width:600%;
+        width:400%;
       }
         .container{
           width:100vw;
