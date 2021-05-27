@@ -282,7 +282,6 @@ header .overlay {
 
 @media (pointer: coarse) and (hover: none) {
   header {
-    display: unset;
     width:100%;
   }
   header video {
@@ -864,9 +863,6 @@ header .overlay {
         position: fixed;
       }
 
-      header{
-        display: unset;
-      }
       header .overlay {
 position: relative;
       }
@@ -886,7 +882,7 @@ position: relative;
         width:100%;
       }
       header video{
-        width:400%;
+        width:500%;
       }
         .container{
           width:100vw;
