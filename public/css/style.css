@@ -68,7 +68,7 @@ body{
     }
     #x{
       position: inherit;
-      top:80px;
+      top:5px;
       right:26%;
       text-align: center;
       font-size: 7vw;
@@ -888,7 +888,7 @@ width:0;
       #x{
         
           position: inherit;
-          top: 80px;
+          top: 5px;
           right: 5%;
           text-align: center;
           font-size: 20vw;
