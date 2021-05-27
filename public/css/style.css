@@ -527,8 +527,11 @@ header .overlay {
       border-width: 1px 0px 1px 1px;
       color:white;
       mix-blend-mode: difference;
-      
-      
+           
+    }
+    #comment-box{
+      border-bottom: 1px solid rgba(255,255,255,.5);
+         
     }
     #buttonContainer{
       display:flex;
@@ -687,7 +690,7 @@ header .overlay {
       display:flex;
       justify-content: space-evenly;
       flex-direction: column;
-      letter-spacing: 5px;
+      letter-spacing: 10px;
       color:white;
       gap:0px;
       height:70px;
@@ -817,8 +820,8 @@ header .overlay {
     }
     #feed img{
       position: relative;
-      margin:.8%;
-      width:23%;
+      margin:.5%;
+      width:24%;
       height:300px;
       object-fit: cover;
     
@@ -844,6 +847,7 @@ header .overlay {
       animation-iteration-count: 1;
       border-bottom:1px;
       animation-fill-mode: forwards;
+      top:-2px;
       
     }
     @keyframes mymove {
@@ -857,8 +861,15 @@ header .overlay {
     
     
     @media only screen and (max-width: 900px) {
+      body{
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+      #header-right{
+        z-index: 5;
+      }
       #headerTitle{
-      letter-spacing: -1px;}
+      letter-spacing: -2px;}
       #toggle-view-element{
         padding-left: 3%;
       padding-right: 3%;
