@@ -864,6 +864,7 @@ header .overlay {
       body{
         overflow-x: hidden;
         overflow-y: hidden;
+        position: fixed;
       }
       #header-right{
         z-index: 5;
