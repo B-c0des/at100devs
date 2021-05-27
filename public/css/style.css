@@ -865,6 +865,7 @@ header .overlay {
 
       header .overlay {
 position: relative;
+width:0;
       }
       #header-right{
         z-index: 5;
