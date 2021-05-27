@@ -200,7 +200,7 @@
             
                           
                        
-                       <h1 id="comment-box" ><%= posts2[i].comments[j]  %></h1> 
+                       <h1 ><%= posts2[i].comments[j]  %></h1> 
                          
                         
                       </li>
@@ -217,12 +217,12 @@
       </div>  
     
 
-        <form  name="myForm" class="col-10 w-100" 
+        <form  class="col-10 w-100" 
           action="/post/commentPost/<%= posts2[i]._id %>?_method=PUT"  
           enctype="multipart/form-data"
           method="POST"
           >
-          <div  class="text-center">
+          <div class="text-center">
             
 
           
@@ -230,9 +230,9 @@
 
 
 
-            <input type="text" class="form-control" name="inputtext" id="sendComment">
+            <input type="text" class="form-control" name="comments" id='sendComment'><%= posts2[i]._id %></input>
           </div>
-        <button type="submit" class="btn btn-primary text-center w-100 rounded-bottom" value="comments"  onsubmit="addText()" onclick="addText()">Post comment!</button>
+        <button type="submit" class="btn btn-primary text-center w-100 rounded-bottom" value="comments" >Post comment!</button>
                     </form>
 
                   
