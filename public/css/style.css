@@ -258,7 +258,8 @@ header {
 }
 
 header video {
-  width: 100%;
+  position: absolute;
+  width: 700%;
   z-index: 0;
  
 }
@@ -884,7 +885,7 @@ width:0;
         width:100%;
       }
       header video{
-        width: 100%;
+        display:hidden;
       }
         .container{
           width:100vw;
