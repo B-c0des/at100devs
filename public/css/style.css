@@ -1,13 +1,8 @@
 body{
-    /*  background-image: url("https://downloops.com/wp-content/uploads/edd/2018/03/MosaicBlue-Flowing-Mosaic-Pattern-Free-Download-Motion-Background-Video-Loop-SampleStill.jpg");
-    */
-    
-    /* background-image: url("https://source.unsplash.com/random/900×700/?flowers?random=2"); 
-     */
       background-size: 100%;
       background-size:cover;
       background-position: center center;
-      background-repeat: no-repeat;
+      background: black;
     }
     #bgimage{
       height: 100%;
@@ -66,7 +61,7 @@ body{
       overflow-y: scroll;
       height: 100%;
       width: 100vw;
-      backdrop-filter: blur(90px) saturate(130%) contrast(120%) brightness;
+      backdrop-filter: blur(90px) saturate(130%) contrast(120%) brightness(150%);
       top: 70px;
       display: none;
       
