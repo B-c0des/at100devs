@@ -862,7 +862,7 @@ header .overlay {
     
     @media only screen and (max-width: 900px) {
       body{
-        overflow-x: hidden;
+        
         overflow-y: hidden;
         position: fixed;
       }
@@ -871,37 +871,7 @@ header .overlay {
       }
       #headerTitle{
       letter-spacing: -2px;}
-      #toggle-view-element{
-        padding-left: 3%;
-      padding-right: 3%;
-     padding-top: 10%;
-      }
-      header {
-        display: unset;
-        width:100%;
-      }
-      header video{
-        width:600%;
-      }
-        .container{
-          width:90%;
-        }
-      #x{
-        
-          position: inherit;
-          top: 5px;
-          right: 5%;
-          text-align: center;
-          font-size: 20vw;
-          backdrop-filter: invert(30%);
-          background-color: rgba(255,255,255,.1);
-          width: 10vw;
-          height: 10vw;
-          border-radius: 100px;
-          line-height: 25px;
-          border: 1px solid rgba(255,255,255,.5);
-      
-      }
+
       #x:hover{
         filter:brightness(115%) contrast(106%);
         
