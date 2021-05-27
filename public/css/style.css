@@ -260,7 +260,6 @@ header {
 
 header video {
   position: absolute;
-  top: 50px;
   width: 200%;
   z-index: 0;
  
@@ -866,6 +865,12 @@ header .overlay {
         overflow-x: hidden;
         position: fixed;
       }
+      header{
+        display: unset;
+      }
+      header .overlay {
+position: relative;
+      }
       #header-right{
         z-index: 5;
       }
@@ -878,14 +883,14 @@ header .overlay {
      width:100%
       }
       header {
-        display: unset;
+        
         width:100%;
       }
       header video{
         width:600%;
       }
         .container{
-          width:90%;
+          width:100vw;
         }
       #x{
         
