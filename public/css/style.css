@@ -8,7 +8,6 @@ body{
       background-size:cover;
       background-position: center center;
       background-repeat: no-repeat;
-      background-attachment: fixed;
     }
     #bgimage{
       height: 100%;
@@ -860,6 +859,10 @@ header .overlay {
     
     
     @media only screen and (max-width: 900px) {
+      body{
+        overflow-x: hidden;
+        position: fixed;
+      }
 
       header{
         display: unset;
