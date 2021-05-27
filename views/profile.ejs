@@ -25,7 +25,6 @@
            <div id="img-box">
             <h1> Name: <%= posts2[i].name%></h1>
             <h1>Title: <%= posts2[i].title%></h1>
-              <h1>Caption: <%= posts2[i].caption%></h1>
              </div>
       <!-- </li> -->
     <% } %>
@@ -90,15 +89,11 @@
                   <input type="text" class="form-control" id="title" name="title">
               </div>
               <div class="mb-3">
-                <h1><label for="caption" class="form-label">Caption</label></h1>
-                <textarea class="form-control" id="caption" name="caption"></textarea>
-              </div>
-              <div class="mb-3">
-                <h1><label for="caption" class="form-label">Website</label></h1>
+                <h1><label for="website" class="form-label">Website</label></h1>
                 <textarea class="form-control" id="website" name="website"></textarea>
               </div>
               <div class="mb-3">
-                <h1><label for="caption" class="form-label">Contact</label></h1>
+                <h1><label for="contact" class="form-label">Contact</label></h1>
                 <textarea class="form-control" id="contact" name="contact"></textarea>
               </div>
               <h1><label for="imgUpload" class="form-label">Image</label>
@@ -130,7 +125,7 @@
         
         <div  id="<%=[i]%>"  class="container-view">
           <div id='x' onclick="this.parentNode.style.display = 'none'">x</div>
-          <div style="background-image: url('<%= posts2[i].image%>'); width:100%; z-index: 5; height:45%; background-size: cover; background-position: center;" onclick="document.getElementById('feed').style.display= 'none'" class="<%=[i]%>" id="img"></div>
+          <div style="background-image: url('<%= posts2[i].image%>'); width:100%; z-index: 5; height: 50vh; background-size: cover; background-position: center;" onclick="document.getElementById('feed').style.display= 'none'" class="<%=[i]%>" id="img"></div>
           <div id="add-posts">
           
 
@@ -187,12 +182,11 @@
           
                     <h1> Name: <%= posts2[i].name%></h1>
               <h1>Title: <%= posts2[i].title%></h1>
-                <h1>Caption: <%= posts2[i].caption%></h1>
                 
                 <h1>Contact: <%= posts2[i].contact%></h1>
                 
                 <h1>Website: <%= posts2[i].website%></h1>
-                <div id='across' style='background-image: <%= posts2[i].image%>'> 
+                <div id='across'> 
                 <div>
 
                     <% for(var j=0; j < posts2[i].comments.length; j++) {  %>
@@ -200,7 +194,7 @@
             
                           
                        
-                       <h1 ><%= posts2[i].comments[j]  %></h1> 
+                       <h1 id="comment-box" ><%= posts2[i].comments[j]  %></h1> 
                          
                         
                       </li>
