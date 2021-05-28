@@ -902,7 +902,7 @@ width:0;
         
           position: inherit;
           top: 5px;
-          right: 5%;
+          right: 0;
           text-align: center;
           font-size: 11vw;
           backdrop-filter: invert(30%);
