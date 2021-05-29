@@ -14,6 +14,7 @@ router.post("/createPost", upload.single("file"), postsController.createPost);
 router.put("/likePost/:id", postsController.likePost);
 
 router.put("/commentPost/:id", upload.single("file"), postsController.commentPost);
+router.put("/deleteComment/:id", upload.single("file"), postsController.deleteComment);
 // router.put("/commentPost/:id", async (req,res) =>{      
 //     const comment = new Comment({comments:req.body.comments});
 //     await comment.save();
@@ -22,5 +23,6 @@ router.put("/commentPost/:id", upload.single("file"), postsController.commentPos
 // })  
 
 router.delete("/deletePost/:id", postsController.deletePost);
+
 
 module.exports = router;

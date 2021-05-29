@@ -103,7 +103,7 @@
               </div>
               <h1><label for="imgUpload" class="form-label">Image</label>
                
-                      <img id="output"/>
+                      <img src="https://media.discordapp.net/attachments/745026292264730795/847957377277362226/empty.jpg" id="output"/>
                 <input type="file" accept="image/*" onchange="loadFile(event)" class="form-control" id="file" name="file">
               </div>
               <button type="submit" class="btn btn-primary"  value="Upload" onclick="toggleContent()">Submit</button>
@@ -200,7 +200,24 @@
             
                           
                        
-                       <h1 id="comment-box" ><%= posts2[i].comments[j]  %></h1> 
+                       <h1 id="comment-box" ><h1><%= posts2[i].comments[j]  %></h1>
+                        <h1><%=[j]%></h1>
+    
+                        <div>
+
+                        <%if(posts2[i].user == user.id){ %>
+                          <form
+                            action="/post/deleteComment/<%= posts2[i].comments[j] %>?_method=PUT"
+                            method="POST"
+                            class=""
+                          >
+                            <button class="btn btn-primary fa fa-trash" name="deleteComment" type="submit" onclick="return confirm('Are you sure you want to delete?')"></button>
+                          </form>
+                          <%}%>
+
+                          
+                       </div>
+                      </h1> 
                          
                         
                       </li>
@@ -222,7 +239,7 @@
           enctype="multipart/form-data"
           method="POST"
           >
-          <div class="text-center">
+          <div id="post-comment-box" class="text-center">
             
 
           

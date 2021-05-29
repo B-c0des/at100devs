@@ -39,7 +39,7 @@ module.exports = {
   createPost: async (req, res) => {
     try {
       // Upload image to cloudinary
-      const result = await cloudinary.uploader.upload(req.file.path);
+      const result = await cloudinary.uploader.upload(req.file.path, {"crop":"limit","tags":"samples","width":2000,"height":1000}, function(result) { console.log(result) });
 
       await Post.create({
         name: req.body.name,
@@ -101,6 +101,33 @@ module.exports = {
     }
   
   },
+ 
+  deletePost: async (req, res) => {
+    try {
+      //const post = await Post.find({ comments: req.user.id });
+
+      //{req.body = JSON.parse(Object.keys(req.body)[0])}catch(err){req.body = req.body}
+      // await Post.create({
+      //   comments: req.body.comments})
+      await Post.findOneAndUpdate(
+        { _id: req.params.id },
+        // {comments: req.body.comments},
+        {
+          $push: { comments: req.body.comments
+            //{
+            //  $each: [ { comments: req.body.comments, postedBy: req.user.id } ]
+            //    }
+               },
+        },
+      );
+      console.log(`Comment: ${req.body.comments} By: ${req.user.id}`);
+      //res.redirect(`/post/${req.params.id}`);
+      res.redirect('/profile/')
+    } catch (err) {
+      console.log(err);
+    }
+  
+  },
   deletePost: async (req, res) => {
   
     try {
@@ -116,4 +143,30 @@ module.exports = {
       res.redirect("/profile");
     }
   },
-};
+  deleteComment: async (req, res) => {
+    try {
+      //const post = await Post.find({ comments: req.user.id });
+
+      //{req.body = JSON.parse(Object.keys(req.body)[0])}catch(err){req.body = req.body}
+      // await Post.create({
+      //   comments: req.body.comments})
+      await Post.findOneAndUpdate(
+        { _id: req.params.id },
+        // {comments: req.body.comments},
+        {
+          $pop: { comments: 1
+            //{
+            //  $each: [ { comments: req.body.comments, postedBy: req.user.id } ]
+            //    }
+               },
+        },
+      );
+      console.log(`Comment: ${req.body.comments} By: ${req.user.id}`);
+      //res.redirect(`/post/${req.params.id}`);
+      res.redirect('/profile/')
+    } catch (err) {
+      console.log(err);
+    }
+  
+  },
+}
