@@ -18,6 +18,8 @@
       
      -->
      <% for(var i=0; i<posts2.length; i++) {%>
+       
+      <%if(posts2[i].user == user.id){ %>
       <!-- <li class=""> -->
         
           <img onclick="document.getElementById('feed').style.display= 'none';" class="<%=[i]%>" id="img" src="<%= posts2[i].image%>"  >
@@ -28,6 +30,7 @@
               <!-- <h1>Caption: <%= posts2[i].caption%></h1> -->
              </div>
       <!-- </li> -->
+    <% } %>
     <% } %>
 <!--     
       <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?person?random=1">
@@ -125,8 +128,9 @@
   <section id="main">
     <div id="feed" onclick="var scrolly = window.pageYOffset"> -->
   <!-- <div class="row justify-content-center mt-5"> -->
-
+   
       <% for(var i=0; i<posts2.length; i++) {%>
+        
         <div id='bgimage'>
         <div  id="<%=[i]%>"  class="container-view">
           <div id='x' onclick="this.parentNode.style.display = 'none'">x</div>
