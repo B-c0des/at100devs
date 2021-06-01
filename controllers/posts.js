@@ -69,6 +69,7 @@ module.exports = {
       console.log("Likes +1");
       //res.redirect(`/post/${req.params.id}`);
       console.log(req.body.likes)
+
       res.redirect('/profile/')
     } catch (err) {
       console.log(err);
@@ -86,13 +87,10 @@ module.exports = {
         { _id: req.params.id },
         // {comments: req.body.comments},
         {
-          $push: { comments: req.body.comments
-            //{
-            //  $each: [ { comments: req.body.comments, postedBy: req.user.id } ]
-            //    }
-               },
+          $push:   { comments: {comments: req.body.comments, postedBy: req.user.id }} 
         },
       );
+      
       console.log(`Comment: ${req.body.comments} By: ${req.user.id}`);
       //res.redirect(`/post/${req.params.id}`);
       res.redirect('/profile/')
@@ -102,32 +100,6 @@ module.exports = {
   
   },
  
-  deletePost: async (req, res) => {
-    try {
-      //const post = await Post.find({ comments: req.user.id });
-
-      //{req.body = JSON.parse(Object.keys(req.body)[0])}catch(err){req.body = req.body}
-      // await Post.create({
-      //   comments: req.body.comments})
-      await Post.findOneAndUpdate(
-        { _id: req.params.id },
-        // {comments: req.body.comments},
-        {
-          $push: { comments: req.body.comments
-            //{
-            //  $each: [ { comments: req.body.comments, postedBy: req.user.id } ]
-            //    }
-               },
-        },
-      );
-      console.log(`Comment: ${req.body.comments} By: ${req.user.id}`);
-      //res.redirect(`/post/${req.params.id}`);
-      res.redirect('/profile/')
-    } catch (err) {
-      console.log(err);
-    }
-  
-  },
   deletePost: async (req, res) => {
   
     try {

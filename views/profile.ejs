@@ -130,7 +130,7 @@
         <div id='bgimage'>
         <div  id="<%=[i]%>"  class="container-view">
           <div id='x' onclick="this.parentNode.style.display = 'none'">x</div>
-          <div style="background-image: url('<%= posts2[i].image%>'); width:100%; z-index: 5; height: 50vh; background-size: cover; background-position: center;" onclick="document.getElementById('feed').style.display= 'none'" class="<%=[i]%>" id="img"></div>
+          <div style="background-image: url('<%= posts2[i].image%>'); width:100%; z-index: 5; height: 50vh; background-size: cover; background-position: center; border-radius: 20px 20px 0px 0px; margin-top:2%;" onclick="document.getElementById('feed').style.display= 'none'" class="<%=[i]%>" id="img"></div>
           <div id="add-posts">
           
 
@@ -152,7 +152,7 @@
           <form
           class="row-6 justify-content-between  "
           action="/post/likePost/<%= posts2[i]._id %>?_method=PUT"
-          method="POST"
+          method="PUT"
         >
        
           <button class="btn btn-primary fa fa-heart" type="submit"> <%= posts2[i].likes %></button>
@@ -195,33 +195,18 @@
                 <div id='across'> 
                 <div>
 
-                    <% for(var j=0; j < posts2[i].comments.length; j++) {  %>
+                          <% for(var j=0; j < posts2[i].comments.length; j++) {  %>
 
             
                           
                        
-                       <h1 id="comment-box" ><h1><%= posts2[i].comments[j]  %></h1>
-                        <!-- <h1><%=[j]%></h1> -->
-<!--     
-                        <div>
-
-                        <%if(posts2[i].user == user.id){ %>
-                          <form
-                            action="/post/deleteComment/<%= posts2[i].comments[j] %>?_method=PUT"
-                            method="POST"
-                            class=""
-                          >
-                            <button class="btn btn-primary fa fa-trash" name="deleteComment" type="submit" onclick="return confirm('Are you sure you want to delete?')"></button>
-                          </form>
-                          <%}%>
-
-                          
-                       </div> -->
-                      </h1> 
+                            <h1 id="comment-box" ><%= posts2[i].comments[j].comments  %></h1> 
+                              
+                             
                          
-                        
-                      </li>
-                    <% } %>
+                         <% } %>
+                          
+                       </div>
 
          <!-- <%= posts2[i].comments  ? posts2[i].comments[0] : 'No comments added yet.'  %>  -->
         </div>

@@ -53,6 +53,8 @@ app.use(
   })
 );
 
+const db = mongoose.connection
+
 // Passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
@@ -67,6 +69,38 @@ app.use("/post", postRoutes);
 //app.use("/guest", guest);
 
 //Server Running
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT, () => {
   console.log(`Server is running on ${process.env.PORT}, you better catch it!`);
+  
+
 });
+
+
+db.once("open", () => {
+console.log("DB connected...");
+const msgCollection = db.collection("BUBs");
+//console.log(msgCollection)
+const changeStream = msgCollection.watch();
+
+// changeStream.on("change", (change) => 
+//     console.log('change')
+// );
+
+
+var filter = [{
+  $match: {
+      $and: [
+          { "updateDescription.updatedFields.SomeFieldA": { $exists: true } },
+          { operationType: "update" }]
+  }
+}];
+
+var options = { fullDocument: 'updateLookup' };
+db.collection('BUBs').watch(filter, options).on('change', data => 
+{
+  console.log(new Date(), data);
+});
+
+
+})
+  
