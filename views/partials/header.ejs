@@ -19,6 +19,7 @@
       <div id="header-right">
         <a href="/logout" class=""><button>Logout</button></a>
         <button onclick="toggleContent()" class="">Add Post</button>
+        <button onclick="toggleContent1()" class="">Toggle My Posts</button>
         
     </div>
         <div id="login-logout-box">
@@ -26,7 +27,7 @@
           
             <span><strong>User Name</strong>: <%- user?.userName && user.userName.trim().length ? `<h1>Hello ${user.userName.trim()}</h1>` : '<h1>Hello Guest</h1>' %></span>
             <span><strong>Email</strong>: <%- user?.email && user.email.trim().length ? `<h1>${user.email.trim()}</h1>` : '<h1>Hello Guest</h1>' %></span>
-        
+            
           </div>
       </div>
 

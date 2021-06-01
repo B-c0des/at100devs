@@ -7,15 +7,14 @@ html,body{
       background-position: center center;
       background: black;
     }
-
-    .bgimage{
-    background-color: red;
-    position: absolute;
-    height: 150%;
-    width: 100%;
-    margin-top: -100vh;
+    #img-single-user{
       display: none;
     }
+    #img-multi-user{
+      display: block;
+    }
+
+
     #output{
       width: 100%;
     }
@@ -281,6 +280,7 @@ header .overlay {
 }
 
 @media (pointer: coarse) and (hover: none) {
+
   header {
     width:100%;
   }
@@ -868,7 +868,9 @@ header .overlay {
     
     
     @media only screen and (max-width: 900px) {
-      
+      #img-single-user{
+        display: none;
+      }
       h1{
         font-size: 1rem;
       }
@@ -966,8 +968,6 @@ width:0;
         
       }
       #feed img{
-        
-        display:flex;
         margin:.5% auto;
         justify-content:center;
         
@@ -978,6 +978,7 @@ width:0;
         object-fit: cover;
         
       }
+      
       
     /*  #imageDisplay img
       display:flex;

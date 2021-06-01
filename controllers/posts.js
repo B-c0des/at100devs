@@ -51,7 +51,6 @@ module.exports = {
         contact: req.body.contact,
         likes: 0,
         user: req.user.id,
-        comments: {comments: '', postedBy: ''},
       });
       console.log("Post has been added!");
       res.redirect("/profile");

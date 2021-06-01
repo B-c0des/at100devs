@@ -29,7 +29,7 @@ const PostSchema = new mongoose.Schema({
     required: false,
   },
   comments: {
-    type: Object,
+    type: Array,
     required: false,
   },
   likes: {

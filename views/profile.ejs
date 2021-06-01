@@ -1,9 +1,9 @@
 
   <%- include('partials/header') -%>
 
-
+  
   <div id="mainContainer">
-          
+ 
           
     <div id="secondContainer">
           
@@ -18,20 +18,14 @@
       
      -->
      <% for(var i=0; i<posts2.length; i++) {%>
-       
       <%if(posts2[i].user == user.id){ %>
-      <!-- <li class=""> -->
+          <img onclick="document.getElementById('feed').style.display= 'none';" class="<%=[i]%>" id="img-single-user" src="<%= posts2[i].image%>"  >
+      <% } %>
+
         
-          <img onclick="document.getElementById('feed').style.display= 'none';" class="<%=[i]%>" id="img" src="<%= posts2[i].image%>"  >
-           <!-- </li> -->
-           <div id="img-box">
-            <h1> Name: <%= posts2[i].name%></h1>
-            <h1>Title: <%= posts2[i].title%></h1>
-              <!-- <h1>Caption: <%= posts2[i].caption%></h1> -->
-             </div>
-      <!-- </li> -->
-    <% } %>
-    <% } %>
+            <img onclick="document.getElementById('feed').style.display= 'none';" class="<%=[i]%>" id="img-multi-user" src="<%= posts2[i].image%>"  >
+
+        <% } %>
 <!--     
       <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?person?random=1">
       <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?portrait?random=2">
@@ -134,7 +128,7 @@
         <div id='bgimage'>
         <div  id="<%=[i]%>"  class="container-view">
           <div id='x' onclick="this.parentNode.style.display = 'none'">x</div>
-          <div style="background-image: url('<%= posts2[i].image%>'); width:100%; z-index: 5; height: 50vh; background-size: cover; background-position: center; border-radius: 20px 20px 0px 0px; margin-top:2%;" onclick="document.getElementById('feed').style.display= 'none'" class="<%=[i]%>" id="img"></div>
+          <div style="background-image: url('<%= posts2[i].image%>'); width:100%; z-index: 5; height: 50vh; background-size: cover; background-position: center; border-radius: 20px 20px 0px 0px; margin-top:2%;" class="<%=[i]%>" id="img"></div>
           <div id="add-posts">
           
 
@@ -153,14 +147,14 @@
     <%}%>
 
     
-          <form
+          <!-- <form
           class="row-6 justify-content-between  "
           action="/post/likePost/<%= posts2[i]._id %>?_method=PUT"
           method="PUT"
         >
        
           <button class="btn btn-primary fa fa-heart" type="submit"> <%= posts2[i].likes %></button>
-        </form>
+        </form> -->
         
 
 
@@ -217,29 +211,29 @@
           </div>
           
           
+        <form  class="col-10 w-100" 
+        action="/post/commentPost/<%= posts2[i]._id %>?_method=PUT"  
+        enctype="multipart/form-data"
+        method="POST"
+        >
+        <div id="post-comment-box" class="text-center">
+          
+
+        
+        
+
+
+
+          <input type="text" class="form-control" name="comments" id='sendComment'></input>
+        </div>
+      <button type="submit" class="btn btn-primary text-center w-100 rounded-bottom" value="comments" >Post comment!</button>
+                  </form>
           </ul>
 
 
       </div>  
     
 
-        <form  class="col-10 w-100" 
-          action="/post/commentPost/<%= posts2[i]._id %>?_method=PUT"  
-          enctype="multipart/form-data"
-          method="POST"
-          >
-          <div id="post-comment-box" class="text-center">
-            
-
-          
-          
-
-
-
-            <input type="text" class="form-control" name="comments" id='sendComment'></input>
-          </div>
-        <button type="submit" class="btn btn-primary text-center w-100 rounded-bottom" value="comments" >Post comment!</button>
-                    </form>
 
                   
 

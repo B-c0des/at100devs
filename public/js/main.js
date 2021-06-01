@@ -55,11 +55,25 @@ let output = document.getElementById('output');
         function dosomething(){
         document.getElementById('feed').style.display= 'none'
         }
-        
-        
-        
-        
         }
+
+        function toggleContent1() {
+          
+          let singleUser = document.querySelectorAll("#img-single-user");
+          
+          for(let i = 0; i < singleUser.length; i++){ 
+            singleUser[i].style.display == "none" ? singleUser[i].style.display = "block" : 
+            singleUser[i].style.display = "none"; 
+          }
+
+          let multiUser = document.querySelectorAll("#img-multi-user");
+          
+          for(let i = 0; i < multiUser.length; i++){ 
+          multiUser[i].style.display == "block" ? multiUser[i].style.display = "none" : 
+          multiUser[i].style.display = "block"; 
+          }
+          }
+
         
         function toggleViews() {
         // Get the DOM reference
@@ -106,7 +120,7 @@ let output = document.getElementById('output');
         
         }
         
-        images = document.querySelectorAll('#img')
+        images = document.querySelectorAll('#img-multi-user, #img-single-user')
         console.log(images)
         
         for (var i = 0 ; i < images.length; i++) {
