@@ -87,19 +87,16 @@ module.exports = {
         { _id: req.params.id },
         // {comments: req.body.comments},
         {
-          $push:   { comments: {comments: req.body.comments, postedBy: req.user.id }} 
+          $push:   { comments: {comments: req.body.comments, postedBy: req.user._id  }} 
         },
       );
-      
-      console.log(`Comment: ${req.body.comments} By: ${req.user.id}`);
-      //res.redirect(`/post/${req.params.id}`);
-      res.redirect('/profile/')
-    } catch (err) {
-      console.log(err);
-    }
-  
-  },
- 
+    console.log("Likes +1");
+    console.log(req.user._id)
+    res.redirect(`/profile/`);
+  } catch (err) {
+    console.log(err);
+  }
+},
   deletePost: async (req, res) => {
   
     try {

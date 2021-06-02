@@ -312,6 +312,23 @@ header .overlay {
   width: 100%;
   box-shadow: 0px 30px 40px 8px rgba(00,00,00,.9);
 }
+#user-info{
+  display:flex;
+  justify-content: space-evenly;
+  position: fixed;
+  flex-direction: row;
+  left:0px;
+  top:0px;
+  width:100%;    
+  height: 55px;
+  background-color:transparent;
+  z-index: 2;
+  backdrop-filter: blur(50px) brightness(140%)contrast(90%)invert(20%);
+  
+}
+#email-label{
+  font-size: 2vw;
+}
     .container{
       
       
@@ -424,6 +441,7 @@ header .overlay {
       font-size: 2vw;
       color: white;
       margin-top: -25px;
+
     }
     #comment-container-backdrop{
       overflow-y: scroll;
@@ -654,7 +672,7 @@ header .overlay {
       background-color: transparent;
       
       margin:0 auto;
-     font-size: calc(12px + .5vw);
+     /* font-size: calc(12px + .5vw); */
        box-shadow: inset 0 0 5px white;
       transition: all .2s ease-in-out;
       
@@ -689,20 +707,7 @@ header .overlay {
       background-color:transparent;
       z-index: 2;
     }
-    #user-info{
-      display:flex;
-      justify-content: space-evenly;
-      position: fixed;
-      flex-direction: row;
-      left:0px;
-      top:0px;
-      width:100%;
-      height:55px;
-      background-color:transparent;
-      z-index: 2;
-      backdrop-filter: blur(50px) brightness(140%)contrast(90%)invert(20%);
-      
-    }
+
     
     
     #headerTitle{
@@ -881,6 +886,20 @@ header .overlay {
     
     
     @media only screen and (max-width: 900px) {
+      #user-info{
+        display:flex;
+        justify-content: space-evenly;
+        position: fixed;
+        flex-direction: row;
+        left:0px;
+        top:0px;
+        width:100%;    
+        height: 90px;
+        background-color:transparent;
+        z-index: 2;
+        backdrop-filter: blur(50px) brightness(140%)contrast(90%)invert(20%);
+        
+      }
       #img-single-user{
         display: none;
       }
@@ -1052,7 +1071,7 @@ width:0;
       #mainContainer{
        width:98%;
        
-       
+       margin-top: 30px;
       height:100%;
       max-width:100%;
       
