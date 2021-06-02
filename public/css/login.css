@@ -1,5 +1,4 @@
-
-html,body{
+body{
     
     height:100%;
     margin:0;
@@ -20,6 +19,7 @@ html,body{
     border-radius: 40px;
     box-shadow: 1px 15px 30px 2px rgba(00,00,00,.9);
     padding-bottom: 20px;
+    margin-top:10vh;
 }
 button{
     border-radius: 50px;
