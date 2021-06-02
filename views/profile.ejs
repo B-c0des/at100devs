@@ -102,11 +102,12 @@
                
                       <img id="output"/>
                 <input type="file" accept="image/*" onchange="loadFile(event)" class="form-control" id="file" name="file">
-              </div>
+              
               <button type="submit" class="btn btn-primary"  value="Upload" onclick="toggleContent()">Submit</button>
             </form>
             <button onclick="toggleContent()" type="none" class="btn btn-primary"  value="cancel">Cancel</button>
           </div>
+        </div>
       </div>
 
        
@@ -178,18 +179,18 @@
 
 
         
-      <div class="col-14">
+      <div id="user-info1">
         
-        <ul class="row list-unstyled">
           
           
-                    <h1> Name: <%= posts2[i].name%></h1>
-              <h1>Title: <%= posts2[i].title%></h1>
+                    <span> Name: <%= posts2[i].name%></span>
+              <span>Title: <%= posts2[i].title%></span>
                 <!-- <h1>Caption: <%= posts2[i].caption%></h1> -->
                 
-                <h1>Contact: <%= posts2[i].contact%></h1>
+                <span>Contact: <%= posts2[i].contact%></span>
                 
-                <h1>Website: <%= posts2[i].website%></h1>
+                <span>Website: <%= posts2[i].website%></span>
+                </div>
                 <div id='across'> 
                 <div>
 
@@ -205,12 +206,11 @@
                          <% } %>
                           
                        </div>
+                       
 
          <!-- <%= posts2[i].comments  ? posts2[i].comments[0] : 'No comments added yet.'  %>  -->
         </div>
-          </div>
-          
-          
+           
         <form  class="col-10 w-100" 
         action="/post/commentPost/<%= posts2[i]._id %>?_method=PUT"  
         enctype="multipart/form-data"
@@ -228,7 +228,10 @@
         </div>
       <button type="submit" class="btn btn-primary text-center w-100 rounded-bottom" value="comments" >Post comment!</button>
                   </form>
-          </ul>
+        
+          </div>
+          
+       
 
 
       </div>  
