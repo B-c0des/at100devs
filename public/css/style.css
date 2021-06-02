@@ -16,7 +16,9 @@ html,body{
 
 
     #output{
-      width: 100%;
+      display:flex;
+      width: 50%;
+      margin: 0 auto;
     }
     .stop-scrolling {
       height: 100%;
@@ -96,6 +98,9 @@ html,body{
       color:black;
       box-shadow: inset 0 0 10px white;
       
+    }
+    #img-label{
+      width: 100%;
     }
     .container-view img{
       height: 30vw;
