@@ -10,7 +10,7 @@ function addText() {
 
 var img = new Image()
 //img.src= 'https://i.ytimg.com/vi/qAbHMwzGfPc/maxresdefault.jpg'
-img.src= 'https://source.unsplash.com/random/900×700/?mountains?random=1'
+img.src= 'https://source.unsplash.com/random/1600×1200/?patterns?random=1'
 document.body.background = img.src
 
 
@@ -46,7 +46,7 @@ let output = document.getElementById('output');
       // })
       function toggleContent() {
         // Get the DOM reference
-        var contentId = document.getElementById("toggle-view-element");
+        let contentId = document.getElementById("add-profile");
         // Toggle 
         contentId.style.display == "block" ? contentId.style.display = "none" : 
         contentId.style.display = "block"; 
@@ -55,7 +55,31 @@ let output = document.getElementById('output');
         function dosomething(){
         document.getElementById('feed').style.display= 'none'
         }
+        
         }
+
+
+
+        function updateProfile() {
+          // Get the DOM reference
+ 
+          var contentId = document.getElementById("update-profile");
+          // Toggle 
+          contentId.style.display == "block" ? contentId.style.display = "none" : 
+          contentId.style.display = "block"; 
+          document.querySelectorAll('#img').onclick = dosomething
+          
+          function dosomething(){
+          document.getElementById('feed').style.display= 'none'
+          }
+          
+          }
+
+
+
+
+
+
         document.getElementById('phone').addEventListener('input', function (e) {
           var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
           e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');

@@ -18,13 +18,15 @@
       </header>
       <div id="header-right">
         <a href="/logout" class=""><button>Logout</button></a>
-        <button onclick="toggleContent()" class="">Add Post</button>
-        <button onclick="toggleContent1()" class="">Toggle My Posts</button>
+       
+        <%- post.length <= 0 ? ` <button onclick="toggleContent()" class="">Add Profile</button>` : '' %></span>
+        <%- post.length > 0 ? `<button onclick="updateProfile()" class="">Update Profile</button>` : '' %></span>
+        <button onclick="toggleContent1()" class="">Toggle My Profile</button>
         
     </div>
         <div id="login-logout-box">
         
-          
+             <h1><%=  %></h1>
             <span><strong>User Name</strong>: <%- user?.userName && user.userName.trim().length ? `<h1>Hello ${user.userName.trim()}</h1>` : '<h1>Hello Guest</h1>' %></span>
             <span><strong>Email</strong>: <%- user?.email && user.email.trim().length ? `<h1  id='email-label'>${user.email.trim()}</h1>` : '<h1>Hello Guest</h1>' %></span>
             

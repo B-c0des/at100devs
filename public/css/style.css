@@ -216,7 +216,7 @@ body{
      padding: 0px 0px 0px 0px;
      
     }
-    #toggle-view-element{
+    #add-profile{
     position: fixed;
     backdrop-filter: blur(80px);
     width: 100%;
@@ -229,9 +229,20 @@ body{
     display: none;
     overflow-y: scroll;
     }
-    /* .toggleDisplay{
+    #update-profile{
+      position: fixed;
+      backdrop-filter: blur(80px);
+      width: 100%;
+      height: 100%;
+      margin-top: 0;
+      padding-left: 20%;
+      padding-right: 20%;
+      padding-top: 4%;
+      top: 0;
       display: none;
-    } */
+      overflow-y: scroll;
+      }
+  
     .first {
       position: fixed;
       backdrop-filter: blur(10px);
