@@ -11,7 +11,7 @@ body{
 
 .container{
     justify-content: center;
-    width:50%;
+    width:80%;
     backdrop-filter: blur(25px);
     height:auto;
     align-items: center;
