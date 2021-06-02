@@ -183,17 +183,13 @@
         
           
           
-                    <span> Name:<br> 
-                      <h6><%= posts2[i].name%></h6>
-                    </span>
-              <span>Title:<br> 
-                <h6><%= posts2[i].title%></h6>
-              </span>
-                <!-- <h1>Caption: <%= posts2[i].caption%></h1> -->
-                
-                <span>Contact:<br> <h6><%= posts2[i].contact%></h6></span>
-                
-                <span>Website:<br> <h6><%= posts2[i].website%></h6></span>
+                     
+                      <h6><%= posts2[i].name ?  'Name: ' + posts2[i].name : '' %></h6>
+                      <h6><%= posts2[i].title ?  'Title: ' + posts2[i].title : '' %></h6>
+                      
+                      <h6><%= posts2[i].contact ?  'Contact: ' + posts2[i].contact : '' %></h6>
+                      <h6><%= posts2[i].website ?  'Website: ' + posts2[i].website : '' %></h6>
+             
                 </div>
                 <div id='across'> 
                 <div>
