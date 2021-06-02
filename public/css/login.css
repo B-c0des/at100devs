@@ -1,5 +1,6 @@
 
 html,body{
+    
     height:100%;
     margin:0;
     padding:0;
@@ -10,7 +11,8 @@ html,body{
       }
 
 .container{
-    margin-top:5vw;
+    display: flex;
+    justify-content: center;
     width:50%;
     backdrop-filter: blur(25px);
     height:auto;
