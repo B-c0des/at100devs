@@ -137,7 +137,7 @@ let loadFile2 = function(e) {
                   let feed = document.getElementById("feed");
                   let myProfile = document.getElementById("my-theme")
                   // Toggle 
-                  myProfile.style.display == "none" ? (myProfile.style.display = "flex") && (feed.style.display = "none") : 
+                  myProfile.style.display == "none" ? (myProfile.style.display = "flex") : 
                   (myProfile.style.display = "none") && (feed.style.display = "flex") ; 
                   
     
