@@ -131,6 +131,18 @@ let loadFile2 = function(e) {
   
                 }
 
+                function selectTheme() {
+                  // Get the DOM reference
+         
+                  let feed = document.getElementById("feed");
+                  let myProfile = document.getElementById("my-theme")
+                  // Toggle 
+                  myProfile.style.display == "none" ? (myProfile.style.display = "flex") && (feed.style.display = "none") : 
+                  (myProfile.style.display = "none") && (feed.style.display = "flex") ; 
+    
+                  }
+
+
               function myChat() {
                 // Get the DOM reference
        
@@ -294,9 +306,21 @@ let loadFile2 = function(e) {
           
           img.src= `https://source.unsplash.com/random/1600×1200/?${input}?random=1`
           document.body.background = img.src
+
+          img.onload = function () {OnImageLoaded (this)};
+          function OnImageLoaded (img) {
+
+            let myProfile = document.getElementById("my-theme")
+            // Toggle 
+            myProfile.style.display == "block" ? (myProfile.style.display = "none") && (feed.style.display = "none") : 
+            (myProfile.style.display = "none") && (feed.style.display = "none") ;
+            
+          }
       }
       document.getElementById('userInput').onkeydown = function(e){
         if(e.keyCode == 13){
           returnText()
         }
      };
+
+

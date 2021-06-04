@@ -267,6 +267,15 @@ body{
           z-index: 20;
           display: none;
         }
+        #my-theme{
+          width: 100vw;
+          height: 100vh;
+          margin-top: 0;
+          padding-top: 4%;
+          top: 0;
+          z-index: 20;
+          display: none;
+        }
         #myProfile{
           top:0px;
         }
@@ -408,6 +417,26 @@ header .overlay {
   overflow-x: hidden;
 }
 #alert div{
+  padding-left:30%;
+  padding-right:30%;
+  padding-top: 20%;;
+  text-align: center;
+  backdrop-filter: blur(20px) invert(30%);
+  border-radius: 40px;
+  
+  overflow-y: hidden;
+  overflow-x: hidden;
+  box-shadow: 0px 20px 100px 8px rgba(00,00,00,.9);
+}
+#alert1{
+
+  width:100%;
+  height:100%;
+  
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+#alert1 div{
   padding-left:30%;
   padding-right:30%;
   padding-top: 20%;;
@@ -932,6 +961,7 @@ header .overlay {
       font-size: calc(12px + .7vw);
       image-rendering: pixelated;
       margin: 0 auto;
+      text-align: center;
     }
     #feed img{
       position: relative;
@@ -1053,6 +1083,22 @@ header .overlay {
         backdrop-filter: blur(50px) brightness(140%)contrast(90%)invert(20%);
         
       }
+      #add-profile{
+        position: fixed;
+        backdrop-filter: blur(80px);
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+        padding-top: 0%;
+        top: 0;
+        z-index: 20;
+        display: none;
+        overflow-y: scroll;
+        padding-right: 0%;
+        padding-left: 0%;
+        
+        }
+  
       #img-single-user{
         display: none;
       }
@@ -1349,15 +1395,3 @@ width:0;
       padding-left: 0%;
       padding-right: 0%;
     }
-    #add-profile{
-      position: fixed;
-      backdrop-filter: blur(80px);
-      width: 100%;
-      height: 100%;
-      margin-top: 0;
-      padding-top: 0%;
-      top: 0;
-      z-index: 20;
-      display: none;
-      overflow-y: scroll;
-      }
