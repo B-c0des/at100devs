@@ -1,5 +1,4 @@
 body{
-  background-size: 100%;
   height: 100vh;
   background-position: bottom;
   background-color: black;
@@ -1053,7 +1052,6 @@ header .overlay {
 
     @media only screen and (max-width: 900px) {
       body{
-        background-size: 100%;
         height: 100vh;
         background-position: bottom;
         background-color: black;
