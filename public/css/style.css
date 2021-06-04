@@ -294,6 +294,7 @@ body{
         
         }
         #show-feed{
+          display: flex;
         }
         #my-profile .container-view{
           display: flex;

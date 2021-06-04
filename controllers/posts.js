@@ -135,11 +135,11 @@ await Post.findOneAndUpdate(
         { _id: req.params.id },
         // {comments: req.body.comments},
         {
-          $push:   { comments: {comments: req.body.comments, postedBy: req.user._id  }} 
+          $push:   { comments: {comments: req.body.comments, postedBy: req.body.image  }} 
         },
       );
     console.log("Likes +1");
-    console.log(req.user._id)
+    console.log(req.body)
     res.redirect(`/profile/`);
   } catch (err) {
     console.log(err);
