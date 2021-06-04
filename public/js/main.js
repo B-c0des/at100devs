@@ -312,8 +312,10 @@ let loadFile2 = function(e) {
           function OnImageLoaded (img) {
 
             let myTheme = document.getElementById("my-theme")
+            let feedy = document.getElementById("feed")
+            feedy.style.display = "flex"
             // Toggle 
-            myTheme.style.display == "block" ? (myTheme.style.display = "none") && (myTheme.style.display = "none") : 
+            myTheme.style.display == "block" ? (myTheme.style.display = "none") && (feedy.style.display = "flex") : 
             (myTheme.style.display = "none") && (myTheme.style.display = "none") ;
             
           }
