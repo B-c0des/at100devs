@@ -771,6 +771,8 @@ header .overlay {
       border: 1px solid rgba(#fff,.15);
       padding-right: 1%;
       padding-left: 1%;;
+      margin-bottom: 30px;
+      border-radius: 30px;
     
       
      /* -webkit-mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
@@ -1183,15 +1185,10 @@ width:0;
         
       }
       .container-view{
-        width:90%;
+        width:100%;
         padding-left: 0px;
         padding-right: 0px;
         padding-top: 30px;
-        border: 10px solid rgba(255,255,255,.5);
-        background:#333c4b;
-border:2px solid red;
-outline:2px #fff solid;
-outline-offset:-6px;
       }
       .container-view img{
         width: 100%;
