@@ -1029,6 +1029,17 @@ header .overlay {
         background-color: black;
       
           }
+          #myDropdown{
+            margin-left: -50vw;
+          }
+          
+      #userInput{
+        width:100%;
+        height:40px;
+      }
+      #dropdown-button{
+        width:100%;
+      }
       #user-info{
         display:flex;
         justify-content: space-between;
@@ -1165,6 +1176,7 @@ width:0;
         height:500px;
         object-fit: cover;
         
+      };
       }
       
       
