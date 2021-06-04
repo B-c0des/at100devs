@@ -139,6 +139,7 @@ let loadFile2 = function(e) {
                   // Toggle 
                   myProfile.style.display == "none" ? (myProfile.style.display = "flex") && (feed.style.display = "none") : 
                   (myProfile.style.display = "none") && (feed.style.display = "flex") ; 
+                  
     
                   }
 
@@ -310,10 +311,10 @@ let loadFile2 = function(e) {
           img.onload = function () {OnImageLoaded (this)};
           function OnImageLoaded (img) {
 
-            let myProfile = document.getElementById("my-theme")
+            let myTheme = document.getElementById("my-theme")
             // Toggle 
-            myProfile.style.display == "block" ? (myProfile.style.display = "none") && (feed.style.display = "none") : 
-            (myProfile.style.display = "none") && (feed.style.display = "none") ;
+            myTheme.style.display == "block" ? (myTheme.style.display = "none") && (myTheme.style.display = "none") : 
+            (myTheme.style.display = "none") && (myTheme.style.display = "none") ;
             
           }
       }
