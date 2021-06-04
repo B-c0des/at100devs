@@ -1,66 +1,14 @@
 
   <%- include('partials/header') -%>
-
+  <%- include('myChat') -%>
   
-  <div id="mainContainer">
+  <div id="show-feed">
  
-          
-    <div id="secondContainer">
-          
+  
+       <%- include('feed') -%>
 
- 
-  <section id="main">
-    <div id="feed" onclick="var scrolly = window.pageYOffset; console.log(scrolly) " >
-     <!-- <img value='1' id="img" src="https://www.birthdaymessagesstatus.com/wp-content/uploads/2018/08/Stylish-Attitude-Girl-Images-for-FB-Profile-Pic.jpg">
-      <img value='2' id="img" src="https://thumbs.dreamstime.com/b/real-normal-person-portrait-22299720.jpg">
-      <img value='3' id="img" src="https://piximus.net/media/6621/portraits-of-people-87.jpg">
-      <img value='4' id="img" src="https://4.bp.blogspot.com/_cG2SV6Pnny4/SVEMe3VpLEI/AAAAAAAABic/tysh9iiyGuQ/s400/12_b.jpg">
-      
-     -->
-     <% for(var i=0; i<posts2.length; i++) {%>
-      <%if(posts2[i].user == user.id){ %>
-          <img onclick="document.getElementById('feed').style.display= 'none';" class="<%=[i]%>" id="img-single-user" src="<%= posts2[i].image%>"  >
-      <% } %>
 
-        
-            <img onclick="document.getElementById('feed').style.display= 'none';" class="<%=[i]%>" id="img-multi-user" src="<%= posts2[i].image%>"  >
-
-        <% } %>
-<!--     
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?person?random=1">
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?portrait?random=2">
-      
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?portrait?random=3">
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?portrait?random=4">
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?human?random=5">
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?man?random=6">
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?woman?random=7">
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?friends?random=8">
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?wedding?random=9">
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?bride?random=10">
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?groom?random=11">
-      
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?hiking?random=3">
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?boating?random=4">
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?group?random=5">
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?event?random=6">
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?gathering?random=7">
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?person?random=8">
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?person?random=9">
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?person?random=10">
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?person?random=11">
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?person?random=12">
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?person?random=13">
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?person?random=14">
-      <img value='4' id="img" src="https://source.unsplash.com/random/900×700/?person?random=15"> -->
-      
-     
-
-    </div>
      </div>
-  </div>
-
-
 
 
 
@@ -80,11 +28,11 @@
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
               <div class="mb-3">
                 <h1><label for="name" class="form-label">Name</label></h1>
-                <input type="text" class="form-control" id="name" name="name">
+                <input type="text" class="form-control" id="name" name="name" required>
             </div>
             <div class="mb-3">
               <h1><label for="title" class="form-label">Title</label></h1>
-                  <input type="text" class="form-control" id="title" name="title">
+                  <input type="text" class="form-control" id="title" name="title" required>
               </div>
               <!-- <div class="mb-3">
                 <h1><label for="stack" class="form-label">Stack</label></h1>
@@ -92,11 +40,11 @@
               </div> -->
               <div class="mb-3">
                 <h1><label for="website" class="form-label">Website</label></h1>
-                <textarea class="form-control" id="website" name="website"></textarea>
+                <textarea class="form-control" id="website" name="website" required></textarea>
               </div>
               <div class="mb-3">
                 <h1><label for="contact" class="form-label">Phone Number</label></h1>
-                 <input type="text" class="form-control" id="phone" name="contact" placeholder="(000) 000-0000"/>
+                 <input type="text" class="form-control" id="phone" name="contact" required placeholder="(000) 000-0000"/>
               </div>
               <h1><label for="imgUpload" id="img-label" class="form-label">Image</label>
                       <img id="output"/>
@@ -113,14 +61,14 @@
         
           <div id="add-posts1">
             <h1 class="text-center">Update Profile</h1>
-            <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+            <form action="/post/updateProfile/<%= user._id %>?_method=PUT" enctype="multipart/form-data" method="POST">
               <div class="mb-3">
                 <h1><label for="name" class="form-label">Name</label></h1>
-                <input type="text" class="form-control" id="name" name="name">
+                <input type="text" class="form-control" id="name" name="name" required>
             </div>
             <div class="mb-3">
               <h1><label for="title" class="form-label">Title</label></h1>
-                  <input type="text" class="form-control" id="title" name="title">
+                  <input type="text" class="form-control" id="title" name="title" required>
               </div>
               <!-- <div class="mb-3">
                 <h1><label for="stack" class="form-label">Stack</label></h1>
@@ -128,22 +76,23 @@
               </div> -->
               <div class="mb-3">
                 <h1><label for="website" class="form-label">Website</label></h1>
-                <textarea class="form-control" id="website" name="website"></textarea>
+                <textarea class="form-control" id="website" name="website" required></textarea>
               </div>
               <div class="mb-3">
                 <h1><label for="contact" class="form-label">Phone Number</label></h1>
-                 <input type="text" class="form-control" id="phone" name="contact" placeholder="(000) 000-0000"/>
+                <input type="text" class="form-control" id="phone1" name="contact" required placeholder="(000) 000-0000"/>
               </div>
               <h1><label for="imgUpload" id="img-label" class="form-label">Image</label>
-                      <img id="output"/>
-                <input type="file" accept="image/*" onchange="loadFile(event)" class="form-control" id="file" name="file">
-              
-              <button type="submit" class="btn btn-primary"  value="Upload" onclick="toggleContent()">Submit</button>
+                <img id="output2"/>
+                <input type="file" accept="image/*" onchange="loadFile2(event)" class="form-control" id="file" name="file">
+        
+              <button type="submit" class="btn btn-primary"  value="Upload" >Submit</button>
             </form>
             <button onclick="updateProfile()" type="none" class="btn btn-primary"  value="cancel">Cancel</button>
           </div>
         </div>
 
+        
 
 
       </div>
@@ -153,16 +102,28 @@
  
 </div>
 
+<div id='photo-wall'>
+    
+    <%- include('userPhotoWall') -%>
+</div>
 
 
+<div id='my-profile'>
+    
+  <%- include('myProfile') -%>
+</div>
 
-<!-- <div id="mainContainer">
-<div  id="secondContainer">
-  <section id="main">
-    <div id="feed" onclick="var scrolly = window.pageYOffset"> -->
-  <!-- <div class="row justify-content-center mt-5"> -->
-   
-    <%- include('posts') -%>
+
+<div id='my-chat'>
+    
+  <%- include('myChat') -%>
+</div>
+
+<!-- just big pix -->
+<div id="show-user">
+  <%- include('showUser') -%>
+
+</div>
 
 
     

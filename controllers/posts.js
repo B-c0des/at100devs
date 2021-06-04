@@ -46,7 +46,7 @@ module.exports = {
         title: req.body.title,
         image: result.secure_url,
         cloudinaryId: result.public_id,
-        caption: req.body.caption,
+       
         website: req.body.website,
         contact: req.body.contact,
         likes: 0,
@@ -58,6 +58,54 @@ module.exports = {
       res.redirect("/504");
     }
   },
+
+updateProfile: async (req, res) => {
+    try {
+
+
+//       var names = req.body.name != '' ? req.body.name : req.user.name;
+// var titles = req.body.title ? req.body.title : req.user.title;
+// var captions = req.body.caption ? req.body.caption : req.user.caption;
+// var websites = req.body.website ? req.body.website : req.user.website;
+// var contacts = req.body.contact ? req.body.contact : req.user.contact;
+
+// let objForUpdate = {};
+
+// if (req.body.name) objForUpdate.name = req.body.nome;
+// if (req.body.title) objForUpdate.title = req.body.title;
+// if (req.body.website) objForUpdate.website = req.body.website;
+
+// //before edit- There is no need for creating a new variable
+// //var setObj = { $set: objForUpdate }
+
+// objForUpdate = { $set: objForUpdate }
+
+const result = await cloudinary.uploader.upload(req.file.path, {"crop":"limit","tags":"samples","width":2000,"height":1000}, function(result) { console.log(result) });
+
+
+await Post.findOneAndUpdate(
+        { user: req.user.id },
+        {
+          $set:   {  
+            name: req.body.name,
+            title: req.body.title,
+            image: result.secure_url,
+            cloudinaryId: result.public_id,
+            website: req.body.website,
+            contact: req.body.contact,
+          }
+        },
+      );
+      
+    console.log(req.user._id)
+    res.redirect(`/profile/`);
+  } catch (err) {
+    console.log(err);
+  }
+},
+  
+
+
   likePost: async (req, res) => {
     try {
       await Post.findOneAndUpdate(
@@ -134,8 +182,16 @@ module.exports = {
       //res.redirect(`/post/${req.params.id}`);
       res.redirect('/profile/')
     } catch (err) {
-      console.log(err);
+      console.log(err);3
     }
   
   },
+
+
+
+
+
+
+
 }
+

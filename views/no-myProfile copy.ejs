@@ -1,0 +1,98 @@
+      
+
+
+        <div id='bgimage' style="display: flex">
+        <div class="container-view" style="display: flex"></div>
+          <div id='x' onclick=" minimize();" style="z-index: 20;">x</div>
+          <div style="background-image: url('<%= post.image%>'); width:100%; z-index: 5; height: 50vh; background-size: cover; background-position: center; border-radius: 20px 20px 0px 0px;"  id="img"></div>
+          <div id="add-posts">
+          
+    
+         
+    <div id='likebox'>
+    
+    
+    <%if(post.user == user.id){ %>
+    <form
+      action="/post/deletePost/<%= post._id %>?_method=DELETE"
+      method="POST"
+      class="row-6 justify-content-between  "
+    >
+      <button class="btn btn-primary fa fa-trash" type="submit" onclick="return confirm('Are you sure you want to delete?')"></button>
+    </form>
+    <%}%>
+    
+    
+
+        
+      <div id="user-info1">
+        
+          
+          
+                     
+                      <h4><%= post.name ?   post.name : '' %></h4>
+                      <h4><%= post.title ?  post.title : '' %></h4>
+                      
+                      <a href="<%=post.contact%>"><%= post.contact ?   post.contact : '' %></a>
+                      <a href="https://<%=post.website%>"><%= post.website ?   post.website : '' %></a>
+             
+                </div>
+                <div id='across'> 
+                <div>
+                  <h1>Comments:</h1>
+    
+                          <% for(var j=0; j < post[0].comments.length; j++) {  %>
+    
+            
+                          
+                       
+                            <h1 id="comment-box" ><%= post[0].comments[j].comments  %></h1> 
+                              
+                             
+                         
+                         <% } %>
+                         
+                       </div>
+                       
+    
+        </div>
+           
+        <form  class="col-10 w-100" 
+        action="/post/commentPost/<%= post._id %>?_method=PUT"  
+        enctype="multipart/form-data"
+        method="POST"
+        >
+        <div id="post-comment-box" class="text-center">
+          
+    
+        
+        
+    
+    
+    
+          <input type="text" class="form-control" name="comments" id='sendComment'></input>
+        </div>
+      <button type="submit" class="btn btn-primary text-center w-100 rounded-bottom" value="comments" >Post comment!</button>
+                  </form>
+        
+          </div>
+          
+       
+    
+    
+      </div>  
+    
+    
+    
+                  
+    
+    
+    
+    
+    
+    
+    
+                  </div>
+        
+    </div>
+    </div>

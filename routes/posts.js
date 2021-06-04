@@ -11,7 +11,9 @@ router.get("/:id", ensureAuth, postsController.getPost);
 
 router.post("/createPost", upload.single("file"), postsController.createPost);
 
-router.put("/likePost/", postsController.likePost);
+router.put("/updateProfile/:id", upload.single("file"), postsController.updateProfile);
+
+router.put("/likePost/:id", postsController.likePost);
 
 router.put("/commentPost/:id", upload.single("file"), postsController.commentPost);
 

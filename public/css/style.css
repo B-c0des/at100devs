@@ -1,10 +1,9 @@
 body{
-  height:100%;
-  margin:0;
-  padding:0;
-      background-size: 100%;
-      background-size:cover;
-      background-position: center center;
+  background-size: 200%;
+  background-position: top;
+  background-repeat:repeat-x;   
+  background-color: black;
+
     }
     #img-single-user{
       display: none;
@@ -15,6 +14,11 @@ body{
 
 
     #output{
+      display:flex;
+      width: 50%;
+      margin: 0 auto;
+    }
+    #output2{
       display:flex;
       width: 50%;
       margin: 0 auto;
@@ -53,9 +57,8 @@ body{
       display: inline-block;
     } */
     .container-view{
-      justify-content: center;
       margin: 0 auto;
-      flex-direction: row;
+      flex-direction: column;
       position: fixed;
       padding-right: 10%;
       padding-left: 10%;
@@ -64,13 +67,12 @@ body{
       width: 100vw;
       backdrop-filter: blur(90px) saturate(130%) contrast(120%) brightness(110%) ;
       background-color: rgba(255,255,255,.15);
-        top: 55px;
+      padding-top: 70px;
       display: none;
       
     }
     #x{
       position: inherit;
-      top:2%;
       right:10%;
       text-align: center;
       font-size: 6vw;
@@ -110,7 +112,7 @@ body{
       
       justify-content:center;
       
-      font-size: calc(12px + 1.5vw)
+      font-size: calc(12px + .8vw)
       
     }
       #likes {
@@ -224,8 +226,9 @@ body{
     margin-top: 0;
     padding-left: 20%;
     padding-right: 20%;
-    padding-top: 4%;
+    padding-top: 0%;
     top: 0;
+    z-index: 20;
     display: none;
     overflow-y: scroll;
     }
@@ -237,11 +240,71 @@ body{
       margin-top: 0;
       padding-left: 20%;
       padding-right: 20%;
-      padding-top: 4%;
       top: 0;
       display: none;
       overflow-y: scroll;
+      z-index: 20;
       }
+      #photo-wall{
+        backdrop-filter: blur(80px);
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-top: 4%;
+        top: 0;
+        display: none;
+        overflow-y: scroll;
+        z-index: 20;
+        }
+        #my-profile{
+          width: 100vw;
+          height: 100vh;
+          margin-top: 0;
+          padding-top: 4%;
+          top: 0;
+          z-index: 20;
+          display: none;
+        }
+        #myProfile{
+          top:0px;
+        }
+        #myProfile2{
+          top:0px;
+          z-index: 20;
+        }
+        #showUser{
+          width: 100vw;
+          height: 100vh;
+          margin-top: 0;
+          padding-top: 4%;
+          top: 0;
+          display: none;
+          overflow-y: scroll;
+          z-index: 20;
+        
+        }
+        #show-feed{
+          display: none;
+        }
+        #my-profile .container-view{
+          display: flex;
+          flex-direction: column;
+        }
+        #my-chat{
+          backdrop-filter: blur(80px);
+          width: 100%;
+          height: 100%;
+          margin-top: 0;
+          padding-left: 20%;
+          padding-right: 20%;
+          padding-top: 4%;
+          top: 0;
+          display: none;
+          overflow-y: scroll;
+          z-index: 20;
+        }
   
     .first {
       position: fixed;
@@ -261,8 +324,11 @@ body{
     display:none;
   }
 #header-right{
-  right:0;
-  position: fixed;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  
+  font-size: 16px;
 }
 header {
   
@@ -324,17 +390,34 @@ header .overlay {
 }
 #user-info{
   display:flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   position: fixed;
   flex-direction: row;
-  left:0px;
-  top:0px;
   width:100%;    
-  height: 55px;
   background-color:transparent;
   z-index: 2;
   backdrop-filter: blur(50px) brightness(140%)contrast(90%)invert(20%);
   
+}
+#alert{
+
+  width:100%;
+  height:100%;
+  
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+#alert div{
+  padding-left:30%;
+  padding-right:30%;
+  padding-top: 20%;;
+  text-align: center;
+  backdrop-filter: blur(20px) invert(30%);
+  border-radius: 40px;
+  
+  overflow-y: hidden;
+  overflow-x: hidden;
+  box-shadow: 0px 20px 100px 8px rgba(00,00,00,.9);
 }
 #email-label{
   font-size: 2vw;
@@ -381,7 +464,7 @@ header .overlay {
       max-width:90%;
       
       height:80vh;
-      font-size: calc(12px + 1.5vw);
+      font-size: calc(12px + .8vw);
       z-index:1;
       
     }
@@ -640,11 +723,11 @@ header .overlay {
       flex-direction: column;
       
       height:100%;
-      width:100%;
+      width:0%;
       margin-top: 80px;
     }
     #feed{
-      
+      margin-top: 40px;
       display:flex;
       width: 100%;
       flex-wrap: wrap;
@@ -652,12 +735,11 @@ header .overlay {
       height:100%;
       border-radius:10px;
       box-shadow: 0px 20px 50px 8px rgba(00,00,00,.9);
-      
+      padding-top: 60px;
       
       
       backdrop-filter: blur(20px);
       scrollbar-width: thin;
-      display: inline-flex;
       
       background-color: rgba(255,255,255,.2);
       border: 1px solid rgba(#fff,.15);
@@ -675,15 +757,14 @@ header .overlay {
     
     button{
       
-      color: white;-
-      
+      color: white;
+      width:100%;
       border: 0px solid gray;
-      
+      height:30px;
       background-color: transparent;
       
       margin:0 auto;
      /* font-size: calc(12px + .5vw); */
-       box-shadow: inset 0 0 5px white;
       transition: all .2s ease-in-out;
       
       
@@ -722,14 +803,13 @@ header .overlay {
     
     #headerTitle{
       display:flex;
-      justify-content: space-evenly;
+      justify-content: space-between;
       flex-direction: column;
-      letter-spacing: 10px;
+      letter-spacing: 2px;
       color:white;
       gap:0px;
-      height:55px;
+      width: 100%;
     
-      line-height: 0%;
     
     }
     
@@ -746,7 +826,7 @@ header .overlay {
     width:100%;
     height:35px;
     color:black;
-    border: 1px solid rgba(255,255,255,.25);
+    
     
     
     }
@@ -754,7 +834,7 @@ header .overlay {
     
     button:hover{
       color:black;
-      box-shadow: inset 0 0 30px white;
+      
       
     }
     
@@ -894,17 +974,69 @@ header .overlay {
       margin:5%;
     }
     
-    
+    /* Dropdown Button */
+.dropbtn {
+  width:22vw;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(255,255,255,.5);
+  border-radius: 20px;
+  z-index: 1;
+  margin-left: 0px;
+}
+#dropdown-button{
+  width: 20%;
+}
+#myDropdown{
+
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
     @media only screen and (max-width: 900px) {
+      body{
+        background-size: 300%;
+        background-position: top;
+        background-repeat:repeat-x;   
+        background-color: black;
+      
+          }
       #user-info{
         display:flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         position: fixed;
-        flex-direction: row;
+        flex-direction: column;
         left:0px;
         top:0px;
         width:100%;    
-        height: 90px;
         background-color:transparent;
         z-index: 2;
         backdrop-filter: blur(50px) brightness(140%)contrast(90%)invert(20%);
@@ -930,12 +1062,15 @@ position: relative;
 width:0;
       }
       #header-right{
-        width: 25%;
+        width: 100%;
         font-size: .8rem;
         z-index: 5;
+        display: flex;
+        flex-direction: row;
       }
       #headerTitle{
-      letter-spacing: -2px;}
+      letter-spacing: -1px;
+    }
       #toggle-view-element{
         padding-left: 3%;
       padding-right: 3%;
@@ -955,7 +1090,6 @@ width:0;
       #x{
         
           position: inherit;
-          top: 5px;
           right: 0;
           text-align: center;
           font-size: 11vw;
@@ -985,7 +1119,7 @@ width:0;
         width:100%;
         padding-left: 0px;
         padding-right: 0px;
-
+        padding-top: 30px;
       }
       .container-view img{
         width: 100%;
@@ -1017,6 +1151,8 @@ width:0;
         font-size: 3vw;
         color: white;
         margin-top: -20px;
+        
+      text-align: center;
 
       }
       #feed img{
@@ -1164,6 +1300,7 @@ width:0;
       width:100%;
       box-sizing: border-box;
       margin:auto;
+      background-color: transparent;
     }
     #buttonContainer button{
       border: 1px solid white;
@@ -1177,7 +1314,7 @@ width:0;
       
     }
     #buttonContainer button:hover{
-      box-shadow: inset 0 0 70px white;
+      
     }
     #commentContainer{
       z-index: 2;
@@ -1186,4 +1323,29 @@ width:0;
       background-color:rgba(255,255,255,.1);
       
     }
-    
+    #output{
+      display:flex;
+      width: 70%;
+      margin: 0 auto;
+    }
+    #output2{
+      display:flex;
+      width: 70%;
+      margin: 0 auto;
+    }
+    #update-profile{
+      padding-left: 0%;
+      padding-right: 0%;
+    }
+    #add-profile{
+      position: fixed;
+      backdrop-filter: blur(80px);
+      width: 100%;
+      height: 100%;
+      margin-top: 0;
+      padding-top: 0%;
+      top: 0;
+      z-index: 20;
+      display: none;
+      overflow-y: scroll;
+      }
