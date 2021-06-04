@@ -1074,7 +1074,7 @@ width:0;
       }
       #header-right{
         width: 100%;
-        font-size: .8rem;
+        font-size: .6rem;
         z-index: 5;
         display: flex;
         flex-direction: row;
