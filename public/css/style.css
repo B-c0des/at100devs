@@ -1,7 +1,8 @@
 body{
   background-size: cover;
   background-color: black;
-  transition: background-image 5000ms;
+  transition: background-image 1000ms;
+  height: 100vh;
     }
     #img-single-user{
       display: none;
