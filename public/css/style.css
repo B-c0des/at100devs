@@ -399,7 +399,7 @@ header .overlay {
   justify-content: space-between;
   min-height: 80vh;
   backdrop-filter: invert(100%);
-  border-radius: 0px 20px 20px 20px;
+  border-radius: 0px 20px 20px 0px;
   width: 100%;
   height: fit-content;
   box-shadow: 0px 20px 20px 4px rgba(00,00,00,.9);
@@ -1194,6 +1194,12 @@ header .overlay {
         padding-left: 0%;
         
         }
+        #across{
+          text-overflow: unset;
+          height: 20vh;
+          overflow-y: scroll;
+          overflow-x: hidden;
+        }
         #add-posts{
           display: flex;
           flex-direction: column;
@@ -1492,10 +1498,4 @@ width:0;
       margin-bottom: -30px;
       background-color:rgba(255,255,255,.1);
       
-    }
-    #across{
-      text-overflow: unset;
-      height: 20vh;
-      overflow-y: scroll;
-      overflow-x: hidden;
     }
