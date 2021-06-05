@@ -1,17 +1,13 @@
 body{
-    
-    height:100%;
-    margin:0;
-    padding:0;
-        background-size: 100%;
-        background-size:cover;
-        background-position: center center;
-        background-image: url('https://source.unsplash.com/random/900×700/?flowers?random=1');
-      }
+
+        background-color: black;
+        background-image: url('https://source.unsplash.com/random/2000×2000/?flowers?random=1');
+        background-size: cover;  
+    }
 
 .container{
     justify-content: center;
-    width:80%;
+    width:50%;
     backdrop-filter: blur(25px);
     height:auto;
     align-items: center;

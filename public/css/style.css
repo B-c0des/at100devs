@@ -1,14 +1,33 @@
 body{
-  height: 100vh;
-  background-position: bottom;
+  background-size: cover;
   background-color: black;
-
+  transition: background-image 5000ms;
     }
     #img-single-user{
       display: none;
     }
     #img-multi-user{
       display: block;
+    }
+    a{
+      color:white;
+    }
+    a:hover{
+      color: rgba(255,255,255,.5);
+    }
+    #dropdown-alert{
+      padding-top: 15%;
+      animation: dropdown 2s;
+    }
+
+    @keyframes dropdown {
+      0% {
+        padding-top: 0;
+        margin-top: -60px;
+      }
+      100% {
+        padding-top: 10%;
+      }
     }
 
 
@@ -68,6 +87,7 @@ body{
       background-color: rgba(255,255,255,.15);
       padding-top: 70px;
       display: none;
+      box-shadow: inset 0 0 20px black;
       
     }
     #x{
@@ -377,7 +397,7 @@ header .overlay {
 #add-posts{
   
   min-height: 50px;
-  backdrop-filter: invert(60%);
+  backdrop-filter: invert(100%);
   border-radius: 0px 0px 20px 20px;
   width: 100%;
   height: fit-content;
@@ -407,6 +427,26 @@ header .overlay {
   backdrop-filter: blur(50px) brightness(140%)contrast(90%)invert(20%);
   
 }
+#dropdown-alert{
+  animation: dropdown 1s;
+}
+
+@keyframes dropdown {
+  0% {
+    padding-top: 0;
+    margin-top: -60px;
+  }
+  100% {
+    padding-top: 15%;
+  }
+  0% {
+    padding-top: 0%;
+  }
+}
+
+#dropdown-alert:active {
+  animation: dropdown 1s;
+}
 #alert{
 
   width:100%;
@@ -418,7 +458,6 @@ header .overlay {
 #alert div{
   padding-left:30%;
   padding-right:30%;
-  padding-top: 20%;;
   text-align: center;
   backdrop-filter: blur(20px) invert(30%);
   border-radius: 40px;
@@ -438,7 +477,6 @@ header .overlay {
 #alert1 div{
   padding-left:30%;
   padding-right:30%;
-  padding-top: 20%;;
   text-align: center;
   backdrop-filter: blur(20px) invert(30%);
   border-radius: 40px;
@@ -755,25 +793,21 @@ header .overlay {
       margin-top: 80px;
     }
     #feed{
-      margin-top: 40px;
       display:flex;
       width: 100%;
       flex-wrap: wrap;
       justify-content: space-around;
       height:100%;
       border-radius:10px;
-      box-shadow: 0px 20px 50px 8px rgba(00,00,00,.9);
-      padding-top: 60px;
-      
-      
+      /* box-shadow: 0px 20px 50px 8px rgba(00,00,00,.9); */
+      padding-top: 100px;
+      margin:0 auto;
+      box-shadow: inset 0 0 20px black;
       backdrop-filter: blur(20px) saturate(120%);
       scrollbar-width: thin;
       border: 1px solid rgba(#fff,.15);
       padding-right: 1%;
-      padding-left: 1%;;
-      margin-bottom: 30px;
-      border-radius: 30px;
-    
+      padding-left: 1%;
       
      /* -webkit-mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
       mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
@@ -793,7 +827,7 @@ header .overlay {
       
       margin:0 auto;
      /* font-size: calc(12px + .5vw); */
-      transition: all .2s ease-in-out;
+      
       
       
     }
@@ -973,7 +1007,6 @@ header .overlay {
       border-radius:7px;
       
       
-      filter:brightness(95%);]
       
       transform-origin: center center;
       
@@ -992,7 +1025,8 @@ header .overlay {
       border-bottom:1px;
       animation-fill-mode: forwards;
       top:-2px;
-      ;
+      transition: all .1s ease-in-out;
+      ;s
     }
     @keyframes mymove {
       from {border-bottom:1px}
@@ -1050,12 +1084,47 @@ header .overlay {
 .show {display:block;}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @media only screen and (max-width: 900px) {
       body{
         height: 100vh;
         background-position: bottom;
         background-color: black;
       
+          }
+          a{
+            color:white;
+          }
+          a:hover{
+            color: rgba(255,255,255,.5);
           }
           #myDropdown{
             margin-left: -50vw;
@@ -1189,6 +1258,7 @@ width:0;
         padding-left: 0px;
         padding-right: 0px;
         padding-top: 30px;
+        box-shadow: inset 0 0 20px black;
       }
       .container-view img{
         width: 100%;

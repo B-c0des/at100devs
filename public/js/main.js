@@ -120,6 +120,63 @@ let loadFile2 = function(e) {
               (myProfile.style.display = "none") && (feed.style.display = "flex") ; 
 
               }
+               // }
+
+          dropDownClick.onclick = function() {
+
+            let input = document.getElementById("dropDownClick").value;
+            var img = new Image()
+            document.body.background = ''
+            
+            img.src = ''
+            document.body.background = img.src
+            const x = Math.floor(Math.random() * 10)
+            img.src= `https://source.unsplash.com/random/1600×1200/?${input}?random=${x}`
+            document.body.background = img.src
+  
+            img.onload = function () {OnImageLoaded (this)};
+            function OnImageLoaded (img) {
+  
+              let myTheme = document.getElementById("my-theme")
+              let feedy = document.getElementById("feed")
+              feedy.style.display = "flex"
+              // Toggle 
+              myTheme.style.display == "block" ? (myTheme.style.display = "none") && (feedy.style.display = "flex") : 
+              (myTheme.style.display = "none") && (myTheme.style.display = "none") ;
+              
+            }
+           };
+
+                   function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+
+        function returnText(){
+
+      }
+      document.getElementById('userInput').onkeydown = function(e){
+        if(e.keyCode == 13){
+          returnText()
+        }
+     };
+
+
+
+
               function showFeed() {
                 // Get the DOM reference
        
@@ -131,16 +188,23 @@ let loadFile2 = function(e) {
   
                 }
 
-                function selectTheme() {
+                selectTheme.onclick = function() {
                   // Get the DOM reference
          
+                  
+            
                   let feed = document.getElementById("feed");
                   let myProfile = document.getElementById("my-theme")
+
+              
                   // Toggle 
                   myProfile.style.display == "none" ? (myProfile.style.display = "flex") && (feed.style.display = "none"): 
                   (myProfile.style.display = "none") && (feed.style.display = "flex") ; 
-                  
     
+                  // document.getElementById('dropdown-alert').style.paddingTop = '15%';
+                  // document.getElementById('dropdown-alert').style.marginTop = '0';
+                  
+                  
                   }
 
 
@@ -276,54 +340,5 @@ let loadFile2 = function(e) {
 
               
               
-        // }
-
-
-        function myFunction() {
-          document.getElementById("myDropdown").classList.toggle("show");
-        }
-        
-        // Close the dropdown menu if the user clicks outside of it
-        window.onclick = function(event) {
-          if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-              }
-            }
-          }
-        }
-
-        function returnText(){
-          let input = document.getElementById("userInput").value;
-          var img = new Image()
-          document.body.background = ''
-          
-          img.src = ''
-          document.body.background = img.src
-          const x = Math.floor(Math.random() * 100)
-          img.src= `https://source.unsplash.com/random/1600×1200/?${input}?random=${x}`
-          document.body.background = img.src
-
-          img.onload = function () {OnImageLoaded (this)};
-          function OnImageLoaded (img) {
-
-            let myTheme = document.getElementById("my-theme")
-            let feedy = document.getElementById("feed")
-            feedy.style.display = "flex"
-            // Toggle 
-            myTheme.style.display == "block" ? (myTheme.style.display = "none") && (feedy.style.display = "flex") : 
-            (myTheme.style.display = "none") && (myTheme.style.display = "none") ;
-            
-          }
-      }
-      document.getElementById('userInput').onkeydown = function(e){
-        if(e.keyCode == 13){
-          returnText()
-        }
-     };
-
+       
 

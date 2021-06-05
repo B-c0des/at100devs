@@ -1,10 +1,21 @@
-      
+<!-- <h1>user length <%= posts2.length %> match? Profile of current user goes here: <%- user.id %>
+</h1> -->
+
+
+<% for(var i=0; i<posts2.length; i++) {%>
+    <%if(posts2[i].user == user.id){ %>
+        <!-- <img onclick="document.getElementById('feed').style.display= 'none';"  src="<%= posts2[i].image%>"  >
+  -->
+    
+
+
+        
 
 
         <div id='bgimage' style="display: flex">
-        <div class="container-view" style="display: flex"></div>
+        <div  id="<%=[i]%>"  class="container-view" style="display: flex"></div>
           <div id='x' onclick=" minimize();" style="z-index: 20;">x</div>
-          <div style="background-image: url('<%= post.image%>'); width:100%; z-index: 5; height: 50vh; background-size: cover; background-position: center; border-radius: 20px 20px 0px 0px;"  id="img"></div>
+          <div style="background-image: url('<%= posts2[i].image%>'); width:100%; z-index: 5; height: 50vh; background-size: cover; background-position: center; border-radius: 20px 20px 0px 0px;" class="<%=[i]%>" id="img"></div>
           <div id="add-posts">
           
     
@@ -12,9 +23,9 @@
     <div id='likebox'>
     
     
-    <%if(post.user == user.id){ %>
+    <%if(posts2[i].user == user.id){ %>
     <form
-      action="/post/deletePost/<%= post._id %>?_method=DELETE"
+      action="/post/deletePost/<%= posts2[i]._id %>?_method=DELETE"
       method="POST"
       class="row-6 justify-content-between  "
     >
@@ -23,30 +34,59 @@
     <%}%>
     
     
-
+           <!-- <form
+          class="row-6 justify-content-between  "
+          action="/post/likePost/<%= posts2[i]._id %>?_method=PUT"
+          method="PUT"
+        >
+       
+          <button class="btn btn-primary fa fa-heart" type="submit"> <%= posts2[i].likes %></button>
+        </form>  -->
+        
+    
+    
+    
+        </div>
+    
+        <!-- <div class="" id='likes'> <%= posts2[i].likes %></div> -->
+    
+    
+        
+        <!-- <%= posts2[i]._id%>
+          
+        Posts: <%= posts2[i]%>
+        Name: <%= posts2[i].name%>
+        Title: <%= posts2[i].title%>
+        Caption: <%= posts2[i].caption%>
+       
+         <%= posts2.user %> -->
+    
+    
+    
+    
         
       <div id="user-info1">
         
           
           
                      
-                      <h4><%= post.name ?   post.name : '' %></h4>
-                      <h4><%= post.title ?  post.title : '' %></h4>
+                      <h4><%= posts2[i].name ?   posts2[i].name : '' %></h4>
+                      <h4><%= posts2[i].title ?  posts2[i].title : '' %></h4>
                       
-                      <a href="<%=post.contact%>"><%= post.contact ?   post.contact : '' %></a>
-                      <a href="https://<%=post.website%>"><%= post.website ?   post.website : '' %></a>
+                      <a href="<%=posts2[i].contact%>"><%= posts2[i].contact ?   posts2[i].contact : '' %></a>
+                      <a href="https://<%=posts2[i].website%>"><%= posts2[i].website ?   posts2[i].website : '' %></a>
              
                 </div>
                 <div id='across'> 
                 <div>
                   <h1>Comments:</h1>
     
-                          <% for(var j=0; j < post[0].comments.length; j++) {  %>
+                          <% for(var j=0; j < posts2[i].comments.length; j++) {  %>
     
             
                           
                        
-                            <h1 id="comment-box" ><%= post[0].comments[j].comments  %></h1> 
+                            <h1 id="comment-box" ><%= posts2[i].comments[j].comments  %></h1> 
                               
                              
                          
@@ -55,10 +95,11 @@
                        </div>
                        
     
+         <!-- <%= posts2[i].comments  ? posts2[i].comments[0] : 'No comments added yet.'  %>  -->
         </div>
            
         <form  class="col-10 w-100" 
-        action="/post/commentPost/<%= post._id %>?_method=PUT"  
+        action="/post/commentPost/<%= posts2[i]._id %>?_method=PUT"  
         enctype="multipart/form-data"
         method="POST"
         >
@@ -96,3 +137,4 @@
         
     </div>
     </div>
+      <% } %>        <% } %>
