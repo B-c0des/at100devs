@@ -124,13 +124,13 @@ let loadFile2 = function(e) {
 
           dropDownClick.onclick = function() {
 
-            let input = document.getElementById("dropDownClick").value;
+            let input = document.getElementById("userInput").value;
             var img = new Image()
             document.body.background = ''
             
             img.src = ''
             document.body.background = img.src
-            const x = Math.floor(Math.random() * 10)
+            const x = Math.floor(Math.random() * 100)
             img.src= `https://source.unsplash.com/random/1600×1200/?${input}?random=${x}`
             document.body.background = img.src
   
