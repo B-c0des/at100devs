@@ -8,7 +8,7 @@
 
         <div  id="<%=[i]%>"  class="container-view" style="display: none; z-index:20;"r>
           <div id='x' onclick=" document.getElementById(`${this.parentNode.id}`).style.display = 'none'; document.getElementById('feed').style.display = 'flex'" style="z-index:20">x</div>
-          <div style="background-image: url('<%= posts2[i].image%>'); width:100%; z-index: 5; height: 50vh; background-size: cover; background-position: center; border-radius: 20px 20px 0px 0px;" class="<%=[i]%>" id="img"></div>
+          <div style="background-image: url('<%= posts2[i].image%>'); width:100%; z-index: 5; height: 80vh; background-size: cover; background-position: center; " class="<%=[i]%>" id="img"></div>
           <div id="add-posts">
           
              
@@ -72,7 +72,6 @@
                 </div>
                 <div id='across'> 
                 <div>
-                  <h1>Comments:</h1>
 
                   <% for(var j=0; j < posts2[i].comments.length; j++) {  %>
     
@@ -89,23 +88,23 @@
     
          <!-- <%= posts2[i].comments  ? posts2[i].comments[0] : 'No comments added yet.'  %>  -->
         </div>
-           
-        <form  class="col-10 w-100" 
-        action="/post/commentPost/<%= posts2[i]._id %>?_method=PUT"  
-        enctype="multipart/form-data"
-        method="POST"
-        >
+       
         <div id="post-comment-box" class="text-center">
           
     
-        
+            
+          <form  class="col-10 w-100" 
+          action="/post/commentPost/<%= posts2[i]._id %>?_method=PUT"  
+          enctype="multipart/form-data"
+          method="POST"
+          >
         
     
     
     
           <input type="text" class="form-control" name="comments" id='sendComment'></input>
         </div>
-      <button type="submit" class="btn btn-primary text-center w-100 rounded-bottom" value="comments" >Post comment!</button>
+      <button type="submit" id="submitComment" class="btn btn-primary text-center w-100 rounded-bottom" value="comments" >Post comment!</button>
                   </form>
         
           </div>
