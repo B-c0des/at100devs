@@ -173,6 +173,10 @@ let loadFile2 = function(e) {
           returnText()
         }
      };
+function commentClick()
+{
+  document.getElementById("${this.parentNode.id}").style.display = 'none'
+}
 
 
 
