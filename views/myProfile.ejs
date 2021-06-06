@@ -8,7 +8,7 @@
   <div id='alert'>
 <div id="dropdown-alert"> <h1>Create a Profile first!</h1></div>
    </div> 
-   <h1><% posts2.length %></h1>
+  
 
 
   <%}%>
@@ -16,44 +16,47 @@
 
 <% for(var i=0; i<post.length; i++) {%>
 
+  
 
         
 
 
   <div  id="myProfile"  class="container-view" style="z-index:20;">
     <div id='x' onclick="myProfile()" style="z-index:20">x</div>
-    <div style="background-image: url('<%= post[0].image%>'); width:100%; z-index: 5; height: 80vh; background-size: cover; background-position: center; border-radius:  15px 0px 35px 0px;" id="img"></div>
+   
+    <div style="background-image: url('<%= posts2[i].image%>'); width:100%; height: 80vh; background-size: cover; background-position: center;box-shadow: 0px 20px 20px 4px rgb(0 0 0 / 90%); " class="<%=[i]%>" id="img"></div>
+   
     <div id="add-posts">
-    
+      <div id='likebox'>
+
+
+        <%if(post[0].user == user.id){ %>
+        <form
+        action="/post/deletePost/<%= post[0]._id %>?_method=DELETE"
+        method="POST"
+        class="row-6 justify-content-between  "
+        >
+        <button  class="btn btn-primary fa fa-trash" type="submit" onclick="return confirm('Are you sure you want to delete?')"></button>
+        </form>
+        <%}%>
+        
+        
+             <form
+            class="row-6 justify-content-between  "
+            action="/post/likePost/<%= posts2[i]._id %>?_method=PUT"
+            method="PUT"
+          >
+         
+            <button class="btn btn-primary fa fa-heart" type="submit"> <%= posts2[i].likes %></button>
+          </form> 
+          
+        
+        
+        
+          </div>
        
    
-<div id='likebox'>
 
-
-<%if(post[0].user == user.id){ %>
-<form
-action="/post/deletePost/<%= post[0]._id %>?_method=DELETE"
-method="POST"
-class="row-6 justify-content-between  "
->
-<button class="btn btn-primary fa fa-trash" type="submit" onclick="return confirm('Are you sure you want to delete?')"></button>
-</form>
-<%}%>
-
-
-     <!-- <form
-    class="row-6 justify-content-between  "
-    action="/post/likePost/<%= posts2[i]._id %>?_method=PUT"
-    method="PUT"
-  >
- 
-    <button class="btn btn-primary fa fa-heart" type="submit"> <%= posts2[i].likes %></button>
-  </form>  -->
-  
-
-
-
-  </div>
 
   <!-- <div class="" id='likes'> <%= posts2[i].likes %></div> -->
 
@@ -77,9 +80,8 @@ class="row-6 justify-content-between  "
     
     
                
-                <h4><%= post[0].name ?   post[0].name : '' %></h4>
-                <h4><%= posts[0].title ?  post[0].title : '' %></h4>
-                
+                <%= post[0].name ?   post[0].name : '' %>
+                <%= posts[0].title ?  post[0].title : '' %>
                 <a href="<%=post[0].contact%>"><%= post[0].contact ?   post[0].contact : '' %></a>
                 <a href="https://<%=post[0].website%>"><%= post[0].website ?   post[0].website : '' %></a>
        
@@ -93,7 +95,7 @@ class="row-6 justify-content-between  "
       
                     
                  
-              <h1 id="comment-box" ><%= post[0].comments[j].comments  %><img src='<%= post[0].image %>' style="width:20px; height:20px"></h1> 
+              <h1 id="comment-box" ><img src='<%= post[0].image %>' style="width:20px; height:20px"><%= post[0].comments[j].comments  %></h1> 
                 
                
            
