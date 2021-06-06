@@ -106,10 +106,10 @@ await Post.findOneAndUpdate(
   
 
 
-  likePost: async (req, res) => {
+likePost: async (req, res) => {
     try {
       await Post.findOneAndUpdate(
-        { _id: req.params.id },
+        { _id: req.body.id },
         {
           $inc: { likes: 1 },
         }

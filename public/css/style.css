@@ -604,7 +604,7 @@ header .overlay {
       flex-direction: column;
       text-align: center;
       justify-content: space-between;
-      font-size: 3vh;
+      font-size: 2.5vh;
       color:white;
       color: white;
 
@@ -813,7 +813,7 @@ header .overlay {
       height:100%;
       border-radius:10px;
       /* box-shadow: 0px 20px 50px 8px rgba(00,00,00,.9); */
-      padding-top: 100px;
+      padding-top: 85px;
       margin:0 auto;
       box-shadow: inset 0 0 20px black;
       backdrop-filter: blur(20px) saturate(120%);
@@ -1029,6 +1029,7 @@ header .overlay {
     #img{
       box-shadow: none;
       border-radius: 0%;
+      box-shadow: 0px;
     }
     #feed img:hover{
       filter:brightness(115%) contrast(106%);
@@ -1232,7 +1233,9 @@ header .overlay {
           box-shadow: 0px 20px 20px 4px rgba(00,00,00,.9);
           background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f6/Blank_page%2C_brown_paper_texture_(14802136533).jpg');
           background-size: cover;
-          height:fit-content;
+          height:fit-content;    
+          z-index: 20;
+
         }
   
       #img-single-user{
@@ -1290,7 +1293,7 @@ width:0;
           width: 8vw;
           height: 8vw;
           border-radius: 100px;
-          line-height: 30px;
+          line-height: 20px;
           border: 3px solid rgba(255,255,255,.5);
       
       }
@@ -1343,10 +1346,8 @@ width:0;
         flex-direction: row;
         justify-content: space-between;
         color:white;
-        font-size: 3vw;
-        color: white;
-        margin-top: 25px;
-        
+        font-size: 2.5vw;
+        color: white;        
       text-align: center;
 
       }
