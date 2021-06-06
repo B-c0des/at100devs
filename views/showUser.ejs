@@ -84,14 +84,12 @@
 
 
 
-                 
-<!-- searches through profiles -->
                     <% for(var k=0; k < posts2.length; k++) {  %>
 
 
 
-                      <%- (posts2[i].comments[j].postedBy.toString().trim() == posts2[k]?.user.toString().trim()) ? `<img onclick="document.getElementById('${[k]}').style.display = 'flex';document.getElementById('${(k !== i) ? [i] : ''}').style.display = 'none'" style="width:50px; height:50px;"src="${posts2[k]?.image.toString().trim()}">` : '' %>   
-                      <!-- document.getElementById(this.parentNode.id).style.display = 'none' -->
+                      <%- (posts2[i].comments[j].postedBy.toString().trim() == posts2[k]?.user.toString().trim()) ? `<img id="userIcon" onclick="document.getElementById('${[k]}').style.display = 'flex';document.getElementById('${(k !== i) ? [i] : ''}').style.display = 'none'" style="width:50px; height:50px;"src="${posts2[k]?.image.toString().trim()}">` : '' %>   
+                    
                        
                     <% } %>
                         

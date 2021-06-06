@@ -131,7 +131,7 @@ let loadFile2 = function(e) {
             img.src = ''
             document.body.background = img.src
             const x = Math.floor(Math.random() * 100)
-            img.src= `https://source.unsplash.com/random/1600×1200/?${input}+background?random=${x}`
+            img.src= `https://source.unsplash.com/random/1600×1200/?${input}?random=${x}`
             document.body.background = img.src
   
             img.onload = function () {OnImageLoaded (this)};

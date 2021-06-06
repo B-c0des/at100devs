@@ -1,7 +1,8 @@
 body{
   background-size: cover;
   background-color: black;
-  height: 100vh;
+  height: 150vh;
+  background-position: top;
   transition: background-image 1000ms linear;
     }
     #img-single-user{
@@ -9,6 +10,10 @@ body{
     }
     #img-multi-user{
       display: block;
+      box-shadow: 3px 4px 3px 0px rgb(0 0 0 / 20%);
+      background-color: rgba(255,255,255,.25);
+      backdrop-filter: blur(10px);
+padding: 2px;
     }
     a{
       color:white;
@@ -165,7 +170,7 @@ body{
       overflow-y: scroll;
       overflow-x: hidden;
       
-      padding-left: 10px;
+      padding: 10px;
     }
     #glow{
       z-index: 2;
@@ -816,12 +821,9 @@ header .overlay {
       flex-wrap: wrap;
       justify-content: space-around;
       height:100%;
-      border-radius:10px;
-      /* box-shadow: 0px 20px 50px 8px rgba(00,00,00,.9); */
+      border-radius:50px;
       padding-top: 95px;
       margin:0 auto;
-      box-shadow: inset 0 0 20px black;
-      backdrop-filter: blur(20px) saturate(120%);
       scrollbar-width: thin;
       border: 1px solid rgba(#fff,.15);
       padding-right: 1%;
@@ -1039,7 +1041,7 @@ header .overlay {
     #feed img:hover{
       filter:brightness(115%) contrast(106%);
       
-      box-shadow: 0px 4px 14px 4px rgba(00,00,00,.5);
+      box-shadow: 0px 4px 14px 4px rgba(00,00,00,.8);
       
       transform: scale(1.01);
       
@@ -1049,8 +1051,67 @@ header .overlay {
       animation-fill-mode: forwards;
       top:-2px;
       transition: all .1s ease-in-out;
-      ;s
     }
+
+    #userIcon{
+        
+      position: inherit;
+      right: 0;
+      text-align: center;
+      font-size: 11vw;
+      
+      width: 8vw;
+      height: 8vw;
+      border-radius: 4px;
+      line-height: 20px;
+      border: 1px solid rgba(255,255,255,.9);
+      background-color: rgba(255, 255, 255, .3);
+  
+  }
+  #userIcon:hover{
+    filter:brightness(115%) contrast(106%);
+    
+    transform: scale(1.0);
+    
+    animation: mymove 1s;
+    animation-iteration-count: 1;
+    border-bottom:20px;
+    animation-fill-mode: forwards;
+    color:white;
+    box-shadow: 0px 1px 7px 1px rgb(0 0 0 / 90%);
+    background-color: rgba(00, 0, 00, .6);
+    
+  }
+
+
+    /* #userIcon:hover{
+      filter:brightness(115%) contrast(106%);
+      
+      box-shadow: 0px 4px 14px 4px rgba(00,00,00,.8);
+      
+      transform: scale(1.01);
+      
+      animation: mymove 1s;
+      animation-iteration-count: 1;
+      border-bottom:1px;
+      animation-fill-mode: forwards;
+      top:-2px;
+      transition: all .1s ease-in-out;
+    } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @keyframes mymove {
       from {border-bottom:1px}
       to {animation: none;}
