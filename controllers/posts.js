@@ -148,6 +148,30 @@ likePost: async (req, res) => {
     console.log(err);
   }
 },
+deleteComment: async (req, res) => {
+  try {
+    //const post = await Post.find({ comments: req.user.id });
+
+    //{req.body = JSON.parse(Object.keys(req.body)[0])}catch(err){req.body = req.body}
+    // await Post.create({
+    //   comments: req.body.comments})
+    await Post.findOneAndUpdate(
+      { _id: req.params.id },
+      // {comments: req.body.comments},
+      {
+        $push:   { comments: {comments: req.body.comments, postedBy: req.user._id  }} 
+      },
+    );
+  console.log("Likes +1");
+  var data = req.body;
+
+console.log("Name: ", data.name);
+  console.log(req.user['image'])
+  res.redirect(`/profile/`);
+} catch (err) {
+  console.log(err);
+}
+},
   deletePost: async (req, res) => {
   
     try {
