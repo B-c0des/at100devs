@@ -41,9 +41,22 @@
 
         <div id="login-logout-box">
         
-             <!-- <h1><%= user.id %></h1> -->
-            <span><%- user?.userName && user.userName.trim().length ? `<h1>Hello ${user.userName.trim()}</h1>` : '<h1>Hello Guest</h1>' %></span>
+             <!-- <><%= user.id %></> -->
+            <h1><% for(var i=0; i<posts2.length; i++) {%>
+              <%- posts2[i]?.user == user.id ? `<img style="width:30px; height:30px;" src="${posts2[i].image}">` : '' %>
+             
+              <%}%><%- user?.userName && user.userName.trim().length ? `Hello ${user.userName.trim()}` : '<h1>Hello Guest</h1>' %></span>
             <span><%- user?.email && user.email.trim().length ? `<h1  id='email-label'>${user.email.trim()}</h1>` : '<h1>Hello Guest</h1>' %></span>
+          
+            <h1>
+<!-- 
+              <%-posts2[10]?.user %>
+               my value needed <%-user?._id %>
+               <%- posts2[10]?.user == user?.id ? posts2[10]?.image : 'not working' %> -->
+             
+            </h1>
+
+       
           </div>
           
           </div>
