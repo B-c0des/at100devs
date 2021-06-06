@@ -160,7 +160,8 @@ padding: 2px;
       top:-30px;
       display: flex;
       position: fixed;
-      top: 85.5vh;
+      top: 80.5vh;
+      margin-left: -44vw;
     z-index: 20;
       
     }
