@@ -3,7 +3,7 @@ body{
         background-color: black;
         background-image: url('https://source.unsplash.com/random/2000×2000/?flowers?random=1');
         background-size: cover;  
-        height: 150vh;
+        height: 100vh;
         transition: background-image 1000ms linear;
     }
 
@@ -17,7 +17,7 @@ body{
     border-radius: 40px;
     box-shadow: 1px 15px 30px 2px rgba(00,00,00,.9);
     padding-bottom: 20px;
-    margin-top:10vh;
+    margin-top:4vh;
 }
 button{
     border-radius: 50px;
@@ -25,7 +25,7 @@ button{
 @media only screen and (max-width: 900px) {
  .container 
  {
-     margin-top: 5%;
+     margin-top: 4vh;
      width:99%;    
      backdrop-filter: blur(45px);
      height:90%;

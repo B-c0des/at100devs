@@ -17,7 +17,10 @@ body{
       color:white;
     }
     a:hover{
-      color: rgba(255,255,255,.5);
+        background-color:transparent;
+        filter: drop-shadow(
+          0 0 60px  #fff);
+          transform: scale(1.2);
     }
     #dropdown-alert{
       padding-top: 15%;
@@ -168,6 +171,19 @@ body{
       overflow-x: hidden;
       
       padding: 10px;
+    }
+    #across::-webkit-scrollbar {
+      width: 14px;               /* width of the entire scrollbar */
+    }
+    
+    #across::-webkit-scrollbar-track {
+      background: black;        /* color of the tracking area */
+    }
+    
+    #across::-webkit-scrollbar-thumb {
+      background-color: black;    /* color of the scroll thumb */
+      
+      border: 1px solid white;  /* creates padding around scroll thumb */
     }
     #glow{
       z-index: 2;
@@ -434,6 +450,8 @@ header .overlay {
   box-shadow: 6px 3px 14px 1px  rgba(00,00,00,.9);
   background-size: cover;
   height:fit-content;
+  background-color: rgba(255, 255, 255, 0.5);
+
 }
 #img{
   
@@ -631,7 +649,9 @@ header .overlay {
       font-size: 2.5vh;
       color:white;
       color: white;
-
+      border-radius: 1px 19px 2px 1px;
+    background-color: rgba(00, 0, 00, 0.6);
+    box-shadow: 0px 9px 10px -3px rgb(0 0 0 / 90%);
     }
     #submitComment{
     height:4vh;
@@ -758,10 +778,14 @@ header .overlay {
       display: flex;
       flex-direction: row;
       border-bottom: 1px solid rgba(255,255,255,.5);
+      color:black;
          
     }
     #post-comment-box{
-      height:5vh;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    border-radius: 1px 19px 2px 1px;
+    background-color: rgba(00, 0, 00, 0.6);
       border-bottom: 1px solid rgba(255,255,255,.5);
          
     }
@@ -1037,7 +1061,7 @@ header .overlay {
       width:24%;
       height:300px;
       object-fit: cover;
-    
+      filter: brightness(110%);
       
       border-radius:7px;
       
@@ -1430,6 +1454,8 @@ width:0;
         font-size: 3vw;
         color: white;        
       text-align: center;
+      border-radius: 0px;
+      box-shadow: 0px 9px 10px -3px rgb(0 0 0 / 90%);
       
       padding-left: 1%;
       padding-right: 1%;
@@ -1439,6 +1465,7 @@ width:0;
         margin:.5% auto;
         justify-content:center;
         
+      filter: brightness(120%);
         box-shadow: 1px 5px 10px 0px rgba(00,00,00,.9);
         
         width:100%;
