@@ -181,6 +181,10 @@ console.log("Name: ", data.name);
       await cloudinary.uploader.destroy(post.cloudinaryId);
       // Delete post from db
       await Post.deleteOne({ _id: req.params.id });
+      
+
+
+
       console.log("Deleted Post");
       res.redirect("/profile");
     } catch (err) {
