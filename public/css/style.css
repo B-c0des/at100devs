@@ -443,7 +443,7 @@ header .overlay {
   width:100%;    
   background-color:transparent;
   z-index: 2;
-  backdrop-filter: blur(50px) brightness(140%)contrast(90%)invert(20%);
+  backdrop-filter: blur(50px) brightness(140%)contrast(90%)invert(10%);
   
 }
 #dropdown-alert{
@@ -478,7 +478,7 @@ header .overlay {
   padding-left:30%;
   padding-right:30%;
   text-align: center;
-  backdrop-filter: blur(20px) invert(30%);
+  backdrop-filter: blur(20px);
   border-radius: 40px;
   
   overflow-y: hidden;
@@ -496,7 +496,7 @@ header .overlay {
   padding-left:30%;
   padding-right:30%;
   text-align: center;
-  backdrop-filter: blur(20px) invert(30%);
+  backdrop-filter: blur(20px);
   border-radius: 40px;
   
   overflow-y: hidden;
@@ -511,7 +511,7 @@ header .overlay {
       
       flex-direction: row;
       display: flexbox;
-      backdrop-filter: blur(15px) brightness(1.2) invert(1%) ;
+      backdrop-filter: blur(15px) brightness(1.2)  ;
       overflow-y: hidden;
       width:100%;
       height:100vh;
@@ -1246,7 +1246,7 @@ header .overlay {
         width:100%;    
         background-color:transparent;
         z-index: 2;
-        backdrop-filter: blur(50px) brightness(140%)contrast(90%)invert(20%);
+        backdrop-filter: blur(50px) brightness(140%)contrast(90%)invert(10%);
         
       }
       #add-profile{
