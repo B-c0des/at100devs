@@ -44,8 +44,9 @@
              <!-- <><%= user.id %></> -->
             <h1><% for(var i=0; i<posts2.length; i++) {%>
               <%- posts2[i]?.user == user.id ? `<img style="width:30px; height:30px;" src="${posts2[i].image}">` : '' %>
-             
-              <%}%><%- user?.userName && user.userName.trim().length ? `Hello ${user.userName.trim()}` : '<h1>Hello Guest</h1>' %></span>
+              <%}%>
+              
+              <%- user?.userName && user.userName.trim().length ? `Hello ${user.userName.trim()}` : '<h1>Hello Guest</h1>' %></span>
             <span><%- user?.email && user.email.trim().length ? `<h1  id='email-label'>${user.email.trim()}</h1>` : '<h1>Hello Guest</h1>' %></span>
           
             <h1>
@@ -78,6 +79,10 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
 

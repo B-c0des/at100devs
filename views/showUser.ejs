@@ -8,7 +8,7 @@
 
         <div  id="<%=[i]%>"  class="container-view" style="display: none; z-index:20;"r>
           <div id='x' onclick=" document.getElementById(`${this.parentNode.id}`).style.display = 'none'; document.getElementById('feed').style.display = 'flex'" style="z-index:20">x</div>
-          <div style="background-image: url('<%= posts2[i].image%>'); width:100%; z-index: 5; height: 80vh; background-size: cover; background-position: center;box-shadow: 5px 18px 14px 1px rgba(00,00,00,.9); " class="<%=[i]%>" id="img"></div>
+          <div style="background-image: url('<%= posts2[i].image%>'); width:100%; z-index: 5; height: 80vh; background-size: cover; background-position: center;box-shadow: 6px 3px 14px 1px  rgba(00,00,00,.9); " class="<%=[i]%>" id="img"></div>
           <div id="add-posts">
           
              
@@ -62,16 +62,29 @@
       <div id="user-info1">
         
           
-          
-                     
+          <div id="column">  
         <span><%= posts2[i].name ?   posts2[i].name : '' %></span>
         <span><%= posts2[i].title ?  posts2[i].title : '' %></span>
-                     
-                      
-      <span><%= posts2[i].contact ?   posts2[i].contact : '' %></span>
-                      <a href="https://<%=posts2[i].website%>"><%= posts2[i].website ?   posts2[i].website : '' %></a>
-             
+      </div>
+
+
+<div id="row">
+        <img style="width:50px; height:50px;" src='https://s2.svgbox.net/files.svg?ic=node'><img style="width:50px; height:50px;" src='https://s2.svgbox.net/files.svg?ic=js'><img style="width:50px; height:50px;" src='https://s2.svgbox.net/files.svg?ic=ejs'><img style="width:50px; height:50px;" src='https://s2.svgbox.net/files.svg?ic=css'><img style="width:50px; height:50px;" src='https://s2.svgbox.net/files.svg?ic=html'>
+        <Icon icon="mdi-light:home" />
+      </div>
+<div id="row">
+        <a href="<%= posts2[i].contact ?   posts2[i].contact : '' %>">
+          <i class="material-icons" style="font-size:48px;">call</i>
+        </a>
+      
+         <a href="https://<%- posts2[i].website ? posts2[i].website : '' %> ">
+      
+          <i class="material-icons" style="font-size:48px;">language</i></a>
                 </div>
+
+              </span>
+            </div>    
+
                 <div id='across'> 
                 <div>
 
@@ -171,7 +184,7 @@
 
   <div  id="myProfile2"  class="container-view"  >
     <div id='x' onclick=" document.getElementById('myProfile2').style.display = 'none'; document.getElementById('feed').style.display = 'flex'" style="z-index:20">x</div>
-    <div style="background-image: url('<%= post[0].image%>'); width:100%; z-index: 5; height: 80vh; background-size: cover; background-position: center;box-shadow: 5px 18px 14px 1px rgba(00,00,00,.9); " id="img"></div>
+    <div style="background-image: url('<%= post[0].image%>'); width:100%; z-index: 5; height: 80vh; background-size: cover; background-position: center;box-shadow: 6px 3px 14px 1px  rgba(00,00,00,.9); " id="img"></div>
     <div id="add-posts">
     
        
