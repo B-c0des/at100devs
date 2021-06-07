@@ -3,7 +3,7 @@ body{
         background-color: black;
         background-image: url('https://source.unsplash.com/random/2000×2000/?flowers?random=1');
         background-size: cover;  
-        height: 100vh;
+        height: 150vh;
         transition: background-image 1000ms linear;
     }
 

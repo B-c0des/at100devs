@@ -12,8 +12,6 @@ body{
       display: block;
       box-shadow: 3px 4px 3px 0px rgb(0 0 0 / 20%);
       background-color: rgba(255,255,255,.25);
-      backdrop-filter: blur(10px);
-padding: 2px;
     }
     a{
       color:white;
@@ -829,7 +827,7 @@ header .overlay {
       border: 1px solid rgba(#fff,.15);
       padding-right: 1%;
       padding-left: 1%;
-      
+      backdrop-filter: blur(20px);
      /* -webkit-mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
       mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
       
@@ -1042,7 +1040,7 @@ header .overlay {
     #feed img:hover{
       filter:brightness(115%) contrast(106%);
       
-      box-shadow: 0px 4px 14px 4px rgba(00,00,00,.8);
+      box-shadow: 2px 7px 12px 2px rgba(00,00,00,.8);
       
       transform: scale(1.01);
       

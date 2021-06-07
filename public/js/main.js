@@ -120,8 +120,8 @@ let loadFile2 = function(e) {
               (myProfile.style.display = "none") && (feed.style.display = "flex") ; 
 
               }
-               // }
-
+              
+            document.body.background = localStorage.getItem("backgroundImg");
           dropDownClick.onclick = function() {
 
             let input = document.getElementById("userInput").value;
@@ -130,12 +130,20 @@ let loadFile2 = function(e) {
             
             img.src = ''
             document.body.background = img.src
-            const x = Math.floor(Math.random() * 100)
-            img.src= `https://source.unsplash.com/random/1600×1200/?${input}?random=${x}`
-            document.body.background = img.src
+            const x = Math.floor(Math.random() * 20)
+
+
+            img.src= `https://source.unsplash.com/random/'1600x1200'/?${input}?random=${x}`
+
+
+            img.src =
+            localStorage.setItem("backgroundImg", img.src);
+            
+             localStorage.getItem("backgroundImg");
+            document.body.background = localStorage.getItem("backgroundImg");
   
-            img.onload = function () {OnImageLoaded (this)};
-            function OnImageLoaded (img) {
+            // document.getElementById("dropDownClick").onclick = function () {OnImageLoaded (this)};
+            // function OnImageLoaded (img) {
   
               let myTheme = document.getElementById("my-theme")
               let feedy = document.getElementById("feed")
@@ -144,7 +152,7 @@ let loadFile2 = function(e) {
               myTheme.style.display == "block" ? (myTheme.style.display = "none") && (feedy.style.display = "flex") : 
               (myTheme.style.display = "none") && (myTheme.style.display = "none") ;
               
-            }
+            
            };
 
                    function myFunction() {
