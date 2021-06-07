@@ -112,10 +112,20 @@
         
     
     
-    
-          <input type="text" class="form-control" name="comments" id='sendComment'></input>
+          <%if(post.length == 0){ %>
+
+
+
+            <div id='alert'>
+          <div id="dropdown-alert" onclick="toggleContent()" style="position: fixed;padding-top: 6%;padding-bottom:6%;color:white;border-radius:0px;background-color: transparent; width: 100%; z-index: 20;"> Create a Profile first!</div>
+             </div> 
+                
+            <%}%>
+          <input type="text" class="form-control" name="comments" id='sendComment' style="z-index:-1"></input>
+        
         </div>
-      <button type="submit" id="submitComment" class="btn btn-primary text-center w-100 rounded-bottom" value="comments" >Post comment!</button>
+        
+        <%- posts2[i].name ? `<button type="submit" id="submitComment" class="btn btn-primary text-center w-100 rounded-bottom" value="comments" >Post Comment!</button>` : 'Please create a profile first!' %>
                   </form>
         
           </div>

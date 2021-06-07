@@ -263,6 +263,7 @@ body{
     z-index: 20;
     display: none;
     overflow-y: scroll;
+    z-index: 100;
     }
     #update-profile{
       position: fixed;
@@ -622,6 +623,7 @@ header .overlay {
     height:4vh;
     }
     #sendComment{
+      z-index: -1;
     height:4hv;
     }
     #comment-container-backdrop{
