@@ -117,10 +117,11 @@
 
 
             <div id='alert'>
-          <div id="dropdown-alert" onclick="toggleContent()" style="position: fixed;padding-top: 6%;padding-bottom:6%;color:white;border-radius:0px;background-color: transparent; width: 100%; z-index: 20;"> Create a Profile first!</div>
+          <div id="dropdown-alert" onclick="toggleContent()" style="margin-top: -11vh; backdrop-filter: blur(6px) invert(30%); position: fixed;color:white;border-radius:0px;background-color: transparent; width: 100%; z-index: 20; padding-bottom: 64vh;margin-top: -75vh;"> Create a Profile to comment!</div>
              </div> 
                 
             <%}%>
+            <%if(post.length > 0){ %>
           <input type="text" class="form-control" name="comments" id='sendComment' style="z-index:-1"></input>
         
         </div>
@@ -129,7 +130,7 @@
                   </form>
         
           </div>
-          
+          <%}%>
        
     
     
