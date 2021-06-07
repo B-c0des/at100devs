@@ -8,7 +8,7 @@
 
         <div  id="<%=[i]%>"  class="container-view" style="display: none; z-index:20;"r>
           <div id='x' onclick=" document.getElementById(`${this.parentNode.id}`).style.display = 'none'; document.getElementById('feed').style.display = 'flex'" style="z-index:20">x</div>
-          <div style="background-image: url('<%= posts2[i].image%>'); width:100%; z-index: 5; height: 80vh; background-size: cover; background-position: center;box-shadow: 5px 18px 14px 1px rgba(00,00,00,.9);; " class="<%=[i]%>" id="img"></div>
+          <div style="background-image: url('<%= posts2[i].image%>'); width:100%; z-index: 5; height: 80vh; background-size: cover; background-position: center;box-shadow: 5px 18px 14px 1px rgba(00,00,00,.9); " class="<%=[i]%>" id="img"></div>
           <div id="add-posts">
           
              
@@ -171,10 +171,11 @@
 
   <div  id="myProfile2"  class="container-view"  >
     <div id='x' onclick=" document.getElementById('myProfile2').style.display = 'none'; document.getElementById('feed').style.display = 'flex'" style="z-index:20">x</div>
-    <div style="background-image: url('<%= post[0].image%>'); width:100%; z-index: 5; height: 80vh; background-size: cover; background-position: center; border-radius: 20px 20px 0px 0px;" id="img"></div>
+    <div style="background-image: url('<%= post[0].image%>'); width:100%; z-index: 5; height: 80vh; background-size: cover; background-position: center;box-shadow: 5px 18px 14px 1px rgba(00,00,00,.9); " id="img"></div>
     <div id="add-posts">
     
        
+      <div style="background-image: url('<%= posts2[i].image%>'); " class="<%=[i]%>" id="img"></div>
    
 <div id='likebox'>
 
@@ -233,27 +234,35 @@ class="row-6 justify-content-between  "
                 <a href="https://<%=post[0].website%>"><%= post[0].website ?   post[0].website : '' %></a>
        
           </div>
+
+
           <div id='across'> 
-          <div>
-            
-
-
-            <% for(var j=0; j < post[0].comments.length; j++) {  %>
-
+            <div>
+  
+              <% for(var j=0; j < post[0].comments.length; j++) {  %>
       
-                    
-                 
-              <h1 id="comment-box" ><%= post[0].comments[j].comments  %></h1> 
+              
+                            
+                         
+                <h1 id="comment-box" >                 
+  
+                  
+  
+                <% for(var k=0; k < posts2.length; k++) {  %>
+  
+  
+  
+                  <%- (post[0].comments[j].postedBy.toString().trim() == posts2[k]?.user.toString().trim()) ? `<img id="userIcon" onclick="document.getElementById('${[k]}').style.display = 'flex';document.getElementById('myProfile2').style.display = 'none'" style="width:50px; height:50px;"src="${posts2[k]?.image.toString().trim()}">` : '' %>   
                 
-               
+                   
+                <% } %>
+                    
+                <%= post[0].comments[j].comments  %> 
+             <% } %>
+                   </div>
            
-           <% } %>
-                 
-                 </div>
-                 
 
-   <!-- <%= posts2[i].comments  ? posts2[i].comments[0] : 'No comments added yet.'  %>  -->
-  </div>
+</div>
      
   <form  class="col-10 w-100" 
   action="/post/commentPost/<%= post[0]._id %>?_method=PUT"  
