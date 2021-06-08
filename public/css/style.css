@@ -1461,7 +1461,7 @@ width:0;
         width:9vh;
         height:9vw;
         color:white;
-        filter: drop-shadow(2px 4px 6px black) brightness(0) invert(1);
+        filter: drop-shadow(0px 0px 2px white) brightness(0) invert(1);
         fill: white;
       }
       #user-info1{
