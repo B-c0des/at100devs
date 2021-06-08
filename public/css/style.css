@@ -1395,7 +1395,8 @@ width:0;
         }
       #x{
         position: inherit;
-        right: 0px;
+        right: 15px;
+        top: 15px;
         text-align: center;
         font-size: 24vw;
         color: rgba(255,255,255,.9);
