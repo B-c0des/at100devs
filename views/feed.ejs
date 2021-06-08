@@ -15,9 +15,11 @@
              <img onclick="document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none' "  class="<%=[i]%>" id="img-multi-user" src="<%= posts2[i].image%>"  >
             
              <div id="text-block" onclick="document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none' ">
-              <h4><%- posts2[i].name %></h4>
-              <h1><%- posts2[i].title %></h1>
+              <span id="backgroundColor">
+              <span><%- posts2[i].name %></span>
+              <span><%- posts2[i].title %></span>
               <img id='stack-icon-feed' src='https://s2.svgbox.net/files.svg?ic=node' style="width:3vw; height:3vw">
+            </span>
             </div>
           </div>
             
@@ -36,10 +38,13 @@
 
              <div id="container3">
            <img style="width:100%;" onclick="document.getElementById('myProfile2').style.display = 'flex';document.getElementById('feed').style.display = 'none' "  class="<%=[i]%>" id="img-multi-user" src="<%= post[i].image%>"  >
-           <div id="text-block">
-             <h4><%- user.userName %></h4>
-             <h1><%- post[0].title %></h1>
+           <div id="text-block" onclick="document.getElementById('myProfile2').style.display = 'flex';document.getElementById('feed').style.display = 'none' ">
+             
+            <span id="backgroundColor">
+             <span><%- user.userName %></span>
+             <span><%- post[0].title %></span>
              <img id='stack-icon-feed' src='https://s2.svgbox.net/files.svg?ic=node' style="width:3vw; height:3vw">
+             </span>
            </div>
          </div>
  
