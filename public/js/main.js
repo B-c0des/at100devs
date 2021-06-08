@@ -82,6 +82,14 @@ let loadFile2 = function(e) {
           
           }
 
+          // document.getElementById('across').onclick = increaseChatSize()
+
+          // function increaseChatSize(){
+          //   document.querySelector('#img').style.cssText = 'height: 0'
+
+          // }
+
+
           
 
           function toggleFeedView() {

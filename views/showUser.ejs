@@ -69,23 +69,26 @@
 
 
 <div id="row">
-        <img style="width:3vw; height:3vw;" src='https://s2.svgbox.net/files.svg?ic=node'><img style="width:3vw; height:3vw;" src='https://s2.svgbox.net/files.svg?ic=js'><img style="width:3vw; height:3vw;" src='https://s2.svgbox.net/files.svg?ic=ejs'><img style="width:3vw; height:3vw;" src='https://s2.svgbox.net/files.svg?ic=css'><img style="width:3vw; height:3vw;" src='https://s2.svgbox.net/files.svg?ic=html'>
+       
+
+
+        <img style="width:4vw; height:4vw;" src='https://s2.svgbox.net/files.svg?ic=node'><img style="width:3vw; height:3vw;" src='https://s2.svgbox.net/files.svg?ic=js'><img style="width:3vw; height:3vw;" src='https://s2.svgbox.net/files.svg?ic=ejs'><img style="width:3vw; height:3vw;" src='https://s2.svgbox.net/files.svg?ic=css'><img style="width:3vw; height:3vw;" src='https://s2.svgbox.net/files.svg?ic=html'>
         <Icon icon="mdi-light:home" />
       </div>
 <div id="row">
-        <a href="<%= posts2[i].contact ?   posts2[i].contact : '' %>">
-          <i class="material-icons" style="font-size:6vw;">call</i>
+        <a href="tel:<%= posts2[i].contact ?   posts2[i].contact : '' %>">
+          <i class="material-icons" style="font-size:5vw;">call</i>
         </a>
       
          <a href="https://<%- posts2[i].website ? posts2[i].website : '' %> ">
       
-          <i class="material-icons" style="font-size:6vw;">language</i></a>
+          <i class="material-icons" style="font-size:5vw;">language</i></a>
                 </div>
 
               </span>
             </div>    
 
-                <div id='across'> 
+                <div id='across' onclick="document.getElementById('add-posts').style.cssText = 'min-height: 100%;' "> 
                 <div>
 
                   <% for(var j=0; j < posts2[i].comments.length; j++) {  %>
@@ -243,7 +246,9 @@ class="row-6 justify-content-between  "
                 <h4><%= post[0].name ?   post[0].name : '' %></h4>
                 <h4><%= posts[0].title ?  post[0].title : '' %></h4>
                 
-                <a href="<%=post[0].contact%>"><%= post[0].contact ?   post[0].contact : '' %></a>
+
+
+                <a href="tel:<%=post[0].contact%>"><%= post[0].contact ?   post[0].contact : '' %></a>
                 <a href="https://<%=post[0].website%>"><%= post[0].website ?   post[0].website : '' %></a>
        
           </div>
