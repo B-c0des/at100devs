@@ -77,12 +77,16 @@
       </div>
 <div id="row">
         <a href="tel:<%= posts2[i].contact ?   posts2[i].contact : '' %>">
-          <i class="material-icons" id='media-icon'>call</i>
+          <img src='https://s2.svgbox.net/hero-outline.svg?ic=phone' id='material-icon'>
         </a>
-      
+        <a href="sms:<%= posts2[i].contact ?   posts2[i].contact : '' %>">
+        <img src="https://s2.svgbox.net/materialui.svg?ic=textsms&color=000" id='material-icon'>
+         </a>
+
+
          <a href="https://<%- posts2[i].website ? posts2[i].website : '' %> ">
-      
-          <i class="material-icons" id='media-icon'>language</i></a>
+          <img src="https://s2.svgbox.net/materialui.svg?ic=language&color=000" id='material-icon'>
+          </a>
                 </div>
 
               </span>
