@@ -14,8 +14,7 @@
              
          
     <div id='likebox'>
-    
-    
+
     <%if(posts2[i].user == user.id){ %>
     <form
       action="/post/deletePost/<%= posts2[i]._id %>?_method=DELETE"
@@ -72,17 +71,18 @@
        
 
 
-        <img style="width:4vw; height:4vw;" src='https://s2.svgbox.net/files.svg?ic=node'><img style="width:3vw; height:3vw;" src='https://s2.svgbox.net/files.svg?ic=js'><img style="width:3vw; height:3vw;" src='https://s2.svgbox.net/files.svg?ic=ejs'><img style="width:3vw; height:3vw;" src='https://s2.svgbox.net/files.svg?ic=css'><img style="width:3vw; height:3vw;" src='https://s2.svgbox.net/files.svg?ic=html'>
-        <Icon icon="mdi-light:home" />
+  <img id='stack-icon' src='https://s2.svgbox.net/files.svg?ic=node'><img id='stack-icon' src='https://s2.svgbox.net/files.svg?ic=js'><img id='stack-icon' src='https://s2.svgbox.net/files.svg?ic=ejs'><img id='stack-icon' src='https://s2.svgbox.net/files.svg?ic=css'><img id='stack-icon' src='https://s2.svgbox.net/files.svg?ic=html'>
+    
+  <Icon  icon="mdi-light:home" />
       </div>
 <div id="row">
         <a href="tel:<%= posts2[i].contact ?   posts2[i].contact : '' %>">
-          <i class="material-icons" style="font-size:5vw;">call</i>
+          <i class="material-icons" id='media-icon'>call</i>
         </a>
       
          <a href="https://<%- posts2[i].website ? posts2[i].website : '' %> ">
       
-          <i class="material-icons" style="font-size:5vw;">language</i></a>
+          <i class="material-icons" id='media-icon'>language</i></a>
                 </div>
 
               </span>
@@ -195,7 +195,7 @@
    
 <div id='likebox'>
 
-
+ 
 <%if(post[0].user == user.id){ %>
 <form
 action="/post/deletePost/<%= post[0]._id %>?_method=DELETE"
