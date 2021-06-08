@@ -2,33 +2,59 @@
 
   
     <div id="feed" >
-     <!-- <img value='1' id="img" src="https://www.birthdaymessagesstatus.com/wp-content/uploads/2018/08/Stylish-Attitude-Girl-Images-for-FB-Profile-Pic.jpg">
-      <img value='2' id="img" src="https://thumbs.dreamstime.com/b/real-normal-person-portrait-22299720.jpg">
-      <img value='3' id="img" src="https://piximus.net/media/6621/portraits-of-people-87.jpg">
-      <img value='4' id="img" src="https://4.bp.blogspot.com/_cG2SV6Pnny4/SVEMe3VpLEI/AAAAAAAABic/tysh9iiyGuQ/s400/12_b.jpg">
-      
-     -->
-     <% for(var i=0; i<posts2.length; i++) {%>
-   
-      <%if(posts2[i].user != user.id){ %>
-            <img onclick="document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none' "  class="<%=[i]%>" id="img-multi-user" src="<%= posts2[i].image%>"  >
-            <% } %>    
-        <% } %>
+      <!-- <img value='1' id="img" src="https://www.birthdaymessagesstatus.com/wp-content/uploads/2018/08/Stylish-Attitude-Girl-Images-for-FB-Profile-Pic.jpg">
+       <img value='2' id="img" src="https://thumbs.dreamstime.com/b/real-normal-person-portrait-22299720.jpg">
+       <img value='3' id="img" src="https://piximus.net/media/6621/portraits-of-people-87.jpg">
+       <img value='4' id="img" src="https://4.bp.blogspot.com/_cG2SV6Pnny4/SVEMe3VpLEI/AAAAAAAABic/tysh9iiyGuQ/s400/12_b.jpg">
+       
+      -->
+      <% for(var i=0; i<posts2.length; i++) {%>
+    
+       <%if(posts2[i].user != user.id){ %>
+        <div id="container3">
+             <img onclick="document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none' "  class="<%=[i]%>" id="img-multi-user" src="<%= posts2[i].image%>"  >
+            
+             <div id="text-block" onclick="document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none' ">
+              <h4><%- posts2[i].name %></h4>
+              <h1><%- posts2[i].title %></h1>
+              <img id='stack-icon-feed' src='https://s2.svgbox.net/files.svg?ic=node' style="width:3vw; height:3vw">
+            </div>
+          </div>
+            
+            
+            
+            
+             <% } %>    
+         <% } %>
+ 
+ 
+ 
+ 
+ 
+         <% for(var i=0; i<post.length; i++) {%>
+    
 
-
-
-
-
-        <% for(var i=0; i<post.length; i++) {%>
-   
-      
-          <img onclick="document.getElementById('myProfile2').style.display = 'flex';document.getElementById('feed').style.display = 'none' "  class="<%=[i]%>" id="img-multi-user" src="<%= post[i].image%>"  >
-          <span class="iconify" data-icon="node" data-inline="false"></span>
-      <% } %>
-
-    </div>
-
+             <div id="container3">
+           <img style="width:100%;" onclick="document.getElementById('myProfile2').style.display = 'flex';document.getElementById('feed').style.display = 'none' "  class="<%=[i]%>" id="img-multi-user" src="<%= post[i].image%>"  >
+           <div id="text-block">
+             <h4><%- user.userName %></h4>
+             <h1><%- post[0].title %></h1>
+             <img id='stack-icon-feed' src='https://s2.svgbox.net/files.svg?ic=node' style="width:3vw; height:3vw">
+           </div>
+         </div>
+ 
+ 
+ 
+       <% } %>
+       <!-- <% for (var y = 0; y < stack.length ; y++){ %>
+         <span class="iconify" data-icon="<%= stack.split(' ')[y] %>" data-inline="false"></span>
+         <span class="iconify" data-icon="node" data-inline="false"></span>
+         
+         <% } %> -->
      </div>
-  </div>
-
-
+ 
+      </div>
+   </div>
+ 
+ 
+ 
