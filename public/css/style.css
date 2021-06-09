@@ -17,8 +17,8 @@ body{
     audio{
       position: absolute;
       right: 0px;
-      height: 30px;
-      width: 139px;
+      height: 60px;
+      width: 15vw;
       filter: invert(100%);
     }
 
