@@ -34,6 +34,8 @@
     "validator": "^13.6.0"
   },
   "devDependencies": {
+    "@iconify/json": "^1.1.354",
+    "@iconify/json-tools": "^1.0.10",
     "@iconify/react-with-api": "^1.0.0-rc.7"
   }
 }

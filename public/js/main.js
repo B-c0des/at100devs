@@ -1,5 +1,6 @@
 
 
+
 console.log('app running...')
 
 
@@ -267,7 +268,7 @@ function commentClick()
         function toggleViews() {
         // Get the DOM reference
         var contentId = document.querySelector(".class");
-        console.log(this.src)
+        
         // Toggle 
         contentId.style.display == "block" ? contentId.style.display = "none" : 
         contentId.style.display = "block"; 
@@ -342,12 +343,12 @@ function commentClick()
         
         
         // }
-        let showProfiles = document.querySelectorAll('img')
-        for (const showProfile of showProfiles) {
-          button.addEventListener('click', function(event) {
-            console.log('click')
-          })
-        }
+        // let showProfiles = document.querySelectorAll('img')
+        // for (const showProfile of showProfiles) {
+        //   button.addEventListener('click', function(event) {
+        //     console.log('click')
+        //   })
+        // }
         // function showUser(){
 
  
