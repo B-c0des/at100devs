@@ -998,7 +998,9 @@ header .overlay {
       overflow-y: scroll;
       */
     }
-    
+    #feed img{
+      box-shadow: inset 0px 0px 60px 2px black;
+    }
     button{
       
       color: white;
