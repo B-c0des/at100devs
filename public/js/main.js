@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 console.log('app running...')
 
@@ -22,6 +23,11 @@ function muteMe(el) {
 function mutePage(){
   document.querySelectorAll('video','audio').forEach( el => muteMe(el))
 }
+=======
+console.log('app running...')
+
+
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
 function addText() {
   var input = document.getElementById('something');
   input.value = input.value + ' test'
@@ -160,7 +166,11 @@ let loadFile2 = function(e) {
             const x = Math.floor(Math.random() * 20)
 
 
+<<<<<<< HEAD
             // img.src= `https://source.unsplash.com/random/'1600x1200'/?${input}?random=${x}`
+=======
+            img.src= `https://source.unsplash.com/random/'1600x1200'/?${input}?random=${x}`
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
 
 
             img.src =
@@ -286,7 +296,11 @@ function commentClick()
         function toggleViews() {
         // Get the DOM reference
         var contentId = document.querySelector(".class");
+<<<<<<< HEAD
         
+=======
+        console.log(this.src)
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
         // Toggle 
         contentId.style.display == "block" ? contentId.style.display = "none" : 
         contentId.style.display = "block"; 
@@ -361,12 +375,21 @@ function commentClick()
         
         
         // }
+<<<<<<< HEAD
         // let showProfiles = document.querySelectorAll('img')
         // for (const showProfile of showProfiles) {
         //   button.addEventListener('click', function(event) {
         //     console.log('click')
         //   })
         // }
+=======
+        let showProfiles = document.querySelectorAll('img')
+        for (const showProfile of showProfiles) {
+          button.addEventListener('click', function(event) {
+            console.log('click')
+          })
+        }
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
         // function showUser(){
 
  

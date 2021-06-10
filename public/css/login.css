@@ -22,6 +22,7 @@ body{
 button{
     border-radius: 50px;
 }
+<<<<<<< HEAD
 #vod{
     position: absolute;
     right: 0;
@@ -30,6 +31,8 @@ button{
     min-height: 100%;
     z-index:-1;
 }
+=======
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
 @media only screen and (max-width: 900px) {
  .container 
  {

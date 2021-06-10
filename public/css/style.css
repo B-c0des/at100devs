@@ -4,8 +4,11 @@ body{
   height: 150vh;
   background-position: top;
   transition: background-image 1000ms linear;
+<<<<<<< HEAD
   overflow-y: hidden;
   overflow-x: hidden;
+=======
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
     }
     #img-single-user{
       display: none;
@@ -13,6 +16,7 @@ body{
     #container3{
       position: relative;
       font-family: Arial;
+<<<<<<< HEAD
       width: 24%;
       height: 300px;
       margin-bottom: 17px;
@@ -31,6 +35,17 @@ body{
       height: 50px;
       width: 142px;
       filter: invert(80%);
+=======
+      width:24%;
+    }
+    
+    audio{
+      position: absolute;
+      right: 0px;
+      height: 30px;
+      width: 139px;
+      filter: invert(100%);
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
     }
 
     #img-multi-user{
@@ -38,12 +53,25 @@ body{
       box-shadow: 3px 4px 3px 0px rgb(0 0 0 / 20%);
       background-color: rgba(255,255,255,.25);
       position: relative;
+<<<<<<< HEAD
       margin: .5%;
       width: 100%;
       height: 300px;
       object-fit: cover;
       filter: brightness(110%);
       border-radius: 7px;
+=======
+      margin:.5%;
+      width:100%;
+      height:300px;
+      object-fit: cover;
+      filter: brightness(110%);
+      
+      border-radius:7px;
+      
+      
+      
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
       transform-origin: center center;
       
     }
@@ -106,6 +134,7 @@ body{
       position: absolute;
       width: 101%;
       text-align: center;
+<<<<<<< HEAD
       bottom: -1px;
       opacity: 0%;
       height: 300px;
@@ -115,6 +144,21 @@ body{
       border-bottom: 1px;
       animation-fill-mode: forwards;
       transition: all .02s ease-out;
+=======
+    bottom: 0px;
+    opacity: 0%;
+    
+    
+    display: flex;
+    height:101%;
+    color: white;
+    padding-top: 100%;
+    animation: mymove 1s;
+    animation-iteration-count: 1;
+    border-bottom:1px;
+    animation-fill-mode: forwards;
+    transition: all .1s ease-in-out;
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
     }
      
     #stack-icon{
@@ -132,7 +176,10 @@ body{
       filter: invert(1) drop-shadow(2px 4px 6px black);
     }
     #backgroundColor{
+<<<<<<< HEAD
       color: white;
+=======
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
         background-color: rgba(00, 0, 00, .6);
         border-radius: 2px;
         display: flex;
@@ -986,8 +1033,12 @@ header .overlay {
       width: 100%;
       flex-wrap: wrap;
       justify-content: space-around;
+<<<<<<< HEAD
       height: 100vh;
       overflow-y: scroll;
+=======
+      height:100%;
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
       border-radius:50px;
       padding-top: 95px;
       margin:0 auto;
@@ -995,7 +1046,11 @@ header .overlay {
       border: 1px solid rgba(#fff,.15);
       padding-right: 1%;
       padding-left: 1%;
+<<<<<<< HEAD
       backdrop-filter: blur(0px);
+=======
+      backdrop-filter: blur(20px);
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
      /* -webkit-mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
       mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
       
@@ -1003,9 +1058,13 @@ header .overlay {
       overflow-y: scroll;
       */
     }
+<<<<<<< HEAD
     #feed img{
       box-shadow: inset 0px 0px 60px 2px black;
     }
+=======
+    
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
     button{
       
       color: white;
@@ -1029,6 +1088,7 @@ header .overlay {
       
       
     }
+<<<<<<< HEAD
     #username-display{
     width:50%;
     }
@@ -1037,6 +1097,17 @@ header .overlay {
       background-color:transparent;
       z-index: 2;
     justify-content: space-between;
+=======
+    
+    #user-name{
+      position: absolute;
+      left:0px;
+      width:150px;
+      height:60px;
+      background-color:transparent;
+      z-index: 2;
+      margin-top:10px
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
     }
     #login-logout-box{
       position: fixed;
@@ -1053,7 +1124,11 @@ header .overlay {
     
     #headerTitle{
       display:flex;
+<<<<<<< HEAD
       justify-content: space-evenly;
+=======
+      justify-content: space-between;
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
       flex-direction: column;
       letter-spacing: 2px;
       color:white;
@@ -1356,9 +1431,13 @@ header .overlay {
           #container3{
             position: relative;
             font-family: Arial;
+<<<<<<< HEAD
             width: 100%;
             height: 300px;
             margin-bottom: 17px;
+=======
+            width:100%;
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
           }
           a{
             color:white;
@@ -1380,12 +1459,20 @@ header .overlay {
             position: absolute;
             width: 101%;
             text-align: center;
+<<<<<<< HEAD
           bottom: -1px;
+=======
+          bottom: 0px;
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
           filter: drop-shadow(1px 4px 6px black);
           opacity: 100%;
           
           height:100%;
           color: white;
+<<<<<<< HEAD
+=======
+          padding-top: 50%;
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
           }
           #myDropdown{
             margin-left: -50vw;
@@ -1542,9 +1629,12 @@ width:0;
           background-color: rgba(00, 0, 00, .3);
       
       }
+<<<<<<< HEAD
       #username-display{
         height: 20px;
       }
+=======
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
       #x:hover{
         filter:brightness(115%) contrast(106%);
         
@@ -1589,8 +1679,11 @@ width:0;
         max-height:100%;
         width: 100%;
         padding-top: 90px;
+<<<<<<< HEAD
         padding-left: 0px;
         padding-right: 0px;
+=======
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
       }
       #stack-icon{
         width:6vw;
@@ -1630,6 +1723,10 @@ width:0;
       filter: brightness(110%);
         box-shadow: 1px 5px 10px 0px rgba(00,00,00,.9);
         width:100%;
+<<<<<<< HEAD
+=======
+        height:500px;
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
         object-fit: cover;
         
       };

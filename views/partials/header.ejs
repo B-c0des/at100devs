@@ -6,6 +6,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
     <iframe id='vod' src="https://www.youtube.com/embed/dx4kwID_GtE/vq=small?autoplay=1&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     <div id="user-info">
@@ -42,11 +43,31 @@
        
       <div id="header-right">
         <button onclick="window.location.href='/logout'">Logout</button>
+=======
+
+    <div id="user-info">
+      <div id="user-name"><span id="username-display"></span>
+        <span id="email-display"></span></div>
+  
+
+      
+        <header id="headerTitle"><span class="text-center">@100 Devs</span>
+          <audio controls autoplay>
+            <source src="https://hearthis.app/willy-junior-cruz/live/stream.mp3?s=xzn&t=1623200148" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+          
+        <span class="text-center">The Social Boost Network</span>
+       
+      <div id="header-right">
+        <a href="/logout" class=""><button>Logout</button></a>
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
        
         <%- post.length <= 0 ? ` <button onclick="toggleContent()" class="">Add Profile</button>` : '' %></span>
         <%- post.length > 0 ? `<button onclick="updateProfile()" class="">Update Profile</button>` : '' %></span>
         <button onclick="showFeed()" id="usersClick">Users</button>
         <button onclick="myProfile()" id="myProfile">My Profile</button>
+<<<<<<< HEAD
         <!-- <button  id="selectTheme">Select Theme</button>
         <script src="https://apis.google.com/js/api.js"></script>
 <script>
@@ -102,6 +123,9 @@
 <button onclick="authenticate().then(loadClient)">authorize and load</button>
 <button onclick="execute()">execute</button>
         <button onClick='searchByKeyword()'>my button</button> -->
+=======
+        <button  id="selectTheme">Select Theme</button>
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
         
         
         
@@ -124,8 +148,20 @@
 
         <div id="login-logout-box">
         
+<<<<<<< HEAD
              <!-- <span><%= user.id %></s> -->
 
+=======
+             <!-- <><%= user.id %></> -->
+            <h1><% for(var i=0; i<posts2.length; i++) {%>
+              <%- posts2[i]?.user == user.id ? `<img style="width:30px; height:30px;" src="${posts2[i].image}">` : '' %>
+              <%}%>
+              
+              <%- user?.userName && user.userName.trim().length ? `Hello ${user.userName.trim()}` : '<h1>Hello Guest</h1>' %></span>
+            <span><%- user?.email && user.email.trim().length ? `<h1  id='email-label'>${user.email.trim()}</h1>` : '<h1>Hello Guest</h1>' %></span>
+          
+            <h1>
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
 <!-- 
               <%-posts2[10]?.user %>
                my value needed <%-user?._id %>
@@ -160,8 +196,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 78fa8c3050ef931f8770b0ec4e32d553d480de33
   </head>
   <body>
 
