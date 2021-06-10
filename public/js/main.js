@@ -155,12 +155,12 @@ let loadFile2 = function(e) {
             var img = new Image()
             document.body.background = ''
             
-            img.src = ''
+            // img.src= `https://source.unsplash.com/random/'1600x1200'/?${input}?random=${x}`
             document.body.background = img.src
             const x = Math.floor(Math.random() * 20)
 
 
-            // img.src= `https://source.unsplash.com/random/'1600x1200'/?${input}?random=${x}`
+             img.src= `https://source.unsplash.com/random/'1600x1200'/?${input}?random=${x}`
 
 
             img.src =
