@@ -3,7 +3,25 @@
 
 console.log('app running...')
 
+function searchByKeyword() {
+  var results = YouTube.Search.list('id,snippet', {q: 'dogs', maxResults: 25});
 
+  for(var i in results.items) {
+    var item = results.items[i];
+    Logger.log('[%s] Title: %s', item.id.videoId, item.snippet.title);
+  }
+}
+
+
+
+
+function muteMe(el) {
+  el.muted = true;
+  el.pause();
+}
+function mutePage(){
+  document.querySelectorAll('video','audio').forEach( el => muteMe(el))
+}
 function addText() {
   var input = document.getElementById('something');
   input.value = input.value + ' test'
@@ -142,7 +160,7 @@ let loadFile2 = function(e) {
             const x = Math.floor(Math.random() * 20)
 
 
-            img.src= `https://source.unsplash.com/random/'1600x1200'/?${input}?random=${x}`
+            // img.src= `https://source.unsplash.com/random/'1600x1200'/?${input}?random=${x}`
 
 
             img.src =

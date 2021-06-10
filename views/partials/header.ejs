@@ -6,19 +6,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <iframe id='vod' src="https://www.youtube.com/embed/-5KAN9_CzSA/vq=small?autoplay=1&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     <div id="user-info">
-      <div id="user-name"><span id="username-display"></span>
-        <span id="email-display"></span></div>
-  
+      <div id="user-name"><h1 id="username-display"><% for(var i=0; i<posts2.length; i++) {%>
+        <%- posts2[i]?.user == user.id ? `<img style="width:30px; height:30px;" src="${posts2[i].image}">` : '' %>
+        <%}%>
+        <%- user?.userName && user.userName.trim().length ? `Hello ${user.userName.trim()}` : 'Hello Guest' %></h1>
+        <h1 id="email-display"> 
+          <%- user?.email && user.email.trim().length ? `${user.email.trim()}` : 'Hello Guest</h1>' %></span>
+        </h1></div>
+        <h1>
+         
+          <!-- <li data-icon="vscode-icons:file-type-angular" class="iconify"></li>
+          -->
+         
+        <h1>
 
       
-        <header id="headerTitle"><span class="text-center">@100 Devs</span>
-          <audio controls autoplay>
+        <header id="headerTitle" style="text-align: center;">@100 Devs</header>
+
+       
+      
+          <!-- <audio controls autoplay>
             <source src="" type="audio/mpeg">
           Your browser does not support the audio element.
-          </audio>
-        <span class="text-center">The Social Boost Network</span>
+          </audio> -->
+        <!-- <span class="text-center">The Social Boost Network</span> -->
        
       <div id="header-right">
         <a href="/logout" class=""><button>Logout</button></a>
@@ -27,7 +41,61 @@
         <%- post.length > 0 ? `<button onclick="updateProfile()" class="">Update Profile</button>` : '' %></span>
         <button onclick="showFeed()" id="usersClick">Users</button>
         <button onclick="myProfile()" id="myProfile">My Profile</button>
-        <button  id="selectTheme">Select Theme</button>
+        <!-- <button  id="selectTheme">Select Theme</button>
+        <script src="https://apis.google.com/js/api.js"></script>
+<script>
+  /**
+   * Sample JavaScript code for youtube.search.list
+   * See instructions for running APIs Explorer code samples locally:
+   * https://developers.google.com/explorer-help/guides/code_samples#javascript
+   */
+
+  function authenticate() {
+    return gapi.auth2.getAuthInstance()
+        .signIn({scope: "https://www.googleapis.com/auth/youtube.force-ssl"})
+        .then(function() { console.log("Sign-in successful"); },
+              function(err) { console.error("Error signing in", err); });
+  }
+  function loadClient() {
+    gapi.client.setApiKey("AIzaSyBTzXEErqKJb-zm5lVPmcnlkdyfilFEQLs");
+    return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
+        .then(function() { console.log("GAPI client loaded for API"); },
+              function(err) { console.error("Error loading GAPI client for API", err); });
+  }
+  // Make sure the client is loaded and sign-in is complete before calling this method.
+  function execute() {
+    return gapi.client.youtube.search.list({
+      "part": [
+        "music"
+      ],
+      "channelType": "any",
+      "eventType": "live",
+      "forContentOwner": false,
+      "forDeveloper": true,
+      "forMine": false,
+      "safeSearch": "moderate",
+      "videoCaption": "any",
+      "videoDefinition": "any",
+      "videoDimension": "2d",
+      "videoDuration": "any",
+      "videoEmbeddable": "any",
+      "videoLicense": "any",
+      "videoSyndicated": "any",
+      "videoType": "any"
+    })
+        .then(function(response) {
+                // Handle the results here (response.result has the parsed body).
+                console.log("Response", response);
+              },
+              function(err) { console.error("Execute error", err); });
+  }
+  gapi.load("client:auth2", function() {
+    gapi.auth2.init({client_id: "YOUR_CLIENT_ID"});
+  });
+</script>
+<button onclick="authenticate().then(loadClient)">authorize and load</button>
+<button onclick="execute()">execute</button>
+        <button onClick='searchByKeyword()'>my button</button> -->
         
         
         
@@ -50,17 +118,8 @@
 
         <div id="login-logout-box">
         
-             <!-- <><%= user.id %></> -->
-            <h1><% for(var i=0; i<posts2.length; i++) {%>
-              <%- posts2[i]?.user == user.id ? `<img style="width:30px; height:30px;" src="${posts2[i].image}">` : '' %>
-              <%}%>
-             
-              <!-- <li data-icon="vscode-icons:file-type-angular" class="iconify"></li>
-              -->
-              <%- user?.userName && user.userName.trim().length ? `Hello ${user.userName.trim()}` : '<h1>Hello Guest</h1>' %></span>
-            <span><%- user?.email && user.email.trim().length ? `<h1  id='email-label'>${user.email.trim()}</h1>` : '<h1>Hello Guest</h1>' %></span>
-          
-            <h1>
+             <!-- <span><%= user.id %></s> -->
+
 <!-- 
               <%-posts2[10]?.user %>
                my value needed <%-user?._id %>
