@@ -1,0 +1,328 @@
+
+
+<% for(var i=0; i<posts2.length; i++) {%>
+
+
+        
+
+
+        <div  id="<%=[i]%>"  class="container-view" style="display: none; z-index:20;"r>
+          <div id='x' onclick=" document.getElementById(`${this.parentNode.id}`).style.display = 'none'; document.getElementById('feed').style.display = 'flex'" style="z-index:20">x</div>
+          <div style="background-image: url('<%= posts2[i].image%>'); width:100%; z-index: 5; height: 80vh; background-size: cover; background-position: center;box-shadow: 6px 3px 14px 1px  rgba(00,00,00,.9); " class="<%=[i]%>" id="img"></div>
+          <div id="add-posts">
+          
+             
+         
+    <div id='likebox'>
+
+    <%if(posts2[i].user == user.id){ %>
+    <form
+      action="/post/deletePost/<%= posts2[i]._id %>?_method=DELETE"
+      method="POST"
+      class="row-6 justify-content-between  "
+    >
+      <button class="btn btn-primary fa fa-trash" type="submit" onclick="return confirm('Are you sure you want to delete?')"></button>
+    </form>
+    <%}%>
+    
+
+    
+           <!-- <form
+          class="row-6 justify-content-between  "
+          action="/post/likePost/<%= posts2[i]._id %>?_method=PUT"
+          method="PUT"
+        >
+       
+          <button class="btn btn-primary fa fa-heart" type="submit"> <%= posts2[i].likes %></button>
+        </form>  -->
+        
+    
+    
+    
+        </div>
+    
+        <!-- <div class="" id='likes'> <%= posts2[i].likes %></div> -->
+    
+    
+        
+        <!-- <%= posts2[i]._id%>
+          
+        Posts: <%= posts2[i]%>
+        Name: <%= posts2[i].name%>
+        Title: <%= posts2[i].title%>
+        Caption: <%= posts2[i].caption%>
+       
+         <%= posts2.user %> -->
+    
+    
+    
+    
+        
+      <div id="user-info1">
+        
+          
+          <div id="row">  
+        <span><%= posts2[i].name ?   posts2[i].name : '' %></span>
+        <span><%= posts2[i].title ?  posts2[i].title : '' %></span>
+      </div>
+
+
+<div id="row">
+       
+
+
+  <img id='stack-icon' src='https://s2.svgbox.net/files.svg?ic=node'><img id='stack-icon' src='https://s2.svgbox.net/files.svg?ic=js'><img id='stack-icon' src='https://s2.svgbox.net/files.svg?ic=ejs'><img id='stack-icon' src='https://s2.svgbox.net/files.svg?ic=css'><img id='stack-icon' src='https://s2.svgbox.net/files.svg?ic=html'>
+    
+  <Icon  icon="mdi-light:home" />
+      </div>
+<div id="row">
+        <a href="tel:<%= posts2[i].contact ?   posts2[i].contact : '' %>">
+          <img src='https://s2.svgbox.net/hero-outline.svg?ic=phone' id='material-icon'>
+        </a>
+        <a href="sms:<%= posts2[i].contact ?   posts2[i].contact : '' %>">
+        <img src="https://s2.svgbox.net/materialui.svg?ic=textsms&color=000" id='material-icon'>
+         </a>
+
+
+         <a href="https://<%- posts2[i].website ? posts2[i].website : '' %> ">
+          <img src="https://s2.svgbox.net/materialui.svg?ic=language&color=000" id='material-icon'>
+          </a>
+                </div>
+
+              </span>
+            </div>    
+
+                <div id='across' onclick="document.getElementById('add-posts').style.cssText = 'min-height: 100%;' "> 
+                <div>
+
+                  <% for(var j=0; j < posts2[i].comments.length; j++) {  %>
+    
+            
+                          
+                       
+                    <h1 id="comment-box" >                 
+
+
+
+                    <% for(var k=0; k < posts2.length; k++) {  %>
+
+
+                      <!-- <%- (posts2[i].comments[j].postedBy.toString().trim() == posts2[k]?.user.toString().trim()) == true ? 'image': ''%> -->
+                      <%- (posts2[i].comments[j].postedBy.toString().trim() == posts2[k]?.user.toString().trim()) == true ? `<img id="userIcon" onclick="document.getElementById('${[k]}').style.display = 'flex';document.getElementById('${(k !== i) ? [i] : ''}').style.display = 'none'" style="width:50px; height:50px;"src="${posts2[k]?.image.toString().trim()}">` : '' %>   
+                    
+                       
+                    <% } %>
+                    <% for(var l=0; l < posts2.length; l++) {  %>
+                    <%= (posts2[i].comments[j].postedBy.toString().trim() == posts2[l]?.user.toString().trim()) ? posts2[i].comments[j].comments : '' %> 
+                
+                    <% } %><% } %>
+                       </div>
+
+        </div>
+       
+        <div id="post-comment-box" class="text-center">
+          
+    
+            
+          <form  class="col-10 w-100" 
+          action="/post/commentPost/<%= posts2[i]._id %>?_method=PUT"  
+          enctype="multipart/form-data"
+          method="POST"
+          >
+        
+    
+    
+          <%if(post.length == 0){ %>
+
+
+
+            <div id='alert'>
+          <div id="dropdown-alert" onclick="toggleContent()" style="color:white; border-radius: 0px;"> Create a Profile to comment!</div>
+             </div> 
+                
+            <%}%>
+            <%if(post.length > 0){ %>
+          <input type="text" class="form-control" name="comments" id='sendComment' style="z-index:-1"></input>
+        
+        
+        
+        <%- posts2[i].name ? `<button type="submit" id="submitComment" class="btn btn-primary text-center w-100 rounded-bottom" value="comments" >Post Comment!</button>` : 'Please create a profile first!' %>
+                  </form>
+        
+          </div>
+          <%}%>
+       
+    
+    
+      </div>  
+    
+    
+    
+                  
+    
+    
+    
+    
+    
+    
+    
+                  </div>
+        
+    </div>
+    </div>
+      <% } %>        
+
+
+
+
+
+
+
+
+
+
+      
+
+<% for(var i=0; i<post.length; i++) {%>
+
+
+        
+
+
+  <div  id="myProfile2"  class="container-view"  >
+    <div id='x' onclick=" document.getElementById('myProfile2').style.display = 'none'; document.getElementById('feed').style.display = 'flex'" style="z-index:20">x</div>
+    <div style="background-image: url('<%= post[0].image%>'); width:100%; z-index: 5; height: 80vh; background-size: cover; background-position: center;box-shadow: 6px 3px 14px 1px  rgba(00,00,00,.9); " id="img"></div>
+    <div id="add-posts">
+    
+       
+      <div style="background-image: url('<%= posts2[i].image%>'); " class="<%=[i]%>" id="img"></div>
+   
+<div id='likebox'>
+
+ 
+<%if(post[0].user == user.id){ %>
+<form
+action="/post/deletePost/<%= post[0]._id %>?_method=DELETE"
+method="POST"
+class="row-6 justify-content-between  "
+>
+<button class="btn btn-primary fa fa-trash" type="submit" onclick="return confirm('Are you sure you want to delete?')"></button>
+</form>
+<%}%>
+
+
+     <!-- <form
+    class="row-6 justify-content-between  "
+    action="/post/likePost/<%= posts2[i]._id %>?_method=PUT"
+    method="PUT"
+  >
+ 
+    <button class="btn btn-primary fa fa-heart" type="submit"> <%= posts2[i].likes %></button>
+  </form>  -->
+  
+
+
+
+  </div>
+
+  <!-- <div class="" id='likes'> <%= posts2[i].likes %></div> -->
+
+
+  
+  <!-- <%= posts2[i]._id%>
+    
+  Posts: <%= posts2[i]%>
+  Name: <%= posts2[i].name%>
+  Title: <%= posts2[i].title%>
+  Caption: <%= posts2[i].caption%>
+ 
+   <%= posts2.user %> -->
+
+
+
+
+  
+<div id="user-info1">
+  
+    
+    
+               
+                <h4><%= post[0].name ?   post[0].name : '' %></h4>
+                <h4><%= posts[0].title ?  post[0].title : '' %></h4>
+                
+
+
+                <a href="tel:<%=post[0].contact%>"><%= post[0].contact ?   post[0].contact : '' %></a>
+                <a href="https://<%=post[0].website%>"><%= post[0].website ?   post[0].website : '' %></a>
+       
+          </div>
+
+
+          <div id='across'> 
+            <div>
+  
+              <% for(var j=0; j < post[0].comments.length; j++) {  %>
+      
+              
+                            
+                         
+                <h1 id="comment-box" >                 
+  
+                  
+  
+                <% for(var k=0; k < posts2.length; k++) {  %>
+  
+  
+  
+                  <%- (post[0].comments[j].postedBy.toString().trim() == posts2[k]?.user.toString().trim()) ? `<img id="userIcon" onclick="document.getElementById('${[k]}').style.display = 'flex';document.getElementById('myProfile2').style.display = 'none'" style="width:50px; height:50px;"src="${posts2[k]?.image.toString().trim()}">` : '' %>   
+                
+                   
+                <% } %>
+                    
+                <%= post[0].comments[j].comments  %> 
+             <% } %>
+                   </div>
+           
+
+</div>
+     
+  <form  class="col-10 w-100" 
+  action="/post/commentPost/<%= post[0]._id %>?_method=PUT"  
+  enctype="multipart/form-data"
+  method="POST"
+  >
+  <div id="post-comment-box" class="text-center">
+    
+
+  
+  
+
+
+
+    <input type="text" class="form-control" name="comments" id='sendComment'></input>
+  </div>
+<button type="submit" class="btn btn-primary text-center w-100 rounded-bottom" value="comments" >Post comment!</button>
+            </form>
+  
+    </div>
+    
+ 
+
+
+</div>  
+
+
+
+            
+
+
+
+
+
+
+
+            </div>
+  
+</div>
+</div>
+<% } %>        
