@@ -14,7 +14,6 @@ body{
       position: relative;
       font-family: Arial;
       width:24%;
-      height: 28vh;
       margin-bottom: 17px;
     }
     #vod{
@@ -36,7 +35,7 @@ body{
     #img-multi-user{
       display: block;
       box-shadow: 3px 4px 3px 0px rgb(0 0 0 / 20%);
-      background-color: rgba(255,255,255,.25);
+      background-color: rgba(5,5,5,0.65);
       position: relative;
       margin:.5%;
       width:100%;
@@ -117,7 +116,6 @@ body{
     margin-bottom: -2px;
     display: flex;
     color: white;
-    padding-top: 100%;
     animation: mymove 1s;
     animation-iteration-count: 1;
     border-bottom:1px;
@@ -603,7 +601,6 @@ header .overlay {
 
 }
 #user-info{
-  display:flex;
   justify-content: space-between;
   position: fixed;
   flex-direction: row;
@@ -1361,10 +1358,14 @@ header .overlay {
         background-color: black;
       
           }
+          #img-multi-user{
+            height: 100%;
+          }
           #container3{
             position: relative;
             font-family: Arial;
             width:100%;
+            height:400px;
           }
           a{
             color:white;
