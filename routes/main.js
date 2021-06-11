@@ -18,6 +18,6 @@ router.get("/:id", ensureAuth, postsController.getPost);
 router.put("/profile", postsController.likePost);
 router.delete("/deletePost/:id", postsController.deletePost);
 
-
+router.get("/icons", postsController.getIcons)
 
 module.exports = router;

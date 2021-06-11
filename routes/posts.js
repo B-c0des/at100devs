@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const upload = require("../middleware/multer");
 const postsController = require("../controllers/posts");
+
+const iconsController = require("../controllers/icons");
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 
@@ -27,6 +29,8 @@ router.put("/deleteComment/:id", upload.single("file"), postsController.deleteCo
 // })  
 
 router.delete("/deletePost/:id", postsController.deletePost);
+
+router.get("/icons", postsController.getIcons);
 
 
 module.exports = router;

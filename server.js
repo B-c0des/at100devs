@@ -10,6 +10,8 @@ const logger = require("morgan");
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const postRoutes = require("./routes/posts");
+
+// const iconsRoutes = require("./routes/icons");
 const bodyParser = require('body-parser')
 const multer = require('multer');
 const path = require("path");
@@ -67,6 +69,8 @@ app.use(flash());
 //Setup Routes For Which The Server Is Listening
 app.use("/", mainRoutes);
 app.use("/post", postRoutes);
+
+// app.use("/icons", iconsRoutes);
 
 //app.use("/guest", guest);
 

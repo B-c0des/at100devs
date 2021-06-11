@@ -2,6 +2,9 @@
 
   
     <div id="feed" >
+
+
+
       <!-- <img value='1' id="img" src="https://www.birthdaymessagesstatus.com/wp-content/uploads/2018/08/Stylish-Attitude-Girl-Images-for-FB-Profile-Pic.jpg">
        <img value='2' id="img" src="https://thumbs.dreamstime.com/b/real-normal-person-portrait-22299720.jpg">
        <img value='3' id="img" src="https://piximus.net/media/6621/portraits-of-people-87.jpg">
@@ -38,7 +41,7 @@
 
              <div id="container3">
            <img style="width:100%;" onclick="document.getElementById('myProfile2').style.display = 'flex';document.getElementById('feed').style.display = 'none' "  class="<%=[i]%>" id="img-multi-user" src="<%= post[i].image%>"  >
-           <div id="text-block" onclick="document.getElementById('myProfile1').style.display = 'flex';document.getElementById('feed').style.display = 'none' ">
+           <div id="text-block" onclick="document.getElementById('myProfile2').style.display = 'flex';document.getElementById('feed').style.display = 'none' ">
              
             <span id="backgroundColor">
              <span><%- user.userName %></span>
@@ -51,15 +54,33 @@
  
  
        <% } %>
-       <!-- <% for (var y = 0; y < stack.length ; y++){ %>
-         <span class="iconify" data-icon="<%= stack.split(' ')[y] %>" data-inline="false"></span>
+
+         
+
+
+
+
+
+
+
+ 
+  <!-- <style>
+       function getIcon(){
+        l
+        //myIcons.forEach((x,index) => x.includes(inputz.value) ? console.log(x) + icons.console.log(index) : '')
+        myIcons.filter(x => x.includes(inputz.value) ? document.getElementById('iconz').innerText = `${x}` : '')
+        // // console.log(inputz.value)
+    }
+    </style> -->
+
+
+
+      
+
          <span class="iconify" data-icon="node" data-inline="false"></span>
          
-         <% } %> -->
      </div>
  
       </div>
    </div>
- 
- 
  
