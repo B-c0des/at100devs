@@ -8,7 +8,7 @@
 
         <div  id="<%=[i]%>"  class="container-view" style="display: none; z-index:20;"r>
           <div id='x' onclick=" document.getElementById(`${this.parentNode.id}`).style.display = 'none'; document.getElementById('feed').style.display = 'flex'" style="z-index:20">x</div>
-          <div style="background-image: url('<%= posts2[i].image%>'); width:100%; z-index: 5; height: 80vh; background-size: cover; background-position: center;box-shadow: 6px 3px 14px 1px  rgba(00,00,00,.9); " class="<%=[i]%>" id="img"></div>
+          <div style="background-image: url('<%= posts2[i].image%>'); width:100%; z-index: 5; height: 80vh; background-size: cover; background-position: center;box-shadow: 6px 3px 14px 1px  rgba(00,00,00,.9); margin-top: 1px; " class="<%=[i]%>" id="img"></div>
           <div id="add-posts">
              
          
@@ -190,7 +190,7 @@
 
   <div  id="myProfile2"  class="container-view"  >
     <div id='x' onclick=" document.getElementById('myProfile2').style.display = 'none'; document.getElementById('feed').style.display = 'flex'" style="z-index:20">x</div>
-    <div style="background-image: url('<%= post[0].image%>'); width:100%; z-index: 5; height: 80vh; background-size: cover; background-position: center;box-shadow: 6px 3px 14px 1px  rgba(00,00,00,.9); " id="img"></div>
+    <div style="background-image: url('<%= post[0].image%>'); width:100%; z-index: 5; height: 80vh; background-size: cover; background-position: center;box-shadow: 6px 3px 14px 1px  rgba(00,00,00,.9); margin-top: 1px;" id="img"></div>
     <div id="add-posts" style="height: 80vh; justify-content:space-between;">
     
        
