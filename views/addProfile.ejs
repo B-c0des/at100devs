@@ -42,7 +42,7 @@
 
         <h1><label for="imgUpload" id="img-label" class="form-label">Image</label>
                 <img id="output"/>
-          <input type="file" accept="image/*" onchange="loadFile(event)" class="form-control" id="file" name="file">
+          <input type="file" accept="image/*" oninput="loadFile(event)" class="form-control" id="file" name="file">
         
         <button type="submit" class="btn btn-primary"  value="Upload" onclick="toggleContent()">Submit</button>
       </form>
