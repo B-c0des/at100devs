@@ -14,6 +14,14 @@ body{
       width:24%;
       margin-bottom: 17px;
     }
+    #container3 .iconify{
+      width: 3vw;
+      height: 3vh;
+    }
+    .iconify{
+      width: 5vw;
+      height: 5vh;
+    }
     #vod{
       position: absolute;
       right: -125%;

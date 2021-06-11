@@ -347,7 +347,7 @@ function commentClick()
             // myIcons.forEach((x,index) => x.includes(inputz.value) ? console.log(x) + console.log(index) : '')
             let iconArr = []
             let myArr = []
-            myIcons.filter(x => x.includes(inputz.value) ? iconArr.push(`<span style="height:50px; width:50px;" onclick="addStackToMyArray(this.id)" class="iconify" data-icon="${x}" id='${x}' data-inline="false"></span>`) : '')
+            myIcons.filter(x => x.includes(inputz.value) ? iconArr.push(`<span  onclick="addStackToMyArray(this.id)" class="iconify" data-icon="${x}" id='${x}' data-inline="false"></span>`) : '')
             // myIcons.filter(x => x.includes(inputz.value) ? console.log(x) + console.log(x.length) : '')
             console.log(iconArr.join())
            
@@ -390,7 +390,7 @@ function commentClick()
             console.log(myArr)
             delete myArr[0]
            // console.log(myArr.toString().includes)
-           myArr.join(' ').includes(x) ? '' : myArr.push(`<span style="height:50px; width:50px;" class="iconify" data-icon="${x}" onclick="removeIcon(${myArr.length})" data-inline="false"></span>`)
+           myArr.join(' ').includes(x) ? '' : myArr.push(`<span class="iconify" data-icon="${x}" onclick="removeIcon(${myArr.length})" data-inline="false"></span>`)
             console.log(myArr.length)
             
             
