@@ -20,9 +20,9 @@
              <div id="text-block" onclick="document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none' ">
               <span id="backgroundColor">
               <span><%- posts2[i].name %></span>
-              <span><%- posts2[i].title %></span>
-              <img id='stack-icon-feed' src='https://s2.svgbox.net/files.svg?ic=node' style="width:3vw; height:3vw">
-            </span>
+              <span><%- posts2[i].title %></span>              
+             <span><%- posts2[i].icons %></span>
+             </span>
             </div>
           </div>
             
@@ -46,7 +46,7 @@
             <span id="backgroundColor">
              <span><%- user.userName %></span>
              <span><%- post[0].title %></span>
-             <img id='stack-icon-feed' src='https://s2.svgbox.net/files.svg?ic=node' style="width:3vw; height:3vw">
+             <span><%- post[0].icons %></span>
              </span>
            </div>
          </div>

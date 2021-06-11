@@ -33,7 +33,7 @@ const PostSchema = new mongoose.Schema({
     required: false,
   },
     icons: {
-    type: Array,
+    type: String,
     required: false,
   },
   likes: {

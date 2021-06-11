@@ -68,16 +68,43 @@ class="row-6 justify-content-between  "
   
 <div id="user-info1">
   
-    
+          
+          
+  <div id="row">  
+    <span><%= post[0].name ?   post[0].name : '' %></span>
+    <span><%= post[0].title ?  post[0].title : '' %></span>
+  </div>
 
-               
-                <h4><%= post[0].name ?   post[0].name : '' %></h4>
-                <h4><%= posts[0].title ?  post[0].title : '' %></h4>
-                
-                <a href="<%=post[0].contact%>"><%= post[0].contact ?   post[0].contact : '' %></a>
-                <a href="https://<%=post[0].website%>"><%= post[0].website ?   post[0].website : '' %></a>
-       
-          </div>
+
+<div id="row">
+   
+
+
+
+        
+<span><%- post[0].icons %></span>
+  </div>
+<div id="row">
+    <a href="tel:<%= post[0].contact ?   posts2[i].contact : '' %>">
+      <img src='https://s2.svgbox.net/hero-outline.svg?ic=phone' id='material-icon'>
+    </a>
+    <a href="sms:<%= post[0].contact ?   posts2[i].contact : '' %>">
+    <img src="https://s2.svgbox.net/materialui.svg?ic=textsms&color=000" id='material-icon'>
+     </a>
+
+
+     <a href="https://<%- post[0].website ? posts2[i].website : '' %> ">
+      <img src="https://s2.svgbox.net/materialui.svg?ic=language&color=000" id='material-icon'>
+      </a>
+            </div>
+
+          </span>
+        </div>    
+
+
+
+
+
           <div id='across'> 
           <div>
 

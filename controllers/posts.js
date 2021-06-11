@@ -51,6 +51,7 @@ module.exports = {
         contact: req.body.contact,
         likes: 0,
         user: req.user.id,
+        icons: req.body.textIcons,
       });
       console.log("Post has been added!");
       res.redirect("/profile");
@@ -93,6 +94,7 @@ await Post.findOneAndUpdate(
             cloudinaryId: result.public_id,
             website: req.body.website,
             contact: req.body.contact,
+            icons: req.body.textIcons,
           }
         },
       );
