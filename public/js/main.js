@@ -82,9 +82,14 @@ let loadFile2 = function(e) {
       function toggleContent() {
         // Get the DOM reference
         let contentId1 = document.getElementById("add-profile");
+        let feed = document.getElementById("feed");
         // Toggle 
         contentId1.style.display == "block" ? contentId1.style.display = "none" : 
         contentId1.style.display = "block"; 
+
+
+        feed.style.display !== "none" ? feed.style.display = "none" : 
+        feed.style.display = "flex"; 
 
         }
 
@@ -94,9 +99,13 @@ let loadFile2 = function(e) {
           // Get the DOM reference
  
           var contentId2 = document.getElementById("update-profile");
+          let feed = document.getElementById("feed");
           // Toggle 
           contentId2.style.display == "block" ? contentId2.style.display = "none" : 
           contentId2.style.display = "block"; 
+
+          feed.style.display !== "none" ? feed.style.display = "none" : 
+          feed.style.display = "flex"; 
 
 
           
@@ -351,7 +360,7 @@ function commentClick()
           // iconArr.length < 20 ? elemDiv.innerHTML += (`<span class="iconify" data-icon="${iconArr[i]}" data-inline="false">hello</span>`) : ''
 
           
-          iconArr.length < 20 ?  document.getElementById('iconss').innerHTML = iconArr.join('') : '';
+          iconArr.length < 1000 ?  document.getElementById('iconss').innerHTML = iconArr.join('') : '';
 
           console.log(iconArr.length)
           // document.body.appendChild(elemDiv); // appends last of that element
@@ -369,8 +378,53 @@ function commentClick()
             // // console.log(inputz.value)
             //console.log(document.getElementById('iconz').innerText)
         }
-          
+                 function getIcon(){
+            let inputz = document.getElementById('inputs')
 
+            
+
+            // myIcons.forEach((x,index) => x.includes(inputz.value) ? console.log(x) + console.log(index) : '')
+            let iconArr = []
+            let myArr = []
+            myIcons.filter(x => x.includes(inputz.value) ? iconArr.push(`<span style="height:50px; width:50px;"  class="iconify" data-icon="${x}" data-inline="false"></span>`) : '')
+            // myIcons.filter(x => x.includes(inputz.value) ? console.log(x) + console.log(x.length) : '')
+            console.log(iconArr.join())
+           
+          //   let myIconRen = []
+          //   myIconRen.push(`${<h1>${iconArr[i].toString()}</h1>}`)
+          //  // document.getElementById('iconz').innerHTML = `<span class="iconify" data-icon="${iconArr[i]}" data-inline="false">hello</span>`
+          //   document.getElementById('iconz').innerHTML = myIconRen.toString()
+          //   console.log(iconArr[i])
+          
+          //elemDiv.style.cssText = 'width:100%;height:10%;background:rgb(192,192,192);';
+          // iconArr.length < 20 ? elemDiv.innerHTML += (`<span class="iconify" data-icon="${iconArr[i]}" data-inline="false">hello</span>`) : ''
+
+          
+          iconArr.length < 100 ?  document.getElementById('iconss').innerHTML = iconArr.join('') : '';
+
+          console.log(iconArr.length)
+          // document.body.appendChild(elemDiv); // appends last of that element
+
+          
+          
+            // iconArr.length < 20 ? document.getElementById('feed').innerHTML += (`<span class="iconify" data-icon="${iconArr[i]}" data-inline="false">hello</span>`) : ''
+                 
+            
+            
+        
+
+
+            
+            // // console.log(inputz.value)
+            //console.log(document.getElementById('iconz').innerText)
+        }
+        
+
+        function addStackToMyArray(x){
+          myArr.push(x)
+          console.log(myArr)
+
+        }
 
         // images = document.querySelectorAll('#img-multi-user, #img-single-user')
         // console.log(images)

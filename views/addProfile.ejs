@@ -1,0 +1,42 @@
+<div id='add-profile'>
+        
+    <div id="add-posts1">
+      <h1 class="text-center">Add a Profile</h1>
+      <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+        <div class="mb-3">
+          <h1><label for="name" class="form-label">Name</label></h1>
+          <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="mb-3">
+        <h1><label for="title" class="form-label">Title</label></h1>
+            <input type="text" class="form-control" id="title" name="title" required>
+        </div>
+        <!-- <div class="mb-3">
+          <h1><label for="stack" class="form-label">Stack</label></h1>
+          <textarea class="form-control" id="caption" name="caption"></textarea>
+        </div> -->
+        <div class="mb-3">
+          <h1><label for="website" class="form-label">Website</label></h1>
+          <textarea class="form-control" id="website" name="website" required></textarea>
+        </div>
+        <div class="mb-3">
+          <h1><label for="contact" class="form-label">Phone Number</label></h1>
+           <input type="text" class="form-control" id="phone" name="contact" required placeholder="(000) 000-0000"/>
+        </div>
+        <h1>Search Your Stack</h1>
+        <textarea style="width:100%" id='inputs' oninput='getIcon()'></textarea><br>
+        <span style="    display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+        max-height: 200px;" id='iconss'></span>`
+
+        <h1><label for="imgUpload" id="img-label" class="form-label">Image</label>
+                <img id="output"/>
+          <input type="file" accept="image/*" onchange="loadFile(event)" class="form-control" id="file" name="file">
+        
+        <button type="submit" class="btn btn-primary"  value="Upload" onclick="toggleContent()">Submit</button>
+      </form>
+      <button onclick="toggleContent()" type="none" class="btn btn-primary"  value="cancel">Cancel</button>
+    </div>
+  </div>
