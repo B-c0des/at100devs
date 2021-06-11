@@ -346,7 +346,8 @@ function commentClick()
 
             // myIcons.forEach((x,index) => x.includes(inputz.value) ? console.log(x) + console.log(index) : '')
             let iconArr = []
-            myIcons.filter(x => x.includes(inputz.value) ? iconArr.push(`<span style="height:50px; width:50px;" class="iconify" data-icon="${x}" data-inline="false"></span>`) : '')
+            let myArr = []
+            myIcons.filter(x => x.includes(inputz.value) ? iconArr.push(`<span style="height:50px; width:50px;" onclick="addStackToMyArray(this.id)" class="iconify" data-icon="${x}" id='${x}' data-inline="false"></span>`) : '')
             // myIcons.filter(x => x.includes(inputz.value) ? console.log(x) + console.log(x.length) : '')
             console.log(iconArr.join())
            
@@ -378,52 +379,33 @@ function commentClick()
             // // console.log(inputz.value)
             //console.log(document.getElementById('iconz').innerText)
         }
-                 function getIcon(){
-            let inputz = document.getElementById('inputs')
-
-            
-
-            // myIcons.forEach((x,index) => x.includes(inputz.value) ? console.log(x) + console.log(index) : '')
-            let iconArr = []
-            let myArr = []
-            myIcons.filter(x => x.includes(inputz.value) ? iconArr.push(`<span style="height:50px; width:50px;"  class="iconify" data-icon="${x}" data-inline="false"></span>`) : '')
-            // myIcons.filter(x => x.includes(inputz.value) ? console.log(x) + console.log(x.length) : '')
-            console.log(iconArr.join())
            
-          //   let myIconRen = []
-          //   myIconRen.push(`${<h1>${iconArr[i].toString()}</h1>}`)
-          //  // document.getElementById('iconz').innerHTML = `<span class="iconify" data-icon="${iconArr[i]}" data-inline="false">hello</span>`
-          //   document.getElementById('iconz').innerHTML = myIconRen.toString()
-          //   console.log(iconArr[i])
-          
-          //elemDiv.style.cssText = 'width:100%;height:10%;background:rgb(192,192,192);';
-          // iconArr.length < 20 ? elemDiv.innerHTML += (`<span class="iconify" data-icon="${iconArr[i]}" data-inline="false">hello</span>`) : ''
-
-          
-          iconArr.length < 100 ?  document.getElementById('iconss').innerHTML = iconArr.join('') : '';
-
-          console.log(iconArr.length)
-          // document.body.appendChild(elemDiv); // appends last of that element
-
-          
-          
-            // iconArr.length < 20 ? document.getElementById('feed').innerHTML += (`<span class="iconify" data-icon="${iconArr[i]}" data-inline="false">hello</span>`) : ''
-                 
-            
-            
         
 
-
-            
-            // // console.log(inputz.value)
-            //console.log(document.getElementById('iconz').innerText)
-        }
         
-
         function addStackToMyArray(x){
-          myArr.push(x)
-          console.log(myArr)
+            
+            console.log(myArr.join(' ').includes(x))
+            console.log(x)
+            console.log(myArr)
+            delete myArr[0]
+           // console.log(myArr.toString().includes)
+           myArr.join(' ').includes(x) ? '' : myArr.push(`<span style="height:50px; width:50px;" class="iconify" data-icon="${x}" onclick="removeIcon(${myArr.length})" data-inline="false"></span>`)
+            console.log(myArr.length)
+            
+            
+            console.log(myArr)
+            document.getElementById('myIcons').innerHTML = myArr.join(' ')
+            document.getElementById('textIcons').innerHTML = myArr.join(' ')
+            
+        }
 
+        function removeIcon(x){
+
+          console.log(myArr)
+          delete myArr[x]
+          document.getElementById('myIcons').innerHTML = myArr.join(' ')
+          document.getElementById('textIcons').innerHTML = myArr.join(' ')
         }
 
         // images = document.querySelectorAll('#img-multi-user, #img-single-user')

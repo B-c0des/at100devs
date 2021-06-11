@@ -23,13 +23,26 @@
           <h1><label for="contact" class="form-label">Phone Number</label></h1>
            <input type="text" class="form-control" id="phone" name="contact" required placeholder="(000) 000-0000"/>
         </div>
-        <h1>Search Your Stack</h1>
+        <h1>My Stack</h1>
+        <textarea  id='textIcons' style="    display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+        max-height: 200px;"></textarea>
+
+
+        <span id='myIcons' style="    display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+        max-height: 200px;" id='iconss'></span>
+        <h1>Search to Add Your Stack</h1>
         <textarea style="width:100%" id='inputs' oninput='getIcon()'></textarea><br>
         <span style="    display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
         overflow-y: scroll;
-        max-height: 200px;" id='iconss'></span>`
+        max-height: 200px;" id='iconss'></span>
 
         <h1><label for="imgUpload" id="img-label" class="form-label">Image</label>
                 <img id="output"/>
