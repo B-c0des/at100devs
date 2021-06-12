@@ -647,6 +647,7 @@ header .overlay {
   background-color:transparent;
   z-index: 2;
   backdrop-filter: blur(50px) brightness(140%)contrast(90%);
+  inset 0px 7px 22px 0px rgb(0 0 0);
   
 }
 #dropdown-alert{
