@@ -74,18 +74,23 @@
             
   <span><%- posts2[i].icons %></span>
       </div>
-<div id="row">
+<div id="row" style="padding-bottom: 10px;">
         <a href="tel:<%= posts2[i].contact ?   posts2[i].contact : '' %>">
-          <img src='https://s2.svgbox.net/hero-outline.svg?ic=phone' id='material-icon'>
+          <span class="iconify" data-icon="fa-solid:phone-alt" data-inline="false"></span>
         </a>
         <a href="sms:<%= posts2[i].contact ?   posts2[i].contact : '' %>">
-        <img src="https://s2.svgbox.net/materialui.svg?ic=textsms&color=000" id='material-icon'>
-         </a>
+          <span class="iconify" data-icon="fa-solid:sms" data-inline="false"></span>      
+        </a>
 
 
          <a href="https://<%- posts2[i].website ? posts2[i].website : '' %> ">
-          <img src="https://s2.svgbox.net/materialui.svg?ic=language&color=000" id='material-icon'>
-          </a>
+          <span class="iconify" data-icon="dashicons:admin-site-alt3" data-inline="false"></span>
+        </a>
+
+          <a href="">
+            <span class="iconify" data-icon="entypo:location" data-inline="false"></span>   
+   
+          </a>  
                 </div>
 
               </span>
@@ -191,11 +196,9 @@
   <div  id="myProfile2"  class="container-view"  >
     <div id='x' onclick=" document.getElementById('myProfile2').style.display = 'none'; document.getElementById('feed').style.display = 'flex'" style="z-index:20">x</div>
     <div style="background-image: url('<%= post[0].image%>'); width:100%; z-index: 5; height: 80vh; background-size: cover; background-position: center;box-shadow: 6px 3px 14px 1px  rgba(00,00,00,.9); margin-top: 1px;" id="img"></div>
-    <div id="add-posts" style="height: 80vh; justify-content:space-between;">
-    
+    <div id="add-posts"> 
        
-      <div style="background-image: url('<%= posts2[i].image%>'); " class="<%=[i]%>" id="img"></div>
-   
+    
 <div id='likebox'>
 
  
@@ -261,18 +264,30 @@ class="row-6 justify-content-between  "
         
 <span><%- post[0].icons %></span>
   </div>
-<div id="row">
+<div id="row" style="padding-bottom: 10px;">
     <a href="tel:<%= post[0].contact ?   posts2[i].contact : '' %>">
-      <img src='https://s2.svgbox.net/hero-outline.svg?ic=phone' id='material-icon'>
+      <span class="iconify" data-icon="fa-solid:phone-alt" data-inline="false"></span>
     </a>
     <a href="sms:<%= post[0].contact ?   posts2[i].contact : '' %>">
-    <img src="https://s2.svgbox.net/materialui.svg?ic=textsms&color=000" id='material-icon'>
-     </a>
+      <span class="iconify" data-icon="fa-solid:sms" data-inline="false"></span>      
+    </a>
 
 
      <a href="https://<%- post[0].website ? posts2[i].website : '' %> ">
-      <img src="https://s2.svgbox.net/materialui.svg?ic=language&color=000" id='material-icon'>
+      <span class="iconify" data-icon="dashicons:admin-site-alt3" data-inline="false"></span>
       </a>
+
+      <a href="">
+        <span class="iconify" data-icon="entypo:location" data-inline="false"></span>   
+      </a>  
+
+
+
+
+
+
+
+
             </div>
 
           </span>
