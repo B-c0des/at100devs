@@ -337,8 +337,8 @@ function commentClick()
         
         }
         
-        document.getElementById('inputs').onclick = getIcon
-        document.getElementById('inputs').addEventListener('oninput' , getIcon())
+        document.getElementById('inputs').onclick = getIcon()
+        document.getElementById('inputs').addEventListener('onclick' , getIcon())
        function getIcon(){
             let inputz = document.getElementById('inputs')
 
