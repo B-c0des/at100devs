@@ -4,7 +4,6 @@ body{
   height: 150vh;
   background-position: top;
   transition: background-image 1000ms linear;
-  font-family: 'Archivo Narrow', sans-serif;
     }
     #img-single-user{
       display: none;
