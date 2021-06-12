@@ -60,7 +60,7 @@
       <div id="user-info1">
         
           
-          <div id="row">  
+          <div id="top-row">  
         <span><%= posts2[i].name ?   posts2[i].name : '' %></span>
         <span><%= posts2[i].title ?  posts2[i].title : '' %></span>
       </div>
@@ -74,7 +74,7 @@
             
   <span><%- posts2[i].icons %></span>
       </div>
-<div id="row" style="padding-bottom: 10px;">
+<div id="bottom-row" style="padding-bottom: 10px;">
         <a href="tel:<%= posts2[i].contact ?   posts2[i].contact : '' %>">
           <span class="iconify" data-icon="fa-solid:phone-alt" data-inline="false"></span>
         </a>
@@ -91,6 +91,10 @@
             <span class="iconify" data-icon="entypo:location" data-inline="false"></span>   
    
           </a>  
+
+          <a href="">
+            <span class="iconify" data-icon="ic:outline-social-distance" data-inline="false"></span>
+          </a>
                 </div>
 
               </span>
@@ -250,7 +254,7 @@ class="row-6 justify-content-between  "
   
           
           
-  <div id="row">  
+  <div id="top-row">  
     <span><%= post[0].name ?   post[0].name : '' %></span>
     <span><%= post[0].title ?  post[0].title : '' %></span>
   </div>
@@ -264,9 +268,10 @@ class="row-6 justify-content-between  "
         
 <span><%- post[0].icons %></span>
   </div>
-<div id="row" style="padding-bottom: 10px;">
+<div id="bottom-row" style="padding-bottom: 10px;">
     <a href="tel:<%= post[0].contact ?   posts2[i].contact : '' %>">
-      <span class="iconify" data-icon="fa-solid:phone-alt" data-inline="false"></span>
+      <span class="iconify" data-icon="fluent:call-connecting-20-regular" data-inline="false"></span>  
+   
     </a>
     <a href="sms:<%= post[0].contact ?   posts2[i].contact : '' %>">
       <span class="iconify" data-icon="fa-solid:sms" data-inline="false"></span>      
@@ -280,6 +285,9 @@ class="row-6 justify-content-between  "
       <a href="">
         <span class="iconify" data-icon="entypo:location" data-inline="false"></span>   
       </a>  
+      <a href="">
+        <span class="iconify" data-icon="ic:outline-social-distance" data-inline="false"></span>
+      </a>
 
 
 
