@@ -4,7 +4,25 @@ body{
   height: 150vh;
   background-position: top;
   transition: background-image 1000ms linear;
+  overflow-y: hidden;
     }
+    #loader{
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+      backdrop-filter: blur(20px);
+      animation: mymove 1s;
+      animation-iteration-count: 1;
+      border-bottom:1px;
+      animation-fill-mode: forwards;
+      top:-2px;
+      transition: all .1s ease-in-out;
+    }
+
     #img-single-user{
       display: none;
     }

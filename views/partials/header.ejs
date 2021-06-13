@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+    <div id='loader'><svg width="232px" height="232px" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" color="#ffffff"><g fill="none" fill-rule="evenodd" stroke-width="2"><circle cx="22" cy="22" r="1"><animate attributeName="r" begin="0s" dur="1.8s" values="1; 20" calcMode="spline" keyTimes="0; 1" keySplines="0.165, 0.84, 0.44, 1" repeatCount="indefinite"></animate><animate attributeName="stroke-opacity" begin="0s" dur="1.8s" values="1; 0" calcMode="spline" keyTimes="0; 1" keySplines="0.3, 0.61, 0.355, 1" repeatCount="indefinite"></animate></circle><circle cx="22" cy="22" r="1"><animate attributeName="r" begin="-0.9s" dur="1.8s" values="1; 20" calcMode="spline" keyTimes="0; 1" keySplines="0.165, 0.84, 0.44, 1" repeatCount="indefinite"></animate><animate attributeName="stroke-opacity" begin="-0.9s" dur="1.8s" values="1; 0" calcMode="spline" keyTimes="0; 1" keySplines="0.3, 0.61, 0.355, 1" repeatCount="indefinite"></animate></circle></g></svg></div>
     <div class="video-background">
       <div class="video-foreground">
         <iframe src="https://www.youtube.com/embed/tNkZsRW7h2c?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=tNkZsRW7h2c" frameborder="0" allowfullscreen></iframe>
@@ -56,6 +58,7 @@
         <%- post.length > 0 ? `<button onclick="updateProfile()" class="">Update Profile</button>` : '' %></span>
         <button onclick="showFeed()" id="usersClick">Users</button>
         <button onclick="myProfile()" id="myProfile">My Profile</button>
+
         
         <!-- <button  id="selectTheme">Select Theme</button> -->
         
