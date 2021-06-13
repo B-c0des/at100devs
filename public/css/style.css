@@ -179,7 +179,7 @@ body{
         animation: mymove 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        transition: all .1s ease-out;
+        transition: all .05s ease-out;
     }
     #dropdown-alert{
       padding-top: 15%;
@@ -594,8 +594,9 @@ header .overlay {
   display: flex;
   flex-direction: row;
     justify-content: space-around;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-top: 10px;
   box-shadow: 0px 9px 10px -3px rgb(0 0 0 / 90%);
 }
 #top-row{
