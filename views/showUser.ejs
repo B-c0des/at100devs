@@ -64,17 +64,7 @@
         <span><%= posts2[i].name ?   posts2[i].name : '' %></span>
         <span><%= posts2[i].title ?  posts2[i].title : '' %></span>
       </div>
-
-
-<div id="row">
-       
-
-
-  
-            
-  <span><%- posts2[i].icons %></span>
-      </div>
-<div id="bottom-row" style="padding-bottom: 10px;">
+      <div id="bottom-row" style="padding-bottom: 10px;">
         <a href="tel:<%= posts2[i].contact ?   posts2[i].contact : '' %>">
           <span class="iconify" data-icon="fa-solid:phone-alt" data-inline="false"></span>
         </a>
@@ -96,6 +86,16 @@
             <span class="iconify" data-icon="ic:outline-social-distance" data-inline="false"></span>
           </a>
                 </div>
+
+<div id="row">
+       
+
+
+  
+            
+  <span><%- posts2[i].icons %></span>
+      </div>
+
 
               </span>
             </div>    
@@ -150,7 +150,7 @@
                 
             <%}%>
             <%if(post.length > 0){ %>
-          <textarea type="text" class="form-control" name="comments" id='sendComment' style="z-index:-1"></textarea>
+          <text type="text" class="form-control" name="comments" id='sendComment' style="z-index:-1"></text>
         
         
         
@@ -259,16 +259,7 @@ class="row-6 justify-content-between  "
     <span><%= post[0].title ?  post[0].title : '' %></span>
   </div>
 
-
-<div id="row">
-   
-
-
-
-        
-<span><%- post[0].icons %></span>
-  </div>
-<div id="bottom-row" style="padding-bottom: 10px;">
+  <div id="bottom-row" style="padding-bottom: 10px;">
     <a href="tel:<%= post[0].contact ?   posts2[i].contact : '' %>">
       <span class="iconify" data-icon="fluent:call-connecting-20-regular" data-inline="false"></span>  
    
@@ -297,6 +288,15 @@ class="row-6 justify-content-between  "
 
 
             </div>
+<div id="row">
+   
+
+
+
+        
+<span><%- post[0].icons %></span>
+  </div>
+
 
           </span>
         </div>    

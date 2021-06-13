@@ -596,6 +596,7 @@ header .overlay {
     justify-content: space-around;
   padding-left: 5%;
   padding-right: 5%;
+  box-shadow: 0px 9px 10px -3px rgb(0 0 0 / 90%);
 }
 #top-row{
   margin-bottom: 5px;
@@ -607,8 +608,9 @@ header .overlay {
   display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: rgba(00, 0, 00, .4);
 }
 
 #add-posts{
