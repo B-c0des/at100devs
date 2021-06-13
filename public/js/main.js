@@ -343,13 +343,14 @@ function commentClick()
         )
        function getIcon(){
             let inputz = document.getElementById('inputs')
+            let inputLowercase = inputz.value.toLowerCase()
 
             
 
             // myIcons.forEach((x,index) => x.includes(inputz.value) ? console.log(x) + console.log(index) : '')
             let iconArr = []
             let myArr = []
-            myIcons.filter(x => x.includes(inputz.value) ? iconArr.push(`<span  onclick="addStackToMyArray(this.id)" class="iconify" data-icon="${x}" id='${x}' data-inline="false"></span>`) : '')
+            myIcons.filter(x => x.includes(inputLowercase) ? iconArr.push(`<span  onclick="addStackToMyArray(this.id)" class="iconify" data-icon="${x}" id='${x}' data-inline="false"></span>`) : '')
             // myIcons.filter(x => x.includes(inputz.value) ? console.log(x) + console.log(x.length) : '')
             console.log(iconArr.join())
            
