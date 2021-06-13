@@ -177,6 +177,7 @@ body{
         filter: drop-shadow( 0 0px 15px white);
         transform: scale(1.05);
         animation: mymove 1s;
+        margin-bottom: -3px
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
         transition: all .05s ease-out;
