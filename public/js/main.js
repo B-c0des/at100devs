@@ -343,7 +343,7 @@ function commentClick()
         )
        function getIcon(){
             let inputz = document.getElementById('inputs')
-            let inputLowercase = inputz.value.toLowerCase()
+            // let inputLowercase = inputz.value.toLowerCase()
 
             
 
