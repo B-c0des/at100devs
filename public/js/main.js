@@ -337,7 +337,7 @@ function commentClick()
         
         }
         
-        document.getElementById('inputs').onTouch = getIcon()
+        document.getElementById('inputs').on = getIcon()
         document.getElementById('inputs').addEventListener('onTouch' , getIcon()
         
         )
