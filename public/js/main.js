@@ -364,7 +364,7 @@ function commentClick()
           // iconArr.length < 20 ? elemDiv.innerHTML += (`<span class="iconify" data-icon="${iconArr[i]}" data-inline="false">hello</span>`) : ''
 
           
-          iconArr.length < 1000 ?  document.getElementById('iconss').innerHTML = iconArr.join('') : '';
+          iconArr.length < 100 ?  document.getElementById('iconss').innerHTML = iconArr.join('') : '';
 
           console.log(iconArr.length)
           // document.body.appendChild(elemDiv); // appends last of that element

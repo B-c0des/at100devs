@@ -1454,6 +1454,10 @@ header .overlay {
             height: 5vh;
             margin-top: 0px;
           }
+          #add-posts1 .iconify{
+ min-height: 7vh;
+ min-width: 7vh;
+          }
           
           
           

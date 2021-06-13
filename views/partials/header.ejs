@@ -22,9 +22,9 @@
       <div id="user-name"><h1 id="username-display"><% for(var i=0; i<posts2.length; i++) {%>
         <%- posts2[i]?.user == user.id ? `<img style="width:30px; height:30px;" src="${posts2[i].image}">` : '' %>
         <%}%>
-        <%- user?.userName && user.userName.trim().length ? `Hello ${user.userName.trim()}` : 'Hello Guest' %></h1>
+        <%- user?.userName && user.userName.trim().length ? `${user.userName.trim()}` : 'Guest' %></h1>
         <h1 id="email-display"> 
-          <%- user?.email && user.email.trim().length ? `${user.email.trim()}` : 'Hello Guest</h1>' %></span>
+          <%- user?.email && user.email.trim().length ? `${user.email.trim()}` : 'Guest</h1>' %></span>
         </h1>
       
       
