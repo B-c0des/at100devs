@@ -1,12 +1,21 @@
-
 document.onreadystatechange = function () {
+  window.scrollTo(0, 0)
   var state = document.readyState
   if (state == 'complete') {
+    
+
       setTimeout(function(){
         document.body.style.overflowY = "scroll"
-        document.getElementById('loader').style.display = "none"
-      },2000);
+        window.onload = document.getElementById('loader').style.display = "none"
+
+        
+      },5000);
   }
+}
+
+
+function videoLoaded(){
+  window.onload = document.getElementById('loader').style.display = "none"
 }
 let images = document.querySelectorAll('img');
 
@@ -221,6 +230,33 @@ let loadFile2 = function(e) {
               myProfile.style.display == "none" ? (myProfile.style.display = "flex") && (feed.style.display = "none") : 
               (myProfile.style.display = "none") && (feed.style.display = "flex") ; 
 
+              }
+
+              function textSearchUsers(){
+                
+              }
+
+              function userIconClick(){
+                (document.getElementById('img').style.height < '50%') ? (document.getElementById('img').style.height = '50%') &&                 
+                (document.getElementById('across').style.height = '50vh') : (document.getElementById('img').style.height = '50%') && (document.getElementById('across').style.height = '50vh')
+              }
+              function increaseTextAreaMobile(){
+                
+                (document.getElementById('img').style.height > '0%') ? (document.getElementById('img').style.height = '0%') &&                 
+                (document.getElementById('across').style.height = '80vh') : (document.getElementById('img').style.height = '50%') && (document.getElementById('across').style.height = '50vh')
+              }
+
+
+
+              function searchUser(){
+
+                let feed = document.getElementById("");
+                let searchUser = document.getElementById("searchUser")
+                // Toggle 
+                searchUser.style.display == "none" ? (searchUser.style.display = "flex") && (feed.style.display = "none") : 
+                (searchUser.style.display = "none") && (feed.style.display = "flex") ; 
+
+              
               }
               
           //   document.body.background = localStorage.getItem("backgroundImg");
@@ -530,7 +566,3 @@ function commentClick()
 
               
               
-       
-
-
-

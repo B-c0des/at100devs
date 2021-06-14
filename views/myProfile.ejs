@@ -17,7 +17,8 @@
 
   <div  id="myProfile"  class="container-view" style="z-index:20;">
     <div id='x' onclick="myProfile()" style="z-index:20">x</div>
-    <div style="background-image: url('<%= post[0].image%>'); width:100%; z-index: 5; height: 80vh; background-size: cover; background-position: center;box-shadow: 6px 3px 14px 1px  rgba(00,00,00,.9);  id="img"></div>
+    
+    <div style="background-image: url('<%= post[0].image%>'); width:100%; z-index: 5;  background-size: cover; background-position: center;box-shadow: 6px 3px 14px 1px  rgba(00,00,00,.9);"  id="img"></div>
     <div id="add-posts">
 
 
@@ -91,6 +92,8 @@ class="row-6 justify-content-between  "
         <span class="iconify" data-icon="entypo:location" data-inline="false"></span>   
       </a>  
 
+    
+        
 
 
 
@@ -125,7 +128,8 @@ class="row-6 justify-content-between  "
 
 
 
-          <div id='across'> 
+          <div onclick="increaseTextAreaMobile()" id='across'> 
+           
           <div>
 
             <% for(var j=0; j < post[0].comments.length; j++) {  %>
@@ -167,7 +171,7 @@ class="row-6 justify-content-between  "
 
 
 
-    <textarea type="text" class="form-control" name="comments" id='sendComment'></textarea>
+    <input type="text" class="form-control" name="comments" id='sendComment'></input>
   </div>
 <button type="submit" class="btn btn-primary text-center w-100 rounded-bottom" value="comments" >Post comment!</button>
             </form>
