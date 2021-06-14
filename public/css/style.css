@@ -624,6 +624,7 @@ header .overlay {
   margin-bottom: 5px;
   display: flex;
     justify-content: space-evenly;
+    filter: drop-shadow(2px 4px 8px black);
 
 }
 #bottom-row{
