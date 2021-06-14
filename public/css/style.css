@@ -622,6 +622,8 @@ header .overlay {
 }
 #top-row{
   margin-bottom: 5px;
+  display: flex;
+    justify-content: space-evenly;
 
 }
 #bottom-row{
@@ -633,6 +635,9 @@ header .overlay {
     padding-left: 2%;
     padding-right: 2%;
     background-color: rgba(00, 0, 00, .4);
+    border-radius: 15px;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 #add-posts{
