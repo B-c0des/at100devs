@@ -18,7 +18,6 @@ function changeimgquality(){
 
 
 
-
 function handler(entries, observer) {
   for (entry of entries) {
 
@@ -40,7 +39,7 @@ function handler(entries, observer) {
   //     }
   // });
 
-    if ((entry.intersectionRatio < 1) && (entry.target.src.length !== 85)) {
+    if ((entry.isIntersecting) && (entry.target.src.length !== 85)) {
 
         // document.getElementsByClassName(entry.target.className)
         // console.log(entry.target.className)
