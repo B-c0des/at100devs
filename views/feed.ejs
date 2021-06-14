@@ -15,7 +15,7 @@
     
        <%if(posts2[i].user != user.id){ %>
         <div id="container3">
-             <img onclick="document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none' "  class="<%=[i]%>" id="img-multi-user" src="<%= posts2[i].image%>"  >
+             <img onclick="document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none' "  class="<%=[i]%>" id="img-multi-user" src="<%= posts2[i].lowresimage%>"  >
             
              <div id="text-block" onclick="document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none' ">
               <span id="backgroundColor">
