@@ -244,8 +244,6 @@ NEW_COMMENT = {
         //image.style.transition = ".2s opacity";
        
         //hover_text.innerHTML = "click to enlarge";
-        
-console.log(this.src)
 
 
 

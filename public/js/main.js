@@ -57,7 +57,7 @@ function handler(entries, observer) {
 //     entry.target.style.padding = '150px'
         
         entry.target.src.includes('q_10:420') ? entry.target.src = `${entry.target.src.substr(0, 49) + entry.target.src.substr(58, )}` : entry.target.src
-      console.log(entry.target.src.length)
+        
       // console.log(first + 'q_10:420/' + second);
       
       //console.log(entry.target.src)
@@ -454,7 +454,6 @@ function commentClick()
             let myArr = []
             myIcons.filter(x => x.includes(inputLowercase) ? iconArr.push(`<span  onclick="addStackToMyArray(this.id)" class="iconify" data-icon="${x}" id='${x}' data-inline="false"></span>`) : '')
             // myIcons.filter(x => x.includes(inputz.value) ? console.log(x) + console.log(x.length) : '')
-            console.log(iconArr.join())
            
           //   let myIconRen = []
           //   myIconRen.push(`${<h1>${iconArr[i].toString()}</h1>}`)
@@ -468,7 +467,6 @@ function commentClick()
           
           iconArr.length < 100 ?  document.getElementById('iconss').innerHTML = iconArr.join('') : '';
 
-          console.log(iconArr.length)
           // document.body.appendChild(elemDiv); // appends last of that element
 
           
@@ -490,24 +488,16 @@ function commentClick()
         
         function addStackToMyArray(x){
             
-            console.log(myArr.join(' ').includes(x))
-            console.log(x)
-            console.log(myArr)
             delete myArr[0]
            // console.log(myArr.toString().includes)
            myArr.join(' ').includes(x) ? '' : myArr.push(`<span class="iconify" data-icon="${x}" onclick="removeIcon(${myArr.length})" data-inline="false"></span>`)
-            console.log(myArr.length)
-            
-            
-            console.log(myArr)
+         
             document.getElementById('myIcons').innerHTML = myArr.join(' ')
             document.getElementById('textIcons').innerHTML = myArr.join(' ')
             
         }
 
         function removeIcon(x){
-
-          console.log(myArr)
           delete myArr[x]
           document.getElementById('myIcons').innerHTML = myArr.join(' ')
           document.getElementById('textIcons').innerHTML = myArr.join(' ')

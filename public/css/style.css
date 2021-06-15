@@ -883,7 +883,7 @@ header .overlay {
     #submitComment{
     height:4vh;
     }
-    #sendComment{
+    .sendComment{
       z-index: -1;
     height:4hv;
     }
