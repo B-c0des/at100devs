@@ -1,8 +1,3 @@
-# Install
-
-`npm install`
-
----
 
 # Things to add
 
@@ -12,9 +7,14 @@
   - User Photo array
   - Location texting for mobile
 
+# Install
+
+`npm install`
+
 ---
 
 # Run
 
 `npm start`
-# at100devs
+
+---
