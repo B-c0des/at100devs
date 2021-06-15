@@ -20,11 +20,11 @@ function videoLoaded(){
 }
 let images = document.querySelectorAll('img');
 
-function changeimgquality(){
-  let images = document.querySelectorAll('img');
-  images.src.includes('q_10:420') ? images.src = `${entry.target.src.substr(0, 49) + images.src.substr(58, )}` : images.src
+// function changeimgquality(){
+//   let images = document.querySelectorAll('img');
+//   images.src.includes('q_10:420') ? images.src = `${entry.target.src.substr(0, 49) + images.src.substr(58, )}` : images.src
 
-}
+// }
 
 
 
@@ -55,7 +55,6 @@ function handler(entries, observer) {
         // console.log(entry.target.className)
         //entry.target.src.replaceAll('q_10:420/', '')
 //     entry.target.style.padding = '150px'
-        
         entry.target.src.includes('q_10:420') ? entry.target.src = `${entry.target.src.substr(0, 49) + entry.target.src.substr(58, )}` : entry.target.src
         
       // console.log(first + 'q_10:420/' + second);
@@ -339,24 +338,24 @@ function commentClick()
   
                 }
 
-                selectTheme.onclick = function() {
-                  // Get the DOM reference
+                // selectTheme.onclick = function() {
+                //   // Get the DOM reference
          
                   
             
-                  let feed = document.getElementById("feed");
-                  let myProfile = document.getElementById("my-theme")
+                //   let feed = document.getElementById("feed");
+                //   let myProfile = document.getElementById("my-theme")
 
               
-                  // Toggle 
-                  myProfile.style.display == "none" ? (myProfile.style.display = "flex") && (feed.style.display = "none"): 
-                  (myProfile.style.display = "none") && (feed.style.display = "flex") ; 
+                //   // Toggle 
+                //   myProfile.style.display == "none" ? (myProfile.style.display = "flex") && (feed.style.display = "none"): 
+                //   (myProfile.style.display = "none") && (feed.style.display = "flex") ; 
     
-                  // document.getElementById('dropdown-alert').style.paddingTop = '15%';
-                  // document.getElementById('dropdown-alert').style.marginTop = '0';
+                //   // document.getElementById('dropdown-alert').style.paddingTop = '15%';
+                //   // document.getElementById('dropdown-alert').style.marginTop = '0';
                   
                   
-                  }
+                  //}
 
 
               function myChat() {
@@ -439,10 +438,8 @@ function commentClick()
         
         }
         
-        document.getElementById('inputs').on = getIcon()
-        document.getElementById('inputs').addEventListener('onTouch' , getIcon()
-        
-        )
+        // document.getElementById('inputs').on = getIcon()
+        // document.getElementById('inputs').addEventListener('onTouch' , getIcon() )
        function getIcon(){
             let inputz = document.getElementById('inputs')
             let inputLowercase = inputz.value.toLowerCase()
@@ -488,8 +485,7 @@ function commentClick()
         
         function addStackToMyArray(x){
             
-            delete myArr[0]
-           // console.log(myArr.toString().includes)
+          delete myArr[0]
            myArr.join(' ').includes(x) ? '' : myArr.push(`<span class="iconify" data-icon="${x}" onclick="removeIcon(${myArr.length})" data-inline="false"></span>`)
          
             document.getElementById('myIcons').innerHTML = myArr.join(' ')
