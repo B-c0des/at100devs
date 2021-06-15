@@ -363,7 +363,7 @@ body{
     }
     #across{
       text-overflow: unset;
-      height: 45vh;
+      height: 55vh;
       overflow-y: scroll;
       overflow-x: hidden;
       
@@ -682,8 +682,7 @@ header .overlay {
 
 }
 #img{
-  background-image: url("https://res.cloudinary.com/at100dev/image/upload/v1623448704/oqcjlip3942kgofjbpd4.jpg"); width: 100%; z-index: 5; background-size: cover; background-position: center center; box-shadow: rgba(0, 0, 0, 0.9) 6px 3px 14px 1px; height: 50%;
-  height:50%;
+  height:100%;
 }
 
 #add-posts1{
