@@ -6,6 +6,9 @@
   - Blogs
   - User Photo array
   - Location texting for mobile
+  - User lookup
+  - Stack name mouseover
+  
 
 # Install
 
