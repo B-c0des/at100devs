@@ -1,15 +1,16 @@
-document.onreadystatechange = function () {
+function pageLoaded() {
   window.scrollTo(0, 0)
   var state = document.readyState
   if (state == 'complete') {
     
-
+    
+    document.getElementById('loader').style.display = "none"
       setTimeout(function(){
-        document.body.style.overflowY = "scroll"
+        
         window.onload = document.getElementById('loader').style.display = "none"
 
         
-      },5000);
+      },1000);
   }
 }
 

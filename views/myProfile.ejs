@@ -15,10 +15,10 @@
         
 
 
-  <div  id="myProfile"  class="container-view" style="z-index:20;">
-    <div id='x' onclick="myProfile()" style="z-index:20">x</div>
+  <div  id="myProfile"  class="container-view" style="z-index:30;">
+    <div id='x' onclick="myProfile()" style="z-index:30">x</div>
     
-    <div style="background-image: url('<%= post[0].image%>'); width:100%; z-index: 5;  background-size: cover; background-position: center;box-shadow: 6px 3px 14px 1px  rgba(00,00,00,.9);"  id="img"></div>
+    <div style="background-image: url('<%= post[0].image%>'); height:50%;"  id="img"></div>
     <div id="add-posts">
 
 
@@ -67,51 +67,47 @@ class="row-6 justify-content-between  "
 
 
   
-<div id="user-info1">
+   <div id="user-info1">
+  
+    
   
           
           
-  <div id="top-row">  
-    <span><%= post[0].name ?   post[0].name : '' %></span>
-    <span><%= post[0].title ?  post[0].title : '' %></span>
-  </div>
-  <div id="bottom-row" style="padding-bottom: 10px;">
-    <a href="tel:<%= post[0].contact ?   posts2[i].contact : '' %>">
-      <span class="iconify" data-icon="fa-solid:phone-alt" data-inline="false"></span>
-    </a>
-    <a href="sms:<%= post[0].contact ?   posts2[i].contact : '' %>">
-      <span class="iconify" data-icon="fa-solid:sms" data-inline="false"></span>      
-  </a>
-
-
-     <a href="https://<%- post[0].website ? posts2[i].website : '' %> ">
-      <span class="iconify" data-icon="dashicons:admin-site-alt3" data-inline="false"></span>
+    <div id="top-row">  
+      <span><%= post[0].name ?   post[0].name : '' %></span>
+      <span><%= post[0].title ?  post[0].title : '' %></span>
+    </div>
+  
+    <div id="middle-row">
+  
+      <a id="icons" href="tel:<%= post[0].contact ?   post[0].contact : '' %>">
+        <span class="iconify" data-icon="fa-solid:phone-alt" data-inline="false"></span>
       </a>
-
-      <a href="">
-        <span class="iconify" data-icon="entypo:location" data-inline="false"></span>   
-      </a>  
-
-    
+      <a id="icons" href="sms:<%= post[0].contact ?   post[0].contact : '' %>">
+        <span class="iconify" data-icon="fa-solid:sms" data-inline="false"></span>      
+      </a>
+  
+  
+       <a id="icons" href="https://<%- post[0].website ? post[0].website : '' %> ">
+        <span class="iconify" data-icon="dashicons:admin-site-alt3" data-inline="false"></span>
+      </a>
+  
+        <a id="icons" href="">
+          <span class="iconify" data-icon="entypo:location" data-inline="false"></span>   
+  
+        </a>  
+  
+        <a id="icons" href="">
+          <span class="iconify" data-icon="ic:outline-social-distance" data-inline="false"></span>
+        </a>
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </div>
-
-<div id="row">
+  
+              </div>
+  
+              <div id="bottom-row">
+              </div>
+  
+  <div id="row">
    
 
 

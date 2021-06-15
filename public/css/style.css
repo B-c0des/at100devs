@@ -4,7 +4,6 @@ body{
   height: 150vh;
   background-position: top;
   transition: background-image 1000ms linear;
-  overflow-y: hidden;
     }
     #loader{
       position: absolute;
@@ -201,13 +200,25 @@ body{
         background-color:transparent;
         background-color: transparent;
         color:white;
-        filter: drop-shadow( 0 0px 15px white);
+        filter: drop-shadow( 0 0px 4px white);
         transform: scale(1.05);
         animation: mymove 1s;
-        margin-bottom: -3px
+        margin-bottom: -3px;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
         transition: all .05s ease-out;
+    }
+    #icons:hover{
+      background-color:transparent;
+      background-color: transparent;
+      color:white;
+      filter: drop-shadow( 0 0px 4px white);
+      animation: mymove 1s;
+      margin-bottom: -3px;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      transition: all .05s ease-out;
+      transform: translate3d(0px, -5px, 0px);
     }
     #dropdown-alert{
       padding-top: 15%;
@@ -630,7 +641,14 @@ header .overlay {
   margin-bottom: 5px;
   display: flex;
     justify-content: space-evenly;
-    filter: drop-shadow(2px 4px 8px black);
+    filter: drop-shadow(0px 2px 4px black);
+
+}
+#middle-row{
+  margin-bottom: 5px;
+  display: flex;
+    justify-content: space-evenly;
+    filter: drop-shadow(0px 15px 8px black);
 
 }
 #bottom-row{
@@ -645,6 +663,9 @@ header .overlay {
     border-radius: 15px;
     margin-right: 8%;
     margin-left: 8%;
+    margin-top: -15px;
+    height: 25px;
+
 }
 
 #add-posts{
@@ -661,8 +682,8 @@ header .overlay {
 
 }
 #img{
-  height:100%;
-  border-radius: 20px 0px 0px 20px;
+  background-image: url("https://res.cloudinary.com/at100dev/image/upload/v1623448704/oqcjlip3942kgofjbpd4.jpg"); width: 100%; z-index: 5; background-size: cover; background-position: center center; box-shadow: rgba(0, 0, 0, 0.9) 6px 3px 14px 1px; height: 50%;
+  height:50%;
 }
 
 #add-posts1{
@@ -1741,9 +1762,6 @@ padding: 0%;
         color: white;        
       text-align: center;
       border-radius: 0px;
-      
-      padding-left: 1%;
-      padding-right: 1%;
 
       }
       #feed img{

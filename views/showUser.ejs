@@ -6,7 +6,7 @@
         
 
 
-        <div  id="<%=[i]%>"  class="container-view" style="display: none; z-index:20;"r>
+        <div  id="<%=[i]%>"  class="container-view" style="display: none; z-index:30;"r>
           <div id='x' onclick=" document.getElementById(`${this.parentNode.id}`).style.display = 'none'; document.getElementById('feed').style.display = 'flex'" style="z-index:20">x</div>
           <div style="background-image: url('<%= posts2[i].image%>'); width:100%; z-index: 5; height: 100%; background-size: cover; background-position: center;box-shadow: 6px 3px 14px 1px  rgba(00,00,00,.9);  " class="<%=[i]%>" id="img"></div>
           <div id="add-posts" >
@@ -64,28 +64,30 @@
         <span><%= posts2[i].name ?   posts2[i].name : '' %></span>
         <span><%= posts2[i].title ?  posts2[i].title : '' %></span>
       </div>
-      <div id="bottom-row" style="padding-bottom: 10px;">
-        <a href="tel:<%= posts2[i].contact ?   posts2[i].contact : '' %>">
+      <div id='middle-row'>
+        <a id="icons" href="tel:<%= posts2[i].contact ?   posts2[i].contact : '' %>">
           <span class="iconify" data-icon="fa-solid:phone-alt" data-inline="false"></span>
         </a>
-        <a href="sms:<%= posts2[i].contact ?   posts2[i].contact : '' %>">
+        <a id="icons" href="sms:<%= posts2[i].contact ?   posts2[i].contact : '' %>">
           <span class="iconify" data-icon="fa-solid:sms" data-inline="false"></span>      
         </a>
 
 
-         <a href="https://<%- posts2[i].website ? posts2[i].website : '' %> ">
+         <a id="icons" href="https://<%- posts2[i].website ? posts2[i].website : '' %> ">
           <span class="iconify" data-icon="dashicons:admin-site-alt3" data-inline="false"></span>
         </a>
 
-          <a href="">
+          <a id="icons" href="">
             <span class="iconify" data-icon="entypo:location" data-inline="false"></span>   
    
           </a>  
 
-          <a href="">
+          <a id="icons" href="">
             <span class="iconify" data-icon="ic:outline-social-distance" data-inline="false"></span>
           </a>
-                </div>
+          </div>
+          <div id="bottom-row">
+            </div>
 
 <div id="row">
        
@@ -198,7 +200,7 @@
 
 
   <div  id="myProfile2"  class="container-view"  >
-    <div id='x' onclick=" document.getElementById('myProfile2').style.display = 'none'; document.getElementById('feed').style.display = 'flex'" style="z-index:20">x</div>
+    <div id='x' onclick=" document.getElementById('myProfile2').style.display = 'none'; document.getElementById('feed').style.display = 'flex'" style="z-index:30">x</div>
      <div style="background-image: url('<%= post[0].image%>'); width:100%; z-index: 5; height: 100%; background-size: cover; background-position: center;box-shadow: 6px 3px 14px 1px  rgba(00,00,00,.9); `" id="img"></div>
     <div id="add-posts"> 
        
@@ -259,35 +261,35 @@ class="row-6 justify-content-between  "
     <span><%= post[0].title ?  post[0].title : '' %></span>
   </div>
 
-  <div id="bottom-row" style="padding-bottom: 10px;">
-    <a href="tel:<%= post[0].contact ?   posts2[i].contact : '' %>">
-      <span class="iconify" data-icon="fluent:call-connecting-20-regular" data-inline="false"></span>  
-   
+  <div id="middle-row" >
+
+    <a id="icons" href="tel:<%= post[0].contact ?   post[0].contact : '' %>">
+      <span class="iconify" data-icon="fa-solid:phone-alt" data-inline="false"></span>
     </a>
-    <a href="sms:<%= post[0].contact ?   posts2[i].contact : '' %>">
+    <a id="icons" href="sms:<%= post[0].contact ?   post[0].contact : '' %>">
       <span class="iconify" data-icon="fa-solid:sms" data-inline="false"></span>      
     </a>
 
 
-     <a href="https://<%- post[0].website ? posts2[i].website : '' %> ">
+     <a id="icons" href="https://<%- post[0].website ? post[0].website : '' %> ">
       <span class="iconify" data-icon="dashicons:admin-site-alt3" data-inline="false"></span>
-      </a>
+    </a>
 
-      <a href="">
+      <a id="icons" href="">
         <span class="iconify" data-icon="entypo:location" data-inline="false"></span>   
+
       </a>  
-      <a href="">
+
+      <a id="icons" href="">
         <span class="iconify" data-icon="ic:outline-social-distance" data-inline="false"></span>
       </a>
-
-
-
-
-
-
-
+      
 
             </div>
+
+            <div id="bottom-row">
+            </div>
+
 <div id="row">
    
 
