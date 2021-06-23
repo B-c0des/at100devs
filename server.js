@@ -10,14 +10,10 @@ const logger = require("morgan");
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const postRoutes = require("./routes/posts");
-
-// const iconsRoutes = require("./routes/icons");
 const bodyParser = require('body-parser')
 const multer = require('multer');
 const path = require("path");
 const tools = require('@iconify/tools');
-
-//const guest = require("./routes/guest");
 
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
@@ -33,8 +29,6 @@ app.set("view engine", "ejs");
 
 //Static Folder
 app.use(express.static("public"));
-//app.use(multer({dest: __dirname + '/image'}).single('image')); // <--
-
 
 
 //Body Parsing
@@ -49,12 +43,12 @@ app.use(methodOverride("_method"));
 
 // Setup Sessions - stored in MongoDB
 app.use(
-  session({
-    secret: "demo",
-    resave: false,
-    saveUninitialized: false,
-    store: new MongoStore({ mongooseConnection: mongoose.connection }),
-  })
+    session({
+        secret: "demo",
+        resave: false,
+        saveUninitialized: false,
+        store: new MongoStore({ mongooseConnection: mongoose.connection }),
+    })
 );
 
 const db = mongoose.connection
@@ -70,43 +64,7 @@ app.use(flash());
 app.use("/", mainRoutes);
 app.use("/post", postRoutes);
 
-// app.use("/icons", iconsRoutes);
-
-//app.use("/guest", guest);
-
 //Server Running
 app.listen(process.env.PORT, () => {
-  console.log(`Server is running on ${process.env.PORT}, you better catch it!`);
-  
-
+    console.log(`Server is running on ${process.env.PORT}, you better catch it!`);
 });
-
-
-db.once("open", () => {
-console.log("DB connected...");
-const msgCollection = db.collection("BUBs");
-//console.log(msgCollection)
-const changeStream = msgCollection.watch();
-
-// changeStream.on("change", (change) => 
-//     console.log('change')
-// );
-
-
-var filter = [{
-  $match: {
-      $and: [
-          { "updateDescription.updatedFields.SomeFieldA": { $exists: true } },
-          { operationType: "update" }]
-  }
-}];
-
-var options = { fullDocument: 'updateLookup' };
-db.collection('BUBs').watch(filter, options).on('change', data => 
-{
-  console.log(new Date(), data);
-});
-
-
-})
-  

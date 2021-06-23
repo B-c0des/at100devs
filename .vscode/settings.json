@@ -1,4 +1,5 @@
 {
-    "editor.fontSize": 18,
+    "editor.fontSize": 10,
+
     "terminal.integrated.fontSize": 60
 }

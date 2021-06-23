@@ -1,54 +1,44 @@
 <div id='update-profile'>
-
     <div id="add-posts1">
-      <h1 class="text-center">Update Profile</h1>
-      <form action="/post/updateProfile/<%= user._id %>?_method=PUT" enctype="multipart/form-data" method="POST">
-        <div class="mb-3">
-          <h1><label for="name" class="form-label">Name</label></h1>
-          <input type="text" class="form-control" id="name" name="name" required>
-      </div>
-      <div class="mb-3">
-        <h1><label for="title" class="form-label">Title</label></h1>
-            <input type="text" class="form-control" id="title" name="title" required>
-        </div>
-        <!-- <div class="mb-3">
-          <h1><label for="stack" class="form-label">Stack</label></h1>
-          <textarea class="form-control" id="caption" name="caption"></textarea>
-        </div> -->
-        <div class="mb-3">
-          <h1><label for="website" class="form-label">Website</label></h1>
-          <textarea class="form-control" id="website" name="website" required></textarea>
-        </div>
-        <div class="mb-3">
-          <h1><label for="contact" class="form-label">Phone Number</label></h1>
-          <input type="text" class="form-control" id="phone1" name="contact" required placeholder="(000) 000-0000"/>
-
-        </div>
-        
-        <h1>My Stack</h1>
-        <textarea autocapitalize="false" id='textIcons' name="textIcons" required style="    display:none;"></textarea>
-
-
-        <span id='myIcons' style="    display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        overflow-y: scroll;
-        max-height: 200px;" id='iconss'></span>
-        <h1>Search to Add Your Stack</h1>
-        <textarea autocapitalize="false" style="width:100%" id='inputs' oninput='getIcon()'></textarea><br>
-        <span style="    display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        overflow-y: scroll;
-        max-height: 200px;" id='iconss'></span>
-       
-          
-        <h1><label for="imgUpload" id="img-label" class="form-label">Image</label>
-          <img id="output2"/>
-          <input type="file" accept="image/*" oninput="loadFile2(event)" class="form-control" id="file" name="file">
-  
-        <button type="submit" class="btn btn-primary"  value="Upload" >Submit</button>
-      </form>
-      <button onclick="updateProfile()" type="none" class="btn btn-primary"  value="cancel">Cancel</button>
+        <h1 class="text-center">Update Profile</h1>
+        <form action="/post/updateProfile/<%= user._id %>?_method=PUT" enctype="multipart/form-data" method="POST">
+            <div class="mb-3">
+                <h1><label for="name" class="form-label">Name</label></h1>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <h1><label for="title" class="form-label">Title</label></h1>
+                <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+            <div class="mb-3">
+                <h1><label for="website" class="form-label">Website</label></h1>
+                <textarea class="form-control" id="website" name="website" required></textarea>
+            </div>
+            <div class="mb-3">
+                <h1><label for="contact" class="form-label">Phone Number</label></h1>
+                <input type="text" class="form-control" id="phone1" name="contact" required placeholder="(000) 000-0000" />
+            </div>
+            <h1>My Stack</h1>
+            <textarea autocapitalize="false" id='textIcons' name="textIcons" required style="    display:none;"></textarea>
+            <span id='myIcons' style="    display: flex;
+           justify-content: space-around;
+           flex-wrap: wrap;
+           overflow-y: scroll;
+           max-height: 200px;" id='iconss'></span>
+            <h1>Search to Add Your Stack</h1>
+            <textarea autocapitalize="false" style="width:100%" id='inputs' oninput='getIcon()'></textarea>
+            <br>
+            <span style="    display: flex;
+           justify-content: space-around;
+           flex-wrap: wrap;
+           overflow-y: scroll;
+           max-height: 200px;" id='iconss'></span>
+            <h1>
+                <label for="imgUpload" id="img-label" class="form-label">Image</label>
+                <img id="output2" />
+                <input type="file" accept="image/*" oninput="loadFile2(event)" class="form-control" id="file" name="file">
+                <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+        </form>
+        <button onclick="updateProfile()" type="none" class="btn btn-primary" value="cancel">Cancel</button>
     </div>
-  </div>
+</div>

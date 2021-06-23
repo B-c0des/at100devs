@@ -9,7 +9,6 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 router.get("/", homeController.getIndex);
 router.get("/profile", ensureAuth, postsController.getProfile);
 router.get("/feed", ensureAuth, postsController.getFeed);
-//router.put("post/commentPost", postsController.commentPost)
 router.post("/login", authController.postLogin);
 router.get("/logout", authController.logout);
 router.get("/signup", authController.getSignup);
@@ -17,7 +16,5 @@ router.post("/signup", authController.postSignup);
 router.get("/:id", ensureAuth, postsController.getPost);
 router.put("/profile", postsController.likePost);
 router.delete("/deletePost/:id", postsController.deletePost);
-
-router.get("/icons", postsController.getIcons)
 
 module.exports = router;

@@ -1,20 +1,26 @@
-
-
 <main class="container1">
-  <div class="">
+    <div class="">
 
-      <h1 class="text-center mt-4">Have an account?</h1>
-    <h6 class="text-center mt-0"> </h6>
-      <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
-      <div class="alert alert-danger"><%= el.msg %></div>
-      <% }) %> <% } %> <% if (locals.messages.info) { %> <%
+        <h1 class="text-center mt-4">Have an account?</h1>
+        <h6 class="text-center mt-0"> </h6>
+        <% if (locals.messages.errors) { %>
+            <% messages.errors.forEach( el => { %>
+                <div class="alert alert-danger">
+                    <%= el.msg %>
+                </div>
+                <% }) %>
+                    <% } %>
+                        <% if (locals.messages.info) { %>
+                            <%
       messages.info.forEach( el => { %>
-      <div class="alert alert-info"><%= el.msg %></div>
-      <% }) %> <% } %>
-      <form action="/login" method="POST">
-        <div class="mb-8">
-          <label for="exampleInputEmail1" class="form-label mt-0"
-            >Email address</label
+                                <div class="alert alert-info">
+                                    <%= el.msg %>
+                                </div>
+                                <% }) %>
+                                    <% } %>
+                                        <form action="/login" method="POST">
+                                            <div class="mb-8">
+                                                <label for="exampleInputEmail1" class="form-label mt-0">Email address</label
           >
           <input
             type="email"
@@ -26,16 +32,11 @@
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input
-            type="password"
-            class="form-control"
-            id="exampleInputPassword1"
-            name="password"
-          />
-        </div>
-        <button type="submit" class="col-12 btn btn-primary mt-3">Login</button>
-      </form>
-      <h1 class="text-center mt-3">Don't have an account?</h1> 
-      <button onclick="window.location.href='/signup';" class="col-12 btn btn-primary mt-3">Join!</button>
-  </div>
+                                                <input type="password" class="form-control" id="exampleInputPassword1" name="password" />
+                                            </div>
+                                            <button type="submit" class="col-12 btn btn-primary mt-3">Login</button>
+                                        </form>
+                                        <h1 class="text-center mt-3">Don't have an account?</h1>
+                                        <button onclick="window.location.href='/signup';" class="col-12 btn btn-primary mt-3">Join!</button>
+    </div>
 </main>

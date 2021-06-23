@@ -1,88 +1,28 @@
-  <%- include('partials/header') -%>
-  
-  <div id="show-feed">
-   
-  
-       <%- include('feed') -%>
-
-
-     </div>
-
-
-
-    
-    
-    </span>
-    </div></div></div>
+<%- include('partials/header') -%>
+    <div id="show-feed">
+        <%- include('feed') -%>
+    </div>
     <div>
-      <!-- <p><strong>User Name</strong>: <%= user.userName %></p>
-      <p><strong>Email</strong>: <%= user.email %></p>
-      <a href="/logout" class="col-3 btn btn-primary">Logout</a>
-  </div> -->
-
-
-
-  <%- (post.length === 0) ? include('addProfile') : '' %>
-
-  <%- (post.length > 0) ?  include('updateProfile') : "" %>
-
-        
-
-
-      </div>
-
-       
-      
- 
-</div>
-
-<div id='photo-wall'>
-    
-    <%- include('userPhotoWall') -%>
-</div>
-
-
-<div id='my-profile'>
-    
-  <%- include('myProfile') -%>
-</div>
-<div id="searchUser">
-  
-  <%- include('searchUser') -%>
-
-</div>
-
-<div id='my-theme'>
-    
-  <%- include('myTheme') -%>
-</div>
-
-
-<div id='my-chat'>
-    
-  <%- include('myChat') -%>
-</div>
-
-<!-- just big pix -->
-<div id="show-user">
-  <%- include('showUser') -%>
-
-</div>
-
-
-
-    
-
-
-  </div>
-</div>  
-</div>
-</div>  
-</div>
-
-
-
-
-
-
-<%- include('partials/footer') -%>
+        <%- (post.length === 0) ? include('addProfile') : '' %>
+            <%- (post.length > 0) ?  include('updateProfile') : "" %>
+    </div>
+    <div id='photo-wall'>
+        <%- include('userPhotoWall') -%>
+    </div>
+    <div id='my-profile'>
+        <%- include('myProfile') -%>
+    </div>
+    <div id="searchUser">
+        <%- include('searchUser') -%>
+    </div>
+    <div id='my-theme'>
+        <%- include('myTheme') -%>
+    </div>
+    <div id='my-chat'>
+        <%- include('myChat') -%>
+    </div>
+    <!-- just big pix -->
+    <div id="show-user">
+        <%- include('showUser') -%>
+    </div>
+    <%- include('partials/footer') -%>
