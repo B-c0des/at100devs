@@ -44,6 +44,7 @@ module.exports = {
                 name: req.body.name,
                 title: req.body.title,
                 image: result.secure_url,
+                lowresimage: result.secure_url,
                 cloudinaryId: result.public_id,
                 website: req.body.website,
                 contact: req.body.contact,
