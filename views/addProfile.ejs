@@ -1,5 +1,5 @@
 <div id='add-profile'>
-    <div id='x' onclick="" style="z-index:20">x</div>
+    <div id='x' onclick="document.getElementById(`${this.parentNode.id}`).style.display = 'none'; document.getElementById('feed').style.display = 'flex'" style="z-index:20">x</div>
     <div id="add-posts1">
         <h1 class="text-center">Add a Profile</h1>
         <form action="/post/createPost" enctype="multipart/form-data" method="POST">
