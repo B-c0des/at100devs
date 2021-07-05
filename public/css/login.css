@@ -95,7 +95,7 @@ button {
     .container {
         margin-top: 4vh;
         width: 97%;
-        backdrop-filter: blur(0px);
+        backdrop-filter: blur(20px);
     }
 }
 
