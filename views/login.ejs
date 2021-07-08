@@ -20,20 +20,28 @@
                                     <% } %>
                                         <form action="/login" method="POST">
                                             <div class="mb-8">
-                                                <label for="exampleInputEmail1" class="form-label mt-0">Email address</label
-          >
-          <input
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            name="email"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
+                                                <label for="exampleInputEmail1" class="form-label mt-0">Email address</label>
+                                                        <input
+                                                            type="email"
+                                                            class="form-control"
+                                                            id="exampleInputEmail1"
+                                                            aria-describedby="emailHelp"
+                                                            name="email"
+                                                        />
+                                                        </div>
+                                                        <div class="mb-3">
+                                                        <label for="exampleInputPassword1" class="form-label">Password</label>
                                                 <input type="password" class="form-control" id="exampleInputPassword1" name="password" />
                                             </div>
+                                            <h1 class="text-center mt-3">Try Demo Mode!</h1>
+                                        <button class="col-12 btn btn-primary mt-3" id="testbtn">Demo Mode</button>
+                                        <script>
+                                            document.getElementById('testbtn').addEventListener('click', demoMode)
+                                            function demoMode(){
+                                             document.getElementById('exampleInputEmail1').value = 'guest@guest.com'
+                                             document.getElementById('exampleInputPassword1').value = 'Guest1234'
+                                            }
+                                            </script>
                                             <button type="submit" class="col-12 btn btn-primary mt-3">Login</button>
                                         </form>
                                         <h1 class="text-center mt-3">Don't have an account?</h1>
