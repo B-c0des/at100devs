@@ -11,7 +11,7 @@ module.exports = {
     getProfile: async(req, res) => {
         try {
             const posts = await Post.find({ user: req.user.id });
-            const posts2 = await Post.find().sort({ createdAt: "desc" }).limit(20).lean();
+            const posts2 = await Post.find().sort({ createdAt: "desc" }).lean();
             const post = await Post.find({ user: req.user.id });
             const post2 = await Post.findById(req.params.id);
             res.render("profile.ejs", { posts: posts, user: req.user, posts2: posts2, post: post, post2: posts2 });
