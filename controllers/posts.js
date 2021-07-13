@@ -110,6 +110,22 @@ module.exports = {
         }
     },
 
+    deleteComment: async(req, res) => {
+        try {
+            await Post.findOneAndUpdate({ _id: req.params.id }, {
+                $push: { comments: { comments: req.body.comments, postedBy: req.user._id } }
+            }, );
+            console.log("Likes +1");
+            var data = req.body;
+
+            console.log("Name: ", data.name);
+            console.log(req.user['image'])
+            res.redirect(`/profile/`);
+        } catch (err) {
+            console.log(err);
+        }
+    },
+
     deletePost: async(req, res) => {
 
         try {
