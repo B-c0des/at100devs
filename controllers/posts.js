@@ -1,7 +1,6 @@
 const cloudinary = require("../middleware/cloudinary");
 const Post = require("../models/Post");
 const express = require("express");
-const app = express();
 const bodyParser = require("body-parser");
 
 const m = new Post;
