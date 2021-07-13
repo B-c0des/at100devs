@@ -140,4 +140,18 @@ module.exports = {
             console.log(err);;
         }
     },
+
+    deleteComment: async(req, res) => {
+        try {
+            await Post.findOneAndUpdate({ _id: req.params.id }, {
+                $pop: {
+                    comments: 1
+                },
+            }, );
+            console.log(`Comment: ${req.body.comments} By: ${req.user.id}`);
+            res.redirect('/profile/')
+        } catch (err) {
+            console.log(err);
+        }
+    },
 }
