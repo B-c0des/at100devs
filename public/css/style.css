@@ -4,6 +4,8 @@
             height: 150vh;
             background-position: top;
             transition: background-image 1000ms linear;
+            background-image: url('https://source.unsplash.com/random/2000×2000/?flowers?random=1');
+   
         }
         
         #loader {
@@ -646,11 +648,17 @@
             width: 100%;
             box-shadow: 6px 3px 14px 1px rgba(00, 00, 00, .9);
             background-size: cover;
-            background-color: rgba(203, 30, 30, 0.3);
+            
         }
         
         #img {
             height: 100%;
+        }
+        #logo{
+            height: 25%;
+            width:25%;
+            margin: 0 auto;
+            margin-bottom: -4%;
         }
         
         #add-posts1 {
@@ -735,8 +743,10 @@
         }
         
         .container {
+            
+            display: flex;
             flex-direction: row;
-            display: flexbox;
+            justify-content: space-evenly;
             backdrop-filter: blur(15px) brightness(1.2);
             overflow-y: hidden;
             width: 100%;
@@ -794,6 +804,7 @@
         }
         
         #container1 {
+            width:50%;
             display: flex;
             justify-content: space-between;
             flex-direction: column;
@@ -1461,10 +1472,11 @@
             }
             #header-right {
                 width: 100%;
-                font-size: .6rem;
+                font-size: 1.2rem;
                 z-index: 5;
                 display: flex;
                 flex-direction: row;
+                justify-content: space-between;
             }
             #headerTitle {
                 letter-spacing: -1px;
