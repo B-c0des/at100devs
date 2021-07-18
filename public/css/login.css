@@ -66,8 +66,10 @@ body {
 }
 
 .container {
-    justify-content: center;
-    width: 50%;
+    
+    display:flex;
+    flex-direction: row;
+    width: 80%;
     backdrop-filter: blur(15px);
     height: auto;
     align-items: center;
@@ -75,10 +77,26 @@ body {
     border-radius: 40px;
     box-shadow: 1px 15px 30px 2px rgba(00, 00, 00, .9);
     padding-bottom: 20px;
-    margin-top: 4vh;
+}
+.container1{
+    display: flex;
+    width: 50%;
 }
 
 button {
+    display: inline-block;
+    padding: 24px 32px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(30px);
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
     border-radius: 50px;
 }
 
@@ -93,7 +111,8 @@ button {
 
 @media only screen and (max-width: 900px) {
     .container {
-        margin-top: 4vh;
+        display:flex;
+        flex-direction: column;
         width: 97%;
         backdrop-filter: blur(20px);
     }
