@@ -3,9 +3,7 @@
             background-color: black;
             height: 150vh;
             background-position: top;
-            transition: background-image 1000ms linear;
-            background-image: url('https://source.unsplash.com/random/2000×2000/?flowers?random=1');
-   
+            transition: background-image 1000ms linear;   
         }
         
         #loader {
