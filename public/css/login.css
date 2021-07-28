@@ -110,11 +110,15 @@ button {
 }
 
 @media only screen and (max-width: 900px) {
+    body{
+        padding: 0%;
+    }
     .container {
         display:flex;
         flex-direction: column;
         width: 100%;
         backdrop-filter: blur(20px);
+        border-radius: 0px;
         
     }
     .container1{
