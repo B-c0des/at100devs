@@ -1,5 +1,6 @@
             body {
             background-size: cover;
+            background-image: url('https://flevix.com/wp-content/uploads/2020/01/Black-Animation-Background.svg');
             background-color: black;
             height: 150vh;
             background-position: top;
@@ -1056,12 +1057,12 @@
         
         #feed {
             display: flex;
-            width: 100%;
+            width: 90%;
             flex-wrap: wrap;
             justify-content: space-around;
             height: 100vh;
             border-radius: 50px;
-            padding-top: 95px;
+            padding-top: 130px;
             margin: 0 auto;
             scrollbar-width: thin;
             border: 1px solid rgba(#fff, .15);

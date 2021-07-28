@@ -1,6 +1,7 @@
 body {
     background-color: black;
     background-size: cover;
+    background-image: url('https://flevix.com/wp-content/uploads/2020/01/Fade-In-Background.svg');
     height: 100vh;
     transition: background-image 1000ms linear;
     font-family: 'Archivo Narrow', sans-serif;
