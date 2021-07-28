@@ -4,6 +4,7 @@ body {
     height: 100vh;
     transition: background-image 1000ms linear;
     font-family: 'Archivo Narrow', sans-serif;
+    padding: 10%;
 }
 
 * {
@@ -112,8 +113,15 @@ button {
     .container {
         display:flex;
         flex-direction: column;
-        width: 97%;
+        width: 100%;
         backdrop-filter: blur(20px);
+        
+    }
+    .container1{
+        display: flex;
+        width: 100%;
+        
+        justify-content: center;
     }
 }
 
@@ -133,16 +141,25 @@ button {
 
 @media all and (max-width: 600px) {
     .vid-info {
-        width: 50%;
+        width: 100%;
         padding: .5rem;
     }
     .vid-info h1 {
         margin-bottom: .2rem;
+    }
+    .container1{
+        display: flex;
+        width: 50%;
     }
 }
 
 @media all and (max-width: 500px) {
     .vid-info .acronym {
         display: none;
+    }
+    .container1{
+        display: flex;
+        width: 100%;
+        justify-content: center;
     }
 }

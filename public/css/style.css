@@ -687,12 +687,15 @@
         }
         
         #add-posts1 {
+            top: 40%;
+            left: 50%;
             margin-top: 40px;
             background-color: rgba(255, 255, 255, .25);
             border-radius: 10px;
             width: 100%;
             box-shadow: 0px 30px 40px 8px rgba(00, 00, 00, .9);
             z-index: 100;
+            
         }
         
         #user-info {
