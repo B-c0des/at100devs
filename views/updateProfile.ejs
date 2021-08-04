@@ -23,7 +23,7 @@
             <span id='myIcons' style="    display: flex;
            justify-content: space-around;
            flex-wrap: wrap;
-           overflow-y: scroll;
+           min-height:50px;
            max-height: 200px;" id='iconss'></span>
             <h1>Search to Add Your Stack</h1>
             <textarea autocapitalize="false" style="width:100%" id='inputs' oninput='getIcon()'></textarea>
@@ -36,9 +36,9 @@
             <h1>
                 <label for="imgUpload" id="img-label" class="form-label">Image</label>
                 <img id="output2" />
-                <input type="file" accept="image/*" oninput="loadFile2(event)" class="form-control" id="file" name="file">
-                <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+                <input type="file" accept="image/*" oninput="loadFile2(event)" class="form-control mb-2" id="file" name="file">
+                <button type="submit" class="btn btn-primary mb-2" value="Upload">Submit</button>
         </form>
-        <button onclick="updateProfile()" type="none" class="btn btn-primary" value="cancel">Cancel</button>
+        <button onclick="updateProfile()" type="none" class="btn btn-primary mb-2" value="cancel">Cancel</button>
     </div>
 </div>

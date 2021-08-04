@@ -1,6 +1,6 @@
 <div id='add-profile'>
     <div id="add-posts1">
-        <h1 class="text-center">Add a Profile</h1>
+        <h1 class="text-center p-2">Add a Profile</h1>
         <form action="/post/createPost" enctype="multipart/form-data" method="POST">
             <div class="mb-3">
                 <h1><label for="name" class="form-label">Name</label></h1>
@@ -26,10 +26,10 @@
             <span id='myIcons' style="    display: flex;
                justify-content: space-around;
                flex-wrap: wrap;
-               overflow-y: scroll;
+               min-height:5vh;
                max-height: 200px;" id='iconss'></span>
             <h1>Search to Add Your Stack</h1>
-            <textarea style="width:100%" id='inputs' oninput='getIcon()'></textarea><br>
+            <textarea style="width:100%; border-radius: 5px;" id='inputs' oninput='getIcon()'></textarea><br>
             <span style="    display: flex;
                justify-content: space-around;
                flex-wrap: wrap;
@@ -40,8 +40,8 @@
                 <img id="output" />
                 <input type="file" accept="image/*" oninput="loadFile(event)" class="form-control" id="file" name="file">
 
-                <button type="submit" class="btn btn-primary" value="Upload" style="filter: drop-shadow( 0 0px 0px black); width:100%" onclick="toggleContent()">Submit</button>
+                <button type="submit" class="btn btn-primary mt-3" value="Upload" style="filter: drop-shadow( 0 0px 0px black); width:100%" onclick="toggleContent()">Submit</button>
         </form>
-        <button onclick="toggleContent()" type="none" class="btn btn-primary" style="filter: drop-shadow( 0 0px 0px black); width:100%;" value="cancel">Cancel</button>
+        <button onclick="toggleContent()" type="none" class="btn btn-primary mt-3 mb-3" style="filter: drop-shadow( 0 0px 0px black); width:100%;" value="cancel">Cancel</button>
     </div>
 </div>
