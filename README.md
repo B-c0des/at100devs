@@ -1,10 +1,10 @@
 # Things to add
 
-  - Texting
+  - Text Messaging 
   - Chat
   - Blogs
   - User Photo array
-  - Location texting for mobile
+  - Location text messaging for mobile
   - User lookup
   - Stack name mouseover
   
