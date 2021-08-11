@@ -36,6 +36,9 @@ body {
     top: 0;
     color: #fff;
 }
+#headerIcon{
+    margin-top: 10px;
+}
 
 .vid-info {
     position: absolute;
@@ -69,21 +72,19 @@ body {
 .container {
     display:flex;
     flex-direction: column;
-    width: 80%;
+    width: 40%;
     backdrop-filter: blur(15px);
     height: auto;
-    align-items: center;
     background-color: rgba(255, 255, 255, .3);
     border-radius: 40px;
     box-shadow: 1px 15px 30px 2px rgba(00, 00, 00, .9);
     padding-bottom: 20px;
+    box-shadow: inset 0 0 90px 10px #354a76, 0 0 2px 1px black;
 }
 .container1{
-    display: flex;
-    width: 50%;
+    
 }
 #wrapper{
-    display: flex;
 }
 
 button {
