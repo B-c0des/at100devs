@@ -358,7 +358,7 @@
         
         #across {
             text-overflow: unset;
-            height: 55vh;
+            height: 70vh;
             overflow-y: scroll;
             overflow-x: hidden;
             padding: 10px;
