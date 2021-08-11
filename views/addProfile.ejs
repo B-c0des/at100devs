@@ -2,20 +2,20 @@
     <div id="add-posts1">
         <h1 class="text-center p-2">Add a Profile</h1>
         <form action="/post/createPost" enctype="multipart/form-data" method="POST">
-            <div class="mb-3">
+            <div class="mb-1">
                 <h1><label for="name" class="form-label">Name</label></h1>
                 <input type="text" class="form-control" id="name" name="name" required>
             </div>
-            <div class="mb-3">
+            <div class="mb-1">
                 <h1><label for="title" class="form-label">Title</label></h1>
                 <input type="text" class="form-control" id="title" name="title" required>
             </div>
 
-            <div class="mb-3">
+            <div class="mb-1">
                 <h1><label for="website" class="form-label">Website</label></h1>
                 <input class="form-control" id="website" name="website" required></input>
             </div>
-            <div class="mb-3">
+            <div class="mb-1">
                 <h1><label for="contact" class="form-label">Phone Number</label></h1>
                 <input type="text" class="form-control" id="phone" name="contact" required placeholder="(000) 000-0000" />
             </div>
@@ -40,8 +40,8 @@
                 <img id="output" />
                 <input type="file" accept="image/*" oninput="loadFile(event)" class="form-control" id="file" name="file">
 
-                <button type="submit" class="btn btn-primary mt-3" value="Upload" style="filter: drop-shadow( 0 0px 0px black); width:100%" onclick="toggleContent()">Submit</button>
+                <button type="submit" class="btn btn-primary mt-1" value="Upload" style="filter: drop-shadow( 0 0px 0px black); width:100%" onclick="toggleContent()">Submit</button>
         </form>
-        <button onclick="toggleContent()" type="none" class="btn btn-primary mt-3 mb-3" style="filter: drop-shadow( 0 0px 0px black); width:100%;" value="cancel">Cancel</button>
+        <button onclick="toggleContent()" type="none" class="btn btn-primary mt-1 mb-1" style="filter: drop-shadow( 0 0px 0px black); width:100%;" value="cancel">Cancel</button>
     </div>
 </div>
