@@ -50,7 +50,7 @@
                 <div id="header-right">
                    <span> <a href="/logout" class=""><button>Logout</button></a>
                     <%- post.length <= 0 ? ` <button onclick="toggleContent()" class="">Add Profile</button>` : '' %></span>
-                        <%- post.length > 0 ? `<button onclick="updateProfile()" class="">Update Profile</button>` : '' %></span></span>
+                       <span><%- post.length > 0 ? `<button onclick="updateProfile()" class="">Update Profile</button>` : '' %></span>
 
                             <span><button onclick="showFeed()" id="usersClick">Users</button>
                             <button onclick="myProfile()" id="myProfile">My Profile</button>
