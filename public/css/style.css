@@ -1145,7 +1145,7 @@
             background-color: transparent;
             color: white;
             filter: drop-shadow( 0 0px 4px white);
-            transform: scale(1.05);
+            transform: scale(1.005);
             animation: mymove 1s;
             margin-bottom: -3px;
             animation-iteration-count: 1;
