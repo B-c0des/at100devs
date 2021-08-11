@@ -25,6 +25,9 @@
             top: -2px;
             transition: all .1s ease-in-out;
         }
+        #headerIcon{
+            margin-top: 10px;
+        }
         
         #searchUser {
             display: none;
