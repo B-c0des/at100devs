@@ -67,9 +67,8 @@ body {
 }
 
 .container {
-    
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 80%;
     backdrop-filter: blur(15px);
     height: auto;
@@ -82,6 +81,9 @@ body {
 .container1{
     display: flex;
     width: 50%;
+}
+#wrapper{
+    display: flex;
 }
 
 button {
