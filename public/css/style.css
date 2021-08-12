@@ -1390,6 +1390,10 @@
                 background-position: bottom;
                 background-color: black;
             }
+            #logo{
+                width: 25%;
+            }
+            
             #img-multi-user {
                 height: 100%;
             }
@@ -1774,12 +1778,14 @@
                 .video-foreground {
                     height: 300%;
                     top: -100%;
+                    width: 25%;
                 }
             }
             @media (max-aspect-ratio: 16/9) {
                 .video-foreground {
                     width: 300%;
                     left: -100%;
+                    width: 25%;
                 }
             }
             @media all and (max-width: 600px) {
