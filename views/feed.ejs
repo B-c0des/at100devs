@@ -5,9 +5,9 @@
                 <img onclick="document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none' " class="<%=[i]%>" id="img-multi-user" src="<%= posts2[i].lowresimage%>">
                 <div id="text-block" onclick="document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none' ">
                     <span id="backgroundColor">
-        <span><%- posts2[i].name %></span>
-                    <span><%- posts2[i].title %></span>
-                    <span><%- posts2[i].icons %></span>
+                    <div><%- posts2[i].name %></div>
+                    <div><%- posts2[i].title %></div>
+                    <div><%- posts2[i].icons %></div>
                     </span>
                 </div>
             </div>
@@ -18,9 +18,9 @@
                             <img style="width:100%;" onclick="document.getElementById('myProfile2').style.display = 'flex';document.getElementById('feed').style.display = 'none' " class="<%=[i]%>" id="img-multi-user" src="<%= post[i].image%>">
                             <div id="text-block" onclick="document.getElementById('myProfile2').style.display = 'flex';document.getElementById('feed').style.display = 'none' ">
                                 <span id="backgroundColor">
-        <span><%- user.userName %></span>
-                                <span><%- post[0].title %></span>
-                                <span><%- post[0].icons %></span>
+                            <div><%- user.userName %></div>
+                                <div><%- post[0].title %></div>
+                                <div><%- post[0].icons %></div>
                                 </span>
                             </div>
                         </div>
