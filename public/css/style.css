@@ -54,6 +54,8 @@
         }
         
         #container3 .iconify:hover {}
+
+        
         
         .iconify {
             width: auto;
@@ -252,7 +254,10 @@
             margin: 0 auto;
             flex-direction: row;
             position: fixed;
-            padding: 5%;
+            padding-top: 5%;
+            padding-left: 15%;
+            padding-right: 15%;
+            padding-bottom: 10%;
             overflow-y: scroll;
             height: 100%;
             width: 100vw;
@@ -264,7 +269,7 @@
         #x {
             position: inherit;
             margin-top: 3px;
-            right: 5%;
+            right: 16%;
             text-align: center;
             font-size: 4vw;
             width: 3vw;
@@ -466,8 +471,8 @@
             width: 100%;
             height: 100%;
             margin-top: 0;
-            padding-left: 20%;
-            padding-right: 20%;
+            padding-left: 30%;
+            padding-right: 30%;
             top: 0;
             z-index: 20;
             display: none;
