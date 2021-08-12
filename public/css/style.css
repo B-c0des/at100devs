@@ -369,7 +369,7 @@
             height: 70vh;
             overflow-y: scroll;
             overflow-x: hidden;
-            padding: 10px;
+            box-shadow: inset 0 0 90px 44px #354a76, 0 0 2px 0px black;
         }
         
         #across::-webkit-scrollbar {
@@ -880,6 +880,8 @@
             color: white;
             border-radius: 1px 19px 2px 1px;
             background-color: rgba(200, 200, 200, 0.3);
+            
+            box-shadow: inset 0 0 90px 44px #354a76, 0 0 2px 0px black;
         }
         
         #submitComment {
@@ -1002,6 +1004,7 @@
             flex-direction: row;
             border-bottom: 1px solid rgba(255, 255, 255, .5);
             color: white;
+            font-size: x-large;
         }
         
         #post-comment-box {
