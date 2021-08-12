@@ -1007,7 +1007,11 @@
             color: white;
             font-size: large;
         }
-        
+        .btn-primary {
+            color: #fff;
+            background-color: aqua;
+            border-color: deeppink;
+        }
         #post-comment-box {
             width: 100%;
             border-bottom: 1px solid rgba(255, 255, 255, .5);
