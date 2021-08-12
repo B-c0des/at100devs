@@ -72,6 +72,7 @@
             width: 350vw;
             height: 100vh;
             z-index: -1;
+            padding-bottom: 10px;;
         }
         
         audio {
@@ -186,7 +187,8 @@
             color: white;
             filter: drop-shadow( 0 0px 4px white);
             animation: mymove 1s;
-            margin-bottom: -3px;
+            margin-bottom: -10px;
+            padding-bottom: 10px;
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
             transition: all .05s ease-out;
@@ -1536,7 +1538,7 @@
             }
             #x {
                 position: inherit;
-                right: 15px;
+                right: 16px;
                 top: 15px;
                 text-align: center;
                 font-size: 24vw;
