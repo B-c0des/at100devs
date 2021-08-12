@@ -156,10 +156,18 @@ input:focus{
         
     }
     .container1{
-        display: flex;
         width: 100%;
         
         justify-content: center;
+    }
+    .container{
+        display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: -webkit-fill-available;
+    backdrop-filter: blur(20px);
+    border-radius: 0px;
+    justify-content: space-evenly;
     }
 }
 
@@ -186,8 +194,6 @@ input:focus{
         margin-bottom: .2rem;
     }
     .container1{
-        display: flex;
-        width: 50%;
     }
 }
 
@@ -196,7 +202,6 @@ input:focus{
         display: none;
     }
     .container1{
-        display: flex;
         width: 100%;
         justify-content: center;
     }
