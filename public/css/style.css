@@ -68,7 +68,7 @@
 			
 			transform: scale(1.10);
 			
-            transition: all .5s ease-in-out;
+            transition: all .2s ease-in-out;
 
 			box-shadow:  2px -2px 5px aqua, -2px 2px 5px deeppink;
         }
@@ -83,7 +83,7 @@
 			transform: scale3d(1.15);
 			transform: scale(1.2);
             cursor: pointer;
-            transition: all .3s ease-in-out;
+            transition: all .4s ease-in-out;
         }
 		#container3 .overlay{
   
