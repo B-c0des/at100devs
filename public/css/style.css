@@ -1,4 +1,4 @@
-            body {
+    	body {
             background-size: cover;
             background-image: url('https://flevix.com/wp-content/uploads/2019/12/Blue-Wave-Background-1.svg');
             background-color: black;
@@ -31,7 +31,7 @@
         }
         
         #searchUser {
-            display: none;
+            display: none;,
             position: absolute;
             margin-top: 0px;
             top: 0;
@@ -58,7 +58,7 @@
             transition: all .3s ease-in-out;			
 			z-index: 30;
             transition: all .2s ease-in-out;
-			box-shadow:  2px -2px 5px aqua, -2px 2px 5px deeppink;
+			box-shadow:  inset 0 0 30px 0px #354a76, 0 0 2px 1px black, 5px -5px 10px aqua, -5px 5px 15px deeppink;
         }
 		#container3 img{
 			
