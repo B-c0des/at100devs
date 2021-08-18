@@ -44,14 +44,7 @@
         
 		#container3 {
             position: relative;
-            font-family: Arial;
-            width: 24%;
-            margin-bottom: 17px;
-            filter: drop-shadow(2px 4px 6px black);
-        }
-		#container3 {
-            position: relative;
-            font-family: Arial;
+			font-family: 'Special Elite', cursive;
             width: 24%;
             filter: drop-shadow(2px 4px 6px black);
   			overflow:hidden;
@@ -60,35 +53,24 @@
 			box-shadow: inset 0 0 30px 0px #354a76, 0 0 2px 1px black;
         }
 		#container3:hover{
-
             cursor: pointer;
             transition: all .3s ease-in-out;			
 			z-index: 30;
-			transform: scale3d(1.05);
-			
-			transform: scale(1.10);
-			
             transition: all .2s ease-in-out;
-
 			box-shadow:  2px -2px 5px aqua, -2px 2px 5px deeppink;
         }
 		#container3 img{
+			
+			transform: scale(1.03);
 			position:relative;
-
 			transition: transform;
 			transition-duration:1s;
         }
         #container3:hover img{
-			border:1px dotted pink;
-			transform: scale3d(1.15);
-			transform: scale(1.2);
+			transform: scale(1.1);
             cursor: pointer;
             transition: all .4s ease-in-out;
         }
-		#container3 .overlay{
-  
-		}
-        
         #container3 .iconify {
             width: 1.5vw;
             height: 1.5vh;
@@ -174,7 +156,6 @@
             position: absolute;
             padding: 2px;
             width: 101%;
-            text-align: center;
             bottom: 0px;
             margin-bottom: 0px;
             border-radius: 10px;
@@ -217,16 +198,24 @@
             filter: drop-shadow(2px 4px 6px white);
         }
         
-        /* #backgroundColor {
-            background-color: rgba(00, 0, 00, .3);
+        /* #backgroundColor{
+            
             border-radius: 2px;
             display: flex;
             flex-direction: column;
             border-radius: 0px 0px 5px 5px;
             box-shadow: inset 0px -15px 40px 3px rgb(0 0 0);
+			filter: drop-shadow(2px 2px 9px black);
             font-size: 14px;
             height: 70px;
+		    box-shadow: inset 0 0 30px 1px #354a76, 0 0 1px 1px black;
         } */
+		#backdrop{
+            display: flex;
+            flex-direction: row;
+            font-size: 14px;
+			filter: drop-shadow(0px 0px 20px black);
+		}
         
         a {
             color: white;
@@ -235,7 +224,7 @@
         a:hover {
             background-color: transparent;
             color: white;
-            filter: drop-shadow( 0 0px 4px white);
+            filter: drop-shadow(2px -2px 5px aqua, -2px 2px 5px deeppink);
             transform: scale(1.05);
             animation: mymove 1s;
             margin-bottom: -3px;
@@ -421,15 +410,13 @@
         #likebox {
             display: flex;
             justify-content: space-between;
-            position: relative;
             height: 25px;
             width: 44vw;
-            top: -30px;
             display: flex;
-            position: fixed;
             top: 80.5vh;
-            margin-left: -44vw;
+            margin-left: -5vw;
             z-index: 20;
+			height: 0px;
         }
         
         #across {

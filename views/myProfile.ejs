@@ -22,19 +22,21 @@
                             <span><%= post[0].name ?   post[0].name : '' %></span>
                             <span><%= post[0].title ?  post[0].title : '' %></span>
                         </div>
-                        <div id="bottom-row">
-                            <a href="tel:<%= post[0].contact ?   posts2[i].contact : '' %>">
+                        <div id="middle-row">
+                            <a id="icons" href="tel:<%= post[0].contact ?   posts2[i].contact : '' %>">
                                 <span class="iconify" data-icon="fa-solid:phone-alt" data-inline="false"></span>
                             </a>
-                            <a href="sms:<%= post[0].contact ?   posts2[i].contact : '' %>">
+                            <a id="icons" href="sms:<%= post[0].contact ?   posts2[i].contact : '' %>">
                                 <span class="iconify" data-icon="fa-solid:sms" data-inline="false"></span>
                             </a>
-                            <a href="https://<%- post[0].website ? posts2[i].website : '' %> ">
+                            <a id="icons" href="https://<%- post[0].website ? posts2[i].website : '' %> ">
                                 <span class="iconify" data-icon="dashicons:admin-site-alt3" data-inline="false"></span>
                             </a>
-                            <a href="">
+                            <a id="icons" href="">
                                 <span class="iconify" data-icon="entypo:location" data-inline="false"></span>
                             </a>
+                        </div>
+                        <div id="bottom-row">
                         </div>
                         <div id="row">
                             <span><%- post[0].icons %></span>

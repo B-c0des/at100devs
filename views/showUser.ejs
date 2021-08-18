@@ -62,8 +62,11 @@
                         <%}%>
                             <%if(post.length > 0){ %>
                                 <input type="text" class="form-control" name="comments" class='sendComment' style="z-index:-1"></input>
-                                <%- posts2[i].name ? `<button type="submit" class="submitComment" class="btn btn-primary text-center w-100 rounded-bottom" value="comments" >Post Comment!</button>` : 'Please create a profile first!' %>
-                </form>
+                                <%- posts2[i].name ? `
+                                
+                                <button type="submit" class="submitComment btn btn-primary text-center w-100 rounded-bottom" value="comments" >Post Comment!</button>` : 'Please create a profile first!' %>
+                              
+                            </form>
             </div>
             <%}%>
         </div>
