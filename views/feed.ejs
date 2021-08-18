@@ -14,18 +14,18 @@
             <% } %>
                 <% } %>
                     <% for(var i=0; i<post.length; i++) {%>
-                        <div id="container3">
+                        <div id="container3" >
                             <img style="width:100%;" onclick="document.getElementById('myProfile2').style.display = 'flex';document.getElementById('feed').style.display = 'none' " class="<%=[i]%>" id="img-multi-user" src="<%= post[i].image%>">
-                            <div id="text-block" onclick="document.getElementById('myProfile2').style.display = 'flex';document.getElementById('feed').style.display = 'none' ">
-                                <span id="backgroundColor">
-                            <div><%- user.userName %></div>
-                                <div><%- post[0].title %></div>
-                                <div><%- post[0].icons %></div>
+                            <div id="text-block" class="tab-card-content" onclick="document.getElementById('myProfile2').style.display = 'flex';document.getElementById('feed').style.display = 'none' ">
+                                <span  id="backgroundColor">
+                            <div id="backgroundColor"><%- user.userName %></div>
+                                <div id="backgroundColor"><%- post[0].title %></div>
+                                <div id="backgroundColor"><%- post[0].icons %></div>
                                 </span>
                             </div>
                         </div>
                         <% } %>
-                            <span class="iconify" data-icon="node" data-inline="false"></span>
+                            
 </div>
 </div>
 </div>
