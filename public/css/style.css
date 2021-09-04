@@ -9,7 +9,7 @@
 
         
         #loader {
-            position: absolute;
+            position: fixed;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -24,7 +24,7 @@
             border-bottom: 1px;
             animation-fill-mode: forwards;
             top: -2px;
-            transition: all .1s ease-in-out;
+            transition: all 2.5s ease-in-out;
         }
         #headerIcon{
             margin-top: 10px;
@@ -182,7 +182,6 @@
         }
         #text-block:hover {
             display: flex;
-            backdrop-filter: brightness(105%);
             opacity: 100%;
             justify-content: flex-end;
             padding: 2px;
