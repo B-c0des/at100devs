@@ -1450,6 +1450,7 @@
                 height: 100vh;
                 background-position: bottom;
                 background-color: black;
+                background-image: none;
             }
             #logo{
                 width: 25%;
@@ -1720,7 +1721,6 @@
             #feed {
                 max-height: 100%;
                 width: 100%;
-                margin-top: 70px;
                 padding-top: 0px;
                 padding-left: 0px;
                 padding-right: 0px;

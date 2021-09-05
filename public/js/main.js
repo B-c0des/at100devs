@@ -27,6 +27,7 @@ function handler(entries, observer) {
     }
 }
 
+
 let observer = new IntersectionObserver(handler);
 
 images.forEach(img => observer.observe(img));
@@ -42,6 +43,19 @@ function searchByKeyword() {
         Logger.log('[%s] Title: %s', item.id.videoId, item.snippet.title);
     }
 }
+
+function getScrollPos() {
+   console.log(window.scrollY)
+};
+
+// window.addEventListener("scroll", function(){
+//     var scroll = window.scrollY;
+//     document.getElementById("scroll_position").textContent=scroll;
+//     function getScrollPos() {
+//     console.log(scroll)
+//     }
+// });
+
 
 function addText() {
     var input = document.getElementById('something');
