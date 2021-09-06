@@ -1122,11 +1122,7 @@
         #comment {
             height: 100px;
             width: 100%;
-            border-color: rgba(255, 255, 255, .25);
-            border-style: solid;
-            border-width: 1px 0px 1px 1px;
             color: white;
-            mix-blend-mode: difference;
         }
         
         #comment-box {
@@ -1135,6 +1131,21 @@
             border-bottom: 1px solid rgba(255, 255, 255, .5);
             color: white;
             font-size: large;
+        }
+        #commentName{
+            clear: both;
+            background-image: linear-gradient(to left, rgba(255, 0, 251,0), rgb(255, 0, 251));
+            color: #fff;
+            text-shadow: 0px 2px 2px black;
+            /* border-color: #354a76;
+            box-shadow: inset 0 0 14px -1px cyan, 0 0 2px 1px black;
+            filter: drop-shadow(1px 1px 2px #354a76); */
+            cursor: pointer;
+            font-family: 'Special Elite', cursive;
+            padding-left: 5px;
+        }
+        hr{
+            margin:0px;
         }
         .btn-primary {
             color: #fff;
@@ -1406,20 +1417,21 @@
         #userIcon {
             position: inherit;
             right: 0;
+            float: left;
             text-align: center;
             font-size: 11vw;
             width: 8vw;
-            height: 8vw;
-            border-radius: 4px;
+            height: 10vw;
+            border-radius: 10px;
             line-height: 20px;
-            border: 1px solid rgba(255, 255, 255, .9);
+            border: 1px solid rgba(255, 255, 255, .5);
             background-color: rgba(255, 255, 255, .3);
             margin: 2px;
+            object-fit: cover;
         }
         
         #userIcon:hover {
-            filter: brightness(115%) contrast(106%);
-            transform: scale(1.0);
+            transform: scale(1.05);
             animation: mymove 1s;
             animation-iteration-count: 1;
             border-bottom: 20px;
@@ -1665,6 +1677,7 @@
                 animation: mymove 1s;
                 animation-iteration-count: 1;
                 animation-fill-mode: forwards;
+                box-shadow: inset 0 0 15px 5px #354a76, 0 0 67px 350px white;
             }
             #img-single-user {
                 display: none;
