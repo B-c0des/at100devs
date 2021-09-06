@@ -1131,6 +1131,8 @@
             font-size: large;
         }
         #commentName{
+            display: flex;
+            flex-direction: row;
             clear: both;
             background-image: linear-gradient(to left, rgba(255, 0, 251,0), rgb(255, 0, 251));
             color: #fff;
@@ -1139,14 +1141,17 @@
             box-shadow: inset 0 0 14px -1px cyan, 0 0 2px 1px black;
             filter: drop-shadow(1px 1px 2px #354a76); */
             cursor: pointer;
-            font-family: 'Special Elite', cursive;
             padding-left: 5px;
             transition: all .1s ease-in-out;
+            font-size: 1.4vw;
+            z-index: 30;
         }
         #commentName:hover{
-            transform: scale(1.01);
             filter: drop-shadow(0px 0px 10px deeppink);
             
+        }
+        #commentTitle{
+            font-size: 50%;
         }
         hr{
             margin:0px;
@@ -1427,10 +1432,9 @@
             width: 8vw;
             height: 10vw;
             line-height: 20px;
-            border: 1px solid rgba(255, 255, 255, .5);
-            background-color: rgba(255, 255, 255, .3);
-            margin: 2px;
+            box-shadow: 1px 0px 7px black;
             object-fit: cover;
+
         }
         
         #userIcon:hover {
@@ -1578,7 +1582,6 @@
                 /* border-radius: 40px; */
                 border-radius: 0px;
                 width: 100%;
-                height: 100%;
                 /* box-shadow: inset 0 0 30px 0px #354a76, 0 0 2px 1px black, 4px -4px 3px cyan, -4px 4px 3px deeppink; */
                 z-index: 100;
             }
