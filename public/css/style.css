@@ -1120,8 +1120,10 @@
         }
         
         #comment {
+            padding:5px;
             width: 100%;
             color: white;
+            text-shadow: 1px 3px 5px black;
         }
         
         #comment-box {
@@ -1434,6 +1436,7 @@
             line-height: 20px;
             box-shadow: 1px 0px 7px black;
             object-fit: cover;
+            margin-right: 10px;
 
         }
         
@@ -1926,6 +1929,7 @@
             }
             #comment{
                 font-size: 5vw;
+                text-shadow: 1px 3px 5px black;
             }
             #userIcon{
                 position: inherit;
