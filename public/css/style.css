@@ -1120,7 +1120,6 @@
         }
         
         #comment {
-            height: 100px;
             width: 100%;
             color: white;
         }
@@ -1427,7 +1426,6 @@
             font-size: 11vw;
             width: 8vw;
             height: 10vw;
-            border-radius: 10px;
             line-height: 20px;
             border: 1px solid rgba(255, 255, 255, .5);
             background-color: rgba(255, 255, 255, .3);
@@ -1442,7 +1440,7 @@
             border-bottom: 20px;
             animation-fill-mode: forwards;
             color: white;
-            box-shadow: 0px 1px 7px 1px rgb(0 0 0 / 90%);
+            box-shadow: rgb(255, 0, 251);
             cursor: pointer;
             transition: all .1s ease-in-out;
         }
