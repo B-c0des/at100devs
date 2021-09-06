@@ -1128,7 +1128,6 @@
         #comment-box {
             display: flex;
             flex-direction: row;
-            border-bottom: 1px solid rgba(255, 255, 255, .5);
             color: white;
             font-size: large;
         }
@@ -1143,6 +1142,11 @@
             cursor: pointer;
             font-family: 'Special Elite', cursive;
             padding-left: 5px;
+        }
+        #commentName:hover{
+            transform: scale(1.01);
+            filter: drop-shadow(0px 0px 10px deeppink);
+            
         }
         hr{
             margin:0px;
