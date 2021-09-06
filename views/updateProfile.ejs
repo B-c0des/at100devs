@@ -16,7 +16,7 @@
             </div>
             <div class="mb-1">
                 <h1><label for="contact" class="form-label">Phone Number</label></h1>
-                <input type="text" class="form-control" onclick="phone()" name="contact" required placeholder="(000) 000-0000" />
+                <input type="text" class="form-control" onChange="phone1()" name="contact" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
             </div>
            
             <textarea placeholder="(click to remove)"autocapitalize="false" id='textIcons' name="textIcons" required style="    display:none;"></textarea>

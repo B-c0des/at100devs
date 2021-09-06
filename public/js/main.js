@@ -210,19 +210,18 @@ function toggleContent1() {
             multiUser[i].style.display = "block";
     }
 }
-function phone(inputtxt)
-{
-  var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-  if(inputtxt.value.match(phoneno))
-     {
-	   return true;      
-	 }
-   else
-     {
-	   alert("Not a valid Phone Number");
-	   return false;
-     }
-}
+
+
+function phone(elementValue){
+    var phoneNumberPattern = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+    return phoneNumberPattern.test(elementValue);
+    }
+function phone1(elementValue){
+    var phoneNumberPattern = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+    return phoneNumberPattern.test(elementValue);
+    }
+
+
 
 
 function toggleViews() {
