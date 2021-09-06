@@ -48,13 +48,6 @@ function getScrollPos() {
    console.log(window.scrollY)
 };
 
-// window.addEventListener("scroll", function(){
-//     var scroll = window.scrollY;
-//     document.getElementById("scroll_position").textContent=scroll;
-//     function getScrollPos() {
-//     console.log(scroll)
-//     }
-// });
 
 
 function addText() {
@@ -200,11 +193,6 @@ function myChat() {
 }
 
 
-document.getElementById('phone', 'phone1').addEventListener('input', function(e) {
-    var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
-    e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
-});
-
 
 function toggleContent1() {
 
@@ -221,6 +209,19 @@ function toggleContent1() {
         multiUser[i].style.display == "block" ? multiUser[i].style.display = "none" :
             multiUser[i].style.display = "block";
     }
+}
+function phone(inputtxt)
+{
+  var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+  if(inputtxt.value.match(phoneno))
+     {
+	   return true;      
+	 }
+   else
+     {
+	   alert("Not a valid Phone Number");
+	   return false;
+     }
 }
 
 

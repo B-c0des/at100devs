@@ -492,12 +492,14 @@
         
         h1 {
             font-family: "Lobster", Sans-serif;
-            font-size: calc(12px + 1vw);
+            font-size: calc(10px + 1vw);
             color: white;
             margin: 0;
             padding: 0px 0px 0px 0px;
         }
-        
+        .form-label {
+            margin-bottom: .01rem; 
+        }
         h2 {
             font-family: "Lobster", Sans-serif;
             font-size: calc(12px + 1vw);
@@ -874,6 +876,15 @@
         #email-label {
             font-size: 2vw;
         }
+        #email-display{
+            font-family: 'Special Elite', cursive;
+            text-shadow: 0px 0px 10px #000;
+        }
+        #username-display{
+            font-family: 'Special Elite', cursive;
+            
+            text-shadow: 0px 0px 10px #000;
+        }
         
         .container {
             
@@ -1199,6 +1210,8 @@
             height: 30px;
             background-color: transparent;
             margin: 0 auto;
+            text-shadow: 0px 2px 4px #000;
+            font-size: 20px;
             /* font-size: calc(12px + .5vw); */
         }
         
@@ -1227,6 +1240,7 @@
             font-size: 1px;
             background-color: transparent;
             z-index: 2;
+            
         }
         
         #headerTitle {
@@ -1256,14 +1270,21 @@
         button:hover {
             background-color: transparent;
             color: white;
-            filter: drop-shadow( 0 0px 4px white);
+            filter: drop-shadow( 0 0px 2px white);
+            text-shadow: 0px 5px 3px black;
             cursor: pointer;
+            margin-top: -1px;
+            padding-bottom: 3px;
+            transform: scale(1.1);
+            transition: all .1s ease-in-out;
+            border: 0px 0px 5px 0px dashed white;
             
         }
         
         button:active {
             border: 1px solid rgba(#fff, .15);
             top: 0px;
+
         }
         
         #login-container {
@@ -1465,6 +1486,7 @@
                 width: 100%;
                 height: 10%;
                 filter: drop-shadow(2px 4px 6px black);
+                font-family: 'Special Elite', cursive;
             }
             a {
                 color: white;
@@ -1485,7 +1507,14 @@
                 margin-top: 0px;
             }
             #container3:hover {
-
+                cursor: pointer;
+                transition: none;
+                z-index: 30;
+                transition: none;
+                box-shadow: none
+            }
+            #container3:hover img {
+                transform: none;
             }
             #add-posts1{
                 top: 40%;
@@ -1650,12 +1679,12 @@
                 right: 16px;
                 top: 15px;
                 text-align: center;
-                font-size: 24vw;
+                font-size: 22vw;
                 color: rgba(255, 255, 255, .9);
-                width: 12vw;
+                width: 13vw;
                 height: 13vw;
                 border-radius: 4px;
-                line-height: 20px;
+                line-height: 45px;
                 border: 1px solid rgba(255, 255, 255, .9);
                 background-color: rgba(00, 0, 00, .3);
             }
@@ -1830,7 +1859,7 @@
                 box-sizing: border-box;
                 margin: auto;
                 background-color: transparent;
-                font-size: 6vw;
+                font-size: 5vw;
             }
             #buttonContainer button {
                 border: 1px solid white;

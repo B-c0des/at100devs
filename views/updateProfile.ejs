@@ -12,21 +12,22 @@
             </div>
             <div class="mb-1">
                 <h1><label for="website" class="form-label">Website</label></h1>
-                <textarea class="form-control" id="website" name="website" required></textarea>
+                <input class="form-control" id="website" name="website" required></textarea>
             </div>
             <div class="mb-1">
                 <h1><label for="contact" class="form-label">Phone Number</label></h1>
-                <input type="text" class="form-control" id="phone1" name="contact" required placeholder="(000) 000-0000" />
+                <input type="text" class="form-control" onclick="phone()" name="contact" required placeholder="(000) 000-0000" />
             </div>
-            <h1>My Stack</h1>
-            <textarea autocapitalize="false" id='textIcons' name="textIcons" required style="    display:none;"></textarea>
+           
+            <textarea placeholder="(click to remove)"autocapitalize="false" id='textIcons' name="textIcons" required style="    display:none;"></textarea>
+            <h1 id="stackLabel"><label for="getIcon" class="form-label">My Software Technologies:</label></h1>
             <span id='myIcons' style="    display: flex;
            justify-content: space-around;
            flex-wrap: wrap;
            min-height:50px;
            max-height: 200px;" id='iconss'></span>
-            <h1>Search to Add Your Stack</h1>
-            <textarea autocapitalize="false" style="width:100%" id='inputs' oninput='getIcon()'></textarea>
+           <h1><label for="getIcon" class="form-label">Search Software Technologies:</label></h1>
+            <textarea autocapitalize="false" placeholder="(click to add)" style="width:100%" id='inputs' oninput='getIcon()'></textarea>
             <br>
             <span style="    display: flex;
            justify-content: space-around;
