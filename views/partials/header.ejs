@@ -27,11 +27,11 @@
             <h1>
                 <header id="headerTitle" style="text-align: center;"><img id="logo" src="https://res.cloudinary.com/at100dev/image/upload/v1628713361/social_again_l9lsgr.svg"></header>
                 <div id="header-right">
-                   <span> <a href="/logout" class=""><button>Logout</button></a></span>
-                    <%- post.length <= 0 ? ` <button onclick="toggleContent()" class="">Add Profile</button>` : '' %>
-                       <span><%- post.length > 0 ? `<button onclick="updateProfile()" class="">Update Profile</button>` : '' %></span>
+                   <span> <a href="/logout"><button class="navButton" >Logout</button></a></span>
+                    <%- post.length <= 0 ? ` <button class="navButton"   onclick="toggleContent()" class="">Add Profile</button>` : '' %>
+                       <span><%- post.length > 0 ? `<button class="navButton" onclick="updateProfile()" class="">Update Profile</button>` : '' %></span>
 
-                             <span><button onclick="myProfile()" id="myProfile">My Profile</button></span>
+                             <span><button onclick="myProfile()" class="navButton" id="myProfile">My Profile</button></span>
                             <div id="login-logout-box">
                             </div>                            
             </h1>

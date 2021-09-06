@@ -5,6 +5,7 @@
             height: 150vh;
             background-position: top;
             transition: background-image 1000ms linear;   
+            font-family: 'Special Elite', cursive;
         }
 
         
@@ -111,9 +112,20 @@
             width: auto;
             height: auto;
             min-height: 4vh;
+            filter: drop-shadow(2px 3px 3px black);
         }
         
-        .iconify:hover {}
+        .iconify:hover {
+            transform: scale(1.1);
+        }
+        svg.iconify{
+            filter: drop-shadow(2px 3px 3px black);
+        }
+        svg.iconify:hover{
+            transform: scale(1.1);
+            filter: drop-shadow(2px 3px 3px black);
+        }
+
         
         #vod {
             position: absolute;
@@ -206,12 +218,12 @@
             filter: drop-shadow(2px 4px 6px white);
         }
 
-		#backdrop{
+        #backdrop{
             display: flex;
             flex-direction: row;
-            font-size: 14px;
-            text-shadow: 0px 0px 10px black;
-		}
+            font-size: 18px;
+            text-shadow: 0px 1px 3px black;      
+        }
         
         a {
             color: white;
@@ -407,7 +419,6 @@
             display: flex;
             justify-content: space-between;
             height: 25px;
-            width: 44vw;
             display: flex;
             top: 80.5vh;
             margin-left: -5vw;
@@ -580,9 +591,15 @@
             z-index: 20;
             display: none;
         }
-        
-        #myProfile {
-            top: 0px;
+        .navButton{
+            padding:10px;
+        }
+        .navButton:hover {
+            margin-top: -1px;
+            padding-bottom: 3px;
+            transform: scale(1.1);
+            transition: all .1s ease-in-out;
+            z-index: 20;
         }
         
         #myProfile2 {
@@ -1199,7 +1216,6 @@
         
         #feed {
             display: flex;
-            width: 90%;
             flex-wrap: wrap;
             justify-content: space-around;
             border-radius: 10px;
@@ -1287,10 +1303,6 @@
             filter: drop-shadow( 0 0px 2px white);
             text-shadow: 0px 5px 3px black;
             cursor: pointer;
-            margin-top: -1px;
-            padding-bottom: 3px;
-            transform: scale(1.1);
-            transition: all .1s ease-in-out;
             border: 0px 0px 5px 0px dashed white;
             
         }
@@ -1757,7 +1769,6 @@
             }
             #feed {
                 display: flex;
-                width: 90%;
                 flex-wrap: wrap;
                 justify-content: space-around;
                 border-radius: 10px;
@@ -1888,8 +1899,7 @@
                 display: flex;
                 flex-direction: row;
                 font-size: 34px;
-                text-shadow: 0px 0px 10px black;
-      
+                text-shadow: 0px 1px 3px black;      
             }
             @media (min-aspect-ratio: 16/9) {
                 .video-foreground {
