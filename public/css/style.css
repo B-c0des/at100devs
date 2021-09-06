@@ -1521,6 +1521,7 @@
                 height: 10%;
                 filter: drop-shadow(2px 4px 6px black);
                 font-family: 'Special Elite', cursive;
+                border-radius: 0px;
             }
             a {
                 color: white;
@@ -1570,6 +1571,7 @@
                 min-width: 7vh;
             }
             #text-block {
+                border-radius: 0px;
             }
             #myDropdown {
                 margin-left: -50vw;
