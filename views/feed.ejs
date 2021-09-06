@@ -1,7 +1,7 @@
 <div id="feed">
     <% for(var i=0; i<posts2.length; i++) {%>
         <%if(posts2[i].user != user.id){ %>
-            <div id="container3">
+            <div id="container3" >
                 <img onclick="document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none' getScrollPos(); " class="<%=[i]%>" id="img-multi-user" src="<%= posts2[i].lowresimage%>">
                 <div id="text-block" onclick="document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none'; getScrollPos();">
                     <span id="backgroundColor">

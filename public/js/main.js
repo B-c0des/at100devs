@@ -243,6 +243,10 @@ function minimize() {
     myProfile.style.display = "none"
 }
 
+function updateScroll(){
+    var element = document.getElementById("across");
+    element.scrollTop = element.scrollHeight;
+}
 
 
 
