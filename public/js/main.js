@@ -244,7 +244,7 @@ function minimize() {
 }
 
 function updateScroll(){
-    var element = document.getElementById("across");
+    var element = document.querySelectorAll("#across");
     element.scrollTop = element.scrollHeight;
 }
 
