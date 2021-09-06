@@ -763,6 +763,7 @@
         
         #img {
             height: 100%;
+            box-shadow: 0px 0px 20px;
         }
         #logo{
             height: 11%;
@@ -1008,11 +1009,14 @@
             flex-direction: column;
             text-align: center;
             justify-content: space-between;
-            font-size: 2.5vh;
-            color: white;
+            font-size: 3.5vh;
             color: white;
             background-color: rgba(200, 200, 200, 0.3);
             box-shadow: inset 0 0 90px 44px #354a76, 0 0 2px 0px black;
+            font-family: monospace;
+            font-weight: bold;
+            text-shadow: 0 0px 2px black;
+            line-height: 30px;
         }
         
         #submitComment {
