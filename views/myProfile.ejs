@@ -45,13 +45,28 @@
                     </div>
                     <div id='across'>
                         <div>
-                            <% for(var j=0; j < post[0].comments.length; j++) {  %>
-                                <h1 id="comment-box">
-                                    <% for(var k=0; k < posts2.length; k++) {  %>
-                                        <%- (post[0].comments[j].postedBy.toString().trim() == posts2[k]?.user.toString().trim()) ? `<img id="userIcon" onclick="document.getElementById('${[k]}').style.display = 'flex';document.getElementById('my-profile').style.display = 'none'" style="width:50px; height:50px;"src="${posts2[k]?.image.toString().trim()}">` : '' %>
-                                            <% } %>
-                                                <%= post[0].comments[j].comments  %>
-                                                    <% } %>
+                            <h1 id="comment-box"></h1>
+                            <% for(var j=0; j < post[i].comments.length; j++) {  %>
+                               
+                                    <% for(var k=0; k < post.length; k++) {  %>
+                                        
+                                           
+                                           <%- (post[i].comments[j].postedBy.toString().trim() == post[k]?.user.toString().trim()) == true ? `<h1 id="commentName" onclick="document.getElementById('${[k]}').style.display = 'flex';document.getElementById('${(k !== i) ? [i] : ''}').style.display = 'none'"> ${post[k].name}  -  ${post[k].title}  </h1>   `  : '' %> 
+        
+                                           <%- (post[i].comments[j].postedBy.toString().trim() == post[k]?.user.toString().trim()) == true ? `<h1 id="comment-box2">  `  : '' %> 
+                                           
+                                           <%- (post[i].comments[j].postedBy.toString().trim() == post[k]?.user.toString().trim()) == true ? `<img id="userIcon" onclick="document.getElementById('${[k]}').style.display = 'flex';document.getElementById('${(k !== i) ? [i] : ''}').style.display = 'none'" src="${posts2[k]?.image.toString().trim()}">` : '' %>
+                                           
+                                           <%- (post[i].comments[j].postedBy.toString().trim() == post[k]?.user.toString().trim()) == true ? `<h1 id="comment"> ${post[i].comments[j].comments} </h1>` : '' %>
+                                           
+                                           <%- (post[i].comments[j].postedBy.toString().trim() == post[k]?.user.toString().trim()) == true ? `</h1">  `  : '' %> 
+                                        </h1>
+                                     <% } %>
+        
+        
+                                                    
+                            <% } %>
+                            </h1>   
                         </div>
                     </div>
                     <form class="col-10 w-100" action="/post/commentPost/<%= post[0]._id %>?_method=PUT" enctype="multipart/form-data" method="POST">
