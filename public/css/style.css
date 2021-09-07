@@ -3,8 +3,8 @@
             background-image: url('https://flevix.com/wp-content/uploads/2019/12/Blue-Wave-Background-1.svg');
             background-color: black;
             height: 150vh;
-            background-position: top;
-            transition: background-image 1000ms linear;   
+            background-position: bottom;
+            background-attachment: fixed;
             font-family: 'Special Elite', cursive;
         }
 
