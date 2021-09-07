@@ -1,6 +1,6 @@
 <div id="feed">
     <% for(var i=0; i<posts2.length; i++) {%>
-        <%if(posts2[i].user != user.id){ %>
+        <%if(posts2[i].user){ %>
             <div id="container3" >
                 <img onclick="document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none' getScrollPos(); " class="<%=[i]%>" id="img-multi-user" src="<%= posts2[i].lowresimage%>">
                 <div id="text-block" onclick="document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none'; getScrollPos();">
@@ -11,9 +11,12 @@
                     </span>
                 </div>
             </div>
+
             <% } %>
                 <% } %>
-                    <% for(var i=0; i<post.length; i++) {%>
+<!--                    
+                
+                <% for(var i=0; i<post.length; i++) {%>
                         <div id="container3" >
                             <img style="width:100%;" onclick="document.getElementById('myProfile2').style.display = 'flex';document.getElementById('feed').style.display = 'none' " class="<%=[i]%>" id="img-multi-user" src="<%= post[i].image%>">
                             <div id="text-block" class="tab-card-content" onclick="document.getElementById('myProfile2').style.display = 'flex';document.getElementById('feed').style.display = 'none'; getScrollPos() ">
@@ -28,4 +31,4 @@
                             
 </div>
 </div>
-</div>
+</div> -->
