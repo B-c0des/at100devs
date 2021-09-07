@@ -6,10 +6,10 @@ function pageLoaded() {
     var state = document.readyState
     if (state == 'complete') {
         document.getElementById('loader').style.display = "none"
-        setTimeout(function() {
-            window.onload = document.getElementById('loader').style.display = "none"
-        }, 2000);
     }
+    setTimeout(function() {
+        window.onload = document.getElementById('loader').style.display = "none"
+    }, 20000);
 }
 
 function videoLoaded() {
