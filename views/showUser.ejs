@@ -3,19 +3,20 @@
         <div id='x' onclick=" document.getElementById(`${this.parentNode.id}`).style.display = 'none'; document.getElementById('feed').style.display = 'flex'" style="z-index:20">x</div>
         <div style="background-image: url('<%= posts2[i].image%>'); width:100%; z-index: 5; height: 100%; background-size: cover; background-position: center;  " class="<%=[i]%>" id="img"></div>
         <div id="add-posts">
-            <div id='likebox'>
-                <%if(posts2[i].user == user.id){ %>
-                    <form action="/post/deletePost/<%= posts2[i]._id %>?_method=DELETE" method="POST" class="row-6 justify-content-between  ">
-                        <button class="btn btn-primary fa fa-trash" type="submit" onclick="return confirm('Are you sure you want to delete?')"></button>
-                    </form>
-                    <%}%>
-            </div>
+    
             <div id="user-info1">
                 <div id="top-row">
                     <span><%= posts2[i].name ?   posts2[i].name : '' %></span>
                     <span><%= posts2[i].title ?  posts2[i].title : '' %></span>
                 </div>
                 <div id='middle-row'>
+                    <div id='likebox'>
+                        <%if(posts2[i].user == user.id){ %>
+                            <form action="/post/deletePost/<%= posts2[i]._id %>?_method=DELETE" method="POST" class="row-6 justify-content-between  ">
+                                <button class="btn btn-primary fa fa-trash" type="submit" onclick="return confirm('Are you sure you want to delete your profile?')"></button>
+                            </form>
+                            <%}%>
+                    </div>
                     <a id="icons" href="tel:<%= posts2[i].contact ?   posts2[i].contact : '' %>">
                         <span class="iconify" data-icon="fa-solid:phone-alt" data-inline="false"></span>
                     </a>
@@ -94,19 +95,20 @@
                 <div id='x' onclick=" document.getElementById('myProfile2').style.display = 'none'; document.getElementById('feed').style.display = 'flex'" style="z-index:30">x</div>
                 <div style="background-image: url('<%= post[0].image%>'); width:100%; z-index: 5; height: 100%; background-size: cover; background-position: center; `" id="img"></div>
                 <div id="add-posts">
-                    <div id='likebox'>
-                        <%if(post[0].user == user.id){ %>
-                            <form action="/post/deletePost/<%= post[0]._id %>?_method=DELETE" method="POST" class="row-6 justify-content-between  ">
-                                <button class="btn btn-primary fa fa-trash" type="submit" onclick="return confirm('Are you sure you want to delete?')"></button>
-                            </form>
-                            <%}%>
-                    </div>
+
                     <div id="user-info1">
                         <div id="top-row">
                             <span><%= post[0].name ?   post[0].name : '' %></span>
                             <span><%= post[0].title ?  post[0].title : '' %></span>
                         </div>
                         <div id="middle-row">
+                            <div id='likebox'>
+                                <%if(post[0].user == user.id){ %>
+                                    <form action="/post/deletePost/<%= post[0]._id %>?_method=DELETE" method="POST" class="row-6 justify-content-between  ">
+                                        <button class="btn btn-primary fa fa-trash" type="submit" onclick="return confirm('Are you sure you want to delete your profile?')"></button>
+                                    </form>
+                                    <%}%>
+                            </div>
                             <a id="icons" href="tel:<%= post[0].contact ?   post[0].contact : '' %>">
                                 <span class="iconify" data-icon="fa-solid:phone-alt" data-inline="false"></span>
                             </a>

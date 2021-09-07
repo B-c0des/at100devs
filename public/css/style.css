@@ -417,12 +417,8 @@
         }
         
         #likebox {
-            display: flex;
-            justify-content: space-between;
             height: 25px;
             display: flex;
-            top: 80.5vh;
-            margin-left: -5vw;
             z-index: 20;
 			height: 0px;
         }
