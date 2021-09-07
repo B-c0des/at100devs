@@ -1444,7 +1444,8 @@
             object-fit: cover;
             margin-right: 10px;
             border-radius: 0px 0px 90px 00px;
-
+            filter: drop-shadow(-5px 9px 8px rgb(255, 0, 185));
+            margin-bottom: 10px;
         }
         
         #userIcon:hover {
