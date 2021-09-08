@@ -1459,6 +1459,19 @@
             cursor: pointer;
             transition: all .1s ease-in-out;
         }
+        #userIcon:hover #commentName{
+            transform: scale(1.01);
+            animation: mymove 1s;
+            animation-iteration-count: 1;
+            border-bottom: 20px;
+            animation-fill-mode: forwards;
+            color: white;
+            box-shadow: rgb(255, 0, 251);
+            cursor: pointer;
+            transition: all .1s ease-in-out;
+        }
+        
+
         
         @keyframes mymove {
             from {
