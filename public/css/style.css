@@ -1019,6 +1019,7 @@
             font-weight: bold;
             text-shadow: 0 0px 2px black;
             line-height: 30px;
+            border-radius: 0px 20px 0px 0px;
         }
         
         #submitComment {
@@ -1854,6 +1855,7 @@
                 color: white;
                 text-align: center;
                 border-radius: 0px;
+                
             }
             #feed img {
                 margin: .5% auto;
