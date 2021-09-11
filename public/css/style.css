@@ -543,11 +543,11 @@
             z-index: 100;
         }
         
-        #update-profile {
-            position: fixed;
+        #update-profile {    
+            position: absolute;
             backdrop-filter: blur(10px);
             width: 100%;
-            height: 100%;
+            height: 150vh;
             margin-top: 0;
             padding-left: 30%;
             padding-right: 30%;
