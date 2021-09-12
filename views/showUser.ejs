@@ -62,7 +62,7 @@
                         </div>
                         <%}%>
                             <%if(post.length > 0){ %>
-                                <textarea placeholder="Type comment here!" type="text" class="form-control" name="comments" class='sendComment' style="z-index:-1"></textarea>
+                                <textarea placeholder="Comment here!" type="text" class="form-control" name="comments" class='sendComment' style="z-index:-1"></textarea>
                                 <%- posts2[i].name ? `
                                 
                                 <button type="submit" class="submitComment btn btn-primary text-center w-100 rounded-bottom" value="comments" >Post Comment!</button>` : 'Please create a profile first!' %>
@@ -137,7 +137,7 @@
                     </div>
                     <form class="col-10 w-100" action="/post/commentPost/<%= post[0]._id %>?_method=PUT" enctype="multipart/form-data" method="POST">
                         <div id="post-comment-box" class="text-center">
-                            <textarea type="text" class="form-control" name="comments" class='sendComment'></textarea>
+                            <textarea placeholder="Comment here!" type="text" class="form-control" name="comments" class='sendComment' style="z-index:-1"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary text-center w-100 rounded-bottom" value="comments">Post comment!</button>
                     </form>

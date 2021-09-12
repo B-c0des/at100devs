@@ -47,11 +47,11 @@
                     <div id='across'>
                         <div>
                             <h1 id="comment-box"></h1>
-                            <% for(var j=0; j < post[i].comments.length; j++) {  %>
+                            <% for(var j=0; j < posts2[i].comments.length; j++) {  %>
                                
-                                    <% for(var k=0; k < post.length; k++) {  %>
+                                    <% for(var k=0; k < posts2.length; k++) {  %>
                                         
-                                        <%- (post[i].comments[j].postedBy.toString().trim() == post[k]?.user.toString().trim()) == true ? `<h1 id="comment-boxw"> <h1 id="commentName" onclick="document.getElementById('${[k]}').style.display = 'flex';document.getElementById('${(k !== i) ? [i] : ''}').style.display = 'none'"> ${post[k].name}  -  ${post[k].title}  </h1>  <img id="userIcon" onclick="document.getElementById('${[k]}').style.display = 'flex';document.getElementById('${(k !== i) ? [i] : ''}').style.display = 'none'" src="${posts2[k]?.image.toString().trim()}"> <h1 id="comment"> ${post[i].comments[j].comments} </h1> </h1>`  : '' %> 
+                                        <%- (posts2[i].comments[j].postedBy.toString().trim() == post[k]?.user.toString().trim()) == true ? `<h1 id="comment-boxw"> <h1 id="commentName" onclick="document.getElementById('${[k]}').style.display = 'flex';document.getElementById('${(k !== i) ? [i] : ''}').style.display = 'none'"> ${post[k].name}  -  ${post[k].title}  </h1>  <img id="userIcon" onclick="document.getElementById('${[k]}').style.display = 'flex';document.getElementById('${(k !== i) ? [i] : ''}').style.display = 'none'" src="${posts2[k]?.image.toString().trim()}"> <h1 id="comment"> ${post[i].comments[j].comments} </h1> </h1>`  : '' %> 
 
                                         </h1>
                                      <% } %>
@@ -62,13 +62,23 @@
                             </h1>   
                         </div>
                     </div>
-                    <form class="col-10 w-100" action="/post/commentPost/<%= post[0]._id %>?_method=PUT" enctype="multipart/form-data" method="POST">
-                        <div id="post-comment-box" class="text-center">
-                            <textarea type="text" class="form-control" name="comments" id='sendComment'></textarea>
+            <div id="post-comment-box" class="text-center">
+                <form class="col-10 w-100" action="/post/commentPost/<%= posts2[i]._id %>?_method=PUT" enctype="multipart/form-data" method="POST">
+                    <h1 class="gradient-spacer"></h1>
+                    <%if(post.length == 0){ %>
+                        <div id='alert'>
+                            <div id="dropdown-alert" onclick="toggleContent()" style="color:white; border-radius: 0px;"> Create a Profile to comment!</div>
                         </div>
-                        <button type="submit" class="btn btn-primary text-center w-100 rounded-bottom" value="comments">Post comment!</button>
-                    </form>
-                </div>
+                        <%}%>
+                            <%if(post.length > 0){ %>
+                                <textarea placeholder="Comment here!" type="text" class="form-control" name="comments" class='sendComment' style="z-index:-1"></textarea>
+                                <%- posts2[i].name ? `
+                                
+                                <button type="submit" class="submitComment btn btn-primary text-center w-100 rounded-bottom" value="comments" >Post Comment!</button>` : 'Please create a profile first!' %>
+                              
+                            </form>
+            </div>
+            <%}%>
             </div>
             </div>
             </div>
