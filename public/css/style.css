@@ -808,7 +808,7 @@
             z-index: 100;
         }
         #button{
-            font-family: 'Mina', sans-serif; */
+            font-family: 'Mina', sans-serif;
         }
         .btn-primary {
             color: #fff;
@@ -854,6 +854,8 @@
             text-shadow: 1px 1px 20px deeppink;
             font-size: 24px;
             box-shadow: inset 0 0 50px 10px black, 0 0 0px 1px aqua;
+            filter: drop-shadow(0px 0px 10px deeppink);
+
         }
         textarea{
             color:white;
@@ -867,9 +869,10 @@
         textarea:focus{
             color:cadetblue;
             background-color: black;
-            text-shadow: 1px 1px 20px deeppink;
             font-size: 24px;
             box-shadow: inset 0 0 50px 10px black, 0 0 0px 1px aqua;
+            filter: drop-shadow(0px 0px 10px deeppink);
+
         }
         .form-control{
             color:white;
@@ -888,7 +891,10 @@
             margin: 5px;
             width: 98%;
         }
-        
+        .gradient-spacer{
+            height:1vh;
+            background-image: linear-gradient(to left, rgba(255, 0, 251,0), rgb(255, 0, 185));
+        }
         #user-info {
             justify-content: space-between;
             position: fixed;
@@ -1241,7 +1247,7 @@
             background-color: rgba(00, 0, 00, 0.6);
             border-bottom: 1px solid rgba(255, 255, 255, .5);
         }
-        
+
         #buttonContainer {
             display: flex;
             justify-content: space-between;

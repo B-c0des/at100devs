@@ -55,6 +55,7 @@
             </div>
             <div id="post-comment-box" class="text-center">
                 <form class="col-10 w-100" action="/post/commentPost/<%= posts2[i]._id %>?_method=PUT" enctype="multipart/form-data" method="POST">
+                    <h1 class="gradient-spacer"></h1>
                     <%if(post.length == 0){ %>
                         <div id='alert'>
                             <div id="dropdown-alert" onclick="toggleContent()" style="color:white; border-radius: 0px;"> Create a Profile to comment!</div>
