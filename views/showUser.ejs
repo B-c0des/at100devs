@@ -42,7 +42,7 @@
                         
                             <% for(var k=0; k < posts2.length; k++) {  %>
                                
-                                    <%- (posts2[i].comments[j].postedBy.toString().trim() == posts2[k]?.user.toString().trim()) == true ? `<h1 id="comment-boxw"> <h1 id="commentName" onclick="document.getElementById('${[k]}').style.display = 'flex';document.getElementById('${(k !== i) ? [i] : ''}').style.display = 'none'"> ${posts2[k].name}  -  ${posts2[k].title}  </h1>  <img id="userIcon" onclick="document.getElementById('${[k]}').style.display = 'flex';document.getElementById('${(k !== i) ? [i] : ''}').style.display = 'none'" src="${posts2[k]?.image.toString().trim()}"> <h1 id="comment"> ${posts2[i].comments[j].comments} </h1> </h1>`  : '' %> 
+                                    <%- (posts2[i].comments[j].postedBy.toString().trim() == posts2[k]?.user.toString().trim()) == true ? `<h1 id="comment-box"> <h1 id="commentName" onclick="document.getElementById('${[k]}').style.display = 'flex';document.getElementById('${(k !== i) ? [i] : ''}').style.display = 'none'"> ${posts2[k].name}  -  ${posts2[k].title}  </h1>  <img id="userIcon" onclick="document.getElementById('${[k]}').style.display = 'flex';document.getElementById('${(k !== i) ? [i] : ''}').style.display = 'none'" src="${posts2[k]?.image.toString().trim()}"> <h1 id="comment"> ${posts2[i].comments[j].comments} </h1> </h1>`  : '' %> 
 
                             <% } %>
 
@@ -61,7 +61,7 @@
                         </div>
                         <%}%>
                             <%if(post.length > 0){ %>
-                                <input type="text" class="form-control" name="comments" class='sendComment' style="z-index:-1"></input>
+                                <textarea placeholder="Type comment here!" type="text" class="form-control" name="comments" class='sendComment' style="z-index:-1"></textarea>
                                 <%- posts2[i].name ? `
                                 
                                 <button type="submit" class="submitComment btn btn-primary text-center w-100 rounded-bottom" value="comments" >Post Comment!</button>` : 'Please create a profile first!' %>
@@ -136,7 +136,7 @@
                     </div>
                     <form class="col-10 w-100" action="/post/commentPost/<%= post[0]._id %>?_method=PUT" enctype="multipart/form-data" method="POST">
                         <div id="post-comment-box" class="text-center">
-                            <input type="text" class="form-control" name="comments" class='sendComment'></input>
+                            <textarea type="text" class="form-control" name="comments" class='sendComment'></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary text-center w-100 rounded-bottom" value="comments">Post comment!</button>
                     </form>

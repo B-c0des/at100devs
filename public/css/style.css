@@ -11,6 +11,24 @@
         #loading{
             margin-top: -50%;
         }
+        .sendComment {
+            color: white;
+            display: block;
+            width: 100%;
+            overflow: hidden;
+            resize: both;
+            min-height: 40px;
+            line-height: 20px;
+            max-height: 30vh;
+            max-width: 35vw;
+            font-size: calc(10px + 1vw);
+            font-family: 'Mina', sans-serif;
+          }
+          
+          .sendComment[contenteditable]:empty::before {
+            content: "Type your comment here!";
+            color: gray;
+          }
         #loader {
             position: fixed;
             display: flex;
@@ -838,10 +856,13 @@
             box-shadow: inset 0 0 50px 10px black, 0 0 0px 1px aqua;
         }
         textarea{
-            color:cadetblue;
+            color:white;
             text-shadow: 0px 0px 20px #354a76;
             font-size: 18px;
             text-align: center;
+            font-size: calc(1.375rem + 1.5vw);
+            font-family: 'Mina', sans-serif;
+            background-color: transparent;
         }
         textarea:focus{
             color:cadetblue;
@@ -849,6 +870,23 @@
             text-shadow: 1px 1px 20px deeppink;
             font-size: 24px;
             box-shadow: inset 0 0 50px 10px black, 0 0 0px 1px aqua;
+        }
+        .form-control{
+            color:white;
+            background-color: transparent;
+            max-height: 30vh;
+            text-shadow: 1px 3px 5px black;
+            font-size: 20px;
+            width: 98%;
+            margin: 5px;
+            border-color: skyblue;
+        }
+        .form-control:focus{
+            color: white;
+            border: deeppink solid 1px;
+            background-color: transparent;
+            margin: 5px;
+            width: 98%;
         }
         
         #user-info {
@@ -1034,11 +1072,6 @@
         
         #submitComment {
             height: 4vh;
-        }
-        
-        .sendComment {
-            z-index: -1;
-            height: 4hv;
         }
         
         #comment-container-backdrop {
