@@ -870,7 +870,7 @@
             color:cadetblue;
             background-color: black;
             font-size: 24px;
-            box-shadow: inset 0 0 50px 10px black;
+            box-shadow: inset 0 0 50px 10px deeppink;
             filter: drop-shadow(0px 0px 10px deeppink);
 
         }
