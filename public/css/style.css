@@ -1762,6 +1762,17 @@ body {
                 font-family: 'Special Elite', cursive;
                 border-radius: 0px;
             }
+            #container3:hover {
+                cursor: pointer;
+                transition: none;
+                z-index: 30;
+                transition: none;
+                box-shadow: none;
+            }
+            
+            #container3:hover img {
+                transform: none;
+            }
             a {
                 color: white;
             }
@@ -1779,16 +1790,6 @@ body {
                 width: 10vw;
                 height: 5vh;
                 margin-top: 0px;
-            }
-            #container3:hover {
-                cursor: pointer;
-                transition: none;
-                z-index: 30;
-                transition: none;
-                box-shadow: none
-            }
-            #container3:hover img {
-                transform: none;
             }
             #add-posts1{
                 top: 40%;
