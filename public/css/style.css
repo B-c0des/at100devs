@@ -1685,6 +1685,13 @@
             #myProfile{
                 display: none;
             }
+            button:hover{
+                margin-top: 0px;
+                padding-bottom: 0px;
+                transform: scale(1);
+                z-index: 20;
+                transition: none;
+            }
             #container3 {
                 position: relative;
                 font-family: Arial;
