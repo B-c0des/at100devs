@@ -5,19 +5,19 @@
         <form action="/post/updateProfile/<%= user._id %>?_method=PUT" enctype="multipart/form-data" method="POST">
             <div class="mb-1">
                 <h1><label for="name" class="form-label">Name</label></h1>
-                <input type="text" class="form-control" id="name" name="name" required>
+                <input type="text" class="comment-box" id="name" name="name" required>
             </div>
             <div class="mb-1">
                 <h1><label for="title" class="form-label">Title</label></h1>
-                <input type="text" class="form-control" id="title" name="title" required>
+                <input type="text" class="comment-box" id="title" name="title" required>
             </div>
             <div class="mb-1">
                 <h1><label for="website" class="form-label">Website</label></h1>
-                <input class="form-control" id="website" name="website" required></textarea>
+                <input class="comment-box" id="website" name="website" required></textarea>
             </div>
             <div class="mb-1">
                 <h1><label for="contact" class="form-label">Phone Number</label></h1>
-                <input type="text" class="form-control" onChange="phone1()" name="contact" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                <input type="text" class="comment-box" onChange="phone1()" name="contact" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
             </div>
            
             <textarea placeholder="(click to remove)"autocapitalize="false" id='textIcons' name="textIcons" required style="    display:none;"></textarea>
@@ -29,7 +29,7 @@
            max-height: 200px;"></span>
            <h9 id="stackLabelInfo">(click to remove)</h9>
            <h1><label for="getIcon" class="form-label">Search Software Technologies:</label></h1>
-            <textarea autocapitalize="false" placeholder="Search here" style="width:100%" id='inputs' oninput='getIcon()'></textarea>
+            <input autocapitalize="false" class="comment-box" placeholder="Search here" style="width:100%" id='inputs' oninput='getIcon()'></input>
             <span style="display: flex;
            justify-content: space-around;
            flex-wrap: wrap;
@@ -38,7 +38,7 @@
             <h1>
                 <label for="imgUpload" id="img-label" class="form-label">Image</label>
                 <img id="output2" />
-                <input type="file" accept="image/*" oninput="loadFile2(event)" class="form-control mb-1"  id="file" name="file">
+                <input type="file" accept="image/*" oninput="loadFile2(event)" class="comment-box" id="file" name="file">
                 <button type="submit" class="btn btn-primary mb-1" value="Upload" style="filter: drop-shadow( 0 0px 0px black); width:100%;">Submit</button>
         </form>
         <button onclick="updateProfile()" type="none" class="btn btn-primary mb-1" value="cancel" style="filter: drop-shadow( 0 0px 0px black); width:100%;">Cancel</button>

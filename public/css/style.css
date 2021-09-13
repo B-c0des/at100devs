@@ -843,10 +843,16 @@
             text-shadow: 1px 2px 2px #354a76;
             padding-left: 50px;
         }
-        input{
-            color:cadetblue;
-            text-shadow: 0px 0px 20px #354a76;
-            font-size: 18px;
+
+        input {
+            margin: .5%;
+            padding: 1%;
+            border-radius: 50px;
+            width: 70%;
+            box-shadow: inset 0 0 30px white;
+            margin: 0 auto;
+            text-align: center; 
+            font-family: 'Mina', sans-serif;
         }
         input:focus{
             color:cadetblue;
@@ -860,15 +866,10 @@
         textarea{
             color:white;
             text-shadow: 0px 0px 20px #354a76;
-            font-size: 18px;
             text-align: center;
-            font-size: calc(1.375rem + 1.5vw);
             font-family: 'Mina', sans-serif;
-            background-color: transparent;
         }
         textarea:focus{
-            color:cadetblue;
-            background-color: black;
             font-size: 24px;
             box-shadow: inset 0 0 50px 10px deeppink;
             filter: drop-shadow(0px 0px 10px deeppink);
@@ -893,7 +894,6 @@
         }
         .comment-box:focus{
             color: white;
-            border: deeppink solid 1px;
             background-color: transparent;
             margin: 5px;
             width: 98%;
@@ -1476,12 +1476,12 @@
         input {
             margin: .5%;
             padding: 1%;
-            border: 1px solid gray;
             border-radius: 50px;
             width: 70%;
             box-shadow: inset 0 0 30px white;
             margin: 0 auto;
-            text-align: center;
+            text-align: center; 
+            font-family: 'Mina', sans-serif;
         }
         
         #userIcon {
