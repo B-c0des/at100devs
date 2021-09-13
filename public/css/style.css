@@ -916,8 +916,7 @@
             width: 100%;
             background-color: transparent;
             z-index: 2;
-            backdrop-filter: blur(50px) brightness(140%)contrast(90%);
-            
+            backdrop-filter: blur(50px) brightness(110%)contrast(110%);
         }
         
         #dropdown-alert {
