@@ -20,8 +20,8 @@
                        <span><%- post.length > 0 ? `<button class="navButton" onclick="updateProfile()" class="">Update Profile</button>` : '' %></span>
                        <span><button onclick="myProfile()" class="navButton" id="myProfile">My Profile</button></span>
                        <img id="logo" src="https://res.cloudinary.com/at100dev/image/upload/v1628713361/social_again_l9lsgr.svg">
-                       <div id="user-name">
-                        <h1 id="username-display">
+                       <div id="user-name" onclick="myProfile()">
+                        <h1 id="username-display" onclick="myProfile()">
                             <% for(var i=0; i<posts2.length; i++) {%>
                                 <%- posts2[i]?.user == user.id ? `<img id="loginIcon" onclick="myProfile()" src="${posts2[i].image}">` : '' %>
                                     <%}%>
