@@ -836,7 +836,7 @@
             cursor: pointer;
         }
         .btn-primary:focus{
-            background-color: deepskyblue; 
+            background-color: deeppink; 
             font-size: 18px;
             border-color: deeppink;
             
@@ -991,11 +991,10 @@
         }
         
         .container {
-            
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
-            backdrop-filter: blur(15px) brightness(1.2);
+            backdrop-filter: blur(5px) brightness(1.2);
             overflow-y: hidden;
             width: 100%;
             height: 100vh;

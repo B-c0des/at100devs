@@ -20,7 +20,7 @@ body {
     display:flex;
     flex-direction: column;
     width: 40%;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(5px) brightness(1.2);
     height: auto;
     background-color: rgba(255, 255, 255, .3);
     border-radius: 40px;
@@ -52,28 +52,50 @@ button {
 }
 
 
-.btn-primary {
-    color: #fff;
-    text-shadow: 1px 2px 2px black;
-    border-color: deeppink;
-    box-shadow: inset 0 0 90px 10px deeppink, 0 0 2px 1px black;
-    filter: drop-shadow(2px 2px 6px black);
-}
-.btn-primary:hover {
-    color: #fff;
-    text-shadow: 0px 0px 2px black;
-    background-color:deeppink;
-    border-color: aqua;
-    box-shadow: inset 0 0 90px 10px aqua, 0 0 2px 1px black;
-    filter: drop-shadow(1px 1px 2px black);
-}
-label{
-    text-shadow: 1px 2px 2px black;
-}
-input{
-    color:cadetblue;
-    text-shadow: 0px 2px 20px #354a76;
-    font-size: 18px;
+        .btn-primary {
+            color: #fff;
+            text-shadow: 1px 2px 2px #354a76;
+            background-color: deeppink;
+            box-shadow: inset 0 0 90px 10px deeppink, 0 0 2px 1px black;
+            filter: drop-shadow(2px 2px 5px #354a76);
+            border: 0px;
+        }
+        .btn-primary:hover {
+            color: #fff;
+            text-shadow: 0px 0px 2px black;
+            background-color:deeppink;
+            border-color: #354a76;
+            box-shadow: inset 0 0 90px 10px aqua, 0 0 2px 1px black;
+            filter: drop-shadow(1px 1px 2px #354a76);
+            cursor: pointer;
+        }
+        .btn-primary:active {
+            color: #fff;
+            text-shadow: 0px 0px 2px black;
+            background-color:deeppink;
+            border-color: #354a76;
+            box-shadow: inset 0 0 90px 10px aqua, 0 0 2px 1px black;
+            filter: drop-shadow(1px 1px 2px #354a76);
+            cursor: pointer;
+        }
+        .btn-primary:focus{
+            background-color:deeppink; 
+            font-size: 18px;
+            border-color: deeppink;
+            
+        }
+        label{
+            text-shadow: 1px 2px 2px #354a76;
+        }
+input {
+    margin: .5%;
+    padding: 1%;
+    border-radius: .25rem;
+    width: 70%;
+    box-shadow: inset 0 0 30px white;
+    margin: 0 auto;
+    text-align: center; 
+    font-family: 'Mina', sans-serif;
 }
 input:focus{
     color:cadetblue;
@@ -81,6 +103,26 @@ input:focus{
     text-shadow: 1px 1px 20px deeppink;
     font-size: 24px;
     box-shadow: inset 0 0 50px 10px black, 0 0 0px 1px aqua;
+    filter: drop-shadow(0px 0px 10px deeppink);
+}
+.comment-box{
+    color: white;
+    background-color: transparent;
+    max-height: 30vh;
+    text-shadow: 1px 3px 5px black;
+    font-size: 20px;
+    width: 98%;
+    margin: 5px;
+    border-radius: 5px;
+    border-color: skyblue;
+}
+.comment-box:focus{
+    color: white;
+    background-color: transparent;
+    margin: 5px;
+    width: 98%;
+    background-image: none;
+    box-shadow: inset 0 0 23px -2px deeppink, 0 0 2px 0px black;
 }
 textarea{
     color:cadetblue;
