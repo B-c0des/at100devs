@@ -1665,13 +1665,25 @@
                 background-position: bottom;
                 background-color: black;
             }
+            #headerGradient{
+                display: flex;
+                flex-direction: row;
+                align-items: unset;
+                height: auto;
+            }
             
             #logo{
-                width: 25%;
+                display: none;
             }
             
             #img-multi-user {
                 height: 100%;
+            }
+            #email-display{
+            display: none;
+            }
+            #myProfile{
+                display: none;
             }
             #container3 {
                 position: relative;
