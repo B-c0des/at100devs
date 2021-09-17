@@ -138,6 +138,14 @@ function myProfile() {
     myProfile.style.display == "none" ? (myProfile.style.display = "flex") && (feed.style.display = "none") :
         (myProfile.style.display = "none") && (feed.style.display = "flex");
 }
+function myProfile1() {
+    // Get the DOM reference
+    let feed1 = document.getElementById("feed");
+    let myProfile1 = document.getElementById("my-profile")
+        // Toggle 
+    myProfile1.style.display == "none" ? (myProfile1.style.display = "flex") && (feed1.style.display = "none") :
+        (myProfil1e.style.display = "none") && (feed1.style.display = "flex");
+}
 
 function userIconClick() {
     (document.getElementById('img').style.height < '50%') ? (document.getElementById('img').style.height = '50%') &&

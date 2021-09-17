@@ -23,12 +23,12 @@
                        <div id="user-name" onclick="myProfile()">
                         <h1 id="username-display" onclick="myProfile()">
                             <% for(var i=0; i<posts2.length; i++) {%>
-                                <%- posts2[i]?.user == user.id ? `<img id="loginIcon" onclick="myProfile()" src="${posts2[i].image}">` : '' %>
+                                <%- posts2[i]?.user == user.id ? `<img id="loginIcon" onclick="myProfile1()" src="${posts2[i].image}">` : '' %>
                                     <%}%>
                                     </h1>
                         <h1 id="email-display">
                             <span><%- user?.userName && user.userName.trim().length ? `${user.userName.trim()}` : 'Guest' %></span>
-                            <span><%- user?.email && user.email.trim().length ? `${user.email.trim()}` : 'Guest' %></span>
+                            <!-- <span><%- user?.email && user.email.trim().length ? `${user.email.trim()}` : 'Guest' %></span> -->
                         </h1>
                     </div>                   
             </h1>

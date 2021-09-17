@@ -1441,7 +1441,7 @@ body {
             z-index: 5;
             display: flex;
             justify-content: flex-end;
-            cursor: pointer;;
+            cursor: pointer;
         }
         
         #login-logout-box {
