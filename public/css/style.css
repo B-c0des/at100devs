@@ -168,11 +168,6 @@ body {
 				left: 0;
 				top: 0;
 			  }
-/* 			  
-			  50% {
-				left: 0;
-				top: -100px;
-			  } */
 			  100% {
 			  }
 			}
@@ -516,57 +511,7 @@ body {
             border: 1px solid white;
             /* creates padding around scroll thumb */
         }
-        
-        #glow {
-            z-index: 2;
-            position: fixed;
-            display: flex;
-            justify-content: center;
-            left: 25%;
-            display: block;
-            margin: 0 auto;
-            width: 50%;
-            max-width: 100%;
-            background-color: white;
-            height: 50px;
-            margin-top: 0px;
-            opacity: 70%;
-            border-radius: 50%;
-        }
-        
-        #glow1 {
-            z-index: 2;
-            position: fixed;
-            display: flex;
-            justify-content: center;
-            left: 0px;
-            display: block;
-            margin: 0 auto;
-            width: 120px;
-            max-width: 100%;
-            background-color: white;
-            height: 40px;
-            margin-top: 10px;
-            opacity: 70%;
-            display: none;
-        }
-        
-        #glow2 {
-            z-index: 2;
-            position: fixed;
-            display: flex;
-            justify-content: center;
-            right: 0px;
-            display: block;
-            margin: 0 auto;
-            width: 100px;
-            max-width: 100%;
-            background-color: white;
-            height: 40px;
-            margin-top: 10px;
-            opacity: 70%;
-        }
-        
+      
         h1 {
             font-family: 'Mina', sans-serif;
             font-size: calc(10px + 1vw);
