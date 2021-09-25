@@ -103,11 +103,15 @@ function updateProfile() {
     // Get the DOM reference
     var contentId2 = document.getElementById("update-profile");
     let feed = document.getElementById("feed");
+    let header = document.getElementById("headerGradient");
     // Toggle 
     contentId2.style.display == "block" ? contentId2.style.display = "none" :
         contentId2.style.display = "block";
     feed.style.display !== "none" ? feed.style.display = "none" :
         feed.style.display = "flex";
+
+        header.style.display !== "none" ? header.style.display = "none" :
+        header.style.display = "flex";
 
 
 }

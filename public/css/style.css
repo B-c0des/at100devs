@@ -396,7 +396,7 @@ body {
         #x {
             position: inherit;
             margin-top: 5px;
-            right: 16%;
+            right: 31%;
             text-align: center;
             font-size: 38px;
             font-family: monospace;
@@ -790,17 +790,22 @@ body {
         }
         
         #add-posts1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
             top: 40%;
             left: 50%;
-            margin-top: 40px;
-            padding-right:5%;
-            padding-left:5%;
+            margin-top: 0px;
+            padding-right: 5%;
+            padding-left: 5%;
             padding-bottom: 10px;
             background-color: rgba(255, 255, 255, .25);
             border-radius: 40px;
+            border-radius: 0px;
             width: 100%;
             box-shadow: inset 0 0 30px 0px #354a76, 0 0 2px 1px black, 4px -4px 3px cyan, -4px 4px 3px deeppink;
             z-index: 100;
+            height: -webkit-fill-available;
         }
         #button{
             font-family: 'Mina', sans-serif;
@@ -845,7 +850,6 @@ body {
         }
         #shadow{
             text-shadow: 1px 2px 2px #354a76;
-            padding-left: 50px;
         }
 
         input {
@@ -1638,9 +1642,39 @@ body {
                 text-shadow: 1px 3px 5px black;
                 font-size: 20px;
                 width: 98%;
-                border-radius: 15px;
+                border-radius: 5px;
                 border-color: skyblue;
                 margin: 0px;
+            }
+            #x {
+                position: inherit;
+                margin-top: 5px;
+                right: 21%;
+                text-align: center;
+                font-size: 38px;
+                font-family: monospace;
+                width: 30px;
+                height: 30px;
+                line-height: 15px;
+                border-radius: 100%;
+                line-height: 20px;
+                background-color: rgba(00, 0, 00, .3);
+                color: rgba(255, 255, 255, .9);
+                cursor: pointer;
+                filter: drop-shadow(2px 3px 3px black);
+                backdrop-filter: invert(.5);
+            }
+            #update-profile {    
+                position: absolute;
+                backdrop-filter: blur(10px);
+                width: 100%;
+                height: 100vh;
+                margin-top: 0;
+                padding-left: 20%;
+                padding-right: 20%;
+                top: 0;
+                display: none;
+                z-index: 20;
             }
       @media all and (max-width: 600px) {
             body {
@@ -1745,10 +1779,10 @@ body {
                 padding-left: 5%;
                 padding-bottom: 10px;
                 background-color: rgba(255, 255, 255, .25);
-                /* border-radius: 40px; */
+                border-radius: 40px;
                 border-radius: 0px;
                 width: 100%;
-                /* box-shadow: inset 0 0 30px 0px #354a76, 0 0 2px 1px black, 4px -4px 3px cyan, -4px 4px 3px deeppink; */
+                box-shadow: inset 0 0 30px 0px #354a76, 0 0 2px 1px black, 4px -4px 3px cyan, -4px 4px 3px deeppink;
                 z-index: 100;
                 height: -webkit-fill-available;
             }

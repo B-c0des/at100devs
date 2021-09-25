@@ -1,6 +1,6 @@
 <div id='update-profile'>
+    <div id="x" style="float:right"onclick="updateProfile()">x</div>
     <div id="add-posts1">
-        <div id="x" style="float:right"onclick="updateProfile()">x</div>
         <h1 class="text-center" id="shadow">Update Profile</h1>
         <form action="/post/updateProfile/<%= user._id %>?_method=PUT" enctype="multipart/form-data" method="POST">
             <div class="mb-1">
