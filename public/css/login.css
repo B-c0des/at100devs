@@ -213,7 +213,7 @@ textarea:focus{
         display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: -webkit-fill-available;
+    height: -webkit-fill-available;
     border-radius: 0px;
     justify-content: space-evenly;
 
