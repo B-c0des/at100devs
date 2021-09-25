@@ -396,7 +396,7 @@ body {
         #x {
             position: inherit;
             margin-top: 5px;
-            right: 31%;
+            right: 10.5%;
             text-align: center;
             font-size: 38px;
             font-family: monospace;
@@ -790,9 +790,9 @@ body {
         }
         
         #add-posts1 {
-            display: flex;
+            /* display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: space-evenly; */
             top: 40%;
             left: 50%;
             margin-top: 0px;
@@ -1928,7 +1928,7 @@ body {
             }
             #x {
                 position: inherit;
-                right: 10.5%;
+                right: 3.5%;
                 top: 15px;
                 text-align: center;
                 font-size: 75px;
