@@ -211,6 +211,7 @@ textarea:focus{
         width: 100%;
         justify-content: center;
     }
+
 }
 
 @media (min-aspect-ratio: 16/9) {
