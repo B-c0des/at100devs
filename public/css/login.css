@@ -229,14 +229,10 @@ textarea:focus{
 }
 
 @media all and (max-width: 600px) {
-    .vid-info {
-        width: 100%;
-        padding: .5rem;
-    }
-    .vid-info h1 {
-        margin-bottom: .2rem;
-    }
-    .container1{
+    .container {
+        width: 100vw;
+        padding-right: 5vw;
+        padding-left: 5vw;
     }
 }
 
