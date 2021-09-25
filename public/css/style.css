@@ -1869,18 +1869,16 @@ body {
                 width: 100vw;
             }
             #x {
-                position: inherit;
+                osition: inherit;
                 right: 16px;
                 top: 15px;
                 text-align: center;
-                font-size: 22vw;
+                font-size: 125px;
                 color: rgba(255, 255, 255, .9);
-                width: 15vw;
-                height: 14vw;
-                border-radius: 4px;
-                line-height: 70px;
-                border: 1px solid rgba(255, 255, 255, .9);
-                background-color: rgba(00, 0, 00, .3);
+                width: 100px;
+                height: 100px;
+                line-height: 75px;
+                border: 1px solid rgba(255, 255, 255, .9);            
             }
             #xAddProfile{
 
