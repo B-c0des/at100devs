@@ -65,7 +65,7 @@ git clone https://github.com/brian-reed-software/brian-reed-networking-app.git
 npm install
 ```
 
-2. Start App
+3. Start App
 
 *
 ```
