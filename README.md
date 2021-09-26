@@ -87,19 +87,19 @@ https://github.com/brian-reed-software/brian-reed-networking-app
 ## Installation
 
 
-1. Clone the repo
+1. Clone repository:
 
 ```
 git clone https://github.com/brian-reed-software/brian-reed-networking-app.git
 ```
 
-2. Install NPM packages
+2. Install NPM packages:
 
 ```
 npm install
 ```
 
-3. Start App
+3. Start App:
 
 ```
 npm start
@@ -110,10 +110,9 @@ npm start
 ```JS
 CLOUD_NAME = 'ENTER CLOUDINARY NAME'
 API_KEY = 'ENTER CLOUDINARY KEY'
-API_SECRET = 'ENTER CLOUDINARY SECRET'
-DB_STRING = 'MONGO DB COLLECTION'
+API_SECRET = 'ENTER MONGO DB SECRET'
+DB_STRING = 'MONGO DB COLLECTION URI'
 PORT = 3000
-
 ```
  <br/>
     <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png">
