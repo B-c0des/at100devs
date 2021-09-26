@@ -34,6 +34,11 @@
 
 A social networking site for Software Engineers to reconnect and be social again. Users can upload their photo, their contact information and their software technologies that they use and connect with users and friends.
 
+<br/>
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png">
+<br/>
+
+
 ## Built With
 
 JavaScript, Node, EJS, Express, Mongoose, MongoDB, CSS3, HTML5
