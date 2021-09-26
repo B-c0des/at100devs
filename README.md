@@ -1,12 +1,11 @@
 <br/>
 <p align="center">
-  <h3 align="center">Social Again</h3>
+  <h3 align="center">  **[<img src="https://res.cloudinary.com/at100dev/image/upload/v1628713361/social_again_l9lsgr.svg">](http://social-again.herokuapp.com/)**</h3>
 
   <p align="center">
     Let's be social again. 
     <br/>
     <br/>
-    [**[<img src="https://res.cloudinary.com/at100dev/image/upload/v1628713361/social_again_l9lsgr.svg">](http://social-again.herokuapp.com/)**
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png">
   </p>
 </p>
