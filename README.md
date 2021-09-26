@@ -6,10 +6,10 @@
     Let's be social again. 
     <br/>
     <br/>
-    [View Demo](https://social-again.herokuapp.com/)
+    **[Live Demo](http://social-again.herokuapp.com/)**
   </p>
 </p>
-**[Live Demo](http://social-again.herokuapp.com/)**
+
 
 ## Table Of Contents
 
