@@ -28,7 +28,7 @@
 * [Acknowledgements](#acknowledgements)
 
 ## About The Project
-[Screen Capture](https://repository-images.githubusercontent.com/370849781/d3bf52de-6d67-4a73-9b17-616e31d05fbf)
+<img src="https://repository-images.githubusercontent.com/370849781/d3bf52de-6d67-4a73-9b17-616e31d05fbf">
 
 A social networking site for Software Engineers to reconnect and be social again. Users can upload their photo, their contact information and their software technologies that they use and connect with users and friends.
 
@@ -40,32 +40,26 @@ JavaScript, Node, EJS, Express, Mongoose, MongoDB, CSS3, HTML5
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-
-* npm
-
-```
-npm install
-```
-
 ### Installation
 
 
 1. Clone the repo
 
+*
 ```
 git clone https://github.com/brian-reed-software/brian-reed-networking-app.git
 ```
 
 2. Install NPM packages
 
+*
 ```
 npm install
 ```
 
+2. Start App
 
+*
 ```
 npm start
 ```
