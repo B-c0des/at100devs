@@ -20,6 +20,7 @@
 ## Table Of Contents
 
 * [About the Project](#Social-Again)
+* [Project Links](#links)
 * [Built With](#built-with)
 * [Installation](#installation)
 * [Roadmap](#roadmap)
@@ -34,6 +35,27 @@
 
 A social networking site for Software Engineers to reconnect and be social again. Users can upload their photo, their contact information and their software technologies to share and connect with friends.
 
+
+<br/>
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png">
+<br/>
+
+## Links
+
+<p align="center">Live Address</p>
+<p align="right">Copy Link Here 👇 </p>
+
+```
+https://social-again.herokuapp.com/
+```
+
+<p align="center">Repository</p>
+<p align="right">Copy Link Here 👇 </p>
+
+```
+https://github.com/brian-reed-software/brian-reed-networking-app
+```
+
 <br/>
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png">
 <br/>
@@ -41,7 +63,14 @@ A social networking site for Software Engineers to reconnect and be social again
 
 ## Built With
 
-JavaScript, Node, EJS, Express, Mongoose, MongoDB, CSS3, HTML5* CSS3
+* JavaScript
+* Node
+* EJS
+* Express
+* Mongoose
+* MongoDB
+* CSS3
+* HTML5
 
 
  <br/>
@@ -108,19 +137,6 @@ PORT = 3000
 <br/>
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png">
 <br/>
-
-  
-# Install
-
-`npm install`
-
----
-
-# Run
-
-`npm start`
-
----
 
 <a href="https://heroku.com/deploy">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
