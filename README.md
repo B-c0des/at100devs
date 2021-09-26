@@ -32,7 +32,7 @@
 ## Social Again
 <img src="https://repository-images.githubusercontent.com/370849781/d3bf52de-6d67-4a73-9b17-616e31d05fbf">
 
-A social networking site for Software Engineers to reconnect and be social again. Users can upload their photo, their contact information and their software technologies that they use and connect with users and friends.
+A social networking site for Software Engineers to reconnect and be social again. Users can upload their photo, their contact information and their software technologies to share and connect with friends.
 
 <br/>
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png">
