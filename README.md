@@ -41,7 +41,8 @@ A social networking site for Software Engineers to reconnect and be social again
 
 ## Built With
 
-JavaScript, Node, EJS, Express, Mongoose, MongoDB, CSS3, HTML5
+JavaScript, Node, EJS, Express, Mongoose, MongoDB, CSS3, HTML5* CSS3
+
 
  <br/>
     <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png">
