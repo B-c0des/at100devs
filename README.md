@@ -9,8 +9,7 @@
     [View Demo](https://social-again.herokuapp.com/)
   </p>
 </p>
-
-![Downloads](https://img.shields.io/github/downloads/Brian Reed/Social Again/total) ![Issues](https://img.shields.io/github/issues/Brian Reed/Social Again) 
+**[Live Demo](http://social-again.herokuapp.com/)**
 
 ## Table Of Contents
 
