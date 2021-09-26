@@ -13,7 +13,9 @@
      </a>
     <br/>
     <br/>
+    <a href="http://social-again.herokuapp.com/" target="_blank">
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png">
+  </a>
   </p>
 </p>
 
