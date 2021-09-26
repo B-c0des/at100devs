@@ -25,6 +25,10 @@
 * [Roadmap](#roadmap)
 * [Acknowledgements](#acknowledgements)
 
+<br/>
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png">
+<br/>
+
 ## Social Again
 <img src="https://repository-images.githubusercontent.com/370849781/d3bf52de-6d67-4a73-9b17-616e31d05fbf">
 
@@ -87,6 +91,11 @@ PORT = 3000
   - User lookup
   - Stack name mouseover
   - Brand Photo Tech Stack uploader
+
+<br/>
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png">
+<br/>
+
   
 # Install
 
@@ -103,6 +112,11 @@ PORT = 3000
 <a href="https://heroku.com/deploy">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
+
+<br/>
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png">
+<br/>
+
 
 ## Authors
 
