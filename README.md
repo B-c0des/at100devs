@@ -19,11 +19,10 @@
 
 ## Table Of Contents
 
-* [About the Project](#about-the-project)
+* [About the Project](#Social-Again)
 * [Built With](#built-with)
-* [Usage](#usage)
+* [Installation](#installation)
 * [Roadmap](#roadmap)
-* [Authors](#authors)
 * [Acknowledgements](#acknowledgements)
 
 ## Social Again
@@ -40,7 +39,7 @@ JavaScript, Node, EJS, Express, Mongoose, MongoDB, CSS3, HTML5
  <br/>
 
 
-### Getting Started / Installation
+## Installation
 
 
 1. Clone the repo
@@ -78,7 +77,7 @@ PORT = 3000
     <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png">
  <br/>
 
-#  Roadmap / Things to add
+##  Roadmap
 
   - Text Messaging 
   - Chat
@@ -107,6 +106,6 @@ PORT = 3000
 
 ## Authors
 
-* **Brian Reed** - *Software Engineer* - [Brian Reed](https://github.com/brian-reed-software/brian-reed-networking-app) - **
+* **Brian Reed** - *Software Engineer* - [Brian Reed](https://github.com/brian-reed-software/brian-reed-networking-app)
 
 
