@@ -53,15 +53,21 @@ npm install
 ### Installation
 
 
-2. Clone the repo
+1. Clone the repo
 
 ```
 git clone https://github.com/brian-reed-software/brian-reed-networking-app.git
 ```
 
-3. Install NPM packages
+2. Install NPM packages
 
-```npm install
+```
+npm install
+```
+
+
+```
+npm start
 ```
 
 4. Enter your API_KEY in `.env`
