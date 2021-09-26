@@ -6,11 +6,7 @@
     Let's be social again. 
     <br/>
     <br/>
-    <a href="https://github.com/Brian Reed/Social Again">View Demo</a>
-    .
-    <a href="https://github.com/Brian Reed/Social Again/issues">Report Bug</a>
-    .
-    <a href="https://github.com/Brian Reed/Social Again/issues">Request Feature</a>
+    [View Demo](https://social-again.herokuapp.com/)
   </p>
 </p>
 
@@ -54,11 +50,10 @@ npm install
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
 
 2. Clone the repo
 
-```sh
+```
 git clone https://github.com/brian-reed-software/brian-reed-networking-app.git
 ```
 
