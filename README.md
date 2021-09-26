@@ -95,7 +95,7 @@ PORT = 3000
   - Location text messaging for mobile
   - User lookup
   - Stack name mouseover
-  - Brand Photo Tech Stack uploader
+  - Brand Photo Tech Stack Detectors
 
 <br/>
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png">
@@ -125,6 +125,6 @@ PORT = 3000
 
 ## Authors
 
-* **Brian Reed** - *Software Engineer* - [Brian Reed](https://github.com/brian-reed-software/brian-reed-networking-app)
+* **Brian Reed** - *Software Engineer* - [Brian Reed](https://brian-reed.me)
 
 
