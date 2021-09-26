@@ -53,21 +53,18 @@ JavaScript, Node, EJS, Express, Mongoose, MongoDB, CSS3, HTML5
 
 1. Clone the repo
 
-*
 ```
 git clone https://github.com/brian-reed-software/brian-reed-networking-app.git
 ```
 
 2. Install NPM packages
 
-*
 ```
 npm install
 ```
 
 3. Start App
 
-*
 ```
 npm start
 ```
@@ -88,14 +85,22 @@ PORT = 3000
 
 ##  Roadmap
 
-  - Text Messaging 
-  - Chat
-  - Blogs
-  - User Photo array
-  - Location text messaging for mobile
-  - User lookup
-  - Stack name mouseover
-  - Brand Photo Tech Stack Detectors
+  
+* Text Messaging 
+ 
+* Chat
+  
+* Blogs
+  
+* User Photo array
+  
+* Location text messaging for mobile
+  
+* User lookup
+  
+* Stack name mouseover
+  
+* Brand Photo Tech Stack Detectors
 
 <br/>
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png">
