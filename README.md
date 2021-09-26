@@ -48,14 +48,14 @@
 
 ## Links
 
-<p align="center">Live Address</p>
+```Live Address```
 <p align="right">Copy Link Here 👇 </p>
 
 ```
 https://social-again.herokuapp.com/
 ```
 
-<p align="center">Repository</p>
+```Repository```
 <p align="right">Copy Link Here 👇 </p>
 
 ```
