@@ -23,7 +23,7 @@
 * [Built With](#built-with)
 * [Installation](#installation)
 * [Roadmap](#roadmap)
-* [Acknowledgements](#acknowledgements)
+* [Authors](#authors)
 
 <br/>
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png">
