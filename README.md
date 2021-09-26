@@ -6,10 +6,10 @@
     Let's be social again. 
     <br/>
     <br/>
-    **[Live Demo](http://social-again.herokuapp.com/)**
+    [**[<img src="https://res.cloudinary.com/at100dev/image/upload/v1628713361/social_again_l9lsgr.svg">](http://social-again.herokuapp.com/)**
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png">
   </p>
 </p>
-
 
 ## Table Of Contents
 
@@ -24,8 +24,7 @@
 * [Acknowledgements](#acknowledgements)
 
 ## About The Project
-
-[Screen Shot](https://repository-images.githubusercontent.com/370849781/d3bf52de-6d67-4a73-9b17-616e31d05fbf)
+[Screen Capture](https://repository-images.githubusercontent.com/370849781/d3bf52de-6d67-4a73-9b17-616e31d05fbf)
 
 A social networking site for Software Engineers to reconnect and be social again. Users can upload their photo, their contact information and their software technologies that they use and connect with users and friends.
 
