@@ -7,7 +7,7 @@
 </h3>
 
   <p align="center">
-    Let's be social again.
+    Let's be social again!
     <br/>
       (view live demo)
      </a>
