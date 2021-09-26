@@ -123,21 +123,13 @@ PORT = 3000
 
   
 * Text Messaging 
- 
 * Chat
-
 * Biographies
-  
 * Blogs
-  
 * User Photo array
-  
 * Location text messaging for mobile
-  
 * User lookup
-  
 * Stack name mouseover
-  
 * Brand Photo Tech Stack Detectors
 
 <br/>
