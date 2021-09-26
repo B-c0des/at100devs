@@ -7,7 +7,9 @@
 </h3>
 
   <p align="center">
-    Let's be social again. 
+    Let's be social again.
+    <br/>
+      (view live demo)
      </a>
     <br/>
     <br/>
@@ -27,7 +29,7 @@
 * [Authors](#authors)
 * [Acknowledgements](#acknowledgements)
 
-## About The Project
+## Social AGain
 <img src="https://repository-images.githubusercontent.com/370849781/d3bf52de-6d67-4a73-9b17-616e31d05fbf">
 
 A social networking site for Software Engineers to reconnect and be social again. Users can upload their photo, their contact information and their software technologies that they use and connect with users and friends.
@@ -36,11 +38,7 @@ A social networking site for Software Engineers to reconnect and be social again
 
 JavaScript, Node, EJS, Express, Mongoose, MongoDB, CSS3, HTML5
 
-## Getting Started
-
-To get a local copy up and running follow these simple example steps.
-
-### Installation
+### Getting Started / Installation
 
 
 1. Clone the repo
@@ -77,14 +75,9 @@ PORT = 3000
 
 ## Usage
 
+Social Networking
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-## Roadmap
-
-See the [open issues](https://github.com/Brian Reed/Social Again/issues) for a list of proposed features (and known issues).
-
-# Things to add
+#  Roadmap / Things to add
 
   - Text Messaging 
   - Chat
@@ -93,6 +86,7 @@ See the [open issues](https://github.com/Brian Reed/Social Again/issues) for a l
   - Location text messaging for mobile
   - User lookup
   - Stack name mouseover
+  - Brand Photo Tech Stack uploader
   
 # Install
 
