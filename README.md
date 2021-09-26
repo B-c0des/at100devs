@@ -31,12 +31,15 @@
 <br/>
 
 ## Social Again
-
+  <p align="center">
 <a href="http://social-again.herokuapp.com/" target="_blank">
-<img src="https://repository-images.githubusercontent.com/370849781/d3bf52de-6d67-4a73-9b17-616e31d05fbf">
+<img width="600px" src="https://repository-images.githubusercontent.com/370849781/d3bf52de-6d67-4a73-9b17-616e31d05fbf">
 </a>
+</p>
+<br>
+<br>
 
-A social networking site for Software Engineers to reconnect and be social again. Users can upload their photo, their contact information and their software technologies to share and connect with friends.
+```A social networking site for Software Engineers to reconnect and be social again. Users can upload their photo, their contact information and their software technologies to share and connect with friends.```
 
 
 <br/>
