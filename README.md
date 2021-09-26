@@ -2,7 +2,7 @@
 <p align="center">
   <h3 align="center">  
     <a href="http://social-again.herokuapp.com/" target="_blank">
-      <img src="https://res.cloudinary.com/at100dev/image/upload/v1628713361/social_again_l9lsgr.svg">
+      <img src="https://res.cloudinary.com/at100dev/image/upload/v1628713361/social_again_l9lsgr.svg" width="300px">
    
 </h3>
 
