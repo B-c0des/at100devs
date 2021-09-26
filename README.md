@@ -38,6 +38,11 @@ A social networking site for Software Engineers to reconnect and be social again
 
 JavaScript, Node, EJS, Express, Mongoose, MongoDB, CSS3, HTML5
 
+ <br/>
+    <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png">
+ <br/>
+
+
 ### Getting Started / Installation
 
 
@@ -75,9 +80,6 @@ PORT = 3000
  <br/>
     <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png">
  <br/>
-## Usage
-
-Social Networking
 
 #  Roadmap / Things to add
 
