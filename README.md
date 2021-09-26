@@ -89,6 +89,8 @@ PORT = 3000
 * Text Messaging 
  
 * Chat
+
+* Biographies
   
 * Blogs
   
