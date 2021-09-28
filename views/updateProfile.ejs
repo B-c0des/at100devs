@@ -3,19 +3,19 @@
         <div id="x" style="float:right"onclick="updateProfile()">x</div>
         <h1 class="text-center" id="shadow">Update Profile</h1>
         <form action="/post/updateProfile/<%= user._id %>?_method=PUT" enctype="multipart/form-data" method="POST">
-            <div class="mb-1">
+            <div class="mb-0">
                 <h1 class="comment-box-text"><label for="name" class="form-label">Name</label></h1>
                 <input type="text" class="comment-box" id="name" name="name" required>
             </div>
-            <div class="mb-1">
+            <div class="mb-0">
                 <h1 class="comment-box-text"><label for="title" class="form-label">Title</label></h1>
                 <input type="text" class="comment-box" id="title" name="title" required>
             </div>
-            <div class="mb-1">
+            <div class="mb-0">
                 <h1 class="comment-box-text"><label for="website" class="form-label">Website</label></h1>
                 <input class="comment-box" id="website" name="website" required></textarea>
             </div>
-            <div class="mb-1">
+            <div class="mb-0">
                 <h1 class="comment-box-text"><label for="contact" class="form-label">Phone Number</label></h1>
                 <input type="text" class="comment-box" onChange="phone1()" name="contact" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
             </div>
