@@ -410,11 +410,7 @@ body {
             line-height: 20px;
             border-radius: 100%;
             line-height: 21px;
-<<<<<<< HEAD
-            border: 1px solid rgba(255, 255, 255, .9);
-=======
             border: 1px solid rgba(255, 255, 255, .5);
->>>>>>> 3974c82a9e9196ceb8de2ef1d955f265a0d740e8
             background-color: rgba(00, 0, 00, .3);
             color: rgba(255, 255, 255, .9);
             cursor: pointer;
