@@ -892,7 +892,7 @@ body {
             font-size: 20px;
             width: 98%;
             margin: 5px;
-	    height:5vh;
+	    height:3vh;
             border-radius: 5px;
             border-color: skyblue;
         }
@@ -910,7 +910,7 @@ body {
 	   color: white;
            margin: 0;
 	   padding: 0px 0px 0px 0px;
-	   height:5vh;
+	   height:3vh;
 	}
 
         .gradient-spacer{
