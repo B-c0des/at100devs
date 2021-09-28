@@ -4,19 +4,19 @@
         <h1 class="text-center" id="shadow">Update Profile</h1>
         <form action="/post/updateProfile/<%= user._id %>?_method=PUT" enctype="multipart/form-data" method="POST">
             <div class="mb-1">
-                <h1><label for="name" class="form-label">Name</label></h1>
+                <h1 class="comment-box-text"><label for="name" class="form-label">Name</label></h1>
                 <input type="text" class="comment-box" id="name" name="name" required>
             </div>
             <div class="mb-1">
-                <h1><label for="title" class="form-label">Title</label></h1>
+                <h1 class="comment-box-text"><label for="title" class="form-label">Title</label></h1>
                 <input type="text" class="comment-box" id="title" name="title" required>
             </div>
             <div class="mb-1">
-                <h1><label for="website" class="form-label">Website</label></h1>
+                <h1 class="comment-box-text"><label for="website" class="form-label">Website</label></h1>
                 <input class="comment-box" id="website" name="website" required></textarea>
             </div>
             <div class="mb-1">
-                <h1><label for="contact" class="form-label">Phone Number</label></h1>
+                <h1 class="comment-box-text"><label for="contact" class="form-label">Phone Number</label></h1>
                 <input type="text" class="comment-box" onChange="phone1()" name="contact" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
             </div>
            
@@ -28,7 +28,7 @@
            min-height:50px;
            max-height: 200px;"></span>
            <h9 id="stackLabelInfo">(click to remove)</h9>
-           <h1><label for="getIcon" class="form-label">Search Software Technologies:</label></h1>
+           <h1 class="comment-box-text"><label for="getIcon" class="form-label">Search Software Technologies:</label></h1>
             <input autocapitalize="false" class="comment-box" placeholder="Search here" style="width:100%" id='inputs' oninput='getIcon()'></input>
             <span style="display: flex;
            justify-content: space-around;

@@ -54,7 +54,11 @@ body {
             height: 100vh;
             background-position: bottom;
             background-attachment: fixed;
+<<<<<<< HEAD
             font-family: 'Special Elite', cursive;
+=======
+            font-family: 'Mina';
+>>>>>>> 3974c82a9e9196ceb8de2ef1d955f265a0d740e8
         }
 
         #loading{
@@ -406,7 +410,11 @@ body {
             line-height: 20px;
             border-radius: 100%;
             line-height: 21px;
+<<<<<<< HEAD
             border: 1px solid rgba(255, 255, 255, .9);
+=======
+            border: 1px solid rgba(255, 255, 255, .5);
+>>>>>>> 3974c82a9e9196ceb8de2ef1d955f265a0d740e8
             background-color: rgba(00, 0, 00, .3);
             color: rgba(255, 255, 255, .9);
             cursor: pointer;
@@ -561,7 +569,11 @@ body {
             position: absolute;
             backdrop-filter: blur(10px);
             width: 100%;
+<<<<<<< HEAD
             height: 150vh;
+=======
+            height: 100vh;
+>>>>>>> 3974c82a9e9196ceb8de2ef1d955f265a0d740e8
             margin-top: 0;
             padding-left: 30%;
             padding-right: 30%;
@@ -785,7 +797,11 @@ body {
         #add-posts1 {
             top: 40%;
             left: 50%;
+<<<<<<< HEAD
             margin-top: 10px;
+=======
+            margin-top: 1vh;
+>>>>>>> 3974c82a9e9196ceb8de2ef1d955f265a0d740e8
             padding-right:5%;
             padding-left:5%;
             padding-bottom: 10px;
@@ -796,6 +812,12 @@ body {
             z-index: 100;
             height: auto;
         }
+<<<<<<< HEAD
+=======
+	#add-posts1 < h1{
+	font-size: 2vh;
+	}
+>>>>>>> 3974c82a9e9196ceb8de2ef1d955f265a0d740e8
         #button{
             font-family: 'Mina', sans-serif;
         }
@@ -887,6 +909,10 @@ body {
             font-size: 20px;
             width: 98%;
             margin: 5px;
+<<<<<<< HEAD
+=======
+	    height:5vh;
+>>>>>>> 3974c82a9e9196ceb8de2ef1d955f265a0d740e8
             border-radius: 5px;
             border-color: skyblue;
         }
@@ -898,6 +924,17 @@ body {
             background-image: none;
             box-shadow: inset 0 0 23px -2px deeppink, 0 0 2px 0px black;
         }
+<<<<<<< HEAD
+=======
+	.comment-box-text{
+ 	   font-family: 'Mina', sans-serif;
+ 	   font-size: calc(10px + 1vw);
+	   color: white;
+           margin: 0;
+	   padding: 0px 0px 0px 0px;
+	   height:5vh;
+	}
+>>>>>>> 3974c82a9e9196ceb8de2ef1d955f265a0d740e8
         .gradient-spacer{
             height:1vh;
             background-image: linear-gradient(to left, rgba(255, 0, 251,0), rgb(255, 0, 185));
