@@ -909,7 +909,9 @@ body {
 	   color: white;
            margin: 0;
 	   padding: 0px 0px 0px 0px;
-	   height:3vh;
+	   height: 3vh;
+           min-height: 20px;
+           max-height: 30px;
 	}
 
         .gradient-spacer{
