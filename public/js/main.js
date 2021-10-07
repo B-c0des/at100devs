@@ -16,6 +16,13 @@ function pageLoaded() {
     }, 20000);
 
 }
+
+function about(){
+    document.getElementById('my-theme').style.display = "block"
+}
+function closeAbout(){
+    document.getElementById('my-theme').style.display = "none"
+}
 function loadingSvg(){
     setTimeout(function() {
         document.getElementById('loader').style.display = "flex"
