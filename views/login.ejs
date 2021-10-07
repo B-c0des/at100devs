@@ -1,9 +1,8 @@
-
+<div id='loader'>
+  <img style="width:100vw; height:100vh;" src="https://res.cloudinary.com/at100dev/image/upload/v1630732008/Alternate-Ball-Loading_qzzdtr.svg">
+   </div>
     <main class="container1">
-    
-    <div class="mt-0">
 
-     <h6 class="text-center mt-0"> </h6>
      <% if (locals.messages.errors) { %>
      <% messages.errors.forEach( el => { %>
      <div class="alert alert-danger">
@@ -29,22 +28,21 @@
          name="email"
        />
         </div>
-         </div>
-         <div class="mb-3">
          <label for="exampleInputPassword1" class="form-label text-white">Password</label>
          <input type="password" class="form-control" id="exampleInputPassword1" name="password" />
          <button type="submit" class="col-12 btn btn-primary mt-3">Login</button>
               
-          <button class="col-12 btn btn-primary mt-3" id="testbtn">Demo Mode</button>
+          <button class="col-12 btn btn-primary mt-3 eightyPercentW" id="testbtn">Demo Mode</button>
           <script>
               document.getElementById('testbtn').addEventListener('click', demoMode)
               function demoMode(){
                document.getElementById('exampleInputEmail1').value = 'guest@guest.com'
                document.getElementById('exampleInputPassword1').value = 'Guest1234'
               }
+
           </script>
-              
+                 <button onclick="window.location.href='/signup' , document.getElementById('loader').style.display = 'block'" class="col-12 btn btn-primary mt-3 fiftyPercentW">Join!</button>
+
          </form>
-       <button onclick="window.location.href='/signup';" class="col-12 btn btn-primary mt-3">Join!</button>
-    </div>
+    
 </main>
