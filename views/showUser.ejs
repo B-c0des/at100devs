@@ -1,9 +1,8 @@
 <% for(var i=0; i<posts2.length; i++) {%>
-    <div id="<%=[i]%>" class="container-view" style="display: none; z-index:30;" r>
-        <div id='x' onclick=" document.getElementById(`${this.parentNode.id}`).style.display = 'none'; document.getElementById('feed').style.display = 'flex'" style="z-index:20">x</div>
+    <div id="<%=[i]%>" class="container-view" style="display: none; z-index:30;">
+        <div id='x' onclick="minimizePost(this.parentNode.id)" style="z-index:20">x</div>
         <div style="background-image: url('<%= posts2[i].image%>'); width:100%; z-index: 5; height: 100%; background-size: cover; background-position: center;  " class="<%=[i]%>" id="img"></div>
         <div id="add-posts">
-    
             <div id="user-info1">
                 <div id="top-row">
                     <span><%= posts2[i].name ?   posts2[i].name : '' %></span>

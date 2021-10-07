@@ -16,6 +16,44 @@ function pageLoaded() {
 
 }
 
+//minimize post
+function minimizePost(x){
+    document.getElementById(x).style.display = 'none'; document.getElementById('feed').style.display = 'flex'
+    document.getElementById('loader').style.display = "block"
+    setTimeout(function() {
+        document.getElementById('loader').style.display = "none"
+    }, 500);
+}
+function minimizeMyProfile(x){
+    document.getElementById(x).style.display = 'none'; document.getElementById('feed').style.display = 'flex'
+    document.getElementById('loader').style.display = "block"
+    setTimeout(function() {
+        document.getElementById('loader').style.display = "none"
+    }, 500);
+}
+
+function openProfile(){
+    document.getElementById('loader').style.display = "block"
+    document.getElementById(x).style.display = 'flex'; 
+    document.getElementById('feed').style.display = 'none'
+    document.getElementById(x).style.className = x
+
+    let header = document.getElementById("headerGradient");
+        header.style.display !== "none" ? header.style.display = "none" :
+        header.style.display = "flex";
+
+
+    setTimeout(function() {
+        document.getElementById('loader').style.display = "none"
+    }, 500);
+}
+//   onclick="document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none' getScrollPos(); " class="<%=[i]%>" id="img-multi-user" src="<%= posts2[i].lowresimage%>">
+            
+
+function myFunction() {
+    location.reload();
+ }
+
 function videoLoaded() {
     window.onload = document.getElementById('loader').style.display = "none"
 }
@@ -48,9 +86,7 @@ function searchByKeyword() {
     }
 }
 
-function getScrollPos() {
-   console.log(window.scrollY)
-};
+
  
 
 
@@ -101,18 +137,23 @@ function toggleContent() {
 
 function updateProfile() {
     // Get the DOM reference
+    document.getElementById('loader').style.display = "block"
+
     var contentId2 = document.getElementById("update-profile");
     let feed = document.getElementById("feed");
     let header = document.getElementById("headerGradient");
     // Toggle 
     contentId2.style.display == "block" ? contentId2.style.display = "none" :
         contentId2.style.display = "block";
-    feed.style.display !== "none" ? feed.style.display = "none" :
+        feed.style.display !== "none" ? feed.style.display = "none" :
         feed.style.display = "flex";
 
         header.style.display !== "none" ? header.style.display = "none" :
         header.style.display = "flex";
 
+        setTimeout(function() {
+            document.getElementById('loader').style.display = "none"
+        }, 500);
 
 }
 
@@ -133,22 +174,46 @@ function photoWall() {
     photoWall.style.display == "none" ? (photoWall.style.display = "flex") && (feed.style.display = "none") :
         (photoWall.style.display = "none") && (feed.style.display = "flex");
 }
+function closeProfile() {
+    // Get the DOM reference
+    document.getElementById('loader').style.display = "block"
+    let feed0 = document.getElementById("feed");
+    let myProfile0 = document.getElementById("my-profile")
+        // Toggle 
+    myProfile0.style.display == "none" ? (myProfile0.style.display = "flex") && (feed0.style.display = "none") :
+        (myProfile0.style.display = "none") && (feed0.style.display = "flex");
 
+        setTimeout(function() {
+            document.getElementById('loader').style.display = "none"
+        }, 500);
+}
 function myProfile() {
     // Get the DOM reference
-    let feed = document.getElementById("feed");
-    let myProfile = document.getElementById("my-profile")
+    document.getElementById('loader').style.display = "block"
+    let feed3 = document.getElementById("feed");
+    let myProfile3 = document.getElementById("my-profile")
+    myProfile3.style.display = "none"
         // Toggle 
-    myProfile.style.display == "none" ? (myProfile.style.display = "flex") && (feed.style.display = "none") :
-        (myProfile.style.display = "none") && (feed.style.display = "flex");
+    myProfile3.style.display == "none" ? (myProfile3.style.display = "flex") && (feed3.style.display = "none") :
+        (myProfile3.style.display = "none") && (feed3.style.display = "flex");
+
+        setTimeout(function() {
+            document.getElementById('loader').style.display = "none"
+        }, 500);
 }
 function myProfile1() {
     // Get the DOM reference
-    let feed1 = document.getElementById("feed");
-    let myProfile1 = document.getElementById("my-profile")
+    document.getElementById('loader').style.display = "block"
+    let feed = document.getElementById("feed");
+    let myProfile = document.getElementById("my-profile")
+    myProfile.style.display = "none"
         // Toggle 
-    myProfile1.style.display == "none" ? (myProfile1.style.display = "flex") && (feed1.style.display = "none") :
-        (myProfil1e.style.display = "none") && (feed1.style.display = "flex");
+    myProfile.style.display == "none" ? (myProfile.style.display = "flex") && (feed.style.display = "none") :
+        (myProfile.style.display = "none") && (feed.style.display = "flex");
+
+        setTimeout(function() {
+            document.getElementById('loader').style.display = "none"
+        }, 500);
 }
 
 function userIconClick() {
@@ -252,12 +317,12 @@ function toggleViews() {
 
 function minimize() {
 
-    let feed = document.getElementById("feed");
-    // Toggle 
-    feed.style.display = "flex"
+//     let feed = document.getElementById("feed");
+//     // Toggle 
+//     feed.style.display = "flex"
 
-    let myProfile = document.getElementById("my-profile");
-    myProfile.style.display = "none"
+//     let myProfile = document.getElementById("my-profile");
+//     myProfile.style.display = "none"
 }
 
 function updateScroll(){
