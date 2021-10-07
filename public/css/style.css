@@ -992,7 +992,7 @@ body {
             overflow-y: hidden;
             overflow-x: hidden;
             box-shadow: 0px 20px 100px 8px rgba(00, 00, 00, .9);
-            margin-bottom: 100px;
+            margin-bottom: 50vh;
         }
         
         #email-label {
