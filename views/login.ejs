@@ -1,45 +1,45 @@
-<main class="container1">
 
-  <% if (locals.messages.errors) { %>
-  <% messages.errors.forEach( el => { %>
-  <div class="alert alert-danger">
-  <%= el.msg %>
-  </div>
-  <% }) %>
-  <% } %>
-  <% if (locals.messages.info) { %>
-  <% messages.info.forEach( el => { %>
-  <div class="alert alert-info">
-   <%= el.msg %>
-   </div>
-    <% }) %>
-    <% } %>
-    <form action="/login" method="POST">
-    <div class="mb-8">
-    <label for="exampleInputEmail1" class="form-label mt-0 text-white">Email address</label>
-    <input
-      type="email"
-      class="form-control"
-      id="exampleInputEmail1"
-      aria-describedby="emailHelp"
-      name="email"
-    />
+    <main class="container1">
+
+     <% if (locals.messages.errors) { %>
+     <% messages.errors.forEach( el => { %>
+     <div class="alert alert-danger">
+     <%= el.msg %>
      </div>
-      <label for="exampleInputPassword1" class="form-label text-white">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" name="password" />
-      <button type="submit" class="col-12 btn btn-primary mt-3"
-      onclick=" document.getElementById('loader').style.display = 'block'">Login</button>
-           
-       <button class="col-12 btn btn-primary mt-3 " id="testbtn"
-       onclick=" document.getElementById('loader').style.display = 'block'">Demo Mode</button>
-       <script>
-           document.getElementById('testbtn').addEventListener('click', demoMode)
-           function demoMode(){
-            document.getElementById('exampleInputEmail1').value = 'guest@guest.com'
-            document.getElementById('exampleInputPassword1').value = 'Guest1234'
-           }
-       </script>
-              <button onclick="window.location.href='/signup' , document.getElementById('loader').style.display = 'block'" class="col-12 btn btn-primary mt-3 ">Join!</button>
+     <% }) %>
+     <% } %>
+     <% if (locals.messages.info) { %>
+     <% messages.info.forEach( el => { %>
+     <div class="alert alert-info">
+      <%= el.msg %>
+      </div>
+       <% }) %>
+       <% } %>
+       <form action="/login" method="POST">
+       <div class="mb-8">
+       <label for="exampleInputEmail1" class="form-label mt-0 text-white">Email address</label>
+       <input
+         type="email"
+         class="form-control"
+         id="exampleInputEmail1"
+         aria-describedby="emailHelp"
+         name="email"
+       />
+        </div>
+         <label for="exampleInputPassword1" class="form-label text-white">Password</label>
+         <input type="password" class="form-control" id="exampleInputPassword1" name="password" />
+         <button type="submit" class="col-12 btn btn-primary mt-3">Login</button>
+              
+          <button class="col-12 btn btn-primary mt-3" id="testbtn">Demo Mode</button>
+          <script>
+              document.getElementById('testbtn').addEventListener('click', demoMode)
+              function demoMode(){
+               document.getElementById('exampleInputEmail1').value = 'guest@guest.com'
+               document.getElementById('exampleInputPassword1').value = 'Guest1234'
+              }
+          </script>
+          
+         </form>
+         <button onclick="window.location.href='/signup';" class="col-12 btn btn-primary mt-3">Join!</button>
 
-      </form>
- 
+</main>

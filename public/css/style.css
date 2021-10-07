@@ -568,8 +568,6 @@ body {
         }
         
         #update-profile {    
-            position: absolute;
-            backdrop-filter: blur(40px);
             margin-top: 0;
             padding-left: 30%;
             padding-right: 30%;
@@ -577,6 +575,9 @@ body {
             display: none;
             z-index: 20;
             height:100vh;
+            padding-top: 3%;
+            backdrop-filter: blur(10px) saturate(130%) contrast(120%) brightness(110%);
+
         }
         #stackLabelInfo{
             display: flex;
@@ -636,8 +637,7 @@ body {
         }
         
         #show-feed {
-            display: flex;
-            backdrop-filter: blur(20px);
+            backdrop-filter: blur(10px);
         }
         
         #my-profile .container-view {
@@ -795,7 +795,6 @@ body {
         #add-posts1 {
             top: 40%;
             left: 50%;
-            margin-top: 1vh;
             padding-right:5%;
             padding-left:5%;
             padding-bottom: 10px;
@@ -1344,12 +1343,11 @@ body {
             border-radius: 10px;
             padding-top: 30px;
             margin: 0 auto;
-            margin-top: 100px;
             scrollbar-width: thin;
             border: 1px solid rgba(#fff, .15);
             padding-right: 1%;
             padding-left: 1%;
-            
+            padding-top: 100px;
             
         }
         
@@ -1618,6 +1616,7 @@ body {
                 align-items: center;
                 height: auto;
                 transition: none;
+                margin-top: 0px;
             }
             #headerGradient:hover{
                 filter: none;  
@@ -1723,6 +1722,7 @@ body {
                 width: -webkit-fill-available;
                 padding-left: 0%;
                 padding-right: 0%;
+                padding-top: 0px;
             }
             #userInput {
                 width: 100%;
