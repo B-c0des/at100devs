@@ -302,6 +302,7 @@ textarea:focus{
         width: 100%;
         backdrop-filter: blur(5px);
         border-radius: 0px;
+        margin-top:50px;
         
     }
     .container1{
