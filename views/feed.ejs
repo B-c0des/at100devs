@@ -4,7 +4,7 @@
             <div id="container3" >
                 <img onclick="document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none' getScrollPos(); " class="<%=[i]%>" id="img-multi-user" src="<%= posts2[i].lowresimage%>">
                 <div id="text-block" onclick="document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none'; getScrollPos();">
-                    <span id="backgroundColor">
+                    <span id="card-info">
                     <div id="backdrop"><%- posts2[i].name %></div>
                     <div id="backdrop"><%- posts2[i].title %></div>
                     <div id="backdrop"><%- posts2[i].icons %></div>
@@ -20,7 +20,7 @@
                         <div id="container3" >
                             <img style="width:100%;" onclick="document.getElementById('myProfile2').style.display = 'flex';document.getElementById('feed').style.display = 'none' " class="<%=[i]%>" id="img-multi-user" src="<%= post[i].image%>">
                             <div id="text-block" class="tab-card-content" onclick="document.getElementById('myProfile2').style.display = 'flex';document.getElementById('feed').style.display = 'none'; getScrollPos() ">
-                                <span  id="backgroundColor">
+                                <span  id="card-info">
                             <div id="backdrop"><%- post[0].name  %></div>
                                 <div id="backdrop"><%- post[0].title %></div>
                                 <div id="backdrop"><%- post[0].icons %></div>

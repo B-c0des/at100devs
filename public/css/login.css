@@ -53,33 +53,46 @@ body {
     background-image: url('https://res.cloudinary.com/at100dev/image/upload/v1631467079/Live-Wave-Background_bf6j9c.svg');
     height: 100vh;
     transition: background-image 1000ms linear;
-    font-family: 'Archivo Narrow', sans-serif;
+    font-family: 'Mina', sans-serif;
     padding-right: 10%;
     padding-left: 10%;
     padding-top: 5%;
     background-position: bottom;
     background-attachment: fixed;
+    backdrop-filter: blur(40px);
 }
 
 * {
     box-sizing: border-box;
 }
 
+#headerIcon{
+    filter: drop-shadow(0px 0px 9px deeppink);
+}
 .container {
-    display:flex;
+    display: flex;
     flex-direction: column;
     width: 40%;
-    backdrop-filter: blur(5px) brightness(1.2);
     height: auto;
-    border-radius: 40px;
-    box-shadow: 1px 15px 30px 2px rgba(00, 00, 00, .9);
+    border-radius: 100%;
+    box-shadow: 1px 15px 100px 40px rgb(0 0 0 / 90%);
     padding-bottom: 20px;
-    box-shadow: inset 0 0 30px 10px #354a76, 0 0 2px 1px black, 5px -5px 5px cyan, -5px 5px 10px deeppink;
+    box-shadow: inset 0 0 90px 50px #354a76, 0 0 2px 1px black, 4px -4px 3px cyan, -4px 4px 3px rgb(189, 184, 186), 0 15px 30px 10px black;
     padding-right: 1vw;
     padding-left: 1vw;
 }
 .container1{
     
+}
+.alert-danger{
+    text-align: center;
+    color:black;
+    background-image: linear-gradient(to right, rgba(255, 255, 2,1), rgb(255, 202, 16));
+    filter: drop-shadow(0px 0px 4px white);
+    box-shadow: inset 0 0px 15px orange, 0 0px 4px red;
+    text-shadow: 0 0px 20px orange;
+    border-radius: 5.25rem;
+    height: 15px;
 }
 #wrapper{
 }
@@ -103,30 +116,39 @@ button {
 
 
         .btn-primary {
-            color: #fff;
-            text-shadow: 1px 2px 2px #354a76;
-            background-color: deeppink;
-            box-shadow: inset 0 0 90px 10px deeppink, 0 0 2px 1px black;
-            filter: drop-shadow(2px 2px 5px #354a76);
+            color: mediumvioletred;
+            text-shadow: 0px 1px 2px #354a76;
+            /* background-color: deeppink; */
+            /* box-shadow: inset 0 0 10px 1px deeppink, 0 0 2px 1px black; */
+            /* filter: drop-shadow(2px 2px 5px #354a76); */
             border: 0px;
+            background-image: linear-gradient(to right, rgba(255, 200, 251,1), rgb(255, 100, 185));
+            /* backdrop-filter: drop-shadow(2px 4px 6px black); */
+            box-shadow: inset 0px -2px 3px 0px white, 0 0 5px -1px white, -2px 2px 4px cyan, 4px -4px 10px deeppink;
         }
         .btn-primary:hover {
-            color: #fff;
+            color: cyan;
             text-shadow: 0px 0px 2px black;
-            background-color:deeppink;
-            border-color: #354a76;
-            box-shadow: inset 0 0 90px 10px aqua, 0 0 2px 1px black;
-            filter: drop-shadow(1px 1px 2px #354a76);
+            /* background-color: deeppink; */
+            /* border-color: #354a76; */
+            box-shadow: 0 0 5px 4px cyan, 0 0 2px 1px black;
+            /* filter: drop-shadow(1px 5px 3px #354a76); */
             cursor: pointer;
+            background-image: linear-gradient(to right, rgba(255, 200, 251,1), rgb(255, 100, 185));
+            /* backdrop-filter: drop-shadow(2px 4px 6px black); */
+            box-shadow: inset 0 0 3px 0px #354a76, 0 0 5px -1px white, -2px 2px 4px cyan, 4px -4px 10px deeppink;
         }
-        .btn-primary:active {
-            color: #fff;
-            text-shadow: 0px 0px 2px black;
-            background-color:deeppink;
-            border-color: #354a76;
-            box-shadow: inset 0 0 90px 10px aqua, 0 0 2px 1px black;
-            filter: drop-shadow(1px 1px 2px #354a76);
-            cursor: pointer;
+
+            .btn-primary:hover {
+                color: cyan;
+                text-shadow: 0px 0px 2px black;
+                /* background-color: deeppink; */
+                /* border-color: #354a76; */
+                box-shadow: 0 0 5px 4px cyan, 0 0 2px 1px black;
+                /* filter: drop-shadow(1px 5px 3px #354a76); */
+                cursor: pointer;
+                box-shadow: inset 0 0 4px 2px white, 0 0 2px 1px deeppink, -4px 4px 5px cyan, 5px 0px 10px deeppink;
+                background-image: linear-gradient(to bottom left, rgba(225, 200, 251,1), rgb(255, 100, 185));
         }
         .btn-primary:focus{
             background-color:deeppink; 
@@ -142,17 +164,21 @@ input {
     padding: 1%;
     border-radius: .25rem;
     width: 70%;
-    box-shadow: inset 0 0 30px white;
+    box-shadow: inset 0 0px 15px deeppink, 0 0px 4px deeppink;
     margin: 0 auto;
     text-align: center; 
     font-family: 'Mina', sans-serif;
 }
+.form-control{
+    border:none;
+}
+.form-control:focus{
+    box-shadow: inset 0 0 10px 4px cyan, 0 0 9px -1px deeppink;
+}
 input:focus{
-    color:cadetblue;
     background-color: black;
     text-shadow: 1px 1px 20px deeppink;
-    font-size: 24px;
-    box-shadow: inset 0 0 50px 10px black, 0 0 0px 1px aqua;
+    box-shadow: inset 0 0 10px 4px cyan, 0 0 9px -1px white;
     filter: drop-shadow(0px 0px 10px deeppink);
 }
 
@@ -191,10 +217,36 @@ textarea:focus{
     font-size: 24px;
     box-shadow: inset 0 0 50px 10px black, 0 0 0px 1px aqua;
 }
+.form-label {
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.btn{
+    border-radius: 5.25rem;
+}
+.form-text{
+    margin-top: .25rem;
+    font-size: -26.125em;
+    color: orange;
+    font-size: 13px;
+    text-align: center;
+    text-shadow: 0 1px 2px deeppink;
+    filter: drop-shadow(2px 4px 6px black);      
+}
 
 @media only screen and (max-width: 900px) {
     body{
         padding: 0%;
+    }
+    .alert-danger{
+        text-align: center;
+        color:black;
+        font-size: 3vh;
+        background-image: linear-gradient(to right, rgba(255, 255, 2,1), rgb(255, 202, 16));
+        filter: drop-shadow(0px 0px 4px white);
+        box-shadow: inset 0 0px 15px orange, 0 0px 4px red;
+        text-shadow: 0 0px 20px orange;
     }
     .container {
         display:flex;
