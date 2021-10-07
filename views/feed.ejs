@@ -6,7 +6,7 @@
                 class="<%=[i]%>" id="img-multi-user" 
                 src="<%= posts2[i].lowresimage%>">
 
-                <div id="text-block" onclick="document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none';">
+                <div id="text-block" onclick="toggleHeader() , document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none';">
                     <span id="card-info">
                     <div id="backdrop"><%- posts2[i].name %></div>
                     <div id="backdrop"><%- posts2[i].title %></div>

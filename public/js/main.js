@@ -20,9 +20,19 @@ function pageLoaded() {
 function minimizePost(x){
     document.getElementById(x).style.display = 'none'; document.getElementById('feed').style.display = 'flex'
     document.getElementById('loader').style.display = "block"
+
+    let header3 = document.getElementById("headerGradient");
+    header3.style.display !== "none" ? header3.style.display = "none" :
+    header3.style.display = "flex";
+
     setTimeout(function() {
         document.getElementById('loader').style.display = "none"
     }, 500);
+}
+function toggleHeader(){
+    let header4 = document.getElementById("headerGradient");
+    header4.style.display !== "none" ? header4.style.display = "none" :
+    header4.style.display = "flex";
 }
 function minimizeMyProfile(x){
     document.getElementById(x).style.display = 'none'; document.getElementById('feed').style.display = 'flex'
@@ -179,6 +189,9 @@ function closeProfile() {
     document.getElementById('loader').style.display = "block"
     let feed0 = document.getElementById("feed");
     let myProfile0 = document.getElementById("my-profile")
+    let header0 = document.getElementById("headerGradient");
+    header0.style.display !== "none" ? header0.style.display = "none" :
+    header0.style.display = "flex";
         // Toggle 
     myProfile0.style.display == "none" ? (myProfile0.style.display = "flex") && (feed0.style.display = "none") :
         (myProfile0.style.display = "none") && (feed0.style.display = "flex");
@@ -190,6 +203,14 @@ function closeProfile() {
 function myProfile() {
     // Get the DOM reference
     document.getElementById('loader').style.display = "block"
+
+    
+    let header1 = document.getElementById("headerGradient");
+    header1.style.display !== "none" ? header1.style.display = "none" :
+    header1.style.display = "flex";
+
+
+
     let feed3 = document.getElementById("feed");
     let myProfile3 = document.getElementById("my-profile")
     myProfile3.style.display = "none"
@@ -206,6 +227,9 @@ function myProfile1() {
     document.getElementById('loader').style.display = "block"
     let feed = document.getElementById("feed");
     let myProfile = document.getElementById("my-profile")
+    let header2 = document.getElementById("headerGradient");
+    header2.style.display !== "none" ? header2.style.display = "none" :
+    header2.style.display = "flex";
     myProfile.style.display = "none"
         // Toggle 
     myProfile.style.display == "none" ? (myProfile.style.display = "flex") && (feed.style.display = "none") :
