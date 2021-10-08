@@ -10,14 +10,12 @@
                 <div id='x' onclick="closeProfile()" style="z-index:20">x</div>
                 <div style="background-image: url('<%= post[0].image%>'); width:100%; z-index: 5;  background-size: cover; background-position: center;box-shadow: 6px 3px 14px 1px  rgba(00,00,00,.9);" id="img"></div>
                 <div id="add-posts">
-
                     <div id="user-info1">
                         <div id="top-row">
                             <span><%= post[0].name ?   post[0].name : '' %></span>
                             <span><%= post[0].title ?  post[0].title : '' %></span>
                         </div>
                         <div id="middle-row">
-
                             <a id="icons" href="tel:<%= post[0].contact ?   posts2[i].contact : '' %>">
                                 <span class="iconify" data-icon="fa-solid:phone-alt" data-inline="false"></span>
                             </a>
@@ -52,16 +50,10 @@
                         <div>
                             <h1 id="comment-box"></h1>
                             <% for(var j=0; j < posts2[i].comments.length; j++) {  %>
-                               
-                                    <% for(var k=0; k < posts2.length; k++) {  %>
-                                        
+                                   <% for(var k=0; k < posts2.length; k++) {  %>
                                         <%- (posts2[i].comments[j].postedBy.toString().trim() == post[k]?.user.toString().trim()) == true ? `<h1 id="comment-boxw"> <h1 id="commentName" onclick="document.getElementById('${[k]}').style.display = 'flex';document.getElementById('${(k !== i) ? [i] : ''}').style.display = 'none'"> ${post[k].name}  -  ${post[k].title}  </h1>  <img id="userIcon" onclick="document.getElementById('${[k]}').style.display = 'flex';document.getElementById('${(k !== i) ? [i] : ''}').style.display = 'none'" src="${posts2[k]?.image.toString().trim()}"> <h1 id="comment"> ${post[i].comments[j].comments} </h1>`  : '' %> 
-
                                         </h1>
-                                     <% } %>
-        
-        
-                                                    
+                                     <% } %>  
                             <% } %>
                             </h1>   
                         </div>
@@ -77,9 +69,7 @@
                             <%if(post.length > 0){ %>
                                 <textarea placeholder="Comment here!" type="text" class="comment-box" name="comments" class='sendComment' style="z-index:-1"></textarea>
                                 <%- posts2[i].name ? `
-                                
                                 <button type="submit" class="submitComment btn btn-primary text-center w-100 rounded-bottom" value="comments" >Post Comment!</button>` : 'Please create a profile first!' %>
-                              
                             </form>
             </div>
             <%}%>

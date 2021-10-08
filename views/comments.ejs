@@ -1,18 +1,13 @@
-<%= post[0].comments[0].comments[0] %>
-    <%= post[0].comments.length %>
-        <%= post[0].comments.comments %>
-            <%= post[0].comments[0].postedBy %>
-                <h1 style=" display:flex; flex-direction:column; width:100vw; height:50%;">
-                </h1>
-                <% for(var i= post[0].comments.length  ; i < post[0].comments.length; i++) {%>
-              <h6>
-                  Length:
-                  <%= post[0].comments.length %>
-                   Comments:
-                   <%= i > 0 ? post[0].comments[i].comments : null  %>
-                    <% if (i > 0) { %>
-                  <% post[0].comments[i].postedBy == user.id ? 'true' : 'false' %>
-                    <% } %>
-                    <hr>
-                    </h6>
-                    <% } %>
+<%= post[0].comments[0].comments[0] %> <%= post[0].comments.length %> <%=
+post[0].comments.comments %> <%= post[0].comments[0].postedBy %>
+<h1
+  style="display: flex; flex-direction: column; width: 100vw; height: 50%"
+></h1>
+<% for(var i= post[0].comments.length ; i < post[0].comments.length; i++) {%>
+<h6>
+  Length: <%= post[0].comments.length %> Comments: <%= i > 0 ?
+  post[0].comments[i].comments : null %> <% if (i > 0) { %> <%
+  post[0].comments[i].postedBy == user.id ? 'true' : 'false' %> <% } %>
+  <hr />
+</h6>
+<% } %>
