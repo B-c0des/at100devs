@@ -187,20 +187,20 @@ function closeUpdateProfile() {
     // Get the DOM reference
     $(document.getElementById("update-profile")).fadeOut();
 
-    var contentId2 = document.getElementById("update-profile");
+    var contentId5 = document.getElementById("update-profile");
 
-    let feed = document.getElementById("feed");
-    let header = document.getElementById("headerGradient");
+    let feed5 = document.getElementById("feed");
+    let header5 = document.getElementById("headerGradient");
     // Toggle 
 
-    feed.style.display !== "none" ? feed.style.display = "none" :
-        feed.style.display = "flex";
 
-    header.style.display !== "none" ? header.style.display = "none" :
-        header.style.display = "flex";
 
     setTimeout(function () {
+        feed5.style.display !== "none" ? feed5.style.display = "none" :
+            feed.style.display = "flex";
 
+        header5.style.display !== "none" ? header5.style.display = "none" :
+            header5.style.display = "flex";
     }, 500);
 
 }
