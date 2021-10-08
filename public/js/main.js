@@ -183,6 +183,28 @@ function updateProfile() {
 
 }
 
+function closeUpdateProfile() {
+    // Get the DOM reference
+    $(document.getElementById("update-profile")).fadeOut();
+
+    var contentId2 = document.getElementById("update-profile");
+
+    let feed = document.getElementById("feed");
+    let header = document.getElementById("headerGradient");
+    // Toggle 
+
+    feed.style.display !== "none" ? feed.style.display = "none" :
+        feed.style.display = "flex";
+
+    header.style.display !== "none" ? header.style.display = "none" :
+        header.style.display = "flex";
+
+    setTimeout(function () {
+
+    }, 500);
+
+}
+
 function toggleFeedView() {
     // Get the DOM reference
     var contentId3 = document.getElementById("feed");
