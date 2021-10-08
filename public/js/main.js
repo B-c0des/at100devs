@@ -21,28 +21,25 @@ function about() {
 }
 
 function closeAbout() {
-    document.getElementById('my-theme').style.display = "none"
+    let about = document.getElementById('my-theme')
+    $(about).fadeOut();
 }
-
-function loadingSvg() {
-    setTimeout(function () {
-        document.getElementById('loader').style.display = "flex"
-    }, 500);
-}
-
 //minimize post
-function minimizePost(x) {
-    document.getElementById(x).style.display = 'none';
-    document.getElementById('feed').style.display = 'flex'
-    document.getElementById('loader').style.display = "block"
 
-    let header3 = document.getElementById("headerGradient");
-    header3.style.display !== "none" ? header3.style.display = "none" :
-        header3.style.display = "flex";
+
+function minimizePost(x) {
+
+    $(document.getElementById(x)).fadeOut();
 
     setTimeout(function () {
-        document.getElementById('loader').style.display = "none"
-    }, 500);
+        document.getElementById('feed').style.display = 'flex'
+
+
+        let header3 = document.getElementById("headerGradient");
+        header3.style.display !== "none" ? header3.style.display = "none" :
+            header3.style.display = "flex";
+
+    }, 300);
 }
 
 function toggleHeader() {
@@ -52,12 +49,13 @@ function toggleHeader() {
 }
 
 function minimizeMyProfile(x) {
-    document.getElementById(x).style.display = 'none';
-    document.getElementById('feed').style.display = 'flex'
-    document.getElementById('loader').style.display = "block"
-    setTimeout(function () {
-        document.getElementById('loader').style.display = "none"
-    }, 500);
+    $(document.getElementById(x)).fadeOut();
+    // document.getElementById(x).style.display = 'none';
+    // document.getElementById('feed').style.display = 'flex'
+    // document.getElementById('loader').style.display = "block"
+    // setTimeout(function () {
+    //     document.getElementById('loader').style.display = "none"
+    // }, 500);
 }
 
 function openProfile() {
@@ -165,14 +163,14 @@ function toggleContent() {
 
 function updateProfile() {
     // Get the DOM reference
-    document.getElementById('loader').style.display = "block"
+    $(document.getElementById("update-profile")).fadeIn();
 
     var contentId2 = document.getElementById("update-profile");
+
     let feed = document.getElementById("feed");
     let header = document.getElementById("headerGradient");
     // Toggle 
-    contentId2.style.display == "block" ? contentId2.style.display = "none" :
-        contentId2.style.display = "block";
+
     feed.style.display !== "none" ? feed.style.display = "none" :
         feed.style.display = "flex";
 
@@ -180,7 +178,7 @@ function updateProfile() {
         header.style.display = "flex";
 
     setTimeout(function () {
-        document.getElementById('loader').style.display = "none"
+
     }, 500);
 
 }
@@ -205,7 +203,8 @@ function photoWall() {
 
 function closeProfile() {
     // Get the DOM reference
-    document.getElementById('loader').style.display = "block"
+
+    $(document.getElementById("my-profile")).fadeOut();
     let feed0 = document.getElementById("feed");
     let myProfile0 = document.getElementById("my-profile")
     let header0 = document.getElementById("headerGradient");
@@ -215,15 +214,13 @@ function closeProfile() {
     myProfile0.style.display == "none" ? (myProfile0.style.display = "flex") && (feed0.style.display = "none") :
         (myProfile0.style.display = "none") && (feed0.style.display = "flex");
 
-    setTimeout(function () {
-        document.getElementById('loader').style.display = "none"
-    }, 500);
+
 }
 
 function myProfile() {
     // Get the DOM reference
-    document.getElementById('loader').style.display = "block"
 
+    $(document.getElementById("my-profile")).fadeIn();
 
     let header1 = document.getElementById("headerGradient");
     header1.style.display !== "none" ? header1.style.display = "none" :
@@ -238,14 +235,12 @@ function myProfile() {
     myProfile3.style.display == "none" ? (myProfile3.style.display = "flex") && (feed3.style.display = "none") :
         (myProfile3.style.display = "none") && (feed3.style.display = "flex");
 
-    setTimeout(function () {
-        document.getElementById('loader').style.display = "none"
-    }, 500);
 }
 
 function myProfile1() {
     // Get the DOM reference
-    document.getElementById('loader').style.display = "block"
+    $(document.getElementById("my-profile")).fadeIn();
+
     let feed = document.getElementById("feed");
     let myProfile = document.getElementById("my-profile")
     let header2 = document.getElementById("headerGradient");
@@ -256,9 +251,7 @@ function myProfile1() {
     myProfile.style.display == "none" ? (myProfile.style.display = "flex") && (feed.style.display = "none") :
         (myProfile.style.display = "none") && (feed.style.display = "flex");
 
-    setTimeout(function () {
-        document.getElementById('loader').style.display = "none"
-    }, 500);
+
 }
 
 function userIconClick() {

@@ -39,7 +39,10 @@
 <br>
 <br>
 
-```A social networking site for Software Engineers to reconnect and be social again. Users can upload their photo, their contact information and their software technologies to share and connect with friends.```
+```Social Again is a social networking application for software technology enthusiasts to be social again.
+
+Users can create a profile,share a photo, share software techonologies share contact information and share comments.
+```
 
 
 <br/>
