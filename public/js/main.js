@@ -3,17 +3,12 @@ let myIcons = ["vscode-icons:default-file", "vscode-icons:default-folder", "vsco
 
 
 function pageLoaded() {
-    var state = document.readyState
-    document.getElementById('loader').style.display = "flex"
-    if (state == 'complete') {
-        document.getElementById('loader').style.display = "none"
+
+    if (document.readyState == 'complete') {
         const t1 = performance.now();
         console.log("Page loaded in " + Math.round(t1 - t0) + ' milliseconds!');
     }
-    setTimeout(function () {
-        window.onload = document.getElementById('loader').style.display = "none"
-    }, 2000);
-
+    alert('hello')
 }
 
 function about() {
@@ -45,7 +40,7 @@ function minimizePost(x) {
         let header3 = document.getElementById("headerGradient");
         header3.style.display !== "none" ? header3.style.display = "none" :
             header3.style.display = "flex";
-        document.getElementById('loader').style.display = "block"
+
 
     }, 100);
     setTimeout(function () {
@@ -53,7 +48,7 @@ function minimizePost(x) {
         document.querySelector('html').scrollTop = localStorage.getItem('scrollLocation')
         setTimeout(function () {
 
-            document.getElementById('loader').style.display = "none"
+
 
         }, 210);
     }, 110);
@@ -94,7 +89,7 @@ function openProfile() {
 
 
     setTimeout(function () {
-        document.getElementById('loader').style.display = "none"
+
     }, 500);
 }
 //   onclick="document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none' getScrollPos(); " class="<%=[i]%>" id="img-multi-user" src="<%= posts2[i].lowresimage%>">
@@ -105,7 +100,7 @@ function myFunction() {
 }
 
 function videoLoaded() {
-    window.onload = document.getElementById('loader').style.display = "none"
+
 }
 
 let images = document.querySelectorAll('img');
@@ -227,14 +222,13 @@ function closeUpdateProfile() {
 
     header5.style.display !== "none" ? header5.style.display = "none" :
         header5.style.display = "flex";
-    document.getElementById('loader').style.display = "block"
+
 
     setTimeout(function () {
 
         document.querySelector('html').scrollTop = localStorage.getItem('scrollLocation')
         setTimeout(function () {
 
-            document.getElementById('loader').style.display = "none"
 
         }, 210);
     }, 110);
@@ -279,7 +273,6 @@ function closeProfile() {
         document.querySelector('html').scrollTop = localStorage.getItem('scrollLocation')
         setTimeout(function () {
 
-            document.getElementById('loader').style.display = "none"
 
         }, 210);
     }, 110);
