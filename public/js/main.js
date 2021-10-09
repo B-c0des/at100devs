@@ -3,12 +3,17 @@ let myIcons = ["vscode-icons:default-file", "vscode-icons:default-folder", "vsco
 
 
 function pageLoaded() {
-
-    if (document.readyState == 'complete') {
+    window.scrollTo(0, 0)
+    var state = document.readyState
+    if (state == 'complete') {
+        document.getElementById('loader').style.display = "none"
         const t1 = performance.now();
         console.log("Page loaded in " + Math.round(t1 - t0) + ' milliseconds!');
     }
-    alert('hello')
+    setTimeout(function () {
+        window.onload = document.getElementById('loader').style.display = "none"
+    }, 20000);
+
 }
 
 function about() {
@@ -22,7 +27,8 @@ function closeAbout() {
 //minimize post
 
 function scrollLoc() {
-    localStorage.setItem('scrollLocation', document.querySelector('html').scrollTop)
+
+    localStorage.setItem('scrollLocation', document.querySelector('body').scrollTop)
 
 }
 
@@ -43,9 +49,10 @@ function minimizePost(x) {
 
 
     }, 100);
+
     setTimeout(function () {
 
-        document.querySelector('html').scrollTop = localStorage.getItem('scrollLocation')
+        document.querySelector('body').scrollTop = localStorage.getItem('scrollLocation')
         setTimeout(function () {
 
 
@@ -226,7 +233,7 @@ function closeUpdateProfile() {
 
     setTimeout(function () {
 
-        document.querySelector('html').scrollTop = localStorage.getItem('scrollLocation')
+        document.querySelector('body').scrollTop = localStorage.getItem('scrollLocation')
         setTimeout(function () {
 
 
@@ -264,17 +271,13 @@ function closeProfile() {
     header0.style.display !== "none" ? header0.style.display = "none" :
         header0.style.display = "flex";
     // Toggle 
+    document.querySelector('body').scrollTop = localStorage.getItem('scrollLocation')
     myProfile0.style.display == "none" ? (myProfile0.style.display = "flex") && (feed0.style.display = "none") :
         (myProfile0.style.display = "none") && (feed0.style.display = "flex");
-    document.getElementById('loader').style.display = "block"
+
 
     setTimeout(function () {
-
-        document.querySelector('html').scrollTop = localStorage.getItem('scrollLocation')
-        setTimeout(function () {
-
-
-        }, 210);
+        document.querySelector('body').scrollTop = localStorage.getItem('scrollLocation')
     }, 110);
 
 }
