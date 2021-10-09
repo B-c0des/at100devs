@@ -442,10 +442,13 @@ function getIcon() {
     myIcons.filter(x => x.includes(inputLowercase) ? iconArr.push(`<span  onclick="addStackToMyArray(this.id)" class="iconify" data-icon="${x}" id='${x}' data-inline="false"></span>`) : '')
     iconArr.length < 100 ? document.getElementById('iconss').innerHTML = iconArr.join('') : '';
 }
+var myArr = []
 
 function addStackToMyArray(x) {
-    delete myArr[0]
-    myArr.join(' ').includes(x) ? '' : myArr.push(`<span class="iconify" data-icon="${x}" onclick="removeIcon(${myArr.length})" data-inline="false"></span>`)
+
+
+    myArr.join(' ').includes(x) ? '' :
+        myArr.push(`<span class="iconify" data-icon="${x}" onclick="removeIcon(${myArr.length})" data-inline="false"></span>`)
     document.getElementById('myIcons').innerHTML = myArr.join(' ')
     document.getElementById('textIcons').innerHTML = myArr.join(' ')
 }
