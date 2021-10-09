@@ -10,9 +10,7 @@ function pageLoaded() {
         const t1 = performance.now();
         console.log("Page loaded in " + Math.round(t1 - t0) + ' milliseconds!');
     }
-    setTimeout(function () {
-        window.onload = document.getElementById('loader').style.display = "none"
-    }, 20000);
+    setTimeout(function () {}, 20000);
 
 }
 

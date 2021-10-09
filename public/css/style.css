@@ -207,16 +207,18 @@
 
      	    	#container3 {
      	    		position: relative;
-     	    		font-family: 'Mina', cursive;
-     	    		width: 24%;
+     	    		font-family: 'Mina',
+     	    			cursive;
+     	    		width: 15%;
+     	    		height: 30vh;
      	    		overflow: hidden;
      	    		cursor: pointer;
      	    		border-radius: 10px;
-     	    		box-shadow:
-     	    			inset 0 0 30px 0px #354a76,
+     	    		box-shadow: inset 0 0 30px 0px #354a76,
      	    			0 0 2px 1px #354a76,
      	    			0 4px 5px 0px black;
      	    		margin-bottom: 12px;
+     	    		margin: 6px;
      	    	}
 
      	    	#container3:hover {
@@ -395,7 +397,7 @@
      	    	#backdrop {
      	    		display: flex;
      	    		flex-direction: row;
-     	    		font-size: 1.5vw;
+     	    		font-size: 1vw;
      	    		text-shadow: 0px 1px 3px black;
      	    		justify-content: center;
      	    	}
@@ -550,6 +552,8 @@
      	    		cursor: pointer;
      	    		text-shadow: 0 1px 10px white;
      	    		filter: drop-shadow(2px 4px 6px black);
+     	    		backdrop-filter: blur(8px);
+
      	    	}
 
 
