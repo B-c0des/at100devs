@@ -1,7 +1,7 @@
 <div id="feed">
   <% for(var i=0; i<posts2.length; i++) {%>
     <%if(posts2[i].user){ %>
-    <div id="container3">
+    <div id="container3" onclick="scrollLoc() ,toggleHeader() , scrollBottom(), document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none';">
       <img
         onclick="openProfile(`${i}`)"
         class="<%=[i]%>"
@@ -11,7 +11,6 @@
 
       <div
         id="text-block"
-        onclick="scrollLoc() ,toggleHeader() , document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none';"
       >
         <span id="card-info">
           <div id="backdrop"><%- posts2[i].name %></div>

@@ -27,7 +27,11 @@ function closeAbout() {
 function scrollLoc() {
 
     localStorage.setItem('scrollLocation', document.querySelector('body').scrollTop)
+}
 
+function scrollBottom() {
+
+    document.querySelector("#across").scrollTop = document.querySelector("#across").scrollHeight
 }
 
 
@@ -64,7 +68,6 @@ function toggleHeader() {
     let header4 = document.getElementById("headerGradient");
     header4.style.display !== "none" ? header4.style.display = "none" :
         header4.style.display = "flex";
-
 }
 
 function minimizeMyProfile(x) {
