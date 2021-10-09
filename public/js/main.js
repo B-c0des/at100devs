@@ -29,10 +29,7 @@ function scrollLoc() {
     localStorage.setItem('scrollLocation', document.querySelector('body').scrollTop)
 }
 
-function scrollBottom() {
-
-    document.querySelector("#across").scrollTop = document.querySelector("#across").scrollHeight
-}
+function scrollBottom() {}
 
 
 
