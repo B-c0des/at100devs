@@ -1,9 +1,5 @@
+<script language="javascript" type="text/javascript"></script>
 <%- include('partials/header') -%>
-<script language="javascript" type="text/javascript">
-  pageLoaded();
-  console.log("Starting...");
-  var t0 = performance.now();
-</script>
 <div id="show-feed"><%- include('feed') -%></div>
 <div>
   <%- (post.length === 0) ? include('addProfile') : '' %> <%- (post.length > 0)
