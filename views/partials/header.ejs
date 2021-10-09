@@ -12,7 +12,7 @@
     <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/ios7-active-basic/512/web_internet_interface_pixel_perfect-128.png" type="image/gif">
     <div id='loader'>
         
-    <img style="width:100vw; height:100vh;" src="https://res.cloudinary.com/at100dev/image/upload/v1630732008/Alternate-Ball-Loading_qzzdtr.svg">
+    <!-- <img style="width:100vw; height:100vh;" src="https://res.cloudinary.com/at100dev/image/upload/v1630732008/Alternate-Ball-Loading_qzzdtr.svg"> -->
      </div>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -23,19 +23,20 @@
                 <div id="headerGradient">
                    <span> <a href="/logout"><button class="navButton" >Logout</button></a></span>
                     <%- post.length <= 0 ? ` <button class="navButton"   onclick="toggleContent()" class="">Add Profile</button>` : '' %>
-                       <span><%- post.length > 0 ? `<button class="navButton" onclick="updateProfile()" class="">Update Profile</button>` : '' %></span>
-                       <span><button onclick="myProfile()" class="navButton" id="myProfile">My Profile</button></span>
+                       <span><%- post.length > 0 ? `<button class="navButton" onclick="scrollLoc(),updateProfile()" class="">Update Profile</button>` : '' %></span>
+                       <span><button onclick="scrollLoc(), myProfile()" class="navButton" id="myProfile">My Profile</button></span>
                        <button onclick="about()" ><img id="logo" src="https://res.cloudinary.com/at100dev/image/upload/v1628713361/social_again_l9lsgr.svg">
                        </button>
-                        <div id="user-name" >
-                        <h1 id="username-display">
+                        <div id="user-name" onclick="scrollLoc(), myProfile1()">
+                        <h1 id="username-display" >
                             <% for(var i=0; i<posts2.length; i++) {%>
-                                <%- posts2[i]?.user == user.id ? `<img id="loginIcon" onclick="myProfile1()" src="${posts2[i].image}">` : '' %>
+                                <%- posts2[i]?.user == user.id ? `<img id="loginIcon" src="${posts2[i].image}">` : '' %>
                                     <%}%>
-                                    </h1>
+                                   
                         <h1 id="email-display">
                             <span><%- user?.userName && user.userName.trim().length ? `${user.userName.trim()}` : 'Guest' %></span>
                             <!-- <span><%- user?.email && user.email.trim().length ? `${user.email.trim()}` : 'Guest' %></span> -->
+                             </h1>
                         </h1>
                     </div>                   
             </h1>

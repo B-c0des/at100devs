@@ -3,8 +3,8 @@ let myIcons = ["vscode-icons:default-file", "vscode-icons:default-folder", "vsco
 
 
 function pageLoaded() {
-    window.scrollTo(0, 0)
     var state = document.readyState
+    document.getElementById('loader').style.display = "flex"
     if (state == 'complete') {
         document.getElementById('loader').style.display = "none"
         const t1 = performance.now();
@@ -12,7 +12,7 @@ function pageLoaded() {
     }
     setTimeout(function () {
         window.onload = document.getElementById('loader').style.display = "none"
-    }, 20000);
+    }, 2000);
 
 }
 
@@ -26,26 +26,45 @@ function closeAbout() {
 }
 //minimize post
 
+function scrollLoc() {
+    localStorage.setItem('scrollLocation', document.querySelector('html').scrollTop)
+
+}
+
+
 
 function minimizePost(x) {
 
     $(document.getElementById(x)).fadeOut();
 
     setTimeout(function () {
+
         document.getElementById('feed').style.display = 'flex'
 
 
         let header3 = document.getElementById("headerGradient");
         header3.style.display !== "none" ? header3.style.display = "none" :
             header3.style.display = "flex";
+        document.getElementById('loader').style.display = "block"
 
-    }, 300);
+    }, 100);
+    setTimeout(function () {
+
+        document.querySelector('html').scrollTop = localStorage.getItem('scrollLocation')
+        setTimeout(function () {
+
+            document.getElementById('loader').style.display = "none"
+
+        }, 210);
+    }, 110);
+
 }
 
 function toggleHeader() {
     let header4 = document.getElementById("headerGradient");
     header4.style.display !== "none" ? header4.style.display = "none" :
         header4.style.display = "flex";
+
 }
 
 function minimizeMyProfile(x) {
@@ -58,7 +77,12 @@ function minimizeMyProfile(x) {
     // }, 500);
 }
 
+
+
 function openProfile() {
+
+
+
     document.getElementById('loader').style.display = "block"
     document.getElementById(x).style.display = 'flex';
     document.getElementById('feed').style.display = 'none'
@@ -193,15 +217,28 @@ function closeUpdateProfile() {
     let header5 = document.getElementById("headerGradient");
     // Toggle 
 
+    header5.style.display = "none"
 
+
+    feed5.style.display !== "none" ? feed.style.display = "none" :
+        feed.style.display = "flex";
+
+
+
+    header5.style.display !== "none" ? header5.style.display = "none" :
+        header5.style.display = "flex";
+    document.getElementById('loader').style.display = "block"
 
     setTimeout(function () {
-        feed5.style.display !== "none" ? feed5.style.display = "none" :
-            feed.style.display = "flex";
 
-        header5.style.display !== "none" ? header5.style.display = "none" :
-            header5.style.display = "flex";
-    }, 500);
+        document.querySelector('html').scrollTop = localStorage.getItem('scrollLocation')
+        setTimeout(function () {
+
+            document.getElementById('loader').style.display = "none"
+
+        }, 210);
+    }, 110);
+
 
 }
 
@@ -235,7 +272,17 @@ function closeProfile() {
     // Toggle 
     myProfile0.style.display == "none" ? (myProfile0.style.display = "flex") && (feed0.style.display = "none") :
         (myProfile0.style.display = "none") && (feed0.style.display = "flex");
+    document.getElementById('loader').style.display = "block"
 
+    setTimeout(function () {
+
+        document.querySelector('html').scrollTop = localStorage.getItem('scrollLocation')
+        setTimeout(function () {
+
+            document.getElementById('loader').style.display = "none"
+
+        }, 210);
+    }, 110);
 
 }
 
