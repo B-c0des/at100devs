@@ -16,7 +16,9 @@ const path = require("path");
 const tools = require('@iconify/tools');
 
 //Use .env file in config folder
-require("dotenv").config({ path: "./config/.env" });
+require("dotenv").config({
+    path: "./config/.env"
+});
 
 // Passport config
 require("./config/passport")(passport);
@@ -32,7 +34,9 @@ app.use(express.static("public"));
 
 
 //Body Parsing
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({
+    extended: true
+}));
 app.use(express.json());
 
 //Logging
@@ -47,7 +51,9 @@ app.use(
         secret: "demo",
         resave: false,
         saveUninitialized: false,
-        store: new MongoStore({ mongooseConnection: mongoose.connection }),
+        store: new MongoStore({
+            mongooseConnection: mongoose.connection
+        }),
     })
 );
 
