@@ -725,7 +725,7 @@ h4 {
 	z-index: 20;
 	padding-top: 3%;
 	backdrop-filter: blur(40px) saturate(130%) contrast(120%) brightness(110%);
-	height: 100vh;
+	height: 120vh;
 }
 
 #stackLabelInfo {
