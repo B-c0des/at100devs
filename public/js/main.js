@@ -487,11 +487,11 @@ function getIcon() {
     let inputz = document.getElementById('inputs')
     let inputLowercase = inputz.value.toLowerCase()
     let iconArr = []
-    let myArr = []
+    let myArr = ['']
     myIcons.filter(x => x.includes(inputLowercase) ? iconArr.push(`<span  onclick="addStackToMyArray(this.id)" class="iconify" data-icon="${x}" id='${x}' data-inline="false"></span>`) : '')
     iconArr.length < 100 ? document.getElementById('iconss').innerHTML = iconArr.join('') : '';
 }
-var myArr = []
+var myArr = ['']
 
 function addStackToMyArray(x) {
 

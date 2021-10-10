@@ -17,11 +17,10 @@
             </div>
             <div class="mb-1">
                 <h1><label for="contact" class="form-label">Phone Number</label></h1>
-                <input type="text" class="form-control" onkeydown="phone()" name="contact" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                <input type="number" class="form-control" onkeydown="phone()" name="contact" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
             </div>
             <h1>My Stack</h1>
             <textarea id='textIcons' name="textIcons" required style="    display:none;"></textarea>
-
 
             <span id='myIcons' style="    display: flex;
                justify-content: space-around;
@@ -39,7 +38,7 @@
                 <img id="output" />
                 <input type="file" accept="image/*" oninput="loadFile(event)" class="form-control" id="file" name="file">
 
-                <button type="submit" class="btn btn-primary mt-1" value="Upload" style="filter: drop-shadow( 0 0px 0px black); width:100%" onclick="toggleContent()">Submit</button>
+                <button type="submit" class="btn-primary mt-1" value="Upload" style="filter: drop-shadow( 0 0px 0px black); width:100%" >Submit</button>
         </form>
         <button onclick="toggleContent()" type="none" class="btn btn-primary mt-1 mb-1" style="filter: drop-shadow( 0 0px 0px black); width:100%;" value="cancel">Cancel</button>
     </div>

@@ -18,10 +18,10 @@
             </div>
             <div class="mb-0">
                 <h1 class="comment-box-text"><label for="contact" class="form-label">Phone Number</label></h1>
-                <input type="text" class="comment-box" onChange="phone1()" name="contact" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                <input type="number" class="comment-box" onChange="phone1()" name="contact" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
             </div>
            
-            <textarea placeholder="(click to remove)"autocapitalize="false" id='textIcons' name="textIcons" required style="    display:none;"></textarea>
+            <textarea placeholder="(click to remove)"autocapitalize="false" id='textIcons' name="textIcons" style="    display:none;"></textarea>
             <h1 id="stackLabel"><label for="getIcon" class="form-label">My Software Technologies:</label></h1>
             <span id='myIcons' style="display: flex;
            justify-content: space-around;
@@ -38,7 +38,7 @@
             <h1>
                 <label for="imgUpload" id="img-label" class="form-label">Image Upload:</label>
                 <img id="output2" />
-                <input type="file" accept="image/*" class="btn btn-primary mb-2" oninput="loadFile2(event)" id="file" name="file">
+                <input type="file" accept="image/*" class="btn btn-primary mb-2" oninput="loadFile2(event)" id="file" name="file" required>
                 <button type="submit" class="btn btn-primary mb-2" value="Upload" style="width:100%;">Submit</button>
         </form>
         <!-- <button onclick="minimizePost(document.getElementById(update-profile))" type="none" class="btn btn-primary mb-2" value="cancel" style="width:100%;">Cancel</button> -->
