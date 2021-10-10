@@ -39,7 +39,15 @@ window.onload = () => {
     console.log('Welcome to Social Again!')
     let about = document.getElementById('loaded')
     $(about).fadeOut();
+
+    document.querySelector('.navButton').addEventListener("click", function () {
+
+        $(document.querySelector('#show-feed')).fadeOut();
+        $(document.querySelector('#headerGradient')).fadeOut();
+    })
 }
+
+
 
 function about() {
     document.getElementById('my-theme').style.display = "block"
@@ -225,7 +233,7 @@ function updateProfile() {
         header.style.display = "flex";
 
     setTimeout(function () {
-
+        document.querySelector('body').scrollTop = 0
     }, 500);
 
 }

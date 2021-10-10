@@ -154,10 +154,10 @@ body {
 #headerIcon {
     filter: drop-shadow(0px 0px 9px deeppink);
     margin-top: -120px;
+    width: -webkit-fill-available;
 }
 
 .container {
-    display: flex;
     flex-direction: column;
     width: 40%;
     height: auto;
@@ -168,6 +168,7 @@ body {
     padding-right: 1vw;
     padding-left: 1vw;
     margin-top: 70px;
+    display: none;
 }
 
 .container1 {
@@ -361,9 +362,9 @@ textarea:focus {
     filter: drop-shadow(2px 4px 6px black);
 }
 
-#loader {
+loaded {
     position: fixed;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -378,7 +379,7 @@ textarea:focus {
     animation-fill-mode: forwards;
     top: -2px;
     transition: all 5.5s ease-in-out;
-    z-index: 30;
+    z-index: 100;
 }
 
 .padding-left-right {

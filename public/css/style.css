@@ -1020,7 +1020,7 @@ textarea:focus {
 	font-size: 20px;
 	width: 98%;
 	margin: 5px;
-	height: 4vh;
+	height: 8vh;
 	border-radius: 5px;
 	border-color: skyblue;
 }
@@ -1522,7 +1522,6 @@ hr {
 	padding-right: 1%;
 	padding-left: 1%;
 	padding-top: 70px;
-	height: 100vh;
 }
 
 #feed img {
