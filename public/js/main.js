@@ -22,7 +22,9 @@ function amountscrolled() {
     var trackLength = docheight - winheight
     var pctScrolled = Math.floor(scrollTop / trackLength * 100) // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
 
-    console.log(pctScrolled >= 99 ? yes() : 'no')
+    if (pctScrolled == 99) {
+        console.log('bottom')
+    }
 }
 
 window.addEventListener("scroll", function () {
