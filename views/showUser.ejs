@@ -10,13 +10,13 @@
                 <span><%= posts2[i].title ?  posts2[i].title : '' %></span>
             </div>
             <div id='middle-row'>
-                <a id="icons" href="tel:<%= posts2[i].contact ?   posts2[i].contact : '' %>">
+                <a id="icons" target="_blank" href="tel:<%= posts2[i].contact ?   posts2[i].contact : '' %>">
                     <span class="iconify" data-icon="fa-solid:phone-alt" data-inline="false"></span>
                 </a>
-                <a id="icons" href="sms:<%= posts2[i].contact ?   posts2[i].contact : '' %>">
+                <a id="icons" target="_blank" href="sms:<%= posts2[i].contact ?   posts2[i].contact : '' %>">
                     <span class="iconify" data-icon="fa-solid:sms" data-inline="false"></span>
                 </a>
-                <a id="icons" href="https://<%- posts2[i].website ? posts2[i].website : '' %> ">
+                <a id="icons" target="_blank" href="https://<%- posts2[i].website ? posts2[i].website : '' %> ">
                     <span class="iconify" data-icon="dashicons:admin-site-alt3" data-inline="false"></span>
                 </a>
             </div>

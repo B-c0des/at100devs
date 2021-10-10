@@ -269,6 +269,18 @@ function closeUpdateProfile() {
 
 }
 
+function topAcross() {
+    var scrollToTop = document.querySelectorAll("#across").length;
+    setTimeout(function () {
+        for (var i = 0; i < scrollToTop; i++) {
+
+
+            document.querySelectorAll("#across")[i].scrollTop = 1000
+
+        };
+    }, 500);
+}
+
 function toggleFeedView() {
     // Get the DOM reference
     var contentId3 = document.getElementById("feed");
