@@ -945,11 +945,7 @@ header .overlay {
 }
 
 #logo {
-	height: 60px;
-	/* height: 11%;
-            width:11%;
-            margin: 0 auto;
-            margin-bottom: -3%; */
+	margin-top: -30px;
 }
 
 #add-posts1 {
@@ -1028,7 +1024,10 @@ textarea:focus {
 	margin: 5px;
 	height: 8vh;
 	border-radius: 5px;
-	border-color: skyblue;
+	border-color: 2px solid skyblue;
+	box-shadow: inset 0 0 30px 0px deeppink,
+		0 0 4px 1px cyan;
+
 }
 
 .comment-box:focus {
@@ -1037,7 +1036,8 @@ textarea:focus {
 	margin: 5px;
 	width: 98%;
 	background-image: none;
-	box-shadow: inset 0 0 23px -2px deeppink, 0 0 2px 0px black;
+	box-shadow: inset 0 0 30px 4px deeppink,
+		inset 0 0 4px 6px rgb(255 255 255);
 }
 
 .comment-box-text {
@@ -1068,24 +1068,27 @@ textarea:focus {
 }
 
 #loginIcon {
-	width: 40px;
-	height: 40px;
+	width: 100px;
+	height: 100px;
 	border-radius: 50%;
 	object-fit: cover;
-	box-shadow: inset 0 0 30px 0px #354a76, 0 0 2px 1px black, 4px -4px 3px cyan, -4px 4px 3px deeppink;
+	box-shadow: inset 0 0 30px 0px #354a76,
+		0 0 2px 1px black,
+		4px -4px 3px cyan,
+		-4px 4px 3px deeppink;
 	cursor: pointer;
-	margin: 5px;
+	/* margin: 5px; */
 	transition: all .1s ease-in-out;
+	margin-top: 50px;
 }
 
 #loginIcon:hover {
-	width: 40px;
-	height: 40px;
+
 	border-radius: 50%;
 	object-fit: cover;
 	box-shadow: inset 0 0 30px 0px #354a76, 0 0 2px 1px black, 4px -4px 5px deeppink, -4px 4px 5px cyan;
 	cursor: pointer;
-	margin: 5px;
+
 }
 
 #dropdown-alert {
@@ -1256,7 +1259,6 @@ main.container1 {
 	justify-content: space-between;
 	font-size: 3.5vh;
 	color: white;
-	background-color: rgba(200, 200, 200, 0.3);
 	box-shadow: inset 0 0 90px 44px #354a76, 0 0 2px 0px black;
 	font-family: monospace;
 	font-weight: bold;
@@ -2169,10 +2171,21 @@ input[type="file"]:active {
 
 	.container-view {
 		margin: 0 auto;
-		flex-direction: column;
-		width: 100%;
-		padding: 0%;
+		flex-direction: row;
+		position: fixed;
+		padding-top: 1%;
+		padding-left: 1%;
+		padding-right: 1%;
+		padding-bottom: 1%;
+		overflow-y: scroll;
+		height: 100%;
+		width: 100vw;
+		backdrop-filter: blur(20px) saturate(100%) contrast(100%) brightness(141%) hue-rotate(46deg) drop-shadow(2px 4px 6px black);
+		background-color: rgba(255, 255, 255, .15);
+		display: none;
+		box-shadow: inset -6px 0px 31px 12px rgb(0 0 0 / 90%), -6px 0px 31px 12px rgb(0 0 0 / 90%);
 	}
+
 
 	.container-view img {
 		width: 100%;

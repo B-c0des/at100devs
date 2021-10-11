@@ -4,20 +4,20 @@
         <form action="/post/createPost" enctype="multipart/form-data" method="POST">
             <div class="mb-1">
                 <h1><label for="name" class="form-label">Name</label></h1>
-                <input type="text" class="form-control" id="name" name="name" required>
+                <input type="text" class="comment-box" id="name" name="name" required>
             </div>
             <div class="mb-1">
                 <h1><label for="title" class="form-label">Title</label></h1>
-                <input type="text" class="form-control" id="title" name="title" required>
+                <input type="text" class="comment-box" id="title" name="title" required>
             </div>
 
             <div class="mb-1">
                 <h1><label for="website" class="form-label">Website</label></h1>
-                <input class="form-control" id="website" name="website" required></input>
+                <input class="comment-box" id="website" name="website" required></input>
             </div>
             <div class="mb-1">
                 <h1><label for="contact" class="form-label">Phone Number</label></h1>
-                <input type="number" class="form-control" onkeydown="phone()" name="contact" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                <input type="number" class="comment-box" onkeydown="phone()" name="contact" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
             </div>
             <h1>My Stack</h1>
             <textarea id='textIcons' name="textIcons" required style="    display:none;"></textarea>
@@ -36,7 +36,7 @@
 
             <h1><label for="imgUpload" id="img-label" class="form-label">Image</label>
                 <img id="output" />
-                <input type="file" accept="image/*" oninput="loadFile(event)" class="form-control" id="file" name="file">
+                <input type="file" accept="image/*" oninput="loadFile(event)" class="comment-box" id="file" name="file">
 
                 <button type="submit" class="btn-primary mt-1" value="Upload" style="filter: drop-shadow( 0 0px 0px black); width:100%" >Submit</button>
         </form>
