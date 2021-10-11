@@ -11,8 +11,10 @@ window.onload = () => {
 
             faseout = document.querySelector(".container")
             $(faseout).fadeOut();
+
+
         });
 
-        $(document.querySelector('.')).fadeOut();
+
     }
 }

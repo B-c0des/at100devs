@@ -356,9 +356,14 @@ textarea:focus {
     filter: drop-shadow(2px 4px 6px black);
 }
 
-loaded {
-    position: fixed;
-    display: flex;
+.padding-left-right {
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.loaded {
+    position: absolute;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -374,11 +379,7 @@ loaded {
     top: -2px;
     transition: all 5.5s ease-in-out;
     z-index: 100;
-}
-
-.padding-left-right {
-    padding-left: 7%;
-    padding-right: 7%;
+    background-image: url(https://flevix.com/wp-content/uploads/2021/05/Bubble-Background.svg);
 }
 
 @media only screen and (max-width: 900px) {
