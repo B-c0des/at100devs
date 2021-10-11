@@ -1165,6 +1165,7 @@ textarea:focus {
 	margin: 5px;
 }
 
+
 .container {
 	display: flex;
 	flex-direction: row;
@@ -1408,7 +1409,7 @@ main.container1 {
 	color: #fff;
 	text-shadow: 0px 2px 2px black;
 	align-items: center;
-	height: 45px;
+	height: 75px;
 	padding-left: 5px;
 	transition: all .1s ease-in-out;
 	font-size: 1.4vw;
@@ -1815,6 +1816,18 @@ input[type="file"]:active {
 		margin-top: -15px;
 		height: 25px;
 	}
+
+	#username-display {
+		font-family: 'Mina',
+			cursive;
+		text-shadow: 0px 0px 10px #000;
+		display: flex;
+		margin: 5px;
+		margin-top: 50px;
+	}
+
+
+
 
 	#x:hover {
 		filter: brightness(100%) contrast(100%);
