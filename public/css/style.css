@@ -536,9 +536,11 @@ body::-webkit-scrollbar-thumb {
 	overflow-y: scroll;
 	height: 100%;
 	width: 100vw;
-	backdrop-filter: blur(100px) saturate(130%) contrast(120%) brightness(110%);
+	backdrop-filter: blur(20px) saturate(130%) contrast(120%) brightness(110%);
 	background-color: rgba(255, 255, 255, .15);
 	display: none;
+	box-shadow: inset -6px 0px 31px 12px rgb(0 0 0 / 90%),
+		-6px 0px 31px 12px rgb(0 0 0 / 90%);
 }
 
 #x {
@@ -932,10 +934,14 @@ header .overlay {
 }
 
 #img {
+	width: 100%;
+	z-index: 5;
 	height: 100%;
-	filter: drop-shadow(2px 4px 6px black);
-	box-shadow: inset -7px 0px 30px 5px #354a76;
-	border-radius: 20px 00px 0px 20px;
+	background-size: cover;
+	background-position: center;
+	border-radius: 20px 0px 0px 20px;
+	box-shadow: inset -6px 0px 31px 12px rgb(0 0 0 / 90%),
+		-6px 0px 31px 12px rgb(0 0 0 / 90%);
 }
 
 #logo {
@@ -1529,6 +1535,10 @@ hr {
 }
 
 button {
+	box-sizing: border-box;
+	margin: auto;
+	background-color: transparent;
+	font-size: 1.5vw;
 	color: white;
 	border: 0px solid gray;
 	height: 30px;
@@ -1769,6 +1779,41 @@ input[type="file"]:active {
 		background-color: black;
 	}
 
+	#top-row {
+		margin-bottom: 5px;
+		display: flex;
+		margin-right: 10px;
+		margin-left: 10px;
+		padding-left: 10px;
+		justify-content: flex-start;
+		flex-direction: column;
+		filter: drop-shadow(0px 2px 4px black);
+	}
+
+	#middle-row {
+		margin-bottom: 5px;
+		padding-left: 40px;
+		padding-right: 40px;
+		display: flex;
+		justify-content: space-evenly;
+		filter: drop-shadow(0px 15px 8px black);
+	}
+
+	#bottom-row {
+		box-shadow: 0px 9px 10px -3px rgb(0 0 0 / 90%);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		/* padding-left: 2%; */
+		/* padding-right: 2%; */
+		background-color: rgba(00, 0, 00, .4);
+		border-radius: 15px;
+		/* margin-right: 8%; */
+		/* margin-left: 100px; */
+		margin-top: -15px;
+		height: 25px;
+	}
+
 	#x:hover {
 		filter: brightness(100%) contrast(100%);
 		transform: scale(1);
@@ -1982,29 +2027,29 @@ input[type="file"]:active {
 	}
 
 	#add-posts {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		border-radius: 0%;
+		top: 40%;
+		left: 50%;
+		margin-top: 0px;
+
+		padding-bottom: 10px;
+		background-color: rgba(255, 255, 255, .25);
+		height: -webkit-fill-available;
+		/* border-radius: 40px; */
+		border-radius: 0px;
 		width: 100%;
-		height: 50%;
-		box-shadow: 0px 20px 20px 4px rgba(00, 00, 00, .9);
-		background-size: cover;
-		height: fit-content;
-		z-index: 20;
-		min-height: 60vh;
+		/* box-shadow: inset 0 0 30px 0px #354a76, 0 0 2px 1px black, 4px -4px 3px cyan, -4px 4px 3px deeppink; */
+
 	}
 
 	#img {
-		border-radius: 0px;
-		height: 100%;
-		box-shadow: 5px 18px 14px 1px rgb(0 0 0 / 0%);
-		animation: mymove 1s;
-		animation-iteration-count: 1;
-		animation-fill-mode: forwards;
-		box-shadow: inset 0 0 15px 5px #354a76, 0 0 67px 350px white;
-		border-radius: 0px;
-
+		width: 75px;
+		height: 100px;
+		margin-bottom: -100px;
+		background-size: cover;
+		background-position: center;
+		border-radius: 0px 0px 30px 0px;
+		z-index: 100;
+		box-shadow: 1px 0px 7px black;
 	}
 
 	#img-single-user {
@@ -2065,17 +2110,17 @@ input[type="file"]:active {
 	#x {
 		position: inherit;
 		font-family: monospace;
-		right: 1px;
-		top: 15px;
+		right: 0px;
+		padding-top: 0px;
+		margin-top: 0px;
 		text-align: center;
 		font-size: 60px;
 		color: rgba(255, 255, 255, .9);
-		width: 50px;
-		height: 50px;
-		border-radius: 4px;
+		width: 65px;
+		height: 85px;
+		border-radius: 0px 0px 0px 30px;
 		line-height: 36px;
 		/* border: 1px solid rgba(255, 255, 255, .9); */
-		border-radius: 100%;
 		background-color: rgba(00, 0, 00, .3);
 	}
 
@@ -2168,12 +2213,15 @@ input[type="file"]:active {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: flex-end;
 		color: white;
 		/* font-size: 3vw; */
-		color: white;
-		text-align: center;
+		/* color: white; */
+		padding-top: 15px;
+		/* padding-left: 75px; */
+		/* text-align: end; */
 		border-radius: 0px;
+		/* padding-left: 100px; */
 
 	}
 
@@ -2252,12 +2300,6 @@ input[type="file"]:active {
 		height: 100px;
 	}
 
-	button {
-		box-sizing: border-box;
-		margin: auto;
-		background-color: transparent;
-		font-size: 5vw;
-	}
 
 	#buttonContainer button {
 		border: 1px solid white;
@@ -2278,8 +2320,9 @@ input[type="file"]:active {
 	#backdrop {
 		display: flex;
 		flex-direction: row;
-		font-size: 4vw;
+		font-size: 1.5vw;
 		text-shadow: 0px 1px 3px black;
+		text-align: center;
 	}
 
 	#comment {
@@ -2313,7 +2356,7 @@ input[type="file"]:active {
 		cursor: pointer;
 		padding-left: 5px;
 		transition: none;
-		font-size: 5vw;
+		font-size: 1.5vw;
 		z-index: 30;
 	}
 
