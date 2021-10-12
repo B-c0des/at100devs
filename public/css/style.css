@@ -2058,6 +2058,7 @@ input[type="file"]:active {
 	}
 
 	#img {
+		position: absolute;
 		width: 75px;
 		height: 100px;
 		margin-bottom: -100px;
