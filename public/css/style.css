@@ -986,7 +986,6 @@ input {
 input:focus {
 	color: cadetblue;
 	background-color: black;
-	text-shadow: 1px 1px 20px deeppink;
 	font-size: 24px;
 	box-shadow: inset 0 0 50px 10px black, 0 0 0px 1px aqua;
 	filter: drop-shadow(0px 0px 10px deeppink);
@@ -1025,8 +1024,7 @@ textarea:focus {
 	height: 8vh;
 	border-radius: 5px;
 	border-color: 2px solid skyblue;
-	box-shadow: inset 0 0 30px 0px deeppink,
-		0 0 4px 1px cyan;
+
 
 }
 
@@ -1036,8 +1034,8 @@ textarea:focus {
 	margin: 5px;
 	width: 98%;
 	background-image: none;
-	box-shadow: inset 0 0 30px 4px deeppink,
-		inset 0 0 4px 6px rgb(255 255 255);
+	box-shadow: inset 0 0 3px 2px deeppink,
+		inset 0 0 38px 6px rgb(255 255 255);
 }
 
 .comment-box-text {
