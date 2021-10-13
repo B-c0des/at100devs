@@ -1873,7 +1873,9 @@ input[type="file"]:active {
 		transition: none;
 	}
 
-	#logo {}
+	#logo {
+		width: 100%;
+	}
 
 
 
