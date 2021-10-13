@@ -536,7 +536,6 @@ body::-webkit-scrollbar-thumb {
 	overflow-y: scroll;
 	height: 100%;
 	width: 100vw;
-	backdrop-filter: blur(20px) saturate(130%) contrast(120%) brightness(110%);
 	background-color: rgba(255, 255, 255, .15);
 	display: none;
 	box-shadow: inset -6px 0px 31px 12px rgb(0 0 0 / 90%),
@@ -547,7 +546,7 @@ body::-webkit-scrollbar-thumb {
 	position: inherit;
 	font-family: monospace;
 	margin-top: 3px;
-	right: 1%;
+	right: 3%;
 	text-align: center;
 	font-size: 40px;
 	width: 30px;
@@ -790,7 +789,7 @@ h4 {
 
 #show-feed {
 
-	backdrop-filter: blur(10px);
+	backdrop-filter: brightness(1.05);
 }
 
 #my-profile .container-view {
@@ -2179,7 +2178,7 @@ input[type="file"]:active {
 		overflow-y: scroll;
 		height: 100%;
 		width: 100vw;
-		backdrop-filter: blur(20px) saturate(100%) contrast(100%) brightness(141%) hue-rotate(46deg) drop-shadow(2px 4px 6px black);
+
 		background-color: rgba(255, 255, 255, .15);
 		display: none;
 		box-shadow: inset -6px 0px 31px 12px rgb(0 0 0 / 90%), -6px 0px 31px 12px rgb(0 0 0 / 90%);

@@ -144,7 +144,6 @@ body {
     padding-top: 5%;
     background-position: bottom;
     background-attachment: fixed;
-    backdrop-filter: blur(25px) brightness(1) saturate(1);
 }
 
 * {
@@ -168,6 +167,7 @@ body {
     padding-right: 1vw;
     padding-left: 1vw;
     margin-top: 70px;
+    backdrop-filter: blur(10px);
     display: none;
 }
 
