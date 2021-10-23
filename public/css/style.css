@@ -155,7 +155,7 @@ table {
 
 body {
 	background-size: cover;
-	background-image: url("https://flevix.com/wp-content/uploads/2020/01/Black-Animation-Background.svg");
+	background-image: url("https://flevix.com/wp-content/uploads/2019/12/Live-Wave-Background.svg");
 	background-color: black;
 	background-position: bottom;
 	background-attachment: fixed;
@@ -952,7 +952,7 @@ header .overlay {
 	padding-right: 3%;
 	padding-left: 3%;
 	padding-bottom: 10px;
-	background-color: rgba(255, 25, 255, .25);
+	background-color: rgba(155, 195, 255, .25);
 	border-radius: 40px;
 	width: 100%;
 	box-shadow: inset 0 0 90px 50px #354a76, 0 0 2px 1px black, 4px -4px 3px cyan, -4px 4px 3px deeppink, 0 15px 30px 10px black;
