@@ -155,8 +155,8 @@ table {
 
 body {
 	background-size: cover;
-	background-image: url("https://flevix.com/wp-content/uploads/2019/12/Live-Wave-Background.svg");
-	background-color: black;
+	/* background-image: url("https://source.unsplash.com/1600x1600/?texture"); */
+	background-color: #212122;
 	background-position: bottom;
 	background-attachment: fixed;
 	font-family: 'Mina';
@@ -567,7 +567,7 @@ body::-webkit-scrollbar-thumb {
 
 #x:hover {
 	filter: brightness(115%) contrast(106%);
-	transform: scale(1.1);
+	transform: scale3d(1.5, 1.5, 1.5);
 	animation: mymove 1s;
 	animation-iteration-count: 1;
 	border-bottom: 20px;
