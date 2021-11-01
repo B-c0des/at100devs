@@ -567,7 +567,7 @@ body::-webkit-scrollbar-thumb {
 
 #x:hover {
 	filter: brightness(115%) contrast(106%);
-	transform: scale3d(1.5, 1.5, 1.5);
+	transform: scale3d(1.1, 1.1, 1.1);
 	animation: mymove 1s;
 	animation-iteration-count: 1;
 	border-bottom: 20px;
