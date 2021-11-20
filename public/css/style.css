@@ -469,11 +469,11 @@ a:hover {
 }
 
 .glow {
-	color: darkblue;
+	color: white;
 	font-size: 2vw;
 	font-family: monospace;
 	text-shadow: 0 1px 3px black;
-	background-image: linear-gradient(to right, rgba(255, 200, 251, 0.9), rgb(255, 255, 185, .9));
+	background-image: linear-gradient(to top right, rgba(25, 200, 251, 0.9), rgb(255, 55, 185, .9));
 	/* backdrop-filter: drop-shadow(2px 4px 6px black); */
 	box-shadow: inset 0px -2px 3px 0px white, 0 0 5px -1px white, -2px 2px 4px cyan, 4px -4px 10px deeppink;
 	border-radius: 20px;
@@ -2407,11 +2407,11 @@ input[type="file"]:active {
 	}
 
 	.glow {
-		color: darkblue;
+		color: white;
 		font-size: 3vh;
 		font-family: monospace;
 		text-shadow: 0 1px 3px black;
-		background-image: linear-gradient(to right, rgba(255, 200, 251, 0.9), rgb(255, 255, 185, .9));
+		background-image: linear-gradient(to top right, rgba(25, 200, 251, 0.9), rgb(255, 55, 185, .9));
 		/* backdrop-filter: drop-shadow(2px 4px 6px black); */
 		box-shadow: inset 0px -2px 3px 0px white, 0 0 5px -1px white, -2px 2px 4px cyan, 4px -4px 10px deeppink;
 		border-radius: 20px;
