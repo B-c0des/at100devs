@@ -33,7 +33,7 @@
 ## Social Again
   <p align="center">
 <a href="http://social-again.herokuapp.com/" target="_blank">
-<img width="600px" src="https://repository-images.githubusercontent.com/370849781/d3bf52de-6d67-4a73-9b17-616e31d05fbf">
+<img width="600px" src="https://repository-images.githubusercontent.com/370849781/ca140020-284f-4f02-8a31-a32a04f50996">
 </a>
 </p>
 <br>
