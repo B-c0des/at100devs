@@ -16,16 +16,16 @@
                             <span><%= post[0].title ?  post[0].title : '' %></span>
                         </div>
                         <div id="middle-row">
-                            <a id="icons" target="_blank" href="tel:<%= post[0].contact ?   posts2[i].contact : '' %>">
+                            <a id="icons" target="_blank" rel="noopener" href="tel:<%= post[0].contact ?   posts2[i].contact : '' %>">
                                 <span class="iconify" data-icon="fa-solid:phone-alt" data-inline="false"></span>
                             </a>
-                            <a id="icons" target="_blank" href="sms:<%= post[0].contact ?   posts2[i].contact : '' %>">
+                            <a id="icons" target="_blank" rel="noopener" href="sms:<%= post[0].contact ?   posts2[i].contact : '' %>">
                                 <span class="iconify" data-icon="fa-solid:sms" data-inline="false"></span>
                             </a>
-                            <a id="icons" target="_blank" href="https://<%- post[0].website ? posts2[i].website : '' %> ">
+                            <a id="icons" target="_blank" rel="noopener" href="https://<%- post[0].website ? posts2[i].website : '' %> ">
                                 <span class="iconify" data-icon="dashicons:admin-site-alt3" data-inline="false"></span>
                             </a>
-                            <a id="icons" target="_blank" href="">
+                            <a id="icons" target="_blank" rel="noopener" href="">
                                 <span class="iconify" data-icon="entypo:location" data-inline="false"></span>
                             </a>
                             <div id='likebox'>
