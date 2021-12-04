@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta name="viewport" content="width=device-width">
-<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="/js/main.js" async></script>
 <title>Social Againe</title>
     <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ios7-active-basic/512/web_internet_interface_pixel_perfect-128.png">
     <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/ios7-active-basic/512/web_internet_interface_pixel_perfect-128.png" type="image/gif">
@@ -17,12 +17,12 @@
                     <%- post.length <= 0 ? ` <button class="navButton"   onclick="toggleContent()" class="">Add Profile</button>` : '' %>
                        <span><%- post.length > 0 ? `<button class="navButton" onclick="scrollLoc(),updateProfile()" class="">Update Profile</button>` : '' %></span>
                        <span><button onclick="scrollLoc(), myProfile()" class="navButton" id="myProfile">My Profile</button></span>
-                       <button onclick="about()" ><img id="logo" src="https://res.cloudinary.com/at100dev/image/upload/v1628713361/social_again_l9lsgr.svg">
+                       <button onclick="about()" ><img id="logo" src="https://res.cloudinary.com/at100dev/image/upload/v1628713361/social_again_l9lsgr.svg" async>
                        </button>
                         <div id="user-name" onclick="scrollLoc(), myProfile1()">
                         <h1 id="username-display" >
                             <% for(var i=0; i<posts2.length; i++) {%>
-                                <%- posts2[i]?.user == user.id ? `<img id="loginIcon" src="${posts2[i].image}">` : '' %>
+                                <%- posts2[i]?.user == user.id ? `<img id="loginIcon" src="${posts2[i].image}" async>` : '' %>
                                     <%}%>
                                    
                         <h1 id="email-display">
@@ -46,7 +46,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js" async></script>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Raleway+Dots&family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
