@@ -135,7 +135,7 @@ table {
 body {
     background-color: black;
     background-size: cover;
-    background-image: url('');
+    background-image: url('https://res.cloudinary.com/at100dev/image/upload/v1638590510/download_h3jazk.png');
     height: 100vh;
     transition: background-image 1000ms linear;
     font-family: 'Mina', sans-serif;
