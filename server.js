@@ -14,6 +14,7 @@ const bodyParser = require('body-parser')
 const multer = require('multer');
 const path = require("path");
 const tools = require('@iconify/tools');
+const compression = require('compression')
 
 //Use .env file in config folder
 require("dotenv").config({
@@ -47,6 +48,7 @@ app.use(methodOverride("_method"));
 
 // Setup Sessions - stored in MongoDB
 app.use(
+    compression(),
     session({
         secret: "demo",
         resave: false,
