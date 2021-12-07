@@ -2055,7 +2055,7 @@ input[type="file"]:active {
 	#img {
 		position: absolute;
 		width: 75px;
-		height: 100px;
+		height: 50px;
 		margin-bottom: -100px;
 		background-size: cover;
 		background-position: center;
@@ -2122,7 +2122,7 @@ input[type="file"]:active {
 	#x {
 		position: inherit;
 		font-family: monospace;
-		right: 0px;
+		right: -8px;
 		padding-top: 0px;
 		margin-top: 0px;
 		text-align: center;
