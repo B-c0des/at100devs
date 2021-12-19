@@ -39,9 +39,11 @@
 <br>
 <br>
 
-```Social Again is a social networking application for software technology enthusiasts to be social again.
+```
+Social Again is a social networking application for software technology enthusiasts to be social again.
 
 Users can create a profile,share a photo, share software technologies share contact information and share comments.
+
 ```
 
 

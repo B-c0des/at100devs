@@ -129,9 +129,7 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-
 /* END RESET CSS */
-
 body {
     background-color: black;
     background-size: cover;
@@ -155,7 +153,6 @@ body {
     margin-top: -120px;
     width: -webkit-fill-available;
 }
-
 .container {
     flex-direction: column;
     width: 40%;
@@ -177,7 +174,6 @@ body {
     align-items: center;
     text-align: -webkit-center;
 }
-
 .fiftyPercentW {
     width: 50%;
 }
@@ -185,7 +181,6 @@ body {
 .eightyPercentW {
     width: 80%;
 }
-
 .alert-danger {
     text-align: center;
     color: black;
@@ -195,17 +190,12 @@ body {
     text-shadow: 0 0px 20px orange;
     border-radius: .55rem;
 }
-
 .center {
     text-align: center;
 }
-
 .alert {
     padding: 0px;
 }
-
-
-
 .comment-box {
     border-radius: .55rem;
     color: black;
@@ -214,21 +204,17 @@ body {
     border-radius: 5px;
     border-color: 2px solid skyblue;
     border-radius: .55rem;
-
 }
-
 .comment-box:focus {
     color: black;
     background-color: white;
     box-shadow: inset 0 0 2px 2px deeppink;
     border-radius: .55rem;
 }
-
 #wrapper {
 
     width: -webkit-fill-available;
 }
-
 button {
     display: inline-block;
     padding: 24px 32px;
@@ -245,8 +231,6 @@ button {
     text-transform: uppercase;
     border-radius: 50px;
 }
-
-
 .btn-primary {
     color: mediumvioletred;
     text-shadow: 0px 1px 2px #354a76;
@@ -261,7 +245,6 @@ button {
         -1px 1px 1px white,
         1px -1px 5px deeppink;
 }
-
 .btn-primary:hover {
     color: cyan;
     text-shadow: 0px 0px 2px black;
@@ -277,7 +260,6 @@ button {
 
     background-image: linear-gradient(to bottom left, rgba(225, 200, 251, 1), rgb(255, 100, 185));
 }
-
 .btn-primary:hover {
     color: cyan;
     text-shadow: 0px 0px 2px black;
@@ -291,18 +273,14 @@ button {
         5px 0px 10px deeppink;
     background-image: linear-gradient(to bottom left, rgba(225, 200, 251, 1), rgb(255, 100, 185));
 }
-
 .btn-primary:focus {
     background-color: deeppink;
     font-size: 18px;
     border-color: deeppink;
-
 }
-
 label {
     text-shadow: 1px 2px 2px #354a76;
 }
-
 input {
     margin: .5%;
     padding: 1%;
@@ -312,21 +290,16 @@ input {
     text-align: center;
     font-family: 'Mina', sans-serif;
 }
-
 input:focus {
     background-color: black;
     box-shadow: inset 0 0 10px 4px cyan, 0 0 9px -1px white;
 }
-
-
-
 textarea {
     color: cadetblue;
     text-shadow: 0px 0px 20px #354a76;
     font-size: 18px;
     text-align: center;
 }
-
 textarea:focus {
     color: cadetblue;
     background-color: black;
@@ -334,17 +307,14 @@ textarea:focus {
     font-size: 24px;
     box-shadow: inset 0 0 50px 10px black, 0 0 0px 1px aqua;
 }
-
 .form-label {
     margin-bottom: 0px;
     padding-bottom: 5px;
     padding-top: 5px;
 }
-
 .btn {
     border-radius: .55rem;
 }
-
 .form-text {
     margin-top: .25rem;
     font-size: -26.125em;
@@ -354,12 +324,10 @@ textarea:focus {
     text-shadow: 0 1px 2px deeppink;
     filter: drop-shadow(2px 4px 6px black);
 }
-
 .padding-left-right {
     padding-left: 7%;
     padding-right: 7%;
 }
-
 .loaded {
     position: absolute;
     display: none;
@@ -380,12 +348,10 @@ textarea:focus {
     z-index: 100;
     background-image: url(https://source.unsplash.com/1600x900/?nature,water);
 }
-
 @media only screen and (max-width: 900px) {
     body {
         padding: 0%;
     }
-
     .alert-danger {
         text-align: center;
         color: black;
@@ -396,7 +362,6 @@ textarea:focus {
         text-shadow: 0 0px 20px orange;
         letter-spacing: .3vw;
     }
-
     .container {
         display: flex;
         flex-direction: column;
@@ -409,13 +374,10 @@ textarea:focus {
         margin-top: 50px;
 
     }
-
     .container1 {
         justify-content: center;
     }
-
 }
-
 @media (min-aspect-ratio: 16/9) {}
 
 @media (max-aspect-ratio: 16/9) {}
