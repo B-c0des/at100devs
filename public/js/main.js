@@ -8,13 +8,11 @@ function getDocHeight() {
         D.body.clientHeight, D.documentElement.clientHeight
     )
 }
-
 var docheight = getDocHeight()
 
 function yes() {
     amountscrolled.bind(console.log('bottom'))
 }
-
 function amountscrolled() {
     var winheight = window.innerHeight || (document.documentElement || document.body).clientHeight
     var docheight = getDocHeight()
@@ -26,78 +24,50 @@ function amountscrolled() {
         console.log('bottom')
     }
 }
-
 window.addEventListener("scroll", function () {
     amountscrolled()
 }, false)
-
-
-
 window.onload = () => {
     const t1 = performance.now();
     console.log("Page loaded in " + Math.round(t1 - t0) + ' milliseconds!');
     console.log('Welcome to Social Again!')
     let about = document.getElementById('loaded')
     $(about).fadeOut();
-
     document.querySelector('.navButton').addEventListener("click", function () {
-
         $(document.querySelector('#show-feed')).fadeOut();
         $(document.querySelector('#headerGradient')).fadeOut();
     })
 }
-
-
-
 function about() {
     document.getElementById('my-theme').style.display = "block"
 }
-
 function closeAbout() {
     let about = document.getElementById('my-theme')
     $(about).fadeOut();
 }
 //minimize post
-
 function scrollLoc() {
     localStorage.setItem('scrollLocation', document.querySelector('body').scrollTop)
-
 }
-
 function scrollBottom() {}
-
-
-
 function minimizePost(x) {
-
     $(document.getElementById(x)).fadeOut();
-
     setTimeout(function () {
-
         let feed3 = document.getElementById('feed')
         $(feed3).fadeIn();
-
         let header3 = document.getElementById("headerGradient");
         header3.style.display !== "none" ? header3.style.display = "none" :
             header3.style.display = "flex";
-
-
     }, 500);
-
     setTimeout(function () {
-
         document.querySelector('body').scrollTop = localStorage.getItem('scrollLocation')
-
     }, 500);
-
 }
-
 function toggleHeader() {
     let header4 = document.getElementById("headerGradient");
     header4.style.display !== "none" ? header4.style.display = "none" :
         header4.style.display = "flex";
 }
-
 function minimizeMyProfile(x) {
     $(document.getElementById(x)).fadeOut();
     // document.getElementById(x).style.display = 'none';
@@ -107,40 +77,24 @@ function minimizeMyProfile(x) {
     //     document.getElementById('loader').style.display = "none"
     // }, 500);
 }
-
-
-
 function openProfile() {
-
-
-
     document.getElementById('loader').style.display = "block"
     document.getElementById(x).style.display = 'flex';
     document.getElementById('feed').style.display = 'none'
     document.getElementById(x).style.className = x
-
     let header = document.getElementById("headerGradient");
     header.style.display !== "none" ? header.style.display = "none" :
         header.style.display = "flex";
-
-
     setTimeout(function () {
-
     }, 500);
 }
 //   onclick="document.getElementById(`${<%=[i]%>}`).style.display = 'flex';document.getElementById('feed').style.display = 'none' getScrollPos(); " class="<%=[i]%>" id="img-multi-user" src="<%= posts2[i].lowresimage%>">
-
-
 function myFunction() {
     location.reload();
 }
-
 function videoLoaded() {
-
 }
-
 let images = document.querySelectorAll('img');
-
 function handler(entries, observer) {
     for (entry of entries) {
         let images = document.querySelectorAll('img');
@@ -149,34 +103,22 @@ function handler(entries, observer) {
         } else {}
     }
 }
-
-
 let observer = new IntersectionObserver(handler);
-
 images.forEach(img => observer.observe(img));
-
 function searchByKeyword() {
     var results = YouTube.Search.list('id,snippet', {
         q: 'dogs',
         maxResults: 25
     });
-
     for (var i in results.items) {
         var item = results.items[i];
         Logger.log('[%s] Title: %s', item.id.videoId, item.snippet.title);
     }
 }
-
-
-
-
-
-
 function addText() {
     var input = document.getElementById('something');
     input.value = input.value + ' test'
 }
-
 let loadFile = function (e) {
     let output = document.getElementById('output');
     output.src = URL.createObjectURL(e.target.files[0]);
@@ -184,13 +126,9 @@ let loadFile = function (e) {
         URL.revokeObjectURL(output.src)
     }
 }
-
 let loadPost = function (e) {
     let output = document.getElementById('output');
-
-
 }
-
 let loadFile2 = function (e) {
     let output2 = document.getElementById('output2');
     output2.src = URL.createObjectURL(e.target.files[0]);
@@ -198,12 +136,9 @@ let loadFile2 = function (e) {
         URL.revokeObjectURL(output2.src)
     }
 }
-
 let loadPost2 = function (e) {
     let output2 = document.getElementById('output2');
-
 }
-
 function toggleContent() {
     // Get the DOM reference
     let contentId1 = document.getElementById("add-profile");
@@ -213,62 +148,38 @@ function toggleContent() {
         contentId1.style.display = "block";
     feed.style.display !== "none" ? feed.style.display = "none" :
         feed.style.display = "flex";
-
 }
-
 function updateProfile() {
     // Get the DOM reference
     $(document.getElementById("update-profile")).fadeIn();
-
     var contentId2 = document.getElementById("update-profile");
-
     let feed = document.getElementById("feed");
     let header = document.getElementById("headerGradient");
     // Toggle 
-
     feed.style.display !== "none" ? feed.style.display = "none" :
         feed.style.display = "flex";
-
     header.style.display !== "none" ? header.style.display = "none" :
         header.style.display = "flex";
-
     setTimeout(function () {
         document.querySelector('body').scrollTop = 0
     }, 500);
-
 }
-
 function closeUpdateProfile() {
     // Get the DOM reference
     $(document.getElementById("update-profile")).fadeOut();
-
     var contentId5 = document.getElementById("update-profile");
-
-
     setTimeout(function () {
-
         let feed5 = document.getElementById('feed')
         $(feed5).fadeIn();
-
         let header5 = document.getElementById("headerGradient");
         header5.style.display !== "none" ? header5.style.display = "none" :
-            header5.style.display = "flex";
-
-
-    }, 500);
-
+     header5.style.display = "flex";
+   }, 500);
     setTimeout(function () {
-
         document.querySelector('body').scrollTop = localStorage.getItem('scrollLocation')
-
     }, 500);
-
     $(document.getElementById("my-profile")).fadeOut();
-
-    ///////////
-
 }
-
 function topAcross() {
     var scrollToTop = document.querySelectorAll("#across").length;
     setTimeout(function () {
@@ -280,7 +191,6 @@ function topAcross() {
         };
     }, 500);
 }
-
 function toggleFeedView() {
     // Get the DOM reference
     var contentId3 = document.getElementById("feed");
@@ -288,8 +198,6 @@ function toggleFeedView() {
     contentId2.style.display == "flex" ? contentId2.style.display = "none" :
         contentId2.style.display = "flex";
 }
-
-
 function photoWall() {
     // Get the DOM reference
     let feed = document.getElementById("feed");
@@ -298,48 +206,29 @@ function photoWall() {
     photoWall.style.display == "none" ? (photoWall.style.display = "flex") && (feed.style.display = "none") :
         (photoWall.style.display = "none") && (feed.style.display = "flex");
 }
-
 function closeProfile() {
-    // Get the DOM reference
-
-
-
+       // Get the DOM reference
     $(document.getElementById("my-profile")).fadeOut();
-
-
-
     let myProfile0 = document.getElementById("my-profile")
-
-
     setTimeout(function () {
-
         let feed0 = document.getElementById('feed')
         $(feed0).fadeIn();
-
         let header0 = document.getElementById("headerGradient");
         header0.style.display !== "none" ? header0.style.display = "none" :
             header0.style.display = "flex";
-
-
     }, 500);
     // Toggle 
     setTimeout(function () {
         document.querySelector('body').scrollTop = localStorage.getItem('scrollLocation')
     }, 500);
-
 }
-
 function myProfile() {
     // Get the DOM reference
-
     $(document.getElementById("my-profile")).fadeIn();
 
     let header1 = document.getElementById("headerGradient");
     header1.style.display !== "none" ? header1.style.display = "none" :
         header1.style.display = "flex";
-
-
-
     let feed3 = document.getElementById("feed");
     let myProfile3 = document.getElementById("my-profile")
     myProfile3.style.display = "none"
@@ -348,7 +237,6 @@ function myProfile() {
         (myProfile3.style.display = "none") && (feed3.style.display = "flex");
 
 }
-
 function myProfile1() {
     // Get the DOM reference
     $(document.getElementById("my-profile")).fadeIn();
@@ -362,15 +250,11 @@ function myProfile1() {
     // Toggle 
     myProfile.style.display == "none" ? (myProfile.style.display = "flex") && (feed.style.display = "none") :
         (myProfile.style.display = "none") && (feed.style.display = "flex");
-
-
 }
-
 function userIconClick() {
     (document.getElementById('img').style.height < '50%') ? (document.getElementById('img').style.height = '50%') &&
     (document.getElementById('across').style.height = '50vh') : (document.getElementById('img').style.height = '50%') && (document.getElementById('across').style.height = '50vh')
 }
-
 function searchUser() {
 
     let feed = document.getElementById("");
@@ -381,11 +265,9 @@ function searchUser() {
 
 
 }
-
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
-
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
@@ -399,13 +281,9 @@ window.onclick = function (event) {
         }
     }
 }
-
-
 function commentClick() {
     document.getElementById("${this.parentNode.id}").style.display = 'none'
 }
-
-
 function showFeed() {
     // Get the DOM reference
 
@@ -413,7 +291,6 @@ function showFeed() {
     // Toggle 
     feed.style.display == "none" ? (feed.style.display = "flex") : (feed.style.display = "none");
 }
-
 function myChat() {
     // Get the DOM reference
 
@@ -423,9 +300,6 @@ function myChat() {
     myChat.style.display == "none" ? (myChat.style.display = "flex") && (feed.style.display = "none") :
         (myChat.style.display = "none") && (feed.style.display = "flex");
 }
-
-
-
 function toggleContent1() {
 
     let singleUser = document.querySelectorAll("#img-single-user");
@@ -442,21 +316,14 @@ function toggleContent1() {
             multiUser[i].style.display = "block";
     }
 }
-
-
 function phone(elementValue) {
     var phoneNumberPattern = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
     return phoneNumberPattern.test(elementValue);
 }
-
 function phone1(elementValue) {
     var phoneNumberPattern = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
     return phoneNumberPattern.test(elementValue);
 }
-
-
-
-
 function toggleViews() {
     // Get the DOM reference
     var contentId = document.querySelector(".class");
@@ -465,7 +332,6 @@ function toggleViews() {
     contentId.style.display == "block" ? contentId.style.display = "none" :
         contentId.style.display = "block";
 }
-
 function minimize() {
 
     //     let feed = document.getElementById("feed");
@@ -475,14 +341,10 @@ function minimize() {
     //     let myProfile = document.getElementById("my-profile");
     //     myProfile.style.display = "none"
 }
-
 function updateScroll() {
     var element = document.querySelectorAll("#across");
     element.scrollTop = element.scrollHeight;
 }
-
-
-
 function getIcon() {
     let inputz = document.getElementById('inputs')
     let inputLowercase = inputz.value.toLowerCase()
@@ -492,24 +354,16 @@ function getIcon() {
     iconArr.length < 100 ? document.getElementById('iconss').innerHTML = iconArr.join('') : '';
 }
 var myArr = ['']
-
 function addStackToMyArray(x) {
-
 
     myArr.join(' ').includes(x) ? '' :
         myArr.push(`<span class="iconify" data-icon="${x}" onclick="removeIcon(${myArr.length})" data-inline="false"></span>`)
     document.getElementById('myIcons').innerHTML = myArr.join(' ')
     document.getElementById('textIcons').innerHTML = myArr.join(' ')
 }
-
 function removeIcon(x) {
     delete myArr[x]
     document.getElementById('myIcons').innerHTML = myArr.join(' ')
     document.getElementById('textIcons').innerHTML = myArr.join(' ')
 }
-
-
-
-
-
 console.log('Initializing...')
