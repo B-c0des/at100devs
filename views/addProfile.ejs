@@ -10,7 +10,6 @@
                 <h1><label for="title" class="form-label">Title</label></h1>
                 <input type="text" class="comment-box" id="title" name="title" required>
             </div>
-
             <div class="mb-1">
                 <h1><label for="website" class="form-label">Website</label></h1>
                 <input class="comment-box" id="website" name="website" required></input>
@@ -21,7 +20,6 @@
             </div>
             <h1>My Stack</h1>
             <textarea id='textIcons' name="textIcons" required style="    display:none;"></textarea>
-
             <span id='myIcons' style="    display: flex;
                justify-content: space-around;
                flex-wrap: wrap;
@@ -33,11 +31,9 @@
                justify-content: space-around;
                flex-wrap: wrap;
                overflow-y: scroll;" id='iconss'></span>
-
             <h1><label for="imgUpload" id="img-label" class="form-label">Image</label>
                 <img id="output" />
                 <input type="file" accept="image/*" oninput="loadFile(event)" class="comment-box" id="file" name="file">
-
                 <button type="submit" class="btn-primary mt-1" value="Upload" style="filter: drop-shadow( 0 0px 0px black); width:100%" >Submit</button>
         </form>
         <button onclick="toggleContent()" type="none" class="btn btn-primary mt-1 mb-1" style="filter: drop-shadow( 0 0px 0px black); width:100%;" value="cancel">Cancel</button>

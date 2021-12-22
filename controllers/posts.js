@@ -3,11 +3,8 @@ const Post = require("../models/Post");
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-
 const m = new Post;
-
 module.exports = {
-
     getProfile: async (req, res) => {
         try {
             const posts = await Post.find({
@@ -115,7 +112,6 @@ module.exports = {
             console.log(err);
         }
     },
-
     likePost: async (req, res) => {
         try {
             await Post.findOneAndUpdate({
@@ -133,7 +129,6 @@ module.exports = {
             console.log(err);
         }
     },
-
     commentPost: async (req, res) => {
         try {
             await Post.findOneAndUpdate({
@@ -156,7 +151,6 @@ module.exports = {
             console.log(err);
         }
     },
-
     deleteComment: async (req, res) => {
         try {
             await Post.findOneAndUpdate({
@@ -179,7 +173,6 @@ module.exports = {
             console.log(err);
         }
     },
-
     deletePost: async (req, res) => {
 
         try {
@@ -198,7 +191,6 @@ module.exports = {
             console.log(err);;
         }
     },
-
     deleteComment: async (req, res) => {
         try {
             await Post.findOneAndUpdate({

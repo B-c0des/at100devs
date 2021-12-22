@@ -44,14 +44,14 @@
                 <%if(post.length == 0){ %>
                 <div id='alert'>
                     <div id="dropdown-alert" onclick="toggleContent()" style="color:white; border-radius: 0px;"> Create
-                        a Profile to comment!</div>
+                    a Profile to comment!</div>
                 </div>
                 <%}%>
-                            <%if(post.length > 0){ %>
+                <%if(post.length > 0){ %>
                 <textarea placeholder="Comment here!" type="text" class="comment-box" name="comments"
-                    class='sendComment' style="z-index:-1"></textarea>
+                class='sendComment' style="z-index:-1"></textarea>
                 <%- posts2[i].name ? `
-                                <button type="submit" class="submitComment btn btn-primary text-center w-100 rounded-bottom" value="comments" >Post Comment!</button>` : 'Please create a profile first!' %>
+             <button type="submit" class="submitComment btn btn-primary text-center w-100 rounded-bottom" value="comments" >Post Comment!</button>` : 'Please create a profile first!' %>
             </form>
         </div>
         <%}%>
@@ -68,7 +68,6 @@
             <div style="background-image: url('<%= post[0].image%>'); width:100%; z-index: 5; height: 100%; background-size: cover; background-position: center; `"
                 id="img"></div>
             <div id="add-posts">
-
                 <div id="user-info1">
                     <div id="top-row">
                         <span><%= post[0].name ?   post[0].name : '' %></span>
@@ -122,10 +121,10 @@
                         enctype="multipart/form-data" method="POST">
                         <div id="post-comment-box" class="text-center">
                             <textarea placeholder="Comment here!" type="text" class="comment-box" name="comments"
-                                class='sendComment' style="z-index:-1"></textarea>
+                             class='sendComment' style="z-index:-1"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary text-center w-100 rounded-bottom"
-                            value="comments">Post comment!</button>
+                         value="comments">Post comment!</button>
                     </form>
                 </div>
             </div>
