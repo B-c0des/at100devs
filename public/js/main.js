@@ -8,11 +8,13 @@ function getDocHeight() {
         D.body.clientHeight, D.documentElement.clientHeight
     )
 }
+
 var docheight = getDocHeight()
 
 function yes() {
     amountscrolled.bind(console.log('bottom'))
 }
+
 function amountscrolled() {
     var winheight = window.innerHeight || (document.documentElement || document.body).clientHeight
     var docheight = getDocHeight()
@@ -24,9 +26,11 @@ function amountscrolled() {
         console.log('bottom')
     }
 }
+
 window.addEventListener("scroll", function () {
     amountscrolled()
 }, false)
+
 window.onload = () => {
     const t1 = performance.now();
     console.log("Page loaded in " + Math.round(t1 - t0) + ' milliseconds!');
@@ -38,17 +42,21 @@ window.onload = () => {
         $(document.querySelector('#headerGradient')).fadeOut();
     })
 }
+
 function about() {
     document.getElementById('my-theme').style.display = "block"
 }
+
 function closeAbout() {
     let about = document.getElementById('my-theme')
     $(about).fadeOut();
 }
+
 //minimize post
 function scrollLoc() {
     localStorage.setItem('scrollLocation', document.querySelector('body').scrollTop)
 }
+
 function scrollBottom() {}
 function minimizePost(x) {
     $(document.getElementById(x)).fadeOut();
@@ -63,11 +71,13 @@ function minimizePost(x) {
         document.querySelector('body').scrollTop = localStorage.getItem('scrollLocation')
     }, 500);
 }
+
 function toggleHeader() {
     let header4 = document.getElementById("headerGradient");
     header4.style.display !== "none" ? header4.style.display = "none" :
         header4.style.display = "flex";
 }
+
 function minimizeMyProfile(x) {
     $(document.getElementById(x)).fadeOut();
     // document.getElementById(x).style.display = 'none';
@@ -77,6 +87,7 @@ function minimizeMyProfile(x) {
     //     document.getElementById('loader').style.display = "none"
     // }, 500);
 }
+
 function openProfile() {
     document.getElementById('loader').style.display = "block"
     document.getElementById(x).style.display = 'flex';
@@ -345,6 +356,16 @@ function updateScroll() {
     var element = document.querySelectorAll("#across");
     element.scrollTop = element.scrollHeight;
 }
+
+/*
+
+The function "getIcon" gets value from the user input
+It changes the value to lower case
+It filters through the icons and creates a list in the database that will be displayed later on.
+It then puts the html data into the dom using various methods
+
+*/
+
 function getIcon() {
     let inputz = document.getElementById('inputs')
     let inputLowercase = inputz.value.toLowerCase()
