@@ -14,9 +14,13 @@ exports.getLogin = (req, res) => {
 exports.postLogin = (req, res, next) => {
   const validationErrors = [];
   if (!validator.isEmail(req.body.email))
-    validationErrors.push({ msg: "Please enter a valid email address." });
+    validationErrors.push({
+      msg: "Please enter a valid email address."
+    });
   if (validator.isEmpty(req.body.password))
-    validationErrors.push({ msg: "Password cannot be blank." });
+    validationErrors.push({
+      msg: "Password cannot be blank."
+    });
 
   if (validationErrors.length) {
     req.flash("errors", validationErrors);
@@ -39,7 +43,9 @@ exports.postLogin = (req, res, next) => {
       if (err) {
         return next(err);
       }
-      req.flash("success", { msg: "Success! You are logged in." });
+      req.flash("success", {
+        msg: "Success! You are logged in."
+      });
       res.redirect(req.session.returnTo || "/profile");
     });
   })(req, res, next);
@@ -67,13 +73,19 @@ exports.getSignup = (req, res) => {
 exports.postSignup = (req, res, next) => {
   const validationErrors = [];
   if (!validator.isEmail(req.body.email))
-    validationErrors.push({ msg: "Please enter a valid email address." });
-  if (!validator.isLength(req.body.password, { min: 8 }))
+    validationErrors.push({
+      msg: "Please enter a valid email address."
+    });
+  if (!validator.isLength(req.body.password, {
+      min: 8
+    }))
     validationErrors.push({
       msg: "Password must be at least 8 characters long",
     });
   if (req.body.password !== req.body.confirmPassword)
-    validationErrors.push({ msg: "Passwords do not match" });
+    validationErrors.push({
+      msg: "Passwords do not match"
+    });
 
   if (validationErrors.length) {
     req.flash("errors", validationErrors);
@@ -89,8 +101,13 @@ exports.postSignup = (req, res, next) => {
     password: req.body.password,
   });
 
-  User.findOne(
-    { $or: [{ email: req.body.email }, { userName: req.body.userName }] },
+  User.findOne({
+      $or: [{
+        email: req.body.email
+      }, {
+        userName: req.body.userName
+      }]
+    },
     (err, existingUser) => {
       if (err) {
         return next(err);

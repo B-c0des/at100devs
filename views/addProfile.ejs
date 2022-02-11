@@ -16,7 +16,8 @@
             </div>
             <div class="mb-1">
                 <h1><label for="contact" class="form-label">Phone Number</label></h1>
-                <input type="number" class="comment-box" onkeydown="phone()" name="contact" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                <input type="number" class="comment-box" onkeydown="phone()" name="contact"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
             </div>
             <h1>My Stack</h1>
             <textarea id='textIcons' name="textIcons" required style="    display:none;"></textarea>
@@ -34,8 +35,10 @@
             <h1><label for="imgUpload" id="img-label" class="form-label">Image</label>
                 <img id="output" />
                 <input type="file" accept="image/*" oninput="loadFile(event)" class="comment-box" id="file" name="file">
-                <button type="submit" class="btn-primary mt-1" value="Upload" style="filter: drop-shadow( 0 0px 0px black); width:100%" >Submit</button>
+                <button type="submit" class="btn-primary mt-1" value="Upload"
+                    style="filter: drop-shadow( 0 0px 0px black); width:100%">Submit</button>
         </form>
-        <button onclick="toggleContent()" type="none" class="btn btn-primary mt-1 mb-1" style="filter: drop-shadow( 0 0px 0px black); width:100%;" value="cancel">Cancel</button>
+        <button onclick="toggleContent()" type="none" class="btn btn-primary mt-1 mb-1"
+            style="filter: drop-shadow( 0 0px 0px black); width:100%;" value="cancel">Cancel</button>
     </div>
 </div>

@@ -1,4 +1,4 @@
-<%if(post.length == 0){ %>
+<%if(post.length==0){ %>
     <div id='alert'>
         <div id="dropdown-alert">
             <h1>Create a Profile first!</h1>
@@ -12,68 +12,91 @@
                 <div id="add-posts">
                     <div id="user-info1">
                         <div id="top-row">
-                            <span><%= post[0].name ?   post[0].name : '' %></span>
-                            <span><%= post[0].title ?  post[0].title : '' %></span>
+                            <span>
+                                <%= post[0].name ? post[0].name : '' %>
+                            </span>
+                            <span>
+                                <%= post[0].title ? post[0].title : '' %>
+                            </span>
                         </div>
                         <div id="middle-row">
-                            <a id="icons" target="_blank" rel="noopener" href="tel:<%= post[0].contact ?   posts2[i].contact : '' %>">
+                            <a id="icons" target="_blank" rel="noopener"
+                                href="tel:<%= post[0].contact ?   posts2[i].contact : '' %>">
                                 <span class="iconify" data-icon="fa-solid:phone-alt" data-inline="false"></span>
                             </a>
-                            <a id="icons" target="_blank" rel="noopener" href="sms:<%= post[0].contact ?   posts2[i].contact : '' %>">
+                            <a id="icons" target="_blank" rel="noopener"
+                                href="sms:<%= post[0].contact ?   posts2[i].contact : '' %>">
                                 <span class="iconify" data-icon="fa-solid:sms" data-inline="false"></span>
                             </a>
-                            <a id="icons" target="_blank" rel="noopener" href="https://<%- post[0].website ? posts2[i].website : '' %> ">
+                            <a id="icons" target="_blank" rel="noopener"
+                                href="https://<%- post[0].website ? posts2[i].website : '' %> ">
                                 <span class="iconify" data-icon="dashicons:admin-site-alt3" data-inline="false"></span>
                             </a>
                             <a id="icons" target="_blank" rel="noopener" href="">
                                 <span class="iconify" data-icon="entypo:location" data-inline="false"></span>
                             </a>
                             <div id='likebox'>
-                                <%if(post[0].user == user.id){ %>
+                                <%if(post[0].user==user.id){ %>
                                     <!-- <form action="/post/deletePost/<%= post[0]._id %>?_method=DELETE" method="POST" class="row-6 justify-content-between  "> -->
-                            <a id="icons" type="submit" onclick="return confirm('Are you sure you want to delete your profile?')" href="">
-                             <span class="iconify" data-icon="entypo:remove-user" data-inline="false"></span>
-                            </a>
-                           <!-- <button class="btn btn-primary fa fa-trash" ></button> -->
-                           <!-- </form> -->
-                            <%}%>
+                                    <a id="icons" type="submit"
+                                        onclick="return confirm('Are you sure you want to delete your profile?')"
+                                        href="">
+                                        <span class="iconify" data-icon="entypo:remove-user" data-inline="false"></span>
+                                    </a>
+                                    <!-- <button class="btn btn-primary fa fa-trash" ></button> -->
+                                    <!-- </form> -->
+                                    <%}%>
                             </div>
                         </div>
                         <div id="bottom-row">
                         </div>
                         <div id="row">
-                            <span><%- post[0].icons %></span>
+                            <span>
+                                <%- post[0].icons %>
+                            </span>
                         </div>
                         </span>
                     </div>
                     <div id='across'>
                         <div>
                             <h1 id="comment-box"></h1>
-                            <% for(var j=0; j < posts2[i].comments.length; j++) {  %>
-                                   <% for(var k=0; k < posts2.length; k++) {  %>
-                                        <%- (posts2[i].comments[j].postedBy.toString().trim() == post[k]?.user.toString().trim()) == true ? `<h1 id="comment-boxw"> <h1 id="commentName" onclick="document.getElementById('${[k]}').style.display = 'flex';document.getElementById('${(k !== i) ? [i] : ''}').style.display = 'none'"> ${post[k].name}  -  ${post[k].title}  </h1>  <img id="userIcon" onclick="document.getElementById('${[k]}').style.display = 'flex';document.getElementById('${(k !== i) ? [i] : ''}').style.display = 'none'" src="${posts2[k]?.image.toString().trim()}"> <h1 id="comment"> ${post[i].comments[j].comments} </h1>`  : '' %> 
+                            <% for(var j=0; j < posts2[i].comments.length; j++) { %>
+                                <% for(var k=0; k < posts2.length; k++) { %>
+                                    <%- (posts2[i].comments[j].postedBy.toString().trim()==post[k]?.user.toString().trim())==true
+                                        ? `<h1 id="comment-boxw">
+                                        <h1 id="commentName"
+                                            onclick="document.getElementById('${[k]}').style.display = 'flex';document.getElementById('${(k !== i) ? [i] : ''}').style.display = 'none'">
+                                            ${post[k].name} - ${post[k].title} </h1> <img id="userIcon"
+                                            onclick="document.getElementById('${[k]}').style.display = 'flex';document.getElementById('${(k !== i) ? [i] : ''}').style.display = 'none'"
+                                            src="${posts2[k]?.image.toString().trim()}">
+                                        <h1 id="comment"> ${post[i].comments[j].comments} </h1>` : '' %>
                                         </h1>
-                                     <% } %>  
-                            <% } %>
-                            </h1>   
+                                        <% } %>
+                                            <% } %>
+                                                </h1>
                         </div>
                     </div>
-            <div id="post-comment-box" class="text-center">
-                <form class="col-10 w-100" action="/post/commentPost/<%= posts2[i]._id %>?_method=PUT" enctype="multipart/form-data" method="POST">
-                    <h1 class="gradient-spacer"></h1>
-                    <%if(post.length == 0){ %>
-                        <div id='alert'>
-                            <div id="dropdown-alert" onclick="toggleContent()" style="color:white; border-radius: 0px;"> Create a Profile to comment!</div>
-                        </div>
-                        <%}%>
-                            <%if(post.length > 0){ %>
-                                <textarea placeholder="Comment here!" type="text" class="comment-box" name="comments" class='sendComment' style="z-index:-1"></textarea>
-                                <%- posts2[i].name ? `
-                                <button type="submit" class="submitComment btn btn-primary text-center w-100 rounded-bottom" value="comments" >Post Comment!</button>` : 'Please create a profile first!' %>
-                            </form>
-            </div>
-            <%}%>
-            </div>
+                    <div id="post-comment-box" class="text-center">
+                        <form class="col-10 w-100" action="/post/commentPost/<%= posts2[i]._id %>?_method=PUT"
+                            enctype="multipart/form-data" method="POST">
+                            <h1 class="gradient-spacer"></h1>
+                            <%if(post.length==0){ %>
+                                <div id='alert'>
+                                    <div id="dropdown-alert" onclick="toggleContent()"
+                                        style="color:white; border-radius: 0px;"> Create a Profile to comment!</div>
+                                </div>
+                                <%}%>
+                                    <%if(post.length> 0){ %>
+                                        <textarea placeholder="Comment here!" type="text" class="comment-box"
+                                            name="comments" class='sendComment' style="z-index:-1"></textarea>
+                                        <%- posts2[i].name ? ` <button type="submit"
+                                            class="submitComment btn btn-primary text-center w-100 rounded-bottom"
+                                            value="comments">Post Comment!</button>` : 'Please create a profile first!'
+                                            %>
+                        </form>
+                    </div>
+                    <%}%>
+                </div>
             </div>
             </div>
             </div>
